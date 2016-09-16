@@ -51,6 +51,7 @@ Como veis el nombre tiene que estar formado por la fecha separada mediante barra
 El siguiente paso será añadir los pots a la pagina de inicio, mediante el uso de un bucle for recorriendo los posts, para ello añadimos el siguiente código:
 
 <pre><code class="language-html">
+```html
 <ul>
   {% for post in site.posts %}
 
@@ -68,7 +69,7 @@ El siguiente paso será añadir los pots a la pagina de inicio, mediante el uso 
   {% endfor %} 
 
 </ul>
-
+```
 </code></pre>
 
 Con esto ya tenemos la funcionalidad muy básica de nuestro blog alojado en GitHub con Jekyll, a partir de aqui la página se puede extender y personalizar a gusto de cada uno.
