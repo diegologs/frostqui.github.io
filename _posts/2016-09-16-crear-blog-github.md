@@ -8,6 +8,8 @@ category:
 date: 16/09/2016
 ---
 
+***
+
 *¡Bienvenido a mi blog!* Este blog se encuentra alojado en GitHub pages, por lo que para realizarlo he decidido utilizar Jekyll, un generador de páginas estaticas. A continuación voy a explicar los pasos que di para su realización. 
 
 Lo primero que hay que hacer es crear un repositorio en GitHub para alojar los archivos de la página web, mi repositorio se encuentra en [https://github.com/Frostqui/my-blog](https://github.com/Frostqui/my-blog).
@@ -50,7 +52,7 @@ Para añadir posts, tenemos que crear una carpeta llamada "_posts". Estos posts,
 Como veis el nombre tiene que estar formado por la fecha separada mediante barras y el nombre del post separado por guiones.
 El siguiente paso será añadir los pots a la pagina de inicio, mediante el uso de un bucle for recorriendo los posts, para ello añadimos el siguiente código:
 
-<pre><code class="language-html">
+
 ```html
 <ul>
   {% for post in site.posts %}
@@ -70,6 +72,6 @@ El siguiente paso será añadir los pots a la pagina de inicio, mediante el uso 
 
 </ul>
 ```
-</code></pre>
+
 
 Con esto ya tenemos la funcionalidad muy básica de nuestro blog alojado en GitHub con Jekyll, a partir de aqui la página se puede extender y personalizar a gusto de cada uno.
