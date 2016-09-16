@@ -1,4 +1,4 @@
 markdown: redcarpet
-baseurl: /
+baseurl: /blog
 exclude: ['README.md']
 permalink: pretty
