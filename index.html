@@ -2,15 +2,20 @@
 layout: post
 ---
 
-<div class="contet">Contenido del blog</div>
 
+</br>
 <ul>
   {% for post in site.posts %}
 
   <li>
-  <a href="{{site.baseurl}}{{post.url}}">{{post.title}}</a>
-    <p</p>
-
+  <a class="post-title" href="{{site.baseurl}}{{post.url}}">{{post.title}}</a>
+  
+  <p class="excerpt">
+  {{ post.content | get_post_excerpt }}
+</p>
+  {% if post.content | post_contains_excerpt_tag %}
+    <a href="{{ post.url }}">Read more →</a>
+  {% endif %}
   </li>
 
   {% endfor %} 
