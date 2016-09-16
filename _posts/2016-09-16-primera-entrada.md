@@ -1,5 +1,5 @@
 ---
-layout: blog
+layout: post
 title: Primera entrada del blog 
 meta: 
 source: 

@@ -9,22 +9,26 @@
 
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
-      
+
+  <link href="{{site.baseurl}}/css/prism.css" rel="stylesheet">
+
 </head>
 
 
 <body>
+<script src="{{site.baseurl}}/js/prism.js"></script>
 
 <nav>
-    <div class="nav-wrapper blue darken-2">
+    <div class="nav-wrapper blue darken-2 z-depth-3">
       <a href="{{site.baseurl}}"><img src="http://static1.textcraft.net/data1/6/a/6ac3e760d81504284e5c31a649015e8816123bb1da39a3ee5e6b4b0d3255bfef95601890afd80709da39a3ee5e6b4b0d3255bfef95601890afd807097eb57f5defa224f75704fe7673674ae0.png"></a>
      
     </div>
   </nav>
         
 
-
+<div class="container">
   {{content}}  
+</div>
 
 </body>
 
