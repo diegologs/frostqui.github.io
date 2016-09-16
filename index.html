@@ -10,11 +10,11 @@ layout: post
   <li>
   <a class="post-title" href="{{site.baseurl}}{{post.url}}">{{post.title}}</a>
   
-  <p class="excerpt">
-  {{ post.content | get_post_excerpt }}
+  <p class="post-description">
+  {{ post.description }}
 </p>
   {% if post.content | post_contains_excerpt_tag %}
-    <a href="{{ post.url }}">Read more →</a>
+    <a href="{{site.baseurl}}{{post.url}}">Read more →</a>
   {% endif %}
   </li>
 

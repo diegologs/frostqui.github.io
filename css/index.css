@@ -7,8 +7,12 @@ body{
 }
 
 .post-title{
-
+  margin-left: 10px;
   color: #1976d2;
   font-size: 2em;
 
+}
+
+.post-description{
+  margin: 20px;
 }
