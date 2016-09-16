@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+
+<ul>
+  {% for post in site.posts %}
+
+  <li>
+  <a class="post-title" href="{{site.baseurl}}{{post.url}}">{{post.title}}</a>
+  
+  <p class="post-description">
+  {{ post.description }}
+</p>
+  {% if post.content | post_contains_excerpt_tag %}
+  <a href="{{site.baseurl}}{{post.url}}" class="waves-effect waves-light btn">Leer más</a>
+  {% endif %}
+  </li>
+
+  {% endfor %} 
+
+</ul>
+
