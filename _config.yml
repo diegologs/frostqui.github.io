@@ -1,4 +1,4 @@
 markdown: redcarpet
-baseurl: /my-blog
+baseurl: /frostqui.github.io
 exclude: ['README.md']
 permalink: pretty
