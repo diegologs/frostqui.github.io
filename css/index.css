@@ -6,8 +6,13 @@ body{
 
 }
 
+.posts{
+  margin: 20px;
+
+}
+
 .post-title{
-  margin-left: 10px;
+
   color: #1976d2;
   font-size: 2em;
 
@@ -16,3 +21,8 @@ body{
 .post-description{
   margin: 20px;
 }
+
+.parallax-container {
+      height: 300px;
+ }
+       

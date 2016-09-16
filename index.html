@@ -3,7 +3,6 @@ layout: post
 ---
 
 
-</br>
 <ul>
   {% for post in site.posts %}
 
@@ -14,10 +13,12 @@ layout: post
   {{ post.description }}
 </p>
   {% if post.content | post_contains_excerpt_tag %}
-    <a href="{{site.baseurl}}{{post.url}}">Read more →</a>
+  <a class="waves-effect waves-light btn"><i class="material-icons left">library_books</i>Leer más</a>
+  <a href="{{site.baseurl}}{{post.url}}">Read more →</a>
   {% endif %}
   </li>
 
   {% endfor %} 
 
 </ul>
+
