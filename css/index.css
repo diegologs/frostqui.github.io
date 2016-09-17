@@ -48,3 +48,15 @@ body{
   margin-top: 7px;
 
 }
+
+ul#menu li {
+    display:inline;
+    padding-left:4%;
+    padding-right: 3%;
+    font-weight: bold;
+    font-size: 0.9em;
+
+  }
+
+  
+
