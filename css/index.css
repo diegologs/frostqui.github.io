@@ -24,13 +24,40 @@ body{
 }
 
 .footer {
-   position: absolute;
+   position: fixed;
    bottom: 0;
    width: 100%; 
    height: 180px;
    background-image: url(/images/footer.jpg);
  }
  
+ .footer-text{
+ font-size: 1.2em;
+   position:fixed;
+   bottom: 10px;
+   width: 100%;
+   font-weight: bold;
+  -webkit-text-stroke: 0.5px black;
+   color: #f35626;
+    background-image: -webkit-linear-gradient(92deg,#f35626,#feab3a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: hue 60s infinite linear;
+    
+;   
+
+
+ }
+
+@-webkit-keyframes hue {
+    from {
+      -webkit-filter: hue-rotate(0deg);
+    }
+    
+    to {
+      -webkit-filter: hue-rotate(360deg);
+    }
+}
 
 .social {
 	overflow: auto;
