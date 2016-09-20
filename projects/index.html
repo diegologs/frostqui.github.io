@@ -1,0 +1,28 @@
+---
+layout: default
+title: Proyectos
+meta: Proyectos de Frostq
+---
+
+<h3>Mis proyectos</h3>
+
+ {% for project in site.pages %}
+
+<li>
+<a href="{{site.baseurll}}{{project.url}}">
+    <div class="card horizontal">
+      <div class="card-image">
+        <img src="{{site.baseurl}}/images/projects/{{project.image}}">
+      </div>
+      <div class="card-stacked">
+        <div class="card-content">
+          <h4>{{project.title}}</h4>
+          <p>{{project.description}}</p>
+        </div>
+      </div>
+  </div>
+</a>
+
+
+</li>
+ {% endfor %}
