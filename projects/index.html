@@ -5,7 +5,7 @@ meta: Proyectos de Frostq
 ---
 
 <h3>Mis proyectos</h3>
-
+<ul>
  {% for project in site.pages %}
     {% if project.type == 'project' %}
 
@@ -26,4 +26,6 @@ meta: Proyectos de Frostq
 
 
 </li>
- {% endfor %}
+ {% endif %}
+  {% endfor %}
+  </ul>
