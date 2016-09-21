@@ -4,7 +4,7 @@ title: Proyectos
 meta: Proyectos de Frostq
 ---
 
-<h3>Mis proyectos</h3>
+<h4>Mis proyectos</h4>
 
  {% for project in site.pages %}
     {% if project.type == 'project' %}
@@ -13,11 +13,11 @@ meta: Proyectos de Frostq
 <a href="{{site.baseurll}}{{project.url}}">
     <div class="card horizontal">
       <div class="card-image">
-        <img src="{{site.baseurl}}/images/projects/{{project.image}}">
+        <img class="responsive-img" src="{{site.baseurl}}/images/projects/{{project.image}}">
       </div>
       <div class="card-stacked">
         <div class="card-content">
-          <h4>{{project.title}}</h4>
+          <h5>{{project.title}}</h5>
           <p>{{project.description}}</p>
         </div>
       </div>
