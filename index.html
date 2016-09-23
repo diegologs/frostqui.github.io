@@ -2,11 +2,12 @@
 layout: default
 ---
 
+<div class="container posts z-depth-2">
 
 <ul>
   {% for post in site.posts %}
 
-  <li class="post">
+  <li class="post white">
   <a class="post-title" href="{{site.baseurl}}{{post.url}}">{{post.title}}</a>
   <div class="date">{{post.date | date: '%B %d, %Y'}}  </div> <a class="kappa"> Kappa</a>
   <p class="post-description">
@@ -20,4 +21,6 @@ layout: default
   {% endfor %} 
 
 </ul>
+
+</div>
 
