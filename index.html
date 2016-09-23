@@ -6,9 +6,9 @@ layout: default
 <ul>
   {% for post in site.posts %}
 
-  <li>
+  <li class="post">
   <a class="post-title" href="{{site.baseurl}}{{post.url}}">{{post.title}}</a>
-  <div class="date">{{post.date}}  </div> <a class="kappa"> Kappa</a>
+  <div class="date">{{post.date | date: '%B %d, %Y'}}  </div> <a class="kappa"> Kappa</a>
   <p class="post-description">
   {{ post.description }}
 </p>
