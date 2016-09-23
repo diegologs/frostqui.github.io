@@ -1,12 +1,9 @@
 body{
   background-image: url(/images/space.jpg);
 
-
-
-
 }
 
-.posts{
+.main-content{
   padding: 20px;
 }
 
@@ -14,6 +11,7 @@ body{
 
   color: #1976d2;
   font-size: 2em;
+  font-weight: bold;
 
 }
 
@@ -91,22 +89,6 @@ ul#menu li {
   
 }
 
-
-.menu-item{
- -webkit-animation: random 5s infinite;
-
-
-
-}
-
-
-@keyframes  random {
-    15% { background-color: red; } 
-    30% { background-color: yellow; } 
-    45% { background-color: green; } 
-    60% { background-color: blue; }
-    75% { background-color: white; }  
-}
 
 
 .post{
