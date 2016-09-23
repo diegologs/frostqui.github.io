@@ -3,7 +3,8 @@ body{
 
 }
 
-.main-contenmain-contentpadding: 20px;
+.main-content{
+  padding: 20px;
 }
 
 .post-title{
