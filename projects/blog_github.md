@@ -5,7 +5,7 @@ meta: Proyecto de blog en github
 type: project
 image: blog.jpg
 description: Blog personal alojado en Github.
-tencology: HTML, CSS, JavaScript, Jekyll
+tencol: HTML, CSS, JavaScript, Jekyll
 ---
 
 #####Mi blog personal
