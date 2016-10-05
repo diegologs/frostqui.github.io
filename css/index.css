@@ -10,13 +10,9 @@ body{
 .post-title{
 
   color: #1976d2;
-  font-size: 2em;
+  font-size: 1.7em;
   font-weight: bold;
 
-}
-
-.post-description{
-  margin: 20px;
 }
 
 .footer {

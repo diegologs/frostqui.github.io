@@ -42,9 +42,7 @@ Jekyll utiliza un sistema de plantillas, para utilizarlo, tenemos que crear una 
 
 Creamos archivo index.html y añadimos al principio la plantilla que estamos utilizando:
 <blockquote>
-      ---
       layout: default
-      ---
 </blockquote>
 
 Para añadir posts, tenemos que crear una carpeta llamada "_posts". Estos posts, tienen que ser archivos con extensión .md y con el siguiente nombre: 2016/09/16-nombre-del-post
@@ -52,7 +50,7 @@ Como veis el nombre tiene que estar formado por la fecha separada mediante barra
 El siguiente paso será añadir los pots a la pagina de inicio, mediante el uso de un bucle for recorriendo los posts, para ello añadimos el siguiente código:
 
 
-```html
+{% raw %} 
 <ul>
   {% for post in site.posts %}
 
@@ -70,7 +68,8 @@ El siguiente paso será añadir los pots a la pagina de inicio, mediante el uso 
   {% endfor %} 
 
 </ul>
-```
+
+{% endraw %}
 
 
 Con esto ya tenemos la funcionalidad muy básica de nuestro blog alojado en GitHub con Jekyll, a partir de aqui la página se puede extender y personalizar a gusto de cada uno.
