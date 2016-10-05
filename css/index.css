@@ -15,6 +15,10 @@ body{
 
 }
 
+.post-description{
+  margin-top: 1px;
+}
+
 .footer {
   color:white;
   font-size: 0.7em;

@@ -4,7 +4,8 @@ title: Creando un blog en GitHub pages con Jekyll
 meta: 
 description: Bienvenido a mi blog, esta es la primera entrada de mi blog, donde explico como esta hecha esta página web.
 source: 
-category: 
+category:
+emote: GivePLZ
 ---
 
 ***

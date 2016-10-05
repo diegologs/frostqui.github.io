@@ -3,7 +3,8 @@ layout: post
 title: Bot en Telegram con PHP 
 meta: 
 description: Telegram ofrece la posibilidad, entre otras cosas de crear bots. En este post veremos como programar un bot para Telegram usando PHP y la plataforma cloud de Heroku.
-category: 
+category:
+emote: ArgieB8
 ---
 
 ***
