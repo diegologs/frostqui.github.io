@@ -8,8 +8,8 @@ layout: default
   {% for post in site.posts %}
 
   <li class="post white">
-  <a class="post-title" href="{{site.baseurl}}{{post.url}}">{{post.title}}</a>
-  <div class="date">{{post.date | date: '%B %d, %Y'}}  </div> <a class="kappa"> Kappa</a>
+  <a class="post-title kappa" href="{{site.baseurl}}{{post.url}}">{{post.title}}  {{post.emote}}</a>
+  <div class="date">{{post.date | date: '%B %d, %Y'}}  </div>
   <p class="post-description">
   {{ post.description }}
 </p>
