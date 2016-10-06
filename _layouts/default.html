@@ -25,6 +25,28 @@
 
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="">
+  <meta name="twitter:creator" content="@Diegolopgr">
+  {% if page.title %}
+  <meta name="twitter:title" content="{{ page.title }}">
+  {% else %}
+  <meta name="twitter:title" content="{{ site.title }}">
+  {% endif %}
+  {% if page.url %}
+  <meta name="twitter:url" content="{{ site.url }}{{ page.url }}">
+  {% endif %}
+  {% if page.description %}
+  <meta name="twitter:description" content="{{ page.description }}">
+  {% else %}
+  <meta name="twitter:description" content="{{ site.description }}">
+  {% endif %}
+  {% if page.thumbnail %}
+  <meta name="twitter:image:src" content="{{ site.url }}/media/images/{{ page.thumbnail }}">
+  {% else %}
+  <meta name="twitter:image:src" content="{{ site.url }}/media/images/danyal-zia-avatar.png">
+
+
 </head>
 
 
