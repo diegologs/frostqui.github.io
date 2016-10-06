@@ -1,11 +1,13 @@
 ---
 layout: post
-title: Bot en Telegram con PHP 
+title: Testing automático de aplicaciones Android 
 meta: 
 description: Tutorial my básico en el que explico como instalar y configurar Calabash para realizar testeos automaticos de aplicaciones Android. 
 category:
 emote: DxAbomb
 ---
+
+***
 
 Calabash es un framework open source que permite el testing automatizado de aplicaciones moviles desarrollado por Xamarin; para ello utiliza Cucumber, software escrito en Ruby pensado para el testing de software, aunque es independiente del lenguaje utilizado.
 
