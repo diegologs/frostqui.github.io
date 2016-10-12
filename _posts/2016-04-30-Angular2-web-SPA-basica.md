@@ -21,7 +21,7 @@ Lo primero que tenemos que descargar es NodeJs, lo puedes descargar de aqui: <a 
  	<li><em><strong>cd main</strong></em></li>
 </ul>
 Hecho todo esto simplemente ejecutamos <em><strong>ng serve</strong></em> para que nos ejecute el servidor en local, en la direccion <strong>localhost:4200</strong>, abrimos esta direccion en nuestro navegador y comprobamos que funciona correctamente.
-<h2>Ejemplo de aplicación básica</h2>
+<h4>Ejemplo de aplicación básica</h4>
 Angular2 utiliza componentes. Un componente es un archivo con extension .ts, que contiene un template (nuestro archivo html con la estructura que se muestra en la web), y la lógica de esa página escrita en TypeScript. Veamos este ejemplo:
 
 ```typescript
