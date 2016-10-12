@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Widget del tiempo usando  
+title: Widget del tiempo usando RxJS 
 meta: 
 description: RxJs es una librería para JavaScript para la creación de programas asíncronos, en este artículo veremos como hacer una página web muy sencilla para buscar la temperatura del lugar que nosotros queramos.
 category:
@@ -64,7 +64,7 @@ var responseStream = requestOnFindStream
 responseStream.subscribe(temp =&gt; {
             weatherText.innerHTML = `${temp} °C`;
   });
-  ```php
+  ```
 <img class="responsive-img" src="http://i2.wp.com/frostq.ml/wp-content/uploads/2016/05/Screenshot_1.png">
 
 Para terminar puedes consultar la <a href="http://codepen.io/Frostq/full/EgEwrN/"><em><strong>DEMO</strong></em></a> del resultado final.
