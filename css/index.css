@@ -123,11 +123,33 @@ ul#menu li {
 
 
 .project{
-  margin-bottom: 35px;
   padding: 30px;
 }
 
 h5{
   font-weight:bold;
+
+}
+
+
+#contact_button{
+  margin-top: 30px;
+
+
+
+}
+
+#contact_message{
+  color:white;
+
+}
+
+#contact_email{
+  color:white;
+}
+
+#contact_form{
+  width: 80%;
+  margin: 0px auto;
 
 }
