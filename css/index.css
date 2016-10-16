@@ -84,7 +84,7 @@ body{
 }
 
 #candy{
-  position:absolute;
+  position:fixed;
   bottom:0;
   width: 100%;
   height: 10px;
@@ -152,5 +152,10 @@ h5{
 #contact_form{
   width: 80%;
   margin: 0px auto;
+
+}
+
+#post-image{
+  max-width: 900px;
 
 }
