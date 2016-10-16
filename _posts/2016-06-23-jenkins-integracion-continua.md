@@ -29,7 +29,7 @@ Otra opción es meter el archivo en nuestro server Tomcat en la carpeta webapps
 
 Nos dirigimos a la dirección <em><strong>http://localhost:8080/ </strong></em>y vemos que todo funciona correctamente.
 
-<img clas="responsive-img" id="post-image"  src="http://i0.wp.com/frostq.ml/wp-content/uploads/2016/06/Screenshot_1.png">
+<img class="responsive-img" id="post-image"  src="http://i0.wp.com/frostq.ml/wp-content/uploads/2016/06/Screenshot_1.png">
 
 Si queremos que Jenkins se pueda utilizar para aplicaciones Java lo que tenemos que hacer es dirigirnos, en el menú de la izquierda, a <strong>Administrar Jenkins </strong>y despues a <strong>Configurar el Sistema </strong>para añadir nuestro JDK de Java. Al añadir un JDK podemos hacerlo añadiendo la ruta donde tenemos instalado el JDK o podemos hacer que Jenkins lo instale automáticamente.
 
