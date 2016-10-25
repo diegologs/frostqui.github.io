@@ -1,11 +1,13 @@
 ---
 layout: post
-title: Bot en Telegram con PHP 
+title: Orientacion a objetos con JavaScript 
 meta: 
-description: Telegram ofrece la posibilidad, entre otras cosas de crear bots. En este post veremos como programar un bot para Telegram usando PHP y la plataforma cloud de Heroku.
+description: En este articulo veremos como podemos hacer orientacion a objetos usando JavaScript.
 category:
 emote: FutureMan
 ---
+
+***
 
 JavaScript es un lenguaje que surgió para la web, para poder interaccionar con el usuario y hacer ciertas acciones básicas. En la actualidad JavaScript se ha ampliado ofreciendo nuevas funcionalidades. Se utiliza principalmente en su forma del lado del cliente, aunque existe una versión para el lado del servidor. JavaScript puede tener todo lo que un lenguaje orientado a objetos, tiene que ofrecer.
 
@@ -23,8 +25,8 @@ Tenemos que saber algunos términos asociados a la orientación de objetos:
 <strong>Polimorfismo</strong>: Las clases podrían definir el mismo método o propiedad.</p>
 </quote>
 
-<a href="http://frostq.ml/wp-content/uploads/2016/06/poo11.jpg"><img class="aligncenter wp-image-2788" src="http://frostq.ml/wp-content/uploads/2016/06/poo11-300x149.jpg" alt="JavaScript Programacion orientada a objetos" width="523" height="260" /></a>
-<h2>Programación orientada a objetos en JavaScript</h2>
+<a href="http://i.imgur.com/xsxithS.jpg"><img class="aligncenter wp-image-2788" src="http://i.imgur.com/xsxithS.jpg" alt="JavaScript Programacion orientada a objetos" width="523" height="260" /></a>
+<h5>Programación orientada a objetos en JavaScript</h5>
 Crear una clase con JavaScript tiene esta pinta:
 
 ```javascript
@@ -52,7 +54,6 @@ function Car(wheels, seats, engines) {
     this.engines = engines;
 };
 var myCar = new Car(6, 3, 1);
-
 ```
 De esta forma, al crear el objeto nuevo, le pasamos los valores que queramos, siguiendo la estructura definida en el constructor.
 
