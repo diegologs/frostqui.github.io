@@ -16,16 +16,17 @@ Para entender como funciona la orientación a objetos en JavaScript, primero hay
 Programación orientada a objetos (POO) es un modelo de lenguaje de programación organizada alrededor de los objetos en lugar de "acciones" y datos en lugar de la lógica. Nos interesa mas saber como vamos a relacionar los objetos y la lógica del programa que los propios datos.
 
 Tenemos que saber algunos términos asociados a la orientación de objetos:
-<quote>
-<strong>Clase</strong>: Definimos como va a ser nuestro objeto.</p>
-<strong>Objeto</strong>: Una instancia de una clase</p>
-<strong>Métodos y propiedades</strong>: Características concretas del objeto y acciones que puede realizar.</p>
-<strong>Constructor</strong>: Con este método inicializamos las propiedades con los valores que le pasamos. Este método se ejecuta al crear un objeto.</p>
-<strong>Herencia</strong>: Con la herencia podemos hacer que una clase adquiera las características de otra.</p>
-<strong>Polimorfismo</strong>: Las clases podrían definir el mismo método o propiedad.</p>
-</quote>
-
-<a href="http://i.imgur.com/xsxithS.jpg"><img class="aligncenter wp-image-2788" src="http://i.imgur.com/xsxithS.jpg" alt="JavaScript Programacion orientada a objetos" width="523" height="260" /></a>
+<ul>
+    <quote>
+        <li><strong>Clase</strong>: Definimos como va a ser nuestro objeto.</li>
+        <li><strong>Objeto</strong>: Una instancia de una clase</li>
+        <li><strong>Métodos y propiedades</strong>: Características concretas del objeto y acciones que puede realizar.</li>
+        <li><strong>Constructor</strong>: Con este método inicializamos las propiedades con los valores que le pasamos. Este método se ejecuta al crear un objeto.</li>
+        <li><strong>Herencia</strong>: Con la herencia podemos hacer que una clase adquiera las características de otra.</li>
+        <li><strong>Polimorfismo</strong>: Las clases podrían definir el mismo método o propiedad.</li>
+    </quote>
+</ul>
+<a href="http://i.imgur.com/xsxithS.jpg"><img class="responsive-img" src="http://i.imgur.com/xsxithS.jpg" alt="JavaScript Programacion orientada a objetos" width="523" height="260" /></a>
 <h5>Programación orientada a objetos en JavaScript</h5>
 Crear una clase con JavaScript tiene esta pinta:
 
