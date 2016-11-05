@@ -1,3 +1,19 @@
+title: Frostq
+description: "Página personal de Diego López Garciá. Estudiante de Ingeniería del Software."
+
+author:
+  name: Diego López
+  twitter: diegolopgr
+  github: Frostqui
+  bio: Estudiante de ingeniería del software. Apasionado de los videojuegos y del diseño gráfico.
+
+
+
+
 baseurl: 
 exclude: ['README.md']
 permalink: pretty
+
+gems:
+  - jekyll-redirect-from
+  - jekyll-sitemap
