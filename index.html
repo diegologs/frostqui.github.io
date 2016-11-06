@@ -13,8 +13,6 @@ layout: default
   <p class="post-description">
   {{ post.description }}
 </p>
-<a class="read_more" href="{{site.baseurl}}{{post.url}}">Leer más</a>
-
 
 {% for tag in post.tags %}
 
@@ -27,6 +25,12 @@ layout: default
 </div>
   
  {% endfor %} 
+ </br>
+
+<a class="read_more" href="{{site.baseurl}}{{post.url}}">Leer más</a>
+
+
+
 </li>
   {% endfor %} 
 
