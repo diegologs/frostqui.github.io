@@ -5,6 +5,7 @@ meta:
 description: Tutorial my básico en el que explico como instalar y configurar Calabash para realizar testeos automaticos de aplicaciones Android. 
 category:
 emote: DxAbomb
+tags: Android Testing Calabash 
 ---
 
 ***

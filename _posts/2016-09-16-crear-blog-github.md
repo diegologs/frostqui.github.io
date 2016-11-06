@@ -6,6 +6,7 @@ description: Bienvenido a mi blog, esta es la primera entrada de mi blog, donde 
 source: 
 category:
 emote: GivePLZ
+tags: Jekyll GitHub
 ---
 
 ***

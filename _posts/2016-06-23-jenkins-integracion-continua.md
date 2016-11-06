@@ -5,6 +5,7 @@ meta:
 description: La integración continua es una práctica de desarrollo de software en la cual los desarrolladores de software suben su código a un repositorio central donde automáticamente pasan las pruebas métricas y de calidad. Esta técnica se suele realizar regularmente para detectar fallos cuanto antes y así mantener el código siempre actualizado. En este articulo veremos como hacer integración continua usando Jenkins.
 category: 
 emote: DxCat
+tags: Jenkins Integracion 
 ---
 
 ***
