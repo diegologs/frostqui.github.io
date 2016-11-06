@@ -5,6 +5,7 @@ meta:
 description: En este articulo veremos como podemos hacer orientacion a objetos usando JavaScript.
 category:
 emote: FutureMan
+tags: JavaScript
 ---
 
 ***

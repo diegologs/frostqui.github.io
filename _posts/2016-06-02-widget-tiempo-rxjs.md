@@ -5,6 +5,7 @@ meta:
 description: RxJs es una librería para JavaScript para la creación de programas asíncronos, en este artículo veremos como hacer una página web muy sencilla para buscar la temperatura del lugar que nosotros queramos.
 category:
 emote: FreakinStinkin
+tags: RxJS JavaScript HTML CSS
 ---
 
 ***
