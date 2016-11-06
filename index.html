@@ -18,9 +18,12 @@ layout: default
 
 {% for tag in post.tags %}
 
-<div class="tags chip">
+
+<div class="right-align tags">
+  <div class="chip">
   
-  <a href="/tags#{{ tag }}" class="tag">{{ tag }}</a>
+    <a href="/tags#{{ tag }}" class="tag">{{ tag }}</a>
+  </div>
 </div>
   
  {% endfor %} 
