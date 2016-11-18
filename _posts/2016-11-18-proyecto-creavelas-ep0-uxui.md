@@ -1,12 +1,16 @@
 ---
 layout: post
-title:  Proyecto: Creavelas - Episodio 0 “UX & UI”
-meta: Creavelas, diseñando UX y UI
-description: Primer episodio donde explico que decisiones tomé en el diseño UX & UI de Creavelas, una red social donde la gente puede encender velas
+title: Proyecto: Creavelas - Episodio 0: UX & UI
+meta: Creavelas, diseñando UX y UI. 
+description: Primer episodio donde explico que decisiones tomé en el diseño UX & UI de Creavelas, una red social donde la gente puede encender velas.
+source: 
 category:
-emote: OSfrog
-tags: Proyectos,  UX & UI, Ruby on Rails
+emote: OSfrog 
+tags: Proyectos,  UX & UI, Creavelas
 ---
+
+***
+
 
 ***
 
