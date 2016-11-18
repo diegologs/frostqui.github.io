@@ -1,4 +1,5 @@
-yout: post
+---
+layout: post
 title:  Proyecto: Creavelas | Episodio 0 “UX & UI”
 meta: Creavelas, diseñando UX y UI
 description: Primer episodio donde explico que decisiones tomé en el diseño UX & UI de Creavelas, una red social donde la gente puede encender velas
