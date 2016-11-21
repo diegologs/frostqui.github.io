@@ -5,7 +5,7 @@ meta: Creavelas, diseñando UX y UI.
 description: Primer episodio donde explico que decisiones tomé en el diseño UX & UI de Creavelas, una red social donde la gente puede encender velas.
 source: 
 category:
-emote: OSfrog 
+title-page: Creavelas tutorial de UX y UI
 tags: Proyectos UX UI Creavelas
 ---
 
