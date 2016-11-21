@@ -4,7 +4,7 @@ title: Testing automático de aplicaciones Android
 meta: Calabash para la el testeo automatico de aplicaciones Android usando Calabash 
 description: Tutorial muy básico en el que explico como instalar y configurar Calabash para realizar testeos automaticos de aplicaciones Android. 
 category:
-emote: DxAbomb
+title-page: Calabash para realizar testing automatico
 tags: Android Testing Calabash 
 ---
 
@@ -30,7 +30,7 @@ Si ya has instalado calabash, puedes generar un esqueleto Cucumber con el siguie
 </ul>
 Automáticamente generará las carpetas con los archivos .feature y .rb
 
-En el archivo con extension .feature se especifica lo que queremos que ejecute automáticamente. Por ejemplo un feature con un escenario para el login muy sencillo, de una aplicación quedaría de esta manera:
+En el archivo con extension .feature se especifica lo que queremos que Calabash ejecute automáticamente. Por ejemplo un feature con un escenario para el login muy sencillo, de una aplicación quedaría de esta manera:
    
    ```python
     Feature: Login Feature

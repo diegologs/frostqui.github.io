@@ -5,7 +5,7 @@ meta: Creacion de un blog usando Jekyll, un generador de paginas estaticas
 description: Bienvenido a mi blog, esta es la primera entrada de mi blog, donde explico como esta hecha esta página web.
 source: 
 category:
-emote: GivePLZ
+title-page: Jekyll para programar un blog en GitHub en español
 tags: Jekyll GitHub 
 ---
 

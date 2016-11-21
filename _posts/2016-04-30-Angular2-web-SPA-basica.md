@@ -5,7 +5,7 @@ meta: Tutorial básico sobre la creación de una página SPA usando Angular2.
 description: Angular2 es un framework diseñado por Google, para la creación de páginas webs SPA. Utiliza la sintaxis de TypeScript, por lo que es muy intuitivo para los usuarios de Java. 
 source: 
 category:
-emote: OpieOP 
+title-page: Angular2 y las webs SPA
 tags: Angular2, Web Develop, SPA
 ---
 

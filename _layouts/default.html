@@ -2,7 +2,7 @@
 
 <html>
 <head>
-  <title>Frostq - Diego López García</title>
+
   
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
@@ -32,8 +32,10 @@
   <meta name="twitter:creator" content="@Diegolopgr">
   {% if page.title %}
   <meta name="twitter:title" content="{{ page.title }}">
-  {% else %}
+  <title>{{ page.title-page }} - Frostq</title>
+    {% else %}
   <meta name="twitter:title" content="{{ site.title }}">
+  <title>Frostq - Diego López García </title>
   {% endif %}
   {% if page.url %}
   <meta name="twitter:url" content="{{ site.url }}{{ page.url }}">

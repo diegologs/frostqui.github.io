@@ -4,7 +4,7 @@ title: Widget del tiempo usando RxJS
 meta: Entendiendo como funciona RxJS para la creacion de un widget del tiempo de forma asincrona 
 description: RxJs es una librería para JavaScript para la creación de programas asíncronos, en este artículo veremos como hacer una página web muy sencilla para buscar la temperatura del lugar que nosotros queramos.
 category:
-emote: FreakinStinkin
+title-page: RxJS para programar un widget del tiempo
 tags: RxJS JavaScript HTML CSS
 ---
 
