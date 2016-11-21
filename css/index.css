@@ -1,21 +1,28 @@
 body{
-  background-image: url(/images/space.jpg);
-  
+  background-color: #F9F9F9; 
+  font-family: 'Open Sans', sans-serif;
 }
 
+.container{
+  background-color: #F9F9F9;
+
+}
 .main-content{
   padding: 20px;
+  font-family: 'Droid Serif', serif;
+   background-color: #F9F9F9;  
 }
 
 .post-title{
-
+  font-family: 'Open Sans', sans-serif;
   color: #1976d2;
-  font-size: 1.7em;
+  font-size: 1.8em;
   font-weight: bold;
 
 }
 
 .post-description{
+  font-family: 'Open Sans', sans-serif;
 }
 
 .footer {
@@ -54,11 +61,13 @@ body{
 
 .social {
 	overflow: auto;
+       
 }
 
 .social li {
 	list-style-type: none;
 	float: left;
+
 }
 
 .date{
@@ -100,24 +109,23 @@ ul#menu li {
     padding-left:2%;
     padding-right: 2%;
     font-weight: bold;
-    font-size: 0.9em;
+    font-size: 1.3em;
 
   }
 
   
-.social-link {
-  margin-left: 100px;
-  
+.menu-item {
+  font-size: 1.2em;
+  font-weight: bold;
 }
 
 
 
 .post{
-  margin-bottom: 35px;
+  margin-bottom: 40px;
   padding-right: 30px;
   padding-left: 30px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 15px;
 }
 
 
@@ -160,10 +168,22 @@ h5{
 }
 
 .tags{
-  margin-bottom: -10px;
-  margin-top: -30px;
+  
+  margin-left: 30px;
   display: inline;
 
+
+
+}
+
+.tag{
+
+}
+
+.read_more{
+  display:block;
+  padding:10px;
+  padding-top:2px;
 
 
 }

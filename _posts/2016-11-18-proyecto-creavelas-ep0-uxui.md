@@ -6,7 +6,7 @@ description: Primer episodio donde explico que decisiones tomé en el diseño UX
 source: 
 category:
 emote: OSfrog 
-tags: Proyectos,  UX & UI, Creavelas
+tags: Proyectos UX UI Creavelas
 ---
 
 ***

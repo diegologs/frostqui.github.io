@@ -2,36 +2,38 @@
 layout: default
 ---
 
-<div class="container posts z-depth-2">
+<div class="container posts">
 
 <ul>
   {% for post in site.posts %}
 
-  <li class="post white">
-  <a class="post-title kappa" href="{{site.baseurl}}{{post.url}}">{{post.title}}   {{post.emote}}</a>
-  <div class="date">{{post.date | date: '%B %d, %Y'}}  </div>
-  <p class="post-description">
-  {{ post.description }}
-</p>
-
+  <li class="post">
+  <a class="post-title kappa" href="{{site.baseurl}}{{post.url}}">{{post.title}}</a>
+  </br>
+  <a class="date">{{post.date | date: '%B %d, %Y'}}  </a>
 {% for tag in post.tags %}
 
 
 <div class="right-align tags">
-  <div class="chip">
   
     <a href="/tags#{{ tag }}" class="tag">{{ tag }}</a>
-  </div>
 </div>
   
  {% endfor %} 
- </br>
 
-<a class="read_more" href="{{site.baseurl}}{{post.url}}">Leer más</a>
+  
+  <p class="post-description">
+  {{ post.description }}
+</p>
+
+
+ <a class="read_more" href="{{site.baseurl}}{{post.url}}"><i class="fa fa-chevron-right" aria-hidden="true"></i >  Leer más</a>
 
 
 
 </li>
+
+<hr>
   {% endfor %} 
 
 </ul>
