@@ -5,7 +5,7 @@ meta: Tutorial muy sencillo para programar un bot en Telegram a nuestro gusto us
 description: Telegram ofrece la posibilidad, entre otras cosas de crear bots. En este post veremos como programar un bot para Telegram usando PHP y la plataforma cloud de Heroku.
 category:
 title-page: Bot de Telegram con PHP
-tags: PHP Telegram Heroku
+tags: [PHP, Telegram, Heroku]
 ---
 
 ***

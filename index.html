@@ -11,15 +11,10 @@ layout: default
   <a class="post-title kappa" href="{{site.baseurl}}{{post.url}}">{{post.title}}</a>
   </br>
   <a class="date">{{post.date | date: '%B %d, %Y'}}  </a>
+
 {% for tag in post.tags %}
-
-
-<div class="right-align tags">
-  
-    <a href="/tags#{{ tag }}" class="tag">{{ tag }}</a>
-</div>
-  
- {% endfor %} 
+            <a class="tag" href="/tag/#{{ tag | slugify }}">{{ tag }}</a>
+      {% endfor %}
 
   
   <p class="post-description">
