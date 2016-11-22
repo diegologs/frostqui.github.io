@@ -11,7 +11,7 @@ tags: [Proyectos, UX, UI, Creavelas]
 
 ***
 
-Empiezo nuevo proyecto, esta vez , como excusa para indagar y aprender sobre el diseño e implementación de una web. Esta web va a ser construida desde 0, pasado por todas las fases del desarrollo, es decir, desarrollo Full-Stack.
+Empiezo nuevo proyecto, esta vez , como excusa para indagar y aprender sobre el diseño y la programación de una web. Esta web va a ser construida desde 0, pasado por todas las fases del desarrollo, es decir, desarrollo Full-Stack.
 
 <h2>La idea</h2>
 

@@ -11,7 +11,7 @@ tags: [Jekyll, GitHub]
 
 ***
 
-*¡Bienvenido a mi blog!* Este blog se encuentra alojado en GitHub pages, por lo que para realizarlo he decidido utilizar Jekyll, un generador de páginas estaticas. A continuación voy a explicar los pasos que di para su realización. 
+Este blog se encuentra alojado en GitHub pages, por lo que para realizarlo he decidido utilizar Jekyll para su programación, un generador de páginas estaticas. A continuación voy a explicar los pasos que di para su realización. 
 
 Lo primero que hay que hacer es crear un repositorio en GitHub para alojar los archivos de la página web, mi repositorio se encuentra en [https://github.com/Frostqui/my-blog](https://github.com/Frostqui/my-blog).
 

@@ -37,7 +37,7 @@ https://api.telegram.org/bot[TOKEN]/setWebhook?url=[URL]
 
 Y cambiamos [TOKEN] por el token que generamos con BotFather y [URL] por la URL que nos asignaron en Heroku. Si todo ha ido bien debería aparecer un mensaje de OK.
 
-Ahora toca programar nuestro bot en si con PHP. Para ello nos descargamos este repositorio de git: <a href="https://github.com/kasramp/geekswebbot">https://github.com/kasramp/geekswebbot </a>haciendo clic en Download Zip o con el comando <em>git clone</em>.
+Ahora toca empezar con la programación de nuestro bot en si con PHP. Para ello nos descargamos este repositorio de git: <a href="https://github.com/kasramp/geekswebbot">https://github.com/kasramp/geekswebbot </a>haciendo clic en Download Zip o con el comando <em>git clone</em>.
 Abrimos el archivo index.php que hemos descargado y lo abrimos con SublimeText, o cualquier otro editor de código, y cambiamos la linea que dice:
 <em>$client = new Zelenin\Telegram\Bot\Api(''); // Set your access token</em>
 Tenemos que poner entre las comillas nuestro token que generó BotFather.
