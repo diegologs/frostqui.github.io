@@ -10,7 +10,7 @@ tags: [JavaScript]
 
 ***
 
-JavaScript es un lenguaje que surgió para la web, para poder interaccionar con el usuario y hacer ciertas acciones básicas. En la actualidad JavaScript se ha ampliado ofreciendo nuevas funcionalidades. Se utiliza principalmente en su forma del lado del cliente, aunque existe una versión para el lado del servidor. JavaScript puede tener todo lo que un lenguaje orientado a objetos, tiene que ofrecer.
+JavaScript es un lenguaje que surgió para el desarrollo web, para poder interaccionar con el usuario y hacer ciertas acciones básicas. En la actualidad JavaScript se ha ampliado ofreciendo nuevas funcionalidades. Se utiliza principalmente en su forma del lado del cliente, aunque existe una versión para el lado del servidor. JavaScript puede tener todo lo que un lenguaje orientado a objetos, tiene que ofrecer.
 
 Para entender como funciona la orientación a objetos en JavaScript, primero hay que empezar definiendo que es la orientación a objetos.
 
@@ -27,8 +27,8 @@ Tenemos que saber algunos términos asociados a la orientación de objetos:
         <li><strong>Polimorfismo</strong>: Las clases podrían definir el mismo método o propiedad.</li>
     </quote>
 </ul>
-<a href="http://i.imgur.com/xsxithS.jpg"><img class="responsive-img" src="http://i.imgur.com/xsxithS.jpg" alt="JavaScript Programacion orientada a objetos" width="523" height="260" /></a>
-<h5>Programación orientada a objetos en JavaScript</h5>
+<a href="http://i.imgur.com/xsxithS.jpg"><img class="responsive-img" src="http://i.imgur.com/xsxithS.jpg" alt="JavaScript Programacion orientada a objetos" width="523" height="260" alt="jvacript programacion orientada a objetos" /></a>
+<h2>Programación orientada a objetos en JavaScript</h2>
 Crear una clase con JavaScript tiene esta pinta:
 
 ```javascript

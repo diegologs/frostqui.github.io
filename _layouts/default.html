@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="es">
 <head>
 
   
@@ -27,11 +27,15 @@
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+  
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="">
   <meta name="twitter:creator" content="@Diegolopgr">
 
    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+   <meta name="keywords" content="Desarrollo web, software, blog programacion, tutoriales programacion español, iniciarse en el desarrollo web">
 
   {% if page.title %}
   <meta name="twitter:title" content="{{ page.title }}">
@@ -73,20 +77,21 @@
 <body>
   <script src="{{site.baseurl}}/js/prism.js"></script>
   <script src="{{site.baseurl}}/js/index.js"></script>
-  <script src="{{site.baseurl}}/js/kappa.js"></script>
+
 
 
   <nav>
     <div class="nav-wrapper blue lighten-1 z-depth-1">
-    <a class="brand-logo" href="https://frostqui.github.io/"><img class="responsive-img logo" src="{{site.baseurl}}/images/logo.png"></a>
+    <a class="brand-logo" href="https://frostqui.github.io/"><img class="responsive-img logo" src="{{site.baseurl}}/images/logo.png" alt="Frostq"></a>
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
     <ul id="nav-mobile" class="animated slideInDown right hide-on-med-and-down social">
    
-      
+        <header>
     <li><a class="menu-item" href="{{site.baseurl}}/projects">PROYECTOS</a></li> 
      <li><a class="menu-item" href="https://www.behance.net/Frostq">PORTFOLIO</a></li>
      <li><a class="menu-item" href="{{site.baseurl}}/sobre-mi">SOBRE MI</a></li>
         <li><a class="menu-item" href="{{site.baseurl}}/contact">CONTACTO</a></li>
+        </header
     
     </ul>
 
@@ -102,6 +107,7 @@
  
 
   {{content}}  
+  <!-- Go to www.addthis.com/dashboard to customize your tools --> <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-58349997f7bd065f"></script> 
 
 </body>
 
