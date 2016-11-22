@@ -5,7 +5,7 @@ meta: Como funciona la programación orientada a objetos en JavaScript
 description: En este articulo veremos como podemos hacer orientacion a objetos usando JavaScript.
 category:
 title-page: Programacion orientada a objetos en javascript con ejemplos
-tags: JavaScript
+tags: [JavaScript]
 ---
 
 ***

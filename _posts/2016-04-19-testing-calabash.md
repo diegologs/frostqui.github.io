@@ -5,7 +5,7 @@ meta: Calabash para la el testeo automatico de aplicaciones Android usando Calab
 description: Tutorial muy básico en el que explico como instalar y configurar Calabash para realizar testeos automaticos de aplicaciones Android. 
 category:
 title-page: Calabash para realizar testing automatico
-tags: Android Testing Calabash 
+tags: [Android, Testing, Calabash] 
 ---
 
 ***

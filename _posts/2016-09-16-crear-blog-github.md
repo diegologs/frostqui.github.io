@@ -6,7 +6,7 @@ description: Bienvenido a mi blog, esta es la primera entrada de mi blog, donde 
 source: 
 category:
 title-page: Jekyll para programar un blog en GitHub en español
-tags: Jekyll GitHub 
+tags: [Jekyll, GitHub]
 ---
 
 ***

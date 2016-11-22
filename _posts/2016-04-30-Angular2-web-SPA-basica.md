@@ -6,7 +6,7 @@ description: Angular2 es un framework diseñado por Google, para la creación de
 source: 
 category:
 title-page: Angular2 y las webs SPA
-tags: Angular2, Web Develop, SPA
+tags: [Angular2, Web Develop, SPA]
 ---
 
 ***
