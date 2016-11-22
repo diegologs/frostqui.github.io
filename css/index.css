@@ -8,7 +8,7 @@ body{
 
 }
 .main-content{
-  padding: 20px;
+  margin-top: 30px;
   font-family: 'Droid Serif', serif;
    background-color: #F9F9F9;  
 }
@@ -187,4 +187,13 @@ h5{
   padding-top:2px;
 
 
+}
+
+.related{
+  margin-top:55px;
+}
+
+.related-posts{
+
+  padding-left:25px;
 }

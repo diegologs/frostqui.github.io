@@ -30,6 +30,9 @@
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="">
   <meta name="twitter:creator" content="@Diegolopgr">
+
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   
   {% if page.title %}
   <meta name="twitter:title" content="{{ page.title }}">
   <title>{{ page.title-page }} - Frostq</title>
@@ -75,8 +78,8 @@
 
   <nav>
     <div class="nav-wrapper blue lighten-1 z-depth-1">
-    <a class="left brand-logo" href="https://frostqui.github.io/"><img class="responsive-img logo" src="{{site.baseurl}}/images/logo.png"></a>
-      
+    <a class="brand-logo" href="https://frostqui.github.io/"><img class="responsive-img logo" src="{{site.baseurl}}/images/logo.png"></a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
     <ul id="nav-mobile" class="animated slideInDown right hide-on-med-and-down social">
    
       
@@ -86,6 +89,13 @@
         <li><a class="menu-item" href="{{site.baseurl}}/contact">CONTACTO</a></li>
     
     </ul>
+
+    <ul class="side-nav" id="mobile-demo">
+        <li><a class="menu-item" href="{{site.baseurl}}/projects">PROYECTOS</a></li> 
+     <li><a class="menu-item" href="https://www.behance.net/Frostq">PORTFOLIO</a></li>
+     <li><a class="menu-item" href="{{site.baseurl}}/sobre-mi">SOBRE MI</a></li>
+        <li><a class="menu-item" href="{{site.baseurl}}/contact">CONTACTO</a></li>
+      </ul>
 
     </div>
   </nav>
