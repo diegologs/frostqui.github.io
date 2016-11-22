@@ -3,6 +3,24 @@ body{
   font-family: 'Open Sans', sans-serif;
 }
 
+h1{
+  font-size: 2em;
+  font-weight: bold;
+
+}
+
+h2{
+ font-size: 1.8em;
+  font-weight: bold;
+
+}
+
+h3{
+   font-size: 1.2em;
+
+
+}
+
 .container{
   background-color: #F9F9F9;
 
@@ -16,8 +34,9 @@ body{
 .post-title{
   font-family: 'Open Sans', sans-serif;
   color: #1976d2;
-  font-size: 1.8em;
+
   font-weight: bold;
+  margin-bottom: -5px;
 
 }
 
@@ -191,6 +210,7 @@ h5{
 
 .related{
   margin-top:55px;
+  margin-bottom: 100px;
 }
 
 .related-posts{

@@ -11,18 +11,18 @@ tags: [Angular2, Web Develop, SPA]
 
 ***
 
-Saludos, buen señor. En esta ocasión traigo un tutorial sobre la creación de paginas web SPA con Angular2 y TypeScript.
+Saludos, buen señor. En esta ocasión traigo un tutorial sobre la creación de paginas web SPA con Angular2 y TypeScript. Si haces desarrollo web deberías conocer Angular 2 por lo que este tutorial no es para ti.
 Para empezar, hay que definir que es SPA. SPA son las siglas de 'Single-page application', se trata de una web compuesta de una solá página, esto permite dar una experiencia mas fluida al usuario, ya que tarda mucho menos en cargar. 
 Para comunicarse con el servidor utiliza API REST. Angular2 es el framework que facilita la creación de paginas webs SPA, utilizando para ello TypeScript, que es un lenguaje con una sintaxis muy parecida a Java.
-<h5>Instalación de Angular2</h5>
+<h2>Instalación de Angular2</h2>
 Lo primero que tenemos que descargar es NodeJs, lo puedes descargar de aqui: <a href="https://nodejs.org/en/">https://nodejs.org/en/</a>. Una vez instalado, abrimos su consola de comandos y ejecutamos los siguientes comandos:
 <ul>
- 	<li><em><strong>npm install -g angular-cli@0.0.24</strong></em></li>
- 	<li><strong>ng new main</strong></li>
- 	<li><em><strong>cd main</strong></em></li>
+ 	<li><em><b>npm install -g angular-cli@0.0.24</strong></em></li>
+ 	<li><b>ng new main</b></li>
+ 	<li><em><b>cd main</b></em></li>
 </ul>
 Hecho todo esto simplemente ejecutamos <em><strong>ng serve</strong></em> para que nos ejecute el servidor en local, en la direccion <strong>localhost:4200</strong>, abrimos esta direccion en nuestro navegador y comprobamos que funciona correctamente.
-<h4>Ejemplo de aplicación básica</h4>
+<h2>Ejemplo de aplicación básica</h2>
 Angular2 utiliza componentes. Un componente es un archivo con extension .ts, que contiene un template (nuestro archivo html con la estructura que se muestra en la web), y la lógica de esa página escrita en TypeScript. Veamos este ejemplo:
 
 ```typescript
@@ -51,7 +51,7 @@ Como vemos en el código, le pasamos el archivo html en <em>templateUrl</em> y d
 
 Simplemente añadimos la etiqueta <em>{{nombre}}</em>, para que coja el valor de la variable del componente. Con la etiqueta <em>(click)="setName('Frost')"</em> lo que hace es llamar a la función de nuestro componente con el valor que le pasamos. Ejecutando este ejemplo nos da como resultado:
 
-<img class="responsive-img" src="http://i.imgur.com/W4UhSod.png">
+<img class="responsive-img" src="http://i.imgur.com/W4UhSod.png" alt="ejemplo angular2">
 
 Cuando hacemos clic en el botón nos cambia el titulo con el string 'Frost'.
 
@@ -128,6 +128,6 @@ export class Consumer implements OnInit{
     }
 }
 ```
-<a href="http://frostq.ml/wp-content/uploads/2016/04/Screenshot_1.png"><img class="responsive-img" src="http://i0.wp.com/frostq.ml/wp-content/uploads/2016/04/Screenshot_1.png" alt="Angular2-ejemplo" /></a>
+<a href="http://frostq.ml/wp-content/uploads/2016/04/Screenshot_1.png"><img class="responsive-img" src="http://i0.wp.com/frostq.ml/wp-content/uploads/2016/04/Screenshot_1.png" alt="Angular2 ejemplo facils" /></a>
 
 Al introducir los datos y pulsar el boton 'Create Costumer', se añade una fila a la tabla que aparece abajo con los datos introducidos.

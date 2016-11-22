@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Testing automático de aplicaciones Android 
-meta: Calabash para la el testeo automatico de aplicaciones Android usando Calabash 
+meta: Calabash para la el testeo automatico de aplicaciones Android usando Calabash en español
 description: Tutorial muy básico en el que explico como instalar y configurar Calabash para realizar testeos automaticos de aplicaciones Android. 
 category:
 title-page: Calabash para realizar testing automatico
@@ -10,11 +10,11 @@ tags: [Android, Testing, Calabash]
 
 ***
 
-Calabash es un framework open source que permite el testing automatizado de aplicaciones moviles desarrollado por Xamarin; para ello utiliza Cucumber, software escrito en Ruby pensado para el testing de software, aunque es independiente del lenguaje utilizado.
+<b>Calabash</b> es un framework open source que permite el testing automatizado de aplicaciones moviles desarrollado por Xamarin; para ello utiliza <b>Cucumber</b>, software escrito en Ruby pensado para el testing de software, aunque es independiente del lenguaje utilizado. También podemos utilizarlo para el desarrollo web usando Selenium, aunque en este articulo veremos como usarlo para las aplicaciones Android.
 
 Calabash ejecuta una serie de pruebas funcionales automatizadas contra la interfaz de usuario de una aplicación. Está pensado para ser usado en un modelo de Testing BDD.
 
-<h5>Instalación y funcionamiento</h5>
+<h2>Instalación y funcionamiento</h2>
 
 Para empezar a instalarlo, tienes que tener instalado Ruby, si no lo tienes lo puedes instalar desde aquí: <a href="http://RubyInstaller.org">RubyInstaller.org</a>
 
@@ -22,11 +22,11 @@ También, tienes que tener instalado el JDK (Java Development Kit), que lo puede
 
 Una vez instalado todo esto tienes que ejecutar el siguiente comando para instalarlo:
 <ul>
- 	<li><em><strong><code>gem install calabash-android</code></strong></em></li>
+ 	<li><em><b><code>gem install calabash-android</code></b></em></li>
 </ul>
 Si ya has instalado calabash, puedes generar un esqueleto Cucumber con el siguiente comando:
 <ul>
- 	<li><em><strong><code>calabash-android gen</code></strong></em></li>
+ 	<li><em><b><code>calabash-android gen</code></b></em></li>
 </ul>
 Automáticamente generará las carpetas con los archivos .feature y .rb
 
@@ -46,8 +46,8 @@ Puedes ejecutar el testing en la maquina virtual de Android que viene con el SDK
 
 Por último ejecutamos el comando para que empiece automáticamente a testear la aplicación:
 <ul>
- 	<li><em><strong><code>calabash-android run &lt;apk&amp;gt</code></strong></em></li>
+ 	<li><em><b><code>calabash-android run &lt;apk&amp;gt</code></b></em></li>
 </ul>
 Y automáticamente abrirá la aplicación en la maquina virtual o en nuestro dispositivo si lo tenemos conectado.
 
-<img class="responsive-img" src="http://i1.wp.com/frostq.ml/wp-content/uploads/2016/04/Animation.gif">
+<img class="responsive-img" src="http://i1.wp.com/frostq.ml/wp-content/uploads/2016/04/Animation.gif" alt="Testing de aplicaciones Android usando Calabash">
