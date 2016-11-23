@@ -17,7 +17,7 @@ Para comunicarse con el servidor utiliza API REST. Angular2 es el framework que 
 <h2>Instalación de Angular2</h2>
 Lo primero que tenemos que descargar es NodeJs, lo puedes descargar de aqui: <a href="https://nodejs.org/en/">https://nodejs.org/en/</a>. Una vez instalado, abrimos su consola de comandos y ejecutamos los siguientes comandos:
 <ul>
- 	<li><em><b>npm install -g angular-cli@0.0.24</strong></em></li>
+ 	<li><em><b>npm install -g angular-cli@0.0.24</b></em></li>
  	<li><b>ng new main</b></li>
  	<li><em><b>cd main</b></em></li>
 </ul>
