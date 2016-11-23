@@ -2,7 +2,7 @@
 layout: post
 title: Creando un blog en GitHub pages con Jekyll 
 meta: Creacion de un blog usando Jekyll, un generador de paginas estaticas 
-description: Bienvenido a mi blog, esta es la primera entrada de mi blog, donde explico como esta hecha esta página web.
+description: En este artículo veremos como crear un blog en github pages utilizando Jekyll para generar páginas estaticas. Utilizando Github como hosting hacemos mucho mas sencillo la tarea de actualizar el código de nuestra web, si a eso le añadimos Jekyll, podemos crear un blog de forma muy sencilla.
 source: 
 category:
 title-page: Jekyll para programar un blog en GitHub en español
