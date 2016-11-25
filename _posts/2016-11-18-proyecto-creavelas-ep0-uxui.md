@@ -15,11 +15,11 @@ Empiezo nuevo proyecto, esta vez , como excusa para indagar y aprender sobre el 
 
 <h2>La idea</h2>
 
-Para empezar describiré el proyecto de desarrollo we que quiero hacer. Creavelas, como su propio nombre indica, es un espacio donde la gente crea y comparte velas virtuales. Al registrarse, puede encender una vela, en la que tiene que seleccionar un tipo de vela (vela de la suerte, vela del amor, vela del dinero, etc), escribir la leyenda de la vela, y, opcionalmente, elegir hacia personas esta destinada la vela. Al crear la vela, esta se queda encendida durante un día, tras esto automáticamente se elimina. Mediante un botón en la vela, otros usuarios pueden aumentar el tiempo de vida de las velas. Es decir quiero que la web tenga un enfoque de red social.
+Para empezar describiré el proyecto de desarrollo web que quiero hacer. Creavelas, como su propio nombre indica, es un espacio donde la gente crea y comparte velas virtuales. Al registrarse, puede encender una vela, en la que tiene que seleccionar un tipo de vela (vela de la suerte, vela del amor, vela del dinero, etc), escribir la leyenda de la vela, y, opcionalmente, elegir hacia personas esta destinada la vela. Al crear la vela, esta se queda encendida durante un día, tras esto automáticamente se elimina. Mediante un botón en la vela, otros usuarios pueden aumentar el tiempo de vida de las velas. Es decir quiero que la web tenga un enfoque de red social.
 
 Bien, una vez definido lo que quiero hacer es hora de pensar los primeros diseños y logotipos para tener una base hacia la que empezar a desarrollar. Lo primero que hice fue diseñar el logotipo.
 
-Quiero que mi página sea muy sencilla por lo tanto el logotipo tiene que ir en consonancia. Un logotipo tiene que ser legible independientemente del tamaño que elijamos por eso decidí hacerlo con formas muy sencillas de forma que se apreciara perfectamente que se trata de una vela. Mas que un logotipo, he diseñado un isotipo ya que únicamente tiene un icono. Decidí hacerlo redondo porque el circulo representa la propia luz que emite la vela. Quiero que la web tenga colores pastel, colores suaves que transmitan tranquilidad.
+Quiero que mi página sea muy sencilla por lo tanto el logotipo tiene que ir en consonancia. Un logotipo tiene que ser legible independientemente del tamaño que elijamos por eso decidí hacerlo con formas muy sencillas de forma que se apreciara perfectamente que se trata de una vela. Mas que un logotipo, he diseñado un isotipo ya que únicamente tiene un icono. Decidí hacerlo redondo porque el círculo representa la propia luz que emite la vela. Quiero que la web tenga colores pastel, colores suaves que transmitan tranquilidad.
 
 <img src="http://i.imgur.com/8kS9GFs.png" class="responsive-img"> 
 
