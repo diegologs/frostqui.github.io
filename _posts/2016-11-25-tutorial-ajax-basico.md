@@ -6,7 +6,7 @@ description: En este post explico como hacer una web que muestra citas celebres.
 source: 
 category:
 title-page: Tutorial AJAX - Citas aleatorias
-tags: [Proyectos, UX, UI, Creavelas]
+tags: [AJAX, JavaScript, HTML, CSS]
 ---
 
 ***
