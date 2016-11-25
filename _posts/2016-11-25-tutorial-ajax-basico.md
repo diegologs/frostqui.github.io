@@ -74,6 +74,7 @@ En cuanto al código HTML del quote generator, lo que hago simplemente es crear 
 </div>
 ```
 Respecto al css lo único que hago es añadir unos estilos muy simples para dejarlo mas bonito, esta parte es a gusto de cada uno.
+
 ```css
 body {
     background-color: #dae0e3;
