@@ -113,7 +113,7 @@ h3{
   margin-right: auto;
   left: 0;
    top: 64px;
-   z-index: -1;
+   z-index: 1;
 
 }
 
@@ -124,7 +124,7 @@ h3{
   height: 10px;
   background-image: url(/images/candy.png); 
   background-repeat:repeat-x; 
-
+  z-index: 2;
 
 }
 
