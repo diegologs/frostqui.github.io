@@ -25,7 +25,7 @@ $(document).ready(function(){
    {
      src += "logo_winter.png";
      $('.container').prepend('<img id="lights" src="/images/lights2.png" />');
-     $('.container').prepend('<div id="candy"></div>');
+     $('.container').append('<div id="candy"></div>');
     }
 
 
