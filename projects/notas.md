@@ -4,6 +4,7 @@ title: Página web para la creación de notas hecho con VueJS
 meta: Pagina web para la creacion de notas con VueJS
 type: project
 image: notas.jpg
+title-page: VueJS, pagina web de notas
 description: Con esta web el usuario será capaz de crear notas, las cuales se guardan y se muestran de forma reactiva con la ayuda de VueJS
 tenol: HTML, CSS, VueJS, Firebase
 ---

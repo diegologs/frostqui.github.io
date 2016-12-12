@@ -37,11 +37,12 @@
 
    <meta name="keywords" content="Desarrollo web, software, blog programacion, tutoriales programacion español, iniciarse en el desarrollo web">
 
-  {% if page.title %}
+  {% if page.title-page %}
   <meta name="twitter:title" content="{{ page.title }}">
   <title>{{ page.title-page }}</title>
     {% else %}
   <meta name="twitter:title" content="{{ site.title }}">
+    
     <title>{{ site.title }}</title>
   
   {% endif %}
