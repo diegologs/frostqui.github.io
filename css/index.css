@@ -1,6 +1,7 @@
 body{
   background-color: #F9F9F9; 
   font-family: 'Open Sans', sans-serif;
+  height: 90%;
 }
 
 h1{
@@ -182,9 +183,12 @@ ul#menu li {
   padding-top: 15px;
 }
 
-
 .project{
   padding: 30px;
+}
+.project-text{
+  padding: 20px;
+  padding-bottom: 60px;
 }
 
 h5{
