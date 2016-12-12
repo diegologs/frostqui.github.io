@@ -28,6 +28,34 @@ h3{
 
 }
 
+.label-newsletter{
+	color:white;
+}
+
+.email{
+	z-index: 1;
+	padding-left: 10px;
+
+}
+
+.parallax{
+
+/* The image used */
+
+z-index: 2;
+color:white;
+position:relative; 
+background: linear-gradient( rgba(0,130, 230, 0.7), rgba(0, 130, 230, 0.7) ), url('http://vignette1.wikia.nocookie.net/prydain/images/7/7f/Mountains.jpg/revision/latest?cb=20130328022425');
+    background-size: cover;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
 .container{
   background-color: #F9F9F9;
 
