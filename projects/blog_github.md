@@ -5,6 +5,7 @@ meta: Proyecto de blog en github
 type: project
 image: blog.jpg
 description: Blog personal alojado en Github.
+title-page: Jekyll y Github Pages 
 tenol: HTML, CSS, JavaScript, Jekyll
 ---
 
