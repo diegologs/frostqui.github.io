@@ -2,7 +2,8 @@
 layout: post
 title: Tutorial AJAX - Creando una página que muestre citas aleatorias.
 meta: Ajax tutorial en español sencillo
-description: En este post explico como hacer una web que muestra citas celebres. Usando AJAX podemos hacer actualizaciónes en la página sin tener que recargarla.
+description: Ajax tutorial en español sencillo. Página de citas celebres.
+summary: Con este sencillo ejemplo puedes entender cómo funcionan las peticiones AJAX, las cuáles son muy útiles cuando queremos llamar a una API y mostrar el resultado sin tener que recargar la página completamente.
 source: 
 category:
 title-page: Tutorial AJAX - Citas aleatorias

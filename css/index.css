@@ -5,26 +5,26 @@ body{
 }
 
 h1{
-  font-size: 2em;
+  font-size: 3.5em;
   font-weight: bold;
 
 }
 
 h2{
- font-size: 1.8em;
+ font-size: 2em;
   font-weight: bold;
 
 }
 
 h3{
-   font-size: 1.2em;
+   font-size: 2em;
 
 
 }
 
 
 h3{
-   font-size: 1.10em;
+   font-size: 1.6em;
 
 
 }
@@ -46,7 +46,7 @@ h3{
 z-index: 2;
 color:white;
 position:relative; 
-background: linear-gradient( rgba(0,130, 230, 0.7), rgba(0, 130, 230, 0.7) ), url('http://vignette1.wikia.nocookie.net/prydain/images/7/7f/Mountains.jpg/revision/latest?cb=20130328022425');
+background: linear-gradient( rgba(0,130, 230, 0.7), rgba(0, 130, 230, 0.7) ), url('http://miriadna.com/desctopwalls/images/max/Lake-in-the-mountains.jpg');
     background-size: cover;
 
     /* Create the parallax scrolling effect */
@@ -55,6 +55,45 @@ background: linear-gradient( rgba(0,130, 230, 0.7), rgba(0, 130, 230, 0.7) ), ur
     background-repeat: no-repeat;
     background-size: cover;
 
+    
+
+}
+
+.text_header{
+  padding: 120px;
+}
+
+.parallax2{
+
+/* The image used */
+
+z-index: -1;
+color:white;
+position:relative; 
+
+background: linear-gradient( rgba(0,0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('http://vignette1.wikia.nocookie.net/prydain/images/7/7f/Mountains.jpg/revision/latest?cb=20130328022425');
+  background-size: cover;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+   
+
+}
+
+.contenidos{
+  color: #555;
+  background-color: #ddd;
+  width: 100%;
+  padding: 30px;
+  
+}
+
+.contenidos h3{
+  font-weight: bold;
 }
 
 .container{
@@ -196,6 +235,10 @@ h5{
 
 }
 
+#about_me{
+  padding: 30px;
+
+}
 
 #contact_button{
   margin-top: 30px;

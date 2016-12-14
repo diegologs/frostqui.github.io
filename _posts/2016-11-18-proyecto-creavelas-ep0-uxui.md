@@ -3,6 +3,7 @@ layout: post
 title: Proyecto Creavelas - Episodio 0 UX & UI
 meta: Creavelas, diseñando UX y UI. 
 description: Primer episodio donde explico que decisiones tomé en el diseño UX & UI de Creavelas, una red social donde la gente puede encender velas.
+summary: En esta serie, explicaré que decisiones he tomado para el desarrollo y el diseño de Creavelas. En este primer episodio toca la parte de UX & UI, una parte esencial en el diseño web. Esta parte nos asegura poder ofrecer una experciencia agradable a todos los tipos de usuarios de nuestra página web.
 source: 
 category:
 title-page: Creavelas tutorial de UX y UI
@@ -35,12 +36,9 @@ A la derecha he puesto un sidebar, o menú lateral para dirigirse a nuestro perf
 
 En cuanto al diseño de cada vela, una imagen a la derecha, representando el tipo de vela que es, ya que cada vela tiene asociada una imagen, y a la derecha el texto de la vela con el autor. Todavía falta por incorporar un boton para aumentar la duraccion de la vela o el tiempo que queda hasta que la vela se apague, como digo no es el diseño final ni mucho menos, simplemente lo voy a utilizar de referencia.
 
-<img src="http://frostq.ml/wp-content/uploads/2016/07/1.jpg" class="responsive-img" alt="ux ui desarrollo web"> 
-
 
 Para la página personal para cada usuario, he decidido meter una imagen de cabecera la cual se puede personalizar para cada usuario. La página, por ahora, simplemente muestra las velas de cada usuario.
 
-<img src="http://frostq.ml/wp-content/uploads/2016/07/2.jpg" class="responsive-img" alt="ux ui desarrollo web"> 
 
 Por último he diseñado la página de registro, simplemente un formulario para rellenar con los datos y una imagen de fondo.
 
@@ -49,3 +47,4 @@ Por último he diseñado la página de registro, simplemente un formulario para 
 Quedan por diseñar mas páginas pero con lo que tengo me sirve para empezar.
 
 Esto es todo por este episodio espero tener las ganas y la inspiración suficientes para seguir adelante con el proyecto. Para cualquier duda o sugerencia puedes contactar conmigo desde la sección contacto. Un saludo.
+
