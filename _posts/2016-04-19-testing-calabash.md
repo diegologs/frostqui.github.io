@@ -2,7 +2,8 @@
 layout: post
 title: Testing automático de aplicaciones Android 
 meta: Calabash para la el testeo automatico de aplicaciones Android usando Calabash en español
-description: Tutorial muy básico en el que explico como instalar y configurar Calabash para realizar testeos automaticos de aplicaciones Android. 
+description: Calabash para la el testeo automatico de aplicaciones Android usando Calabash en español
+summary: Antiguamente las aplicaciones y los programas se testeaban a mano, es decir teniamos que comprobar por nuestra cuenta que todo funcionaba correctamente. Hoy en dia podemos dejar que las aplicaciones se prueben automaticamente. Para este tutorial vamos a usar Cucumber para escribir que pruebas queremos que nuestra aplicación compruebe y Calabash para ejecutar dichas pruebas.
 category:
 title-page: Calabash para realizar testing automatico
 tags: [Android, Testing, Calabash] 

@@ -2,7 +2,8 @@
 layout: post
 title: Angular2 para crear una web SPA básica
 meta: Tutorial básico sobre la creación de una página SPA usando Angular2. 
-description: Angular2 nos permite desarrollar una web SPA utilizando TypeScript, un framework para el desarrollo web que utiliza una sintaxis muy parecida a Java.
+description: Tutorial básico sobre la creación de una página SPA usando Angular2. 
+summary: Angular2 nos ofrece la posibilidad de de crear páginas webs SPA, es decir páginas compuestas de una sola página, esto tiene la ventaja de ser rápida, para ofrecer la mejor experiencia a los usuarios de nuestra página web. En este artículo iniciaremos un acercamiento a Angular2 para ver que cosas nos puede ofrecer. 
 source: 
 category:
 title-page: Angular2 y las webs SPA

@@ -1,8 +1,9 @@
 ---
 layout: post
 title: Como hacer orientacion a objetos con JavaScript 
-meta: En este tutorial explico como funciona la orientacion a objetos y como podemos aplicarla al desarrollo web usando JavaScript
+meta: En este articulo veremos como podemos hacer orientacion a objetos usando JavaScript.
 description: En este articulo veremos como podemos hacer orientacion a objetos usando JavaScript.
+summary: La programación orientada a objetos es vital para el desarrollo web y de software, por lo que es esencial que sepamos como funciona. La programación orientada a objetos tamboén se puede aplicar a JavaScprit.
 category:
 title-page: Programacion orientada a objetos en javascript con ejemplos
 tags: [JavaScript]
