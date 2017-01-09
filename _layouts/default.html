@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 
-<html>
-
+<html lang="es">
 <head>
-  <title>Frostq Blog</title>
+
   
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
@@ -14,6 +13,8 @@
 
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+  
+  <link href="https://fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet">
 
   <link href="{{site.baseurl}}/css/prism.css" rel="stylesheet">
   <link rel="stylesheet" href="{{site.baseurl}}/css/index.css">
@@ -25,14 +26,27 @@
 
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+  
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="">
   <meta name="twitter:creator" content="@Diegolopgr">
-  {% if page.title %}
+
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+   <meta name="keywords" content="Desarrollo web, software, blog programacion, tutoriales programacion español, iniciarse en el desarrollo web">
+
+  {% if page.title-page %}
   <meta name="twitter:title" content="{{ page.title }}">
-  {% else %}
+  <title>{{ page.title-page }}</title>
+    {% else %}
   <meta name="twitter:title" content="{{ site.title }}">
+    
+    <title>{{ site.title }}</title>
+  
   {% endif %}
+    
   {% if page.url %}
   <meta name="twitter:url" content="{{ site.url }}{{ page.url }}">
   {% endif %}
@@ -42,10 +56,23 @@
   <meta name="twitter:description" content="{{ site.description }}">
   {% endif %}
   {% if page.thumbnail %}
-  <meta name="twitter:image:src" content="{{ site.url }}/media/images/{{ page.thumbnail }}">
+  <meta name="twitter:image:src" content="{{ site.url }}/images/{{ page.thumbnail }}">
   {% else %}
   <meta name="twitter:image:src" content="http://i.imgur.com/7DThPa7.jpg">
   {% endif %}
+
+  {% seo %}
+
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-87066592-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
 
 </head>
 
@@ -53,48 +80,63 @@
 <body>
   <script src="{{site.baseurl}}/js/prism.js"></script>
   <script src="{{site.baseurl}}/js/index.js"></script>
-  <script src="{{site.baseurl}}/js/kappa.js"></script>
+
 
 
   <nav>
     <div class="nav-wrapper blue lighten-1 z-depth-1">
-    <a class="left brand-logo" href="https://frostqui.github.io/"><img class="responsive-img logo" src="{{site.baseurl}}/images/logo.png"></a>
-      
+    <a class="brand-logo" href="https://frostqui.github.io/"><img class="responsive-img logo" src="{{site.baseurl}}/images/logo.png" alt="Frostq"></a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
     <ul id="nav-mobile" class="animated slideInDown right hide-on-med-and-down social">
-     <li><a href="https://github.com/Frostqui"><i class="fa fa-github-alt "></i></a></li>
-     <li><a href="https://es.linkedin.com/in/diego-lopez-781057114"><i class="fa fa-linkedin"></i></a></li>
-     <li><a href="http://twitter.com/diegolopgr"><i class="fa fa-twitter"></i></a></li>
-     <li><a href="mailto:diego.lopezgarcia@hotmail.com"><i class="fa fa-envelope"></i> </a></li>
+   
+    <li><a class="menu-item" href="{{site.baseurl}}/projects">PROYECTOS</a></li> 
+     <li><a class="menu-item" href="https://www.behance.net/Frostq">PORTFOLIO</a></li>
+     <li><a class="menu-item" href="{{site.baseurl}}/sobre-mi">SOBRE MI</a></li>
+        <li><a class="menu-item" href="{{site.baseurl}}/contact">CONTACTO</a></li>
+    
     </ul>
+
+    <ul class="side-nav" id="mobile-demo">
+        <li><a class="menu-item" href="{{site.baseurl}}/projects">PROYECTOS</a></li> 
+     <li><a class="menu-item" href="https://www.behance.net/Frostq">PORTFOLIO</a></li>
+     <li><a class="menu-item" href="{{site.baseurl}}/sobre-mi">SOBRE MI</a></li>
+        <li><a class="menu-item" href="{{site.baseurl}}/contact">CONTACTO</a></li>
+      </ul>
 
     </div>
   </nav>
-  <div class="menu center-align">
-  
-    <ul id="menu">
-        <li><a class="menu-item" href="{{site.baseurl}}/projects">Mis proyectos</a></li>
-        <li><a class="menu-item" href="https://www.behance.net/Frostq">Portfolio</a></li>
-        <li><a class="menu-item" href="{{site.baseurl}}/sobre-mi">Sobre mi</a></li>
-        <li><a class="menu-item" href="{{site.baseurl}}/contact">Contacto</a></li>
-    </ul>
-  
-  </div>   
-
+ 
 
   {{content}}  
+  <!-- Go to www.addthis.com/dashboard to customize your tools --> <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-58349997f7bd065f"></script> 
+
+  <!-- Begin MailChimp Signup Form -->
+  <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+  #mc_embed_signup{ clear:left; color:white; padding:30px; font:14px Helvetica,Arial,sans-serif; width:100%;}
+    /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+           We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+</style>
+<div id="mc_embed_signup" class="parallax">
+  <form action="//github.us14.list-manage.com/subscribe/post?u=cd16a671a63cd217caf6b2f3f&amp;id=bb3cc69837" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+        <div id="mc_embed_signup_scroll">
+            <label for="mce-EMAIL" class="label-newsletter">Suscribete a mi newsletter para que no te pierdas ningun artículo:</label>
+            <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Tu email" required>
+            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_cd16a671a63cd217caf6b2f3f_bb3cc69837" tabindex="-1" value=""></div>
+            <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+        </div>
+  </form>
+</div>
+
+<!--End mc_embed_signup-->
 
 </body>
 
 
 
-<!--
 
-<div class="footer">
-  <div class="footer-text center kappa">Created by Frostq (Diego López) / 2016 Kappa</div>
-  </div>
 
---!>
 
-<div class="footer center">Copyright © 2016 Frostq - Diego López García.</div>
 
 </html>

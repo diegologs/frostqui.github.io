@@ -1,21 +1,121 @@
 body{
-  background-image: url(/images/space.jpg);
-  
-}
+  background-color: #F9F9F9; 
+  font-family: 'Open Sans', sans-serif;
+  }
 
-.main-content{
-  padding: 20px;
-}
-
-.post-title{
-
-  color: #1976d2;
-  font-size: 1.7em;
+h1{
+  font-size: 3.5em;
   font-weight: bold;
 
 }
 
+h2{
+ font-size: 2em;
+  font-weight: bold;
+
+}
+
+h3{
+   font-size: 2em;
+
+
+}
+
+
+h3{
+   font-size: 1.6em;
+
+
+}
+
+.label-newsletter{
+	color:white;
+}
+
+.email{
+	z-index: 1;
+	padding-left: 10px;
+
+}
+
+.parallax{
+
+/* The image used */
+
+z-index: 2;
+color:white;
+position:relative; 
+background: linear-gradient( rgba(0,130, 230, 0.7), rgba(0, 130, 230, 0.7) ), url('http://miriadna.com/desctopwalls/images/max/Lake-in-the-mountains.jpg');
+    background-size: cover;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    
+
+}
+
+.text_header{
+  padding: 120px;
+}
+
+.parallax2{
+
+/* The image used */
+
+z-index: -1;
+color:white;
+position:relative; 
+
+background: linear-gradient( rgba(0,0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('http://vignette1.wikia.nocookie.net/prydain/images/7/7f/Mountains.jpg/revision/latest?cb=20130328022425');
+  background-size: cover;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+   
+
+}
+
+.contenidos{
+  color: #555;
+  background-color: #ddd;
+  width: 100%;
+  padding: 30px;
+  
+}
+
+.contenidos h3{
+  font-weight: bold;
+}
+
+.container{
+  background-color: #F9F9F9;
+
+}
+.main-content{
+  margin-top: 30px;
+  font-family: 'Droid Serif', serif;
+   background-color: #F9F9F9;  
+}
+
+.post-title{
+  font-family: 'Open Sans', sans-serif;
+  color: #1976d2;
+
+  font-weight: bold;
+  margin-bottom: -5px;
+
+}
+
 .post-description{
+  font-family: 'Open Sans', sans-serif;
 }
 
 .footer {
@@ -54,11 +154,13 @@ body{
 
 .social {
 	overflow: auto;
+       
 }
 
 .social li {
 	list-style-type: none;
 	float: left;
+
 }
 
 .date{
@@ -78,7 +180,7 @@ body{
   margin-right: auto;
   left: 0;
    top: 64px;
-   z-index: -1;
+   z-index: 1;
 
 }
 
@@ -89,7 +191,7 @@ body{
   height: 10px;
   background-image: url(/images/candy.png); 
   background-repeat:repeat-x; 
-
+  z-index: 2;
 
 }
 
@@ -100,29 +202,31 @@ ul#menu li {
     padding-left:2%;
     padding-right: 2%;
     font-weight: bold;
-    font-size: 0.9em;
+    font-size: 1.3em;
 
   }
 
   
-.social-link {
-  margin-left: 100px;
-  
+.menu-item {
+  font-size: 1.2em;
+  font-weight: bold;
 }
 
 
 
 .post{
-  margin-bottom: 35px;
+  margin-bottom: 40px;
   padding-right: 30px;
   padding-left: 30px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 15px;
 }
-
 
 .project{
   padding: 30px;
+}
+.project-text{
+  padding: 20px;
+  padding-bottom: 60px;
 }
 
 h5{
@@ -130,6 +234,10 @@ h5{
 
 }
 
+#about_me{
+  padding: 30px;
+
+}
 
 #contact_button{
   margin-top: 30px;
@@ -157,4 +265,36 @@ h5{
 #post-image{
   max-width: 78%;
 
+}
+
+.tags{
+  
+  margin-left: 30px;
+  display: inline;
+
+
+
+}
+
+.tag{
+  padding-left: 15px;
+
+}
+
+.read_more{
+  display:block;
+  padding:10px;
+  padding-top:2px;
+
+
+}
+
+.related{
+  margin-top:55px;
+  margin-bottom: 100px;
+}
+
+.related-posts{
+
+  padding-left:25px;
 }

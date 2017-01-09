@@ -2,20 +2,81 @@
 layout: default
 ---
 
-<div class="container posts z-depth-2">
+
+<div class="parallax2">
+  <div class="text_header center">
+    <h1>Bienvenido a Frostq<h1>
+      
+      <h2>Desarrollo web y de software</h2>
+      <hr width="50%">
+    </div>
+   
+
+  
+  </div>
+
+  <div class="center contenidos">
+      <h2>¿Sobre qué temas escribo aquí?</h2>
+        <div class="row">
+          <div class="col s12 m4"><h3>Desarrollo web</h3>
+          <hr width="50%">
+          <img width="90px" class="icon" src="{{site.baseurl}}/images/icon1.png"></img>
+          <div>¿Quieres una web y no sabes como hacerla?
+            Con estos tuturiales podrás aprender todo tipo de lenguajes y tecnologías para el desarrollo de páginas webs.
+          </div>
+          
+          </div>
+          <div class="col s12 m4"><h3>Diseño web</h3>
+           <hr width="50%">
+              <img width="90px" class="icon" src="{{site.baseurl}}/images/icon2.png"></img>
+          <div>
+          Hoy es dia es muy importante tener una web agradable a la vista, además de poder ofrecer una buena experiencia al usuario.
+
+          </div>
+          </div>
+          <div class="col s12 m4"><h3>Programación de software</h3>
+           <hr width="50%">
+              <img width="90px" class="icon" src="{{site.baseurl}}/images/icon3.png"></img>
+          <div>
+            No todo es desarrollo web, es esencial saber otros lenguajes orientados a otro tipo de sistemas.
+          </div>
+          </div>
+        
+          
+        </div>
+</div>
+
+
+
+<h2 class="center">Echa un vistazo a mis posts</h2>
+<hr width="900px">
+<div class="container posts">
 
 <ul>
   {% for post in site.posts %}
 
-  <li class="post white">
-  <a class="post-title kappa" href="{{site.baseurl}}{{post.url}}">{{post.title}}   {{post.emote}}</a>
-  <div class="date">{{post.date | date: '%B %d, %Y'}}  </div>
-  <p class="post-description">
-  {{ post.description }}
-</p>
-<a class="read_more" href="{{site.baseurl}}{{post.url}}">Leer más</a>
-  </li>
+  <li class="post">
+  <a href="{{site.baseurl}}{{post.url}}" ><h2 class="post-title" >{{post.title}}</h2></a>
+  </br>
+  <a class="date">{{post.date | date: '%B %d, %Y'}}  </a>
 
+{% for tag in post.tags %}
+            <a class="tag" href="/tag#{{ tag | slugify }}">{{ tag }}</a>
+      {% endfor %}
+
+  
+  <p class="post-description">
+  {{ post.summary }}
+</p>
+
+
+ <a class="read_more" href="{{site.baseurl}}{{post.url}}"><i class="fa fa-chevron-right" aria-hidden="true"></i >  Leer más</a>
+
+
+
+</li>
+
+<hr>
   {% endfor %} 
 
 </ul>

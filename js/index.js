@@ -1,6 +1,7 @@
 $(document).ready(function(){
       $('.parallax').parallax();
-      $('.kappa').kappa();
+       $(".button-collapse").sideNav();
+
    
 
 
@@ -23,8 +24,8 @@ $(document).ready(function(){
     else if (total ==12 || total == 1)
    {
      src += "logo_winter.png";
-     $('.menu').prepend('<img id="lights" src="/images/lights2.png" />');
-     $('.menu').prepend('<div id="candy"></div>');
+     $('.container').prepend('<img id="lights" src="/images/lights2.png" />');
+     $('nav').append('<div id="candy"></div>');
     }
 
 

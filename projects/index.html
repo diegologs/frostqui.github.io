@@ -3,7 +3,7 @@ layout: default
 title: Proyectos
 meta: Proyectos de Frostq
 ---
-<div class="container z-depth-2">
+<div class="container">
 <ul>
  {% for project in site.pages %}
     {% if project.type == 'project' %}
@@ -15,12 +15,11 @@ meta: Proyectos de Frostq
         <img class="responsive-img" src="{{site.baseurl}}/images/projects/{{project.image}}">
       </div>
       <div class="col s12 m8">
-          <h4>{{project.title}}</h4>
+          <a class="post-title" href="{{project.url}}"><h2>{{project.title}}</h2></a>
           <p>{{project.description}}</p>
-          <div class="right-align">{{project.tenol}}</div>
+          <div class="right-align chip">{{project.tenol}}</div>
         </div>
       </div>
-  </div>
 </a>
 
 

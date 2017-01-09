@@ -1,10 +1,12 @@
 ---
 layout: post
 title: Widget del tiempo usando RxJS 
-meta: 
-description: RxJs es una librería para JavaScript para la creación de programas asíncronos, en este artículo veremos como hacer una página web muy sencilla para buscar la temperatura del lugar que nosotros queramos.
+meta: Entendiendo como funciona RxJS para la creacion de un widget del tiempo de forma asincrona 
+description: Entendiendo como funciona RxJS para la creacion de un widget del tiempo de forma asincrona 
+summary: Si siempre has querido hacer un widget asíncrono, con este pequeño tutorial, aprenderemos a realizar un widget que podremos colocar en cualquier página web en el que podremos comprobar la temperatura que hace en determinada zona, y todo sin tener que recargar la página.
 category:
-emote: FreakinStinkin
+title-page: RxJS para programar un widget del tiempo
+tags: [RxJS, JavaScript, HTML, CSS]
 ---
 
 ***
@@ -16,7 +18,10 @@ La programación reactiva es un paradigma de la programación que se basa en los
 La programación reactiva aprovecha las ventajas del patrón <strong>Iterator</strong> y las ventajas del patrón <strong>Observer</strong>. Es posible escribir sentencias del estilo filtrar, ordenar, seleccionar, etc; sobre eventos.
 La diferencia es que la consulta es evaluada conforme llegan los datos. Uno puede evaluar datos en tiempo real.
 
-Bien, para la creación de nuestro widget vamos a utilizar la API de OpenWheaterMap, para ello lo primero que tenemos que hacer es registrarnos en su página oficial:  
+Bien, vamos a aprovechar las ventajas de la programación reactiva para el desarrollo web.
+
+<h2>Creación del widget</h2>
+Para la creación de nuestro widget vamos a utilizar la API de OpenWheaterMap, para ello lo primero que tenemos que hacer es registrarnos en su página oficial:  
 
 <a href="http://openweathermap.org/current">http://openweathermap.org/current</a>
 
@@ -65,6 +70,6 @@ responseStream.subscribe(temp =&gt; {
             weatherText.innerHTML = `${temp} °C`;
   });
   ```
-<img class="responsive-img" src="http://i2.wp.com/frostq.ml/wp-content/uploads/2016/05/Screenshot_1.png">
+<img class="responsive-img" src="http://i2.wp.com/frostq.ml/wp-content/uploads/2016/05/Screenshot_1.png" alt="ejemplo de rxjs">
 
 Para terminar puedes consultar la <a href="http://codepen.io/Frostq/full/EgEwrN/"><em><strong>DEMO</strong></em></a> del resultado final.
