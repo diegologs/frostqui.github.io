@@ -298,3 +298,26 @@ h5{
 
   padding-left:25px;
 }
+
+@media only screen and (max-width: 500px) {
+   h1{
+      font-size: 2.5em;
+   }
+   
+    h2 {
+       font-size: 1.5em;
+    }
+
+    hr {
+      width: 90%;
+    }
+}
+
+footer{
+  position: relative;
+  text-align: center;
+  display: block;
+  margin: 0px auto;
+  padding: 30px;
+}
+
