@@ -21,7 +21,7 @@ $(document).ready(function(){
 
 
     // Navidad
-    else if (total ==12 || total == 0)
+    else if (total ==12 || total == 1)
    {
      src += "logo_winter.png";
      $('.container').prepend('<img id="lights" src="/images/lights2.png" />');

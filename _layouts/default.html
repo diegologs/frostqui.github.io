@@ -78,7 +78,8 @@
 
 
 <body>
-
+  <script src="{{site.baseurl}}/js/prism.js"></script>
+  <script src="{{site.baseurl}}/js/index.js"></script>
 
 
 
@@ -88,7 +89,6 @@
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
     <ul id="nav-mobile" class="animated slideInDown right hide-on-med-and-down social">
    
-     <li><a class="menu-item" href="{{site.baseurl}}/blog">BLOG</a></li> 
     <li><a class="menu-item" href="{{site.baseurl}}/projects">PROYECTOS</a></li> 
      <li><a class="menu-item" href="https://www.behance.net/Frostq">PORTFOLIO</a></li>
      <li><a class="menu-item" href="{{site.baseurl}}/sobre-mi">SOBRE MI</a></li>
@@ -97,12 +97,10 @@
     </ul>
 
     <ul class="side-nav" id="mobile-demo">
-        
-     <li><a class="menu-item" href="{{site.baseurl}}/blog">BLOG</a></li> 
-      <li><a class="menu-item" href="{{site.baseurl}}/projects">PROYECTOS</a></li> 
+        <li><a class="menu-item" href="{{site.baseurl}}/projects">PROYECTOS</a></li> 
      <li><a class="menu-item" href="https://www.behance.net/Frostq">PORTFOLIO</a></li>
      <li><a class="menu-item" href="{{site.baseurl}}/sobre-mi">SOBRE MI</a></li>
-      <li><a class="menu-item" href="{{site.baseurl}}/contact">CONTACTO</a></li>
+        <li><a class="menu-item" href="{{site.baseurl}}/contact">CONTACTO</a></li>
       </ul>
 
     </div>
@@ -110,9 +108,28 @@
  
 
   {{content}}  
-  <footer>
-   <p class="love">Made with <i class="fa fa-heart" aria-hidden="true" style="color: red"></i>  by <a href="https://frostqui.github.io/sobre-mi/">Frostq</a> - Diego López García</p>
-  </footer>
+  <!-- Go to www.addthis.com/dashboard to customize your tools --> <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-58349997f7bd065f"></script> 
+
+  <!-- Begin MailChimp Signup Form -->
+  <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+  #mc_embed_signup{ clear:left; color:white; padding:30px; font:14px Helvetica,Arial,sans-serif; width:100%;}
+    /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+           We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+</style>
+<div id="mc_embed_signup" class="parallax">
+  <form action="//github.us14.list-manage.com/subscribe/post?u=cd16a671a63cd217caf6b2f3f&amp;id=bb3cc69837" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+        <div id="mc_embed_signup_scroll">
+            <label for="mce-EMAIL" class="label-newsletter">Suscribete a mi newsletter para que no te pierdas ningun artículo:</label>
+            <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Tu email" required>
+            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_cd16a671a63cd217caf6b2f3f_bb3cc69837" tabindex="-1" value=""></div>
+            <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+        </div>
+  </form>
+</div>
+
+<!--End mc_embed_signup-->
 
 </body>
 

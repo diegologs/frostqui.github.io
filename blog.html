@@ -2,30 +2,15 @@
 layout: default
 ---
 
-<div class="container">
- {% for post in site.posts  %}
-    {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
-    {% capture next_year %}{{ post.previous.date | date: "%Y" }}{% endcapture %}
+<ul>
+  {% for post in site.posts %}
 
-    {% if forloop.first %}
-    <h2 id="{{ this_year }}-ref">{{this_year}}</h2>
-    <ul>
-    {% endif %}
+  <li>
+  <a href=''>{{post.title}}</a>
+    <p</p>
 
-    <h5>
-     <li><a href="{{ post.url }}">  {{ post.title }}</a></li>
-    </h5>
+  </li>
 
-    {% if forloop.last %}
-    </ul>
-    {% else %}
-        {% if this_year != next_year %}
-        </ul>
-        <h2 id="{{ next_year }}-ref">{{next_year}}</h2>
-        <ul>
-        {% endif %}
-    {% endif %}
-{% endfor %}
+  {% endfor %} 
 
-</div>
-
+</ul>
