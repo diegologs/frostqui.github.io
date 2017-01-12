@@ -36,9 +36,11 @@ A la derecha he puesto un sidebar, o menú lateral para dirigirse a nuestro perf
 
 En cuanto al diseño de cada vela, una imagen a la derecha, representando el tipo de vela que es, ya que cada vela tiene asociada una imagen, y a la derecha el texto de la vela con el autor. Todavía falta por incorporar un boton para aumentar la duraccion de la vela o el tiempo que queda hasta que la vela se apague, como digo no es el diseño final ni mucho menos, simplemente lo voy a utilizar de referencia.
 
+<img src="http://i.imgur.com/JUtD7U9.jpg" class="responsive-img" alt="ux ui desarrollo web"> 
 
 Para la página personal para cada usuario, he decidido meter una imagen de cabecera la cual se puede personalizar para cada usuario. La página, por ahora, simplemente muestra las velas de cada usuario.
 
+<img src="http://i.imgur.com/WQi2lLx.jpg" class="responsive-img" alt="ux ui desarrollo web"> 
 
 Por último he diseñado la página de registro, simplemente un formulario para rellenar con los datos y una imagen de fondo.
 
