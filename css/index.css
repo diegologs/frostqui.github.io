@@ -299,7 +299,7 @@ h5{
   padding-left:25px;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width:950px) {
     h1 {
         font-size: 2em;
     }
