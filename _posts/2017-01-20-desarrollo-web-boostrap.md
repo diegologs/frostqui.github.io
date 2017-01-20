@@ -20,7 +20,7 @@ el cual abrimos la página web.
 
 
  - . <b> Facilidad de uso</b>. Simplemente usando sus clases 
- - . <b> Respinsive</b>. Con las nuevas tecnologías queremos que nuestra página web se vea bien en todos los dispositivos. 
+ - . <b> Responsive</b>. Con las nuevas tecnologías queremos que nuestra página web se vea bien en todos los dispositivos. 
  - . <b> Personalizable</b>. Al descargarlo podremos elegir que elementos queremos dependiendo de nuestras necesidades
  - . <b> Gran comunidad</b>. Este framework está muy extendido y si tenemos un problema podremos encontrar mucha información en Internet.
 
