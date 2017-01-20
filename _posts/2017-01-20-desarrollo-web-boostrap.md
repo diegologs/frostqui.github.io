@@ -33,7 +33,6 @@ Para usar Boostrap en nuestro proyecto tenemos dos formas:
  Metemos estos archivos que acabamos de descargar en una carpeta dentro del proyecto en el cual queremos usar Boostrap. Ahora tenemos que llamar a Boostrap desde el archivo index.html o en su defecto el archivo donde tenemos todos los estilos por defecto.
 
 
-
 ```html
  <head> 
   
@@ -44,9 +43,7 @@ Para usar Boostrap en nuestro proyecto tenemos dos formas:
     	<script src="js/bootstrap.min.js"></script> <!– Llamamos al JavaScript de Bootstrap –> 
  </head>
 
- ```
-
-
+```
  
   - Segunda opción: CDN. Con este método no tenemos que descargar Boostrap. Simplemente inclimos el enlace del CDN para que se descargue solo.
   
@@ -65,6 +62,7 @@ Para usar Boostrap en nuestro proyecto tenemos dos formas:
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 </head>
+
 ```
   
 <h2>Elementos de Boostrap</h2>
