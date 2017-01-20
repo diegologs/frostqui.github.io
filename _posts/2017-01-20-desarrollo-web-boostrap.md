@@ -65,8 +65,8 @@ Para usar Boostrap en nuestro proyecto tenemos dos formas:
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 </head>
-
-  ```
+```
+  
 <h2>Elementos de Boostrap</h2>
 
 Para usar los elementos de Boostrap tenemos que usar sus clases dentro de los elementos del html. Aquí los elementos más importantes de Boostrap
