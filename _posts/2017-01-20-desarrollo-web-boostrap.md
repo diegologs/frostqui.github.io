@@ -3,7 +3,7 @@ layout: post
 title: Desarrollo web con Boostrap. Tutorial para principiantes
 meta: Como desarrollar una web usando Boostrap para un diseño responsive
 description: Como desarrollar una web usando Boostrap para un diseño responsive
-summary: 
+summary: Una de las tareas más difíciles que tenemos como desarrolladores webs es la obligación de adaptar el contenido de nuestra web a todas las pantallas. Afortunadamente contamos con Boostrap, un framework capaz de adaptar todo nuestro contenido. En este artículo veremos como podemos hacer uso de Boostrap para sacarle todo el partido.
 category: 
 title-page: Boostrap - Desarrollo web
 tags: [Boostrap, Desarrollo web] 
@@ -31,8 +31,10 @@ Para usar Boostrap en nuestro proyecto tenemos dos formas:
 
  - Primera opcion: Descargamos Boostrap desde su página oficial [http://getbootstrap.com/](http://getbootstrap.com/) y descargamos JQuery [https://jquery.com/](https://jquery.com/). 
  Metemos estos archivos que acabamos de descargar en una carpeta dentro del proyecto en el cual queremos usar Boostrap. Ahora tenemos que llamar a Boostrap desde el archivo index.html o en su defecto el archivo donde tenemos todos los estilos por defecto.
- 
- ```html
+
+
+
+```html
  <head> 
   
  	<link href="css/bootstrap.min.css" rel="stylesheet" media="screen"> <! Inicializamos Boostrap con la ruta en la que se encuentra.–> 
@@ -42,10 +44,12 @@ Para usar Boostrap en nuestro proyecto tenemos dos formas:
     	<script src="js/bootstrap.min.js"></script> <!– Llamamos al JavaScript de Bootstrap –> 
  </head>
  ```
+
+
  
   - Segunda opción: CDN. Con este método no tenemos que descargar Boostrap. Simplemente inclimos el enlace del CDN para que se descargue solo.
   
- ```html
+```html
  <head>
 	  <!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -60,6 +64,7 @@ Para usar Boostrap en nuestro proyecto tenemos dos formas:
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 </head>
+
   ```
 <h2>Elementos de Boostrap</h2>
 
