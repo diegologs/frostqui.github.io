@@ -43,6 +43,7 @@ Para usar Boostrap en nuestro proyecto tenemos dos formas:
  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> <!– Llamamos antes a JQuery –> 
     	<script src="js/bootstrap.min.js"></script> <!– Llamamos al JavaScript de Bootstrap –> 
  </head>
+
  ```
 
 
