@@ -241,19 +241,19 @@ h5{
 
 #contact_button{
   margin-top: 30px;
-
+  margin-bottom: 30px;
 
 
 }
 
 #contact_message{
-  color:white;
+  color: black;
   height: 160px;
 
 }
 
 #contact_email{
-  color:white;
+  color: black;
 }
 
 #contact_form{
