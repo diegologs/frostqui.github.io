@@ -5,7 +5,7 @@ meta: Como desarrollar una web usando Boostrap para un diseño responsive
 description: Como desarrollar una web usando Boostrap para un diseño responsive
 summary: Una de las tareas más difíciles que tenemos como desarrolladores webs es la obligación de adaptar el contenido de nuestra web a todas las pantallas. Afortunadamente contamos con Boostrap, un framework capaz de adaptar todo nuestro contenido. En este artículo veremos como podemos hacer uso de Boostrap para sacarle todo el partido.
 category: 
-title-page: Desarrollo web con Bootstrap. Tutorial en español
+title-page: Desarrollo web con Bootstrap. Cómo crear columnas y componentes responsive
 tags: [Boostrap, Desarrollo web] 
 ---
 
