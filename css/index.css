@@ -299,6 +299,25 @@ h5{
   padding-left:25px;
 }
 
+.elevator {
+    text-align: center;
+    cursor: pointer;
+    width: 140px;
+    margin: auto;
+}
+
+.elevator:hover {
+    opacity: 0.7;
+}
+
+.elevator svg {
+    width: 40px;
+    height: 40px;
+    display: block;
+    margin: auto;
+    margin-bottom: 5px;
+}
+
 @media screen and (max-width: 480px) {
     h1 {
         font-size: 2em;
