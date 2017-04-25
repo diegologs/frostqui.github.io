@@ -10,197 +10,205 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <link type="text/css" rel="stylesheet" href="css/bootstraptheme.css" />
+    <link type="text/css" rel="stylesheet" href="css/index.css" />
     <script src="js/cookie.js"></script>
     <script src="js/addProducts.js"></script>
 </head>
 
 <body>
+    <nav>
+        <div class="navbar navbar-default navbar-fixed-top">
 
-    <!header>
-    <div class="navbar navbar-default navbar-fixed-top">
-
-        <div class="navbar-header">
-            <a id="logo-container" href="index.html" class="brand-logo" style="width: 180px; height: 64px"><img src="imagenes/AmericanRoutesLogo.png" alt="Logotipo" style="width: 180px; height: 58px; padding: 5px"></a>
-            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <div class="navbar-header">
+                <a id="logo-container" href="index.html" class="brand-logo" style="width: 180px; height: 64px"><img src="imagenes/AmericanRoutesLogo.png" alt="Logotipo" style="width: 180px; height: 58px; padding: 5px"></a>
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-        </div>
-        <div class="container">
-            <div class="navbar-collapse collapse" id="navbar-main">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="contacto.html">CONTACTO</a>
-                    </li>
-                    <li>
-                        <a href="somos.html">QUIENES SOMOS</a>
-                    </li>
-                </ul>
             </div>
-        </div>
-    </div>
-
-    <!carousel>
-    <br>
-    <br>
-
-    <div class="page" id="banner">
-        <div class="row">
-            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-                <!-- Indicators -->
-                <ol class="carousel-indicators">
-                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                </ol>
-
-                <!-- Wrapper for slides -->
-                <div class="carousel-inner">
-                    <div class="item active">
-                        <img src="imagenes/Caroussel1.jpg" alt="Imagen del carrusel 1: Desierto">
-                        <div class="carousel-caption">
-                            <img src="imagenes/AmericanRoutesBIG.png" alt="Imagen ruta 66 grande">
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="imagenes/Caroussel2.jpg" alt="Imagen del carrusel 2: Ciudad">
-                        <div class="carousel-caption">
-                            <img src="imagenes/AmericanRoutesBIG.png" alt="Imagen ruta 66 grande">
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="imagenes/Caroussel3.jpg" alt="Imagen del carrusel 3: Ciudad de noche">
-                        <div class="carousel-caption">
-                            <img src="imagenes/AmericanRoutesBIG.png" alt="Imagen ruta 66 grande">
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Controls -->
-                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-                    <span class="glyphicon glyphicon-chevron-left"></span>
-                </a>
-                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-                    <span class="glyphicon glyphicon-chevron-right"></span>
-                </a>
-            </div>
-            <!-- Carousel -->
-        </div>
-    </div>
-
-    <br/>
-    <br/>
-    <br/>
-
-    <!rejilla con diferentes secciones>
-
-    <!-- Page Content -->
-    <div class="container">
-
-        <section>
             <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <h1 class="section-heading">Descubre las mejores rutas</h1>
-                        <p class="lead section-lead">Organizate y planea las mejores rutas con nuestra ayuda</p>
-                        <p class="section-paragraph">Aprovecha nuestros itinerarios y disfruta con tu familia y amigos de las más famosas y divertidas rutas de Estados Unidos. Recorre este increible país y no te dejes sin ver ninguno de sus rincones con nuestra guía gratuita online y no dudes en contactar con nosotros para cualquier información.</p>
-                        <br>
-                        <br>
-                        <br>
-                    </div>
+                <div class="navbar-collapse collapse" id="navbar-main">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="contacto.html">CONTACTO</a>
+                        </li>
+                        <li>
+                            <a href="somos.html">QUIENES SOMOS</a>
+                        </li>
+                    </ul>
                 </div>
-            </div>
-        </section>
-    </div>
-
-    <div class="carousel-inner">
-        <div class="item active">
-            <img src="imagenes/nuestrasrutas.jpg" alt="Montañas nevadas">
-            <div class="carousel-caption">
-                <img src="imagenes/nuestrasrutasTEXT.png" alt="Montañas Nevadas">
             </div>
         </div>
-    </div>
 
-    <div class="container">
+
         <br>
         <br>
-        <br>
 
-        <section>
-            <div class="row" id="productsIndexTotal">
-
-                <div class="col-sm-12 col-lg-6 col-md-6">
-                    <div class="thumbnail">
-                        <img src="imagenes/ruta66/ruta66chicago.jpg" style="width: 100%; height: 280px" alt="Imagen de Chicago">
-                        <div class="caption">
-                            <h6 class="pull-right">3945 km</h6>
-                            <h5><a href="ruta66.html">RUTA 66</a>
-                                </h5>
-                            <p>La Ruta principal y mas famosa de Estados Unidos, con una longitud de 3.945 kilómetros, atraviesa 8 estados desde el punto de salida en Chicago hasta finalizar en Los Ángeles.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-12 col-lg-6 col-md-6">
-                    <div class="thumbnail">
-                        <img src="imagenes/ruta24/ruta%2024%20W%20DC.jpg" style="width: 100%; height: 280px" alt="Imagen de Washington ">
-                        <div class="caption">
-                            <h4 class="pull-right">1916 km</h4>
-                            <h4><a href="ruta24.html">RUTA 24</a>
-                                </h4>
-                            <p>La Ruta 24 se inauguró a finales de 1910. Comienza en Washington D.C y culmina en Miami. Pasa por tres estados y la red completa de carreteras de esta ruta cubre 1916 kilómetros.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-12 col-lg-6 col-md-6">
-                    <div class="thumbnail">
-                        <img src="imagenes/ruta61/ruta%2061%20nueva%20orleans.jpg" style="width: 100%; height: 280px" alt="Imagen de Nueva Orleans">
-                        <div class="caption">
-                            <h4 class="pull-right">1036 km</h4>
-                            <h4><a href="ruta61.html">RUTA 61</a>
-                                </h4>
-                            <p>No es tan famosa como la 66 pero es tan americana o más. Se conoce como la Great River Road, y se inauguró a finales de 1930. Comienza en la cabecera del Misisipi y culmina en Nueva Orleans.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-12 col-lg-6 col-md-6">
-                    <div class="thumbnail">
-                        <img src="imagenes/ruta38/ruta%2038%20san%20francisco.jpg" style="width: 100%; height: 280px" alt="Imagen de San Francisco">
-                        <div class="caption">
-                            <h4 class="pull-right">5153 km</h4>
-                            <h4><a href="ruta38.html">RUTA 38</a>
-                                </h4>
-                            <p>Esta ruta es menos transitada debido a sus mas de 5000 kilometros de carreteras interminables que recorren de la costa del Oceano Atlántico a la del Pacífico.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </section>
-
-
-    </div>
-    <!-- /.container -->
-
-    <div class="container">
-        <hr>
-
-        <!-- Footer -->
-        <footer>
+        <div class="page" id="banner">
             <div class="row">
-                <div class="col-lg-12">
-                    <p align="center">Copyright &copy; American Routes 2017</p>
-                    <p align="center">Guillermo Urbano, Adrián Gómez, Luis Carlos Jiménez, Diego López</p>
-                    <p align="center" class="text-danger"><a href="somos.html">Quienes Somos</a></p>
+                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                    </ol>
 
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <img src="imagenes/Caroussel1.jpg" alt="Imagen del carrusel 1: Desierto">
+                            <div class="carousel-caption">
+                                <img src="imagenes/AmericanRoutesBIG.png" alt="Imagen ruta 66 grande">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="imagenes/Caroussel2.jpg" alt="Imagen del carrusel 2: Ciudad">
+                            <div class="carousel-caption">
+                                <img src="imagenes/AmericanRoutesBIG.png" alt="Imagen ruta 66 grande">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="imagenes/Caroussel3.jpg" alt="Imagen del carrusel 3: Ciudad de noche">
+                            <div class="carousel-caption">
+                                <img src="imagenes/AmericanRoutesBIG.png" alt="Imagen ruta 66 grande">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Controls -->
+                    <a class="left carousel-control" href="#carousel-example-generic "data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                    </a>
+                    <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                    </a>
+                </div>
+                <!-- Carousel -->
+            </div>
+        </div>
+
+        <br/>
+        <br/>
+        <br/>
+    </nav>
+
+    <main>
+        <!-- Page Content -->
+        <div class="container">
+
+            <section>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h1 class="section-heading">Descubre las mejores rutas</h1>
+                            <p class="lead section-lead">Organizate y planea las mejores rutas con nuestra ayuda</p>
+                            <p class="section-paragraph">Aprovecha nuestros itinerarios y disfruta con tu familia y amigos de las más famosas y divertidas
+                                rutas de Estados Unidos. Recorre este increible país y no te dejes sin ver ninguno de sus
+                                rincones con nuestra guía gratuita online y no dudes en contactar con nosotros para cualquier
+                                información.</p>
+                            <br>
+                            <br>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="carousel-inner">
+            <div class="item active">
+                <img src="imagenes/nuestrasrutas.jpg" alt="Montañas nevadas">
+                <div class="carousel-caption">
+                    <img src="imagenes/nuestrasrutasTEXT.png" alt="Montañas Nevadas">
                 </div>
             </div>
-            <!-- /.row -->
-        </footer>
+        </div>
+
+        <div class="container">
+            <br>
+            <br>
+            <br>
+
+            <section>
+                <div class="row" id="productsIndexTotal">
+
+                    <div class="col-sm-12 col-lg-6 col-md-6">
+                        <div class="thumbnail">
+                            <img src="imagenes/ruta66/ruta66chicago.jpg" style="width: 100%; height: 280px" alt="Imagen de Chicago">
+                            <div class="caption">
+                                <h6 class="pull-right">3945 km</h6>
+                                <h5><a href="ruta66.html">RUTA 66</a>
+                                </h5>
+                                <p>La Ruta principal y mas famosa de Estados Unidos, con una longitud de 3.945 kilómetros, atraviesa
+                                    8 estados desde el punto de salida en Chicago hasta finalizar en Los Ángeles.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12 col-lg-6 col-md-6">
+                        <div class="thumbnail">
+                            <img src="imagenes/ruta24/ruta%2024%20W%20DC.jpg" style="width: 100%; height: 280px" alt="Imagen de Washington ">
+                            <div class="caption">
+                                <h4 class="pull-right">1916 km</h4>
+                                <h4><a href="ruta24.html">RUTA 24</a>
+                                </h4>
+                                <p>La Ruta 24 se inauguró a finales de 1910. Comienza en Washington D.C y culmina en Miami.
+                                    Pasa por tres estados y la red completa de carreteras de esta ruta cubre 1916 kilómetros.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12 col-lg-6 col-md-6">
+                        <div class="thumbnail">
+                            <img src="imagenes/ruta61/ruta%2061%20nueva%20orleans.jpg" style="width: 100%; height: 280px" alt="Imagen de Nueva Orleans">
+                            <div class="caption">
+                                <h4 class="pull-right">1036 km</h4>
+                                <h4><a href="ruta61.html">RUTA 61</a>
+                                </h4>
+                                <p>No es tan famosa como la 66 pero es tan americana o más. Se conoce como la Great River Road,
+                                    y se inauguró a finales de 1930. Comienza en la cabecera del Misisipi y culmina en Nueva
+                                    Orleans.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12 col-lg-6 col-md-6">
+                        <div class="thumbnail">
+                            <img src="imagenes/ruta38/ruta%2038%20san%20francisco.jpg" style="width: 100%; height: 280px" alt="Imagen de San Francisco">
+                            <div class="caption">
+                                <h4 class="pull-right">5153 km</h4>
+                                <h4><a href="ruta38.html">RUTA 38</a>
+                                </h4>
+                                <p>Esta ruta es menos transitada debido a sus mas de 5000 kilometros de carreteras interminables
+                                    que recorren de la costa del Oceano Atlántico a la del Pacífico.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+
+        </div>
+        <!-- /.container -->
+
+        <div class="container">
+            <hr>
+    </main>
+    <!-- Footer -->
+    <footer>
+        <div class="row">
+            <div class="col-lg-12">
+                <p class="center">Copyright &copy; American Routes 2017</p>
+                <p class="center">Guillermo Urbano, Adrián Gómez, Luis Carlos Jiménez, Diego López</p>
+                <p class="center" class="text-danger"><a href="somos.html">Quienes Somos</a></p>
+
+            </div>
+        </div>
+        <!-- /.row -->
+    </footer>
     </div>
 
 </body>
