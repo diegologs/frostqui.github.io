@@ -12,16 +12,16 @@ $(document).ready(function(){
   
     
     // Verano
-    if (total >=6 && total <= 7)
-    {
-        src += "logo.png";
+    //if (total >=6 && total <= 7)
+   // {
+        
 
-    }
+   // }
     
 
 
     // Navidad
-    else if (total ==12 || total == 0)
+     if (total ==12 || total == 0)
    {
      src += "logo_winter.png";
      $('.container').prepend('<img id="lights" src="/images/lights2.png" />');
