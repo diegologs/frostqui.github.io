@@ -14,7 +14,7 @@ $(document).ready(function(){
     // Verano
     if (total >=6 && total <= 7)
     {
-        src += "logo_summer.jpg";
+        src += "logo.png";
 
     }
     
