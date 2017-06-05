@@ -1,22 +1,21 @@
 ---
 layout: post
-title: Desarrollo web con Boostrap. Tutorial para principiantes
-meta: Como desarrollar una web usando Boostrap para un diseño responsive
-description: Como desarrollar una web usando Boostrap para un diseño responsive
-summary: Una de las tareas más difíciles que tenemos como desarrolladores webs es la obligación de adaptar el contenido de nuestra web a todas las pantallas. Afortunadamente contamos con Boostrap, un framework capaz de adaptar todo nuestro contenido. En este artículo veremos como podemos hacer uso de Boostrap para sacarle todo el partido.
-category: 
+title: Bootstrap. Tutorial para principiantes
+meta: ¿Qué es Bootstrap? ¿Cómo el grid y las columnas en Boostrap? ¿Cómo hacer un diseño responsive?
+description: ¿Qué es Bootstrap? ¿Cómo el grid y las columnas en Boostrap? ¿Cómo hacer un diseño responsive?
+summary: Una de las tareas más difíciles que tenemos como desarrolladores webs es la obligación de adaptar el contenido de nuestra web a todas las pantallas. Afortunadamente contamos con Bootstrap, un framework capaz de adaptar todo nuestro contenido. En este artículo veremos como podemos hacer uso de Bootstrap para sacarle todo el partido.
 title-page: Desarrollo web con Bootstrap. Cómo crear columnas y componentes responsive
-tags: [Boostrap, Desarrollo web] 
+tags: [Bootstrap, Desarrollo web] 
+image: bootstrap
 ---
 
-*** 
 
 <h2>Introducción y primeros pasos</h2>
 
 Bosstrap es un framework creado con la finalidad de crear páginas webs reponsive, es decir, páginas en las cuales el diseño se adapta en función del dispositivo desde
 el cual abrimos la página web. 
 
-<h3><b>¿Por qué usar Boostrap?</b></h3>
+<h3><b>¿Por qué usar Bootstrap?</b></h3>
 
 
  - . <b> Facilidad de uso</b>. Simplemente usando sus clases 
@@ -25,18 +24,18 @@ el cual abrimos la página web.
  - . <b> Gran comunidad</b>. Este framework está muy extendido y si tenemos un problema podremos encontrar mucha información en Internet.
 
 
-<h3><b>Descarga y configuración de Boostrap</b></h3>
+<h3><b>Descarga y configuración de Bootstrap</b></h3>
 
-Para usar Boostrap en nuestro proyecto tenemos dos formas:
+Para usar Bootstrap en nuestro proyecto tenemos dos formas:
 
- . Primera opcion: Descargamos Boostrap desde su página oficial [http://getbootstrap.com/](http://getbootstrap.com/) y descargamos JQuery [https://jquery.com/](https://jquery.com/). 
- Metemos estos archivos que acabamos de descargar en una carpeta dentro del proyecto en el cual queremos usar Boostrap. Ahora tenemos que llamar a Boostrap desde el archivo index.html o en su defecto el archivo donde tenemos todos los estilos por defecto.
+ . Primera opcion: Descargamos Bootstrap desde su página oficial [http://getbootstrap.com/](http://getbootstrap.com/) y descargamos JQuery [https://jquery.com/](https://jquery.com/). 
+ Metemos estos archivos que acabamos de descargar en una carpeta dentro del proyecto en el cual queremos usar Bootstrap. Ahora tenemos que llamar a Bootstrap desde el archivo index.html o en su defecto el archivo donde tenemos todos los estilos por defecto.
 
 
 ```html
  <head> 
   
- 	<link href="css/bootstrap.min.css" rel="stylesheet" media="screen"> <! Inicializamos Boostrap con la ruta en la que se encuentra.–> 
+ 	<link href="css/bootstrap.min.css" rel="stylesheet" media="screen"> <! Inicializamos Bootstrap con la ruta en la que se encuentra.–> 
  	<meta name="viewport" content="width=device-width, initial-scale=1"> <!– Con esto garantizamos que se vea correctamente en todos los dispositivos móviles –> 
  	
  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> <!– Llamamos antes a JQuery –> 
@@ -44,7 +43,7 @@ Para usar Boostrap en nuestro proyecto tenemos dos formas:
  </head>
 ```
  
-   . Segunda opción: CDN. Con este método no tenemos que descargar Boostrap. Simplemente inclimos el enlace del CDN para que se descargue solo.
+   . Segunda opción: CDN. Con este método no tenemos que descargar Bootstrap. Simplemente inclimos el enlace del CDN para que se descargue solo.
   
 ```html
  <head>
@@ -63,13 +62,13 @@ Para usar Boostrap en nuestro proyecto tenemos dos formas:
 </head>
 ```
   
-<h2>Elementos de Boostrap</h2>
+<h2>Elementos de Bootstrap</h2>
 
-Para usar los elementos de Boostrap tenemos que usar sus clases dentro de los elementos del html. Aquí los elementos más importantes de Boostrap
+Para usar los elementos de Bootstrap tenemos que usar sus clases dentro de los elementos del html. Aquí los elementos más importantes de Bootstrap
 
 <h3><b>Grid</b></h3>
 
-Estos son los elementos que, personalmente, me parecen más utilies y son los que más utilizo. Boostrap tiene un sistema para crear columnas, las cuales adaptan su ancho dependiendo
+Estos son los elementos que, personalmente, me parecen más utilies y son los que más utilizo. Bootstrap tiene un sistema para crear columnas, las cuales adaptan su ancho dependiendo
 del dispositivo.
 Para usar este sistema tenemos que ponerle la clase <b>"row"</b> a un elemento div del html. Acabamos de crear la fila de una columna, pero esta vacía. Para meter columnas dentro de las filas tenemos 
 que meter elementos div con la clase <b>"col"</b>
@@ -121,7 +120,7 @@ que meter elementos div con la clase <b>"col"</b>
 
 El primer row es una fila con 2 columnas de igual tamaño y el segundo row es una fila con 3 columnas iguales. Como ves si queremos crear columnas de igual tamaño basta con meter
 elementos col dentro de las filas. ¿Qué pasa si queremos crear columnas con un tamaño diferente?
-Para crearlas tenemos que especificar el tamaño que queremos. <b>Importante: </b> Las filas de Boostrap tienen un tamaño de 12 unidades, es decir, si creamos columnas más pequeñas
+Para crearlas tenemos que especificar el tamaño que queremos. <b>Importante: </b> Las filas de Bootstrap tienen un tamaño de 12 unidades, es decir, si creamos columnas más pequeñas
 no llegarán a cubrir el ancho de la fila, y si las creamos más grandes saltarán a la siguiente fila.
 
 ```html
@@ -154,7 +153,7 @@ no llegarán a cubrir el ancho de la fila, y si las creamos más grandes saltar�
     </div>
   </div>
 
-También podemos definir especificamente que tamaño queremos que tengan las columnas dependiendo del dispositivo. Para ello existen varias clases en Boostrap:
+También podemos definir especificamente que tamaño queremos que tengan las columnas dependiendo del dispositivo. Para ello existen varias clases en Bootstrap:
 
  - -<b> xs</b> (para móviles)
  - -<b> sm</b> (para tablets)
@@ -167,7 +166,7 @@ También podemos definir especificamente que tamaño queremos que tengan las col
 
 <h3><b>Botones</b></h3>
 
-Para añadir un botón en Boostrap tenemos que usar la clase <b>"btn"</b>. Podemos usar varios tipos dependiendo del uso que le vayamos a dar. El boton por defecto es "default"
+Para añadir un botón en Bootstrap tenemos que usar la clase <b>"btn"</b>. Podemos usar varios tipos dependiendo del uso que le vayamos a dar. El boton por defecto es "default"
 
 ```html
 <!-- Botón standart -->
@@ -201,7 +200,7 @@ según lo necesite.
 
 <h3><b>Otros elementos</b></h3>
 
-Añadir colores de fondo a un elemento directamente con una clase de Boostrap
+Añadir colores de fondo a un elemento directamente con una clase de Bootstrap
 
 ```html
 <p class="bg-primary">...</p>
@@ -232,7 +231,7 @@ Centrar contenido
 
 <h2>Conclusiones</h2>
  
- Boostrap es un framework muy potente y muy extendido en la actualidad. Tiene multitud de elementos (muchos no los he puesto en este artículo) a nuestra disposición que 
+ Bootstrap es un framework muy potente y muy extendido en la actualidad. Tiene multitud de elementos (muchos no los he puesto en este artículo) a nuestra disposición que 
  nos facilitarán enormemente la vida para desarrollar webs responsive adatadas a las nuevas tecnologías. Si quieres seguir aprendiedo acerca de este framework te invito a que
  busques más información en su página web [http://getbootstrap.com/css/](http://getbootstrap.com/css/)
   

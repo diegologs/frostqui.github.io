@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Widget del tiempo usando RxJS 
-meta: Entendiendo como funciona RxJS para la creacion de un widget del tiempo de forma asincrona 
-description: Entendiendo como funciona RxJS para la creacion de un widget del tiempo de forma asincrona 
+title: Cómo usar RxJS para crear un widget que muestre el tiempo 
+meta: ¿Qué es RxJS? ¿Cómo se usa RxJS? ¿Para qué sirve? ¿Cómo podemos usarlo para crear un widget que muestre el tiempo?
+description: ¿Qué es RxJS? ¿Cómo se usa RxJS? ¿Para qué sirve? ¿Cómo podemos usarlo para crear un widget que muestre el tiempo?
 summary: Si siempre has querido hacer un widget asíncrono, con este pequeño tutorial, aprenderemos a realizar un widget que podremos colocar en cualquier página web en el que podremos comprobar la temperatura que hace en determinada zona, y todo sin tener que recargar la página.
-category:
 title-page: RxJS para programar un widget del tiempo
-tags: [RxJS, JavaScript, HTML, CSS]
+image: weather
+tags: [RxJS, Javascript, HTML, CSS]
 ---
 
-***
+
 <a href="http://codepen.io/Frostq/full/EgEwrN/" class="waves-effect waves-light btn">DEMO</a>
 
 Saludos, buen señor. Hoy vamos a aprender a hacer un widget del tiempo usando <strong>RxJS</strong>, pero antes hay que saber que es RxJs y que es la programación reactiva.

@@ -4,12 +4,11 @@ title: WebGL con Dart 01 - Primeros pasos
 meta: Tutorial de Dart junto con WebGL para la creación de gráficos en 3D. Instalación de Dart con WebStorm
 description: Tutorial de Dart junto con WebGL para la creación de gráficos en 3D. Instalación de Dart con WebStorm
 summary: Dart es un lenguaje tipado con orientación a objetos desarrollado por Google. En este sencillo tutorial aprenderemos a usarlo junto con WebGL, una API creada para el desarrollo de gráficos en 3D que podremos visualizar en cualquier navegador que soporte WebGL. 
-category:
 title-page: Tutorial WebGl y Dart
+image: dart
 tags: [Dart, WebGL]
 ---
 
-***
 
 WebGL es una API basada en OpenGL mediante la cual podemos crear gráficos o pequeños juegos en 3D para el desarrollo web. Para ello, necesitamos que el navegador que estemos utilizando
 soporte WebGL (actualmente la mayoria lo soportan). Si quieres saber más información puedes consultar la wikipedia ([https://es.wikipedia.org/wiki/WebGL](https://es.wikipedia.org/wiki/WebGL)),

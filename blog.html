@@ -1,8 +1,18 @@
 ---
 layout: default
+title-page: Blog de desarrollo web y software - Frostq
+meta: Artículos y tutoriales destacados sobre desarrollo web para iniciarse
+description: Artículos y tutoriales destacados sobre desarrollo web para iniciarse
 ---
 
-<div class="container">
+<canvas id="granim-canvas" style="background-image: url('{{site.baseurl}}/images/posts/library.jpg');"></canvas>
+
+<h1 class="main_title center">~./blog/</h1>
+<h3 class="center">Todos mis posts recopilados en el mismo espacio</h3>
+<br>
+
+<div class="container main-content">
+    
 {% for post in site.posts  %}
     {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
     {% capture next_year %}{{ post.previous.date | date: "%Y" }}{% endcapture %}
@@ -12,7 +22,7 @@ layout: default
     <ul>
     {% endif %}
 
-   <h5> <li><a href="{{ post.url }}">{{ post.title }}</a></li></h5>
+   <li><a href="{{site.baseurl}}{{post.url}}" ><h4 class="post-title" >{{post.title}}</h4></a> </li>
 
     {% if forloop.last %}
     </ul>

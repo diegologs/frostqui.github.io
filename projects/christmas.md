@@ -4,12 +4,11 @@ title: Christmas game
 meta: Christmas game with dart an StageXL
 type: project
 image: christmas.png
-description: Un sencillo juego creado para las festividades navideñas del año 2016
-title-page: Christmas game
-tenol: Dart
+description: Este juego surgió en el invierno del año 2016. Tiene como temática la festividad navideña. El objetivo es simple, disparar regalos a los conejos. El juego tiene algunos fallos pero siemplemente lo creé para probar el lenguaje Dart.
+title-page: Christmas game con Dart
+tenol: [Dart, WebGL]
 ---
 
-***
 
 <a href="https://frostqui.github.io/christmas/" class="waves-effect waves-light btn">DEMO</a>
 

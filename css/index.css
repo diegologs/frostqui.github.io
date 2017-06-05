@@ -1,6 +1,7 @@
 body{
   background-color: #F9F9F9; 
   font-family: 'Open Sans', sans-serif;
+  
   }
 
 h1{
@@ -33,6 +34,50 @@ h3{
 
 }
 
+
+.mynav{
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+nav{
+  background-color: transparent;
+}
+
+#granim-canvas {
+   position: absolute;
+    display: block;
+    width: 100%;
+    height: 400px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background-image: url("https://ak6.picdn.net/shutterstock/videos/9228407/thumb/1.jpg");
+    
+}
+
+#post-canvas {
+   position: absolute;
+    display: block;
+    width: 100%;
+    height: 500px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    
+ 
+    
+}
+
+.main_title{
+  margin-top: 100px;
+  color: white;
+}
+
+
 .label-newsletter{
 	color:white;
 }
@@ -61,6 +106,10 @@ background: linear-gradient( rgba(0,130, 230, 0.7), rgba(0, 130, 230, 0.7) ), ur
 
     
 
+}
+
+.posts{
+  margin-top: 150px
 }
 
 .text_header{
@@ -105,19 +154,41 @@ background: linear-gradient( rgba(0,0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('http:
 
 }
 .main-content{
-  margin-top: 30px;
+  margin-top: 150px;
   font-family: 'Droid Serif', serif;
-   background-color: #F9F9F9;  
+  font-size: 1.125rem;
+  background-color: #F9F9F9;  
+  line-height: 1.6;
+  padding-left: 4.5%;
+  padding-right: 4.5%;
+  
+}
+
+
+.main-content h2{
+  font-family: 'Open Sans', sans-serif;
+  margin-top: 50px;
+  
 }
 
 .post-title{
   font-family: 'Open Sans', sans-serif;
-  color: #1976d2;
+  color: #0babc6;
 
   font-weight: bold;
   margin-bottom: -5px;
 
 }
+
+.post_title{
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+
+  font-weight: bold;
+  margin-top: 150px;
+}
+
+
 
 .post-description{
   font-family: 'Open Sans', sans-serif;
@@ -274,7 +345,7 @@ h5{
 
 .tags{
   
-  margin-left: 30px;
+  margin-left: 20px;
   display: inline;
 
 
@@ -286,22 +357,44 @@ h5{
 
 }
 
+.chip_post{
+  display: inline;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+  border-radius: 35px;
+  padding: 10px 25px 10px 25px;
+  margin-left: 7px;
+  margin-right: 7px;
+
+}
+
+.date_post{
+  color: white;
+  margin-top: 30px;
+}
+
 .read_more{
   display:block;
   padding:10px;
   padding-top:2px;
+  width: 100px;
+  color: white;
 
 
 }
 
 .related{
-  margin-top:55px;
+  margin-top:25px;
   margin-bottom: 100px;
 }
 
 .related-posts{
 
   padding-left:25px;
+}
+.btn{
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 .elevator {
@@ -321,6 +414,13 @@ h5{
     display: block;
     margin: auto;
     margin-bottom: 5px;
+}
+
+footer{
+  background-color: #eee;
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
 }
 
 @media screen and (max-width: 480px) {

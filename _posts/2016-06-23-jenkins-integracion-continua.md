@@ -4,12 +4,11 @@ title: Integración continua con Jenkins
 meta: Usando Jenkins para hacer integracion continua en nuestros proyectos
 description: Usando Jenkins para hacer integracion continua en nuestros proyectos 
 summary: La integración continua es una práctica de desarrollo de software y del desarrollo web, en la cual los desarrolladores de software suben su código a un repositorio central donde automáticamente pasan las pruebas métricas y de calidad. Y Jenkins es la herramienta perfecta para realizar integración continua, además es muy simple de utilizar.
-category: 
 title-page: Jenkins tutorial en español, integración continua
+image: jenkins
 tags: [Jenkins, Integracion continua] 
 ---
 
-***
 
 Saludos, buen señor. Antes de empezar a ver como se instala y como se configura Jenkins es importante saber qué es la integración continua, ya que Jenkins es un software open source de integración continua escrito en Java.
 

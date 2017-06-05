@@ -4,12 +4,11 @@ title: VIM - Guía para principiantes.
 meta: Atajos y plugins básicos para vim
 description: En este articulo veremos como podemos hacer orientacion a objetos usando JavaScript.
 summary: ¿Quires programar usando VIM y no sabes por donde empezar? ¿Has abierto VIM y no sabes como cerrarlo? ¿Quieres descubrir los mejores plugins de VIM? Entonces te recomiendo que leas esto. Explicare los atajos básicos, como configurar vim a nuestro gusto y como añadir plugins.
-category:
 title-page: Guia VIM para principiantes
+image: vim
 tags: [VIM]
 ---
 
-***
 
 Empecemos este post viendo qué es VIM. VIM es un editor de texto incorporado en todos los sistemas UNIX. Proviene de otro editor, VI, aunque con el paso del tiempo se han ido implementando mejoras.
 Si estas utilizando Windows no te preocupes porque puedes descargarte VIM desde su página oficial [http://www.vim.org/download.php](http://www.vim.org/download.phphttp://www.vim.org/download.php).

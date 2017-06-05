@@ -1,15 +1,14 @@
 ---
 layout: post
-title: Como hacer orientacion a objetos con JavaScript 
-meta: En este articulo veremos como podemos hacer orientacion a objetos usando JavaScript.
-description: En este articulo veremos como podemos hacer orientacion a objetos usando JavaScript.
+title: Javascript orientado a objetos 
+meta: ¿Cómo hacer orientacion a objetos usando JavaScript? ¿Qué son los prototipos en JavaScript?
+description: ¿Cómo hacer orientacion a objetos usando JavaScript? ¿Qué son los prototipos en JavaScript?
 summary: La programación orientada a objetos es vital para el desarrollo web y de software, por lo que es esencial que sepamos como funciona. La programación orientada a objetos tamboén se puede aplicar a JavaScprit.
-category:
 title-page: Programacion orientada a objetos en javascript con ejemplos
-tags: [JavaScript]
+image: poo
+tags: [Javascript]
 ---
 
-***
 
 JavaScript es un lenguaje que surgió para el desarrollo web, para poder interaccionar con el usuario y hacer ciertas acciones básicas. En la actualidad JavaScript se ha ampliado ofreciendo nuevas funcionalidades. Se utiliza principalmente en su forma del lado del cliente, aunque existe una versión para el lado del servidor. JavaScript puede tener todo lo que un lenguaje orientado a objetos, tiene que ofrecer.
 

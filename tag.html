@@ -1,6 +1,8 @@
 ---
 layout: default
-title: Tag
+title-page: Tags y categorías 
+meta: Todos los artículos sobre desarrollo web ordenados por categorías
+description: Todos los artículos sobre desarrollo web ordenados por categorías
 ---
 
 {% comment %}
@@ -31,21 +33,21 @@ The following part removes dulpicated tags and invalid tags like blank tag.
 		{% endunless %}
 	{% endif %}
 {% endfor %}
+<canvas id="granim-canvas" style="background-image: url('{{site.baseurl}}/images/posts/poo.jpg');"></canvas>
 
-<div class="container">
+<h1 class="main_title center">~./tags/</h1>
+<h3 class="center">Los artículos del blog ordenados por categorías</h3>
+<br>
+
+<div class="container main-content">
 {% for tag in tags %}
-	<h4 id="{{ tag | slugify }}">{{ tag }}</h4>
+	<h2 id="{{ tag | slugify }}">{{ tag }}</h2>
 	<ul>
 	 {% for post in site.posts %}
 		 {% if post.tags contains tag %}
 		 <li>
-		 <h5>
-		 <em><a href="{{ post.url }}"></em>
-		 {{ post.title }}
-		 <small class="date">{{ post.date | date_to_string }}</small>
-		 </a>
-		 
-		 </h5>
+		
+		 <a href="{{site.baseurl}}{{post.url}}" ><h4 class="post-title" >{{post.title}}</h4></a> <small class="date">{{ post.date | date_to_string }}</small>
 		 </li>
 		 {% endif %}
      

@@ -1,23 +1,34 @@
 ---
 layout: default
-title: Proyectos
-meta: Proyectos de Frostq
+title-page: Trabajos de Frostq - Diego López García
+meta: Todos los proyectos más importantes en forma de lista que he realizado hasta la fecha
+description: Todos los proyectos más importantes en forma de lista que he realizado hasta la fecha
 ---
-<div class="container">
+
+<canvas id="granim-canvas" style="background-image: url('{{site.baseurl}}/images/posts/blog.jpg');"></canvas>
+
+<h1 class="main_title center">~./proyectos/</h1>
+<h3 class="center">Una recopilación de mis mejores trabajos</h3>
+<br>
+
+<div class="container main-content">
 <ul>
  {% for project in site.pages %}
     {% if project.type == 'project' %}
 
 <li>
 <a href="{{site.baseurll}}{{project.url}}">
-    <div class="row white project">
+    <div class="row project">
       <div class="col s12 m4">
         <img class="responsive-img" src="{{site.baseurl}}/images/projects/{{project.image}}">
       </div>
       <div class="col s12 m8">
-          <a class="post-title" href="{{project.url}}"><h2>{{project.title}}</h2></a>
+          <a class="post-title" href="{{project.url}}"><h3 class="post-title">{{project.title}}</h3></a>
           <p>{{project.description}}</p>
-          <div class="right-align chip">{{project.tenol}}</div>
+           {% for tag in project.tenol %}
+                <a class="tag chip" href="/tag#{{ tag | slugify }}">{{ tag }}</a>
+          {% endfor %}
+          
         </div>
       </div>
 </a>

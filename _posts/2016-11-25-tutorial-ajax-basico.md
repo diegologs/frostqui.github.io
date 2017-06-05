@@ -1,16 +1,14 @@
 ---
 layout: post
 title: Tutorial AJAX - Creando una página que muestre citas aleatorias.
-meta: Ajax tutorial en español sencillo
-description: Ajax tutorial en español sencillo. Página de citas celebres.
+meta: ¿Qué es AJAX en desarrollo web? ¿Cómo se usa? ¿Para qué sirve AJAX?
+description: ¿Qué es AJAX en desarrollo web? ¿Cómo se usa? ¿Para qué sirve AJAX?
 summary: Con este sencillo ejemplo puedes entender cómo funcionan las peticiones AJAX, las cuáles son muy útiles cuando queremos llamar a una API y mostrar el resultado sin tener que recargar la página completamente.
-source: 
-category:
 title-page: Tutorial AJAX - Citas aleatorias
-tags: [AJAX, JavaScript, HTML, CSS]
+image: quotes
+tags: [AJAX, Javascript, HTML, CSS]
 ---
 
-***
 
 <a href="https://codepen.io/Frostq/full/VjEZqm/" class="waves-effect waves-light btn">DEMO</a>
 
