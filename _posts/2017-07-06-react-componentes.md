@@ -13,7 +13,7 @@ tags: [React]
 
 React es una librería javascript para crear interfaces de usuario dependiendo de su estado. Las aplicaciones React se construyen mediante componentes, los cuales son elementos independientes y pueden ser reutilizados, además, describen cómo tienen que visualizarse y cómo tienen que comportarse.
 
-React utiliza el llamado HTML virtual DOM, el cual se renderiza mucho más rapido que el HTML tradiccional ya que no se calculan sus estilos CSS. Cuando el virtual DOM cambia se genera uno nuevo y se calcula las diferecias con el anterior virtual DOM. Por último React genera los cambios pertinentes en el HTML. 
+React utiliza el llamado HTML virtual DOM, el cual se renderiza mucho más rapido que el HTML tradiccional ya que no se calculan sus estilos CSS. Cuando el virtual DOM cambia se genera uno nuevo y se calcula las diferencias con el anterior virtual DOM. Por último React genera los cambios pertinentes en el HTML. 
 
 
 
