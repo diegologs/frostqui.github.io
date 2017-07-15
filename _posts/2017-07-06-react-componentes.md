@@ -1,9 +1,9 @@
 ---
 layout: post
 title: React - Cómo crear componentes y elementos
-meta: ¿Que es React? ¿Cómo instalar y configurar React? ¿Cómo crear componentes en React?
-description: ¿Que es React? ¿Cómo instalar y configurar React? ¿Cómo crear componentes en React?  
-summary: React es una librería para el frontend muy potente, es capaz de crear componentes y renderizarlos de forma muy rápida. En este artículos veremos cómo podemos usarlo en nuestros proyectos, como instalarlo y cómo crear componentes reutilizables.
+meta: ¿Qué es React? ¿Cómo instalar y configurar React? ¿Cómo crear componentes en React?
+description: ¿Qué es React? ¿Cómo instalar y configurar React? ¿Cómo crear componentes en React?  
+summary: React es una librería muy potente, es capaz de crear componentes y renderizarlos de forma muy rápida. En este artículos veremos cómo podemos usarlo en nuestros proyectos, como instalarlo y cómo crear componentes reutilizables.
 title-page: React, componentes y elementos
 image: react
 tags: [React] 
@@ -122,8 +122,8 @@ Además, JSX permite escribir expresiones mas complejas:
 
 Como decíamos anteriormente, un componente en React es un elemento independiente y reeutilizable. Además existen dos tipos de componentes en React:
 
-- <b>Componentes funcionales</b>:  Tienen propiedades, ciclos de vida y propiedades
-- <b>Componentes de clase</b>:  Solo tienen propiedades.
+- <b>Componentes funcionales</b>: Solo tienen propiedades.
+- <b>Componentes de clase</b>: Tienen propiedades, ciclos de vida y propiedades.
 
 ### Componentes funcionales
 
