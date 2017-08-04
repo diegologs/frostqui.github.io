@@ -11,18 +11,22 @@ layout: default
 
 
 
-
+  
 <div class="container posts">
 
-<ul>
-  {% for post in site.posts %}
+<ul class="row">
+  {% for post in site.posts limit:10 %}
 
-  <li class="post row">
+  <li class="post">
   
       
    
   
      <a href="{{site.baseurl}}{{post.url}}" ><h2 class="post-title" >{{post.title}}</h2></a>
+     <div class="crop">
+     
+      <img class="responsive-img image-post" src="{{site.baseurl}}/images/posts/{{post.image}}.jpg">
+      </div>
   
     </br>
     <a class="date"> <i class="fa fa-calendar" aria-hidden="true"></i>  {{post.date | date: '%B %d, %Y'}}  </a>
@@ -40,7 +44,8 @@ layout: default
 
     <a class="waves-effect waves-light btn cyan darken-1" href="{{site.baseurl}}{{post.url}}">> Leer más</a>
  
-
+  
+<hr class="hr-posts">
 
 
   </li>
@@ -48,6 +53,10 @@ layout: default
   {% endfor %} 
 
 </ul>
+
+<h3 class="more_posts">¿Ya no hay más posts? Tranquilo, en la sección <a href="https://frostqui.github.io/blog"><b>BLOG</b></a> hay muchos más.</h3>
+
+
 
 </div>
 

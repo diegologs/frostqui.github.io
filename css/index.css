@@ -5,7 +5,7 @@ body{
   }
 
 h1{
-  font-size: 3.5em;
+  font-size: 3.2em;
   font-weight: bold;
 
 }
@@ -108,6 +108,20 @@ background: linear-gradient( rgba(0,130, 230, 0.7), rgba(0, 130, 230, 0.7) ), ur
 
 }
 
+.crop{
+  margin-top: 30px;
+  position: relative;
+ 
+  height: 150px;
+  overflow: hidden;
+}
+
+.crop img{
+ opacity: .7
+}
+
+
+
 .posts{
   margin-top: 150px
 }
@@ -180,6 +194,11 @@ background: linear-gradient( rgba(0,0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('http:
 
 }
 
+.hr-posts{
+  opacity: 0.16;
+  margin-top: 40px;
+}
+
 .post_title{
   font-family: 'Open Sans', sans-serif;
   color: white;
@@ -188,10 +207,16 @@ background: linear-gradient( rgba(0,0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('http:
   margin-top: 150px;
 }
 
+.more_posts{
+  text-align: center;
+  padding-bottom: 70px;
+  font-style: italic;
+}
 
 
 .post-description{
   font-family: 'Open Sans', sans-serif;
+  font-size: 1.3em;
 }
 
 .footer {
