@@ -49,9 +49,11 @@
 
   {% if page.title-page %}
   <meta name="twitter:title" content="{{ page.title }}">
+  <meta property='og:title' content="{{ page.title }}"/>
   <title>{{ page.title-page }}</title>
     {% else %}
   <meta name="twitter:title" content="{{ site.title }}">
+  <meta property='og:title' content="{{ site.title }}"/>
     
     <title>{{ site.title }}</title>
   
@@ -59,19 +61,29 @@
     
   {% if page.url %}
   <meta name="twitter:url" content="{{ site.url }}{{ page.url }}">
+  <meta property='og:url' content="{{ site.url }}{{ page.url }}" />
   {% endif %}
   {% if page.description %}
   <meta name="twitter:description" content="{{ page.description }}">
+  <meta property='og:description' content="{{ page.description }}"/>
   {% else %}
   <meta name="twitter:description" content="{{ page.description }}">
+  <meta property='og:description' content="{{ page.description }}"/>
   {% endif %}
-  {% if page.thumbnail %}
-  <meta name="twitter:image:src" content="{{ site.url }}/images/{{ page.thumbnail }}">
+  {% if page.image %}
+  <meta name="twitter:image:src" content="{{ site.url }}/images/posts/{{ page.image }}.jpg">
+  <meta property='og:image' content="{{ site.url }}/images/posts/{{ page.image }}.jpg"/>
   {% else %}
   <meta name="twitter:image:src" content="http://i.imgur.com/7DThPa7.jpg">
+  <meta property='og:image' content="http://i.imgur.com/7DThPa7.jpg"/>
   {% endif %}
 
-  {% seo title=false %}
+
+
+
+ 
+ 
+
 
 
 
