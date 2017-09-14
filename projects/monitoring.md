@@ -3,7 +3,7 @@ layout: project
 title: Monitoreo de vídeos de YouTube
 meta: Monitoreo de cámaras web de Youtube
 type: project
-image: blog.jpg
+image: monitoring.png
 description: Se trata de una página en la que el usuario introduce los enlaces a vídeos de cámaras web o de cualquier otro tipo en Youtube, para poder visualizarlos todos a la vez 
 title-page: Jekyll y Github Pages 
 tenol: [HTML, CSS, Vue, Javascript]
