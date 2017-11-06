@@ -1,388 +1,330 @@
-body{
-  background-color: #F9F9F9; 
+body {
+  background-color: #F9F9F9;
   font-family: 'Open Sans', sans-serif;
-  
-  }
+}
 
-h1{
+h1 {
   font-size: 3.2em;
   font-weight: bold;
-
 }
 
-h2{
- font-size: 2em;
+h2 {
+  font-size: 2em;
   font-weight: bold;
-
 }
 
-h3{
-   font-size: 2em;
-
-
-} 
-
-h4{
-	font-size: 1.5em;
-	font-weight: bold;
+h3 {
+  font-size: 2em;
 }
 
-
-h3{
-   font-size: 1.6em;
-
-
+h4 {
+  font-size: 1.5em;
+  font-weight: bold;
 }
 
+h3 {
+  font-size: 1.6em;
+}
 
-.mynav{
+.mynav {
   background-color: rgba(0, 0, 0, 0.2);
 }
 
-nav{
+nav {
   background-color: transparent;
 }
 
 #granim-canvas {
-   position: absolute;
-    display: block;
-    width: 100%;
-    height: 400px;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
-    background-image: url("https://ak6.picdn.net/shutterstock/videos/9228407/thumb/1.jpg");
-    
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 400px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  background-image: url("https://ak6.picdn.net/shutterstock/videos/9228407/thumb/1.jpg");
 }
 
 #post-canvas {
-   position: absolute;
-    display: block;
-    width: 100%;
-    height: 500px;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
-    
- 
-    
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 500px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
 }
 
-.main_title{
+.main_title {
   margin-top: 100px;
   color: white;
 }
 
-
-.label-newsletter{
-	color:white;
+.sub_title {
+  color: white !important;
 }
 
-.email{
-	z-index: 1;
-	padding-left: 10px;
-
+.label-newsletter {
+  color: white;
 }
 
-.parallax{
-
-/* The image used */
-
-z-index: 2;
-color:white;
-position:relative; 
-background: linear-gradient( rgba(0,130, 230, 0.7), rgba(0, 130, 230, 0.7) ), url('http://miriadna.com/desctopwalls/images/max/Lake-in-the-mountains.jpg');
-    background-size: cover;
-
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    
-
+.email {
+  z-index: 1;
+  padding-left: 10px;
 }
 
-.crop{
+.parallax {
+  /* The image used */
+  z-index: 2;
+  color: white;
+  position: relative;
+  background: linear-gradient( rgba(0, 130, 230, 0.7), rgba(0, 130, 230, 0.7)), url('http://miriadna.com/desctopwalls/images/max/Lake-in-the-mountains.jpg');
+  background-size: cover;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.crop {
   margin-top: 30px;
   position: relative;
- 
   height: 150px;
   overflow: hidden;
 }
 
-.crop img{
- opacity: .7
+.crop img {
+  opacity: .7
 }
 
-
-
-.posts{
+.posts {
   margin-top: 150px
 }
 
-.text_header{
+.text_header {
   padding: 120px;
 }
 
-.parallax2{
-
-/* The image used */
-
-z-index: -1;
-color:white;
-position:relative; 
-
-background: linear-gradient( rgba(0,0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('http://vignette1.wikia.nocookie.net/prydain/images/7/7f/Mountains.jpg/revision/latest?cb=20130328022425');
-  background-size: cover;
-
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-   
-
+strong{
+  font-weight: bold !important;
 }
 
-.contenidos{
+.parallax2 {
+  /* The image used */
+  z-index: -1;
+  color: white;
+  position: relative;
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('http://vignette1.wikia.nocookie.net/prydain/images/7/7f/Mountains.jpg/revision/latest?cb=20130328022425');
+  background-size: cover;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.contenidos {
   color: #555;
   background-color: #ddd;
   width: 100%;
   padding: 30px;
-  
 }
 
-.contenidos h3{
+.contenidos h3 {
   font-weight: bold;
 }
 
-.container{
+.container {
   background-color: #F9F9F9;
-
 }
-.main-content{
+
+.main-content {
   margin-top: 150px;
   font-family: 'Droid Serif', serif;
   font-size: 1.125rem;
-  background-color: #F9F9F9;  
+  background-color: #F9F9F9;
   line-height: 1.6;
   padding-left: 4.5%;
   padding-right: 4.5%;
-  
 }
 
-
-.main-content h2{
+.main-content h2 {
   font-family: 'Open Sans', sans-serif;
   margin-top: 50px;
-  
 }
 
-.post-title{
+.post-title {
   font-family: 'Open Sans', sans-serif;
   color: #0babc6;
-
   font-weight: bold;
   margin-bottom: -5px;
-
 }
 
-.hr-posts{
+.hr-posts {
   opacity: 0.16;
   margin-top: 40px;
 }
 
-.post_title{
+.post_title {
   font-family: 'Open Sans', sans-serif;
   color: white;
-
   font-weight: bold;
   margin-top: 150px;
 }
 
-.more_posts{
+.more_posts {
   text-align: center;
   padding-bottom: 70px;
   font-style: italic;
 }
 
-
-.post-description{
+.post-description {
   font-family: 'Open Sans', sans-serif;
   font-size: 1.3em;
 }
 
 .footer {
-  color:white;
+  color: white;
   font-size: 0.7em;
-
 }
- 
- .footer-text{
- font-size: 1.2em;
-   position:fixed;
-   bottom: 10px;
-   width: 100%;
-   font-weight: bold;
+
+.footer-text {
+  font-size: 1.2em;
+  position: fixed;
+  bottom: 10px;
+  width: 100%;
+  font-weight: bold;
   -webkit-text-stroke: 0.5px black;
-   color: #f35626;
-    background-image: -webkit-linear-gradient(92deg,#f35626,#feab3a);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -webkit-animation: hue 60s infinite linear;
-    
-;   
-
-
- }
+  color: #f35626;
+  background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: hue 60s infinite linear;
+  ;
+}
 
 @-webkit-keyframes hue {
-    from {
-      -webkit-filter: hue-rotate(0deg);
-    }
-    
-    to {
-      -webkit-filter: hue-rotate(360deg);
-    }
+  from {
+    -webkit-filter: hue-rotate(0deg);
+  }
+  to {
+    -webkit-filter: hue-rotate(360deg);
+  }
 }
 
 .social {
-	overflow: auto;
-       
+  overflow: auto;
 }
 
 .social li {
-	list-style-type: none;
-	float: left;
-
+  list-style-type: none;
+  float: left;
 }
 
-.date{
-  color:#9D9D9D;
-   font-style: italic;
+.date {
+  color: #9D9D9D;
+  font-style: italic;
 }
 
-.logo{
+.logo {
   margin-top: 2px;
   margin-left: 20px;
-
 }
 
-#lights{
+#lights {
   position: absolute;
   margin-left: auto;
   margin-right: auto;
   left: 0;
-   top: 64px;
-   z-index: 1;
-
+  top: 64px;
+  z-index: 1;
 }
 
-#candy{
-  position:fixed;
-  bottom:0;
+#candy {
+  position: fixed;
+  bottom: 0;
   width: 100%;
   height: 10px;
-  background-image: url(/images/candy.png); 
-  background-repeat:repeat-x; 
+  background-image: url(/images/candy.png);
+  background-repeat: repeat-x;
   z-index: 2;
-
 }
 
-
-
 ul#menu li {
-    display:inline;
-    padding-left:2%;
-    padding-right: 2%;
-    font-weight: bold;
-    font-size: 1.3em;
+  display: inline;
+  padding-left: 2%;
+  padding-right: 2%;
+  font-weight: bold;
+  font-size: 1.3em;
+}
 
-  }
-
-  
 .menu-item {
   font-size: 1.2em;
   font-weight: bold;
 }
 
-
-
-.post{
+.post {
   margin-bottom: 40px;
   padding-right: 30px;
   padding-left: 30px;
   padding-top: 15px;
 }
 
-.project{
+.project {
   padding: 30px;
 }
-.project-text{
+
+.project-text {
   padding: 20px;
   padding-bottom: 60px;
 }
 
-h5{
-  font-weight:bold;
-
+h5 {
+  font-weight: bold;
 }
 
-#about_me{
+#about_me {
   padding: 30px;
-
 }
 
-#contact_button{
+#contact_button {
   margin-top: 30px;
   margin-bottom: 30px;
-
-
 }
 
-#contact_message{
+#contact_message {
   color: black;
   height: 160px;
-
 }
 
-#contact_email{
+#contact_email {
   color: black;
 }
 
-#contact_form{
+#contact_form {
   width: 80%;
   margin: 0px auto;
-
 }
 
-#post-image{
+#post-image {
   max-width: 78%;
-
 }
 
-.tags{
-  
+.tags {
   margin-left: 20px;
   display: inline;
-
-
-
 }
 
-.tag{
+.tag {
   padding-left: 15px;
-
 }
 
-.chip_post{
+.chip_post {
   display: inline;
   background-color: rgba(0, 0, 0, 0.3);
   color: white;
@@ -390,58 +332,55 @@ h5{
   padding: 10px 25px 10px 25px;
   margin-left: 7px;
   margin-right: 7px;
-
 }
 
-.date_post{
+.date_post {
   color: white;
   margin-top: 30px;
 }
 
-.read_more{
-  display:block;
-  padding:10px;
-  padding-top:2px;
+.read_more {
+  display: block;
+  padding: 10px;
+  padding-top: 2px;
   width: 100px;
   color: white;
-
-
 }
 
-.related{
-  margin-top:25px;
+.related {
+  margin-top: 25px;
   margin-bottom: 100px;
 }
 
-.related-posts{
-
-  padding-left:25px;
+.related-posts {
+  padding-left: 25px;
 }
-.btn{
+
+.btn {
   margin-top: 15px;
   margin-bottom: 15px;
 }
 
 .elevator {
-    text-align: center;
-    cursor: pointer;
-    width: 140px;
-    margin: auto;
+  text-align: center;
+  cursor: pointer;
+  width: 140px;
+  margin: auto;
 }
 
 .elevator:hover {
-    opacity: 0.7;
+  opacity: 0.7;
 }
 
 .elevator svg {
-    width: 40px;
-    height: 40px;
-    display: block;
-    margin: auto;
-    margin-bottom: 5px;
+  width: 40px;
+  height: 40px;
+  display: block;
+  margin: auto;
+  margin-bottom: 5px;
 }
 
-footer{
+footer {
   background-color: #eee;
   width: 100%;
   padding: 10px;
@@ -449,16 +388,13 @@ footer{
 }
 
 @media screen and (max-width: 480px) {
-    h1 {
-        font-size: 2em;
-    }
-
-     h2 {
-        font-size: 1.5em;
-    }
-
-    hr{
-      width: 90%;
-    }
-
+  h1 {
+    font-size: 2em;
+  }
+  h2 {
+    font-size: 1.5em;
+  }
+  hr {
+    width: 90%;
+  }
 }

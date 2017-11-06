@@ -14,7 +14,7 @@ baseurl:
 exclude: ['README.md']
 permalink: :title
 
-gems:
+plugins:
   - jekyll-redirect-from
   - jekyll-sitemap
   - jekyll-seo-tag
