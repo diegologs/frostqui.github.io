@@ -58,11 +58,19 @@
 
   {% endif %} {% if page.url %}
   <meta name="twitter:url" content="{{ site.url }}{{ page.url }}">
-  <meta property='og:url' content="{{ site.url }}{{ page.url }}" /> {% endif %} {% if page.description %}
+  <meta property='og:url' content="{{ site.url }}{{ page.url }}" />
+   {% endif %} 
+   {% if page.description %}
   <meta name="twitter:description" content="{{ page.description }}">
-  <meta property='og:description' content="{{ page.description }}" /> {% else %}
+  <meta name="description" content="{{ page.description }}">
+  <meta property='og:description' content="{{ page.description }}" />
+   {% else %}
+  <meta name="description" content="{{ page.description }}">
+  
   <meta name="twitter:description" content="{{ page.description }}">
-  <meta property='og:description' content="{{ page.description }}" /> {% endif %} {% if page.image %}
+  <meta property='og:description' content="{{ page.description }}" /> 
+  {% endif %} 
+  {% if page.image %}
   <meta name="twitter:image:src" content="{{ site.url }}/images/posts/{{ page.image }}.jpg">
   <meta property='og:image' content="{{ site.url }}/images/posts/{{ page.image }}.jpg" /> {% else %}
   <meta name="twitter:image:src" content="http://i.imgur.com/7DThPa7.jpg">
