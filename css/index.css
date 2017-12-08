@@ -57,6 +57,8 @@ nav {
   bottom: 0;
   left: 0;
   z-index: -1;
+  background-position: center;
+  background-size: cover;
 }
 
 .main_title {
@@ -96,6 +98,7 @@ nav {
   position: relative;
   height: 150px;
   overflow: hidden;
+  background-position: center;
 }
 
 .crop img {
