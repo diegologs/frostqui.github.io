@@ -266,6 +266,18 @@ ul#menu li {
   font-size: 1.3em;
 }
 
+.post ul > li{
+  
+  list-style: outside;
+
+}
+
+.post ul{
+  padding-left: 40px;
+  padding-top: 6px;
+  padding-bottom: 15px;
+}
+
 .menu-item {
   font-size: 1.2em;
   font-weight: bold;
@@ -388,6 +400,10 @@ footer {
   width: 100%;
   padding: 10px;
   margin-top: 20px;
+}
+
+.img-100{
+  width: 100px;
 }
 
 @media screen and (max-width: 480px) {
