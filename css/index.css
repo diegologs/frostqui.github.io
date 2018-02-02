@@ -272,6 +272,11 @@ ul#menu li {
 
 }
 
+.post {
+  text-align : justify;
+
+}
+
 .post ul{
   padding-left: 40px;
   padding-top: 6px;
