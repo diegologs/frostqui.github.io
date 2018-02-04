@@ -411,7 +411,14 @@ footer {
   width: 100px;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 800px) {
+
+.post {
+  margin-bottom: 40px;
+  padding-right: 0px;
+  padding-left: 0px;
+  padding-top: 15px;
+}
   h1 {
     font-size: 2em;
   }
