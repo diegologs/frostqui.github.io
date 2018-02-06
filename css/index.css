@@ -356,7 +356,9 @@ h5 {
 
 .date_post {
   color: white;
-  margin-top: 30px;
+  padding-right: 25px;
+  font-style: italic;
+  padding-bottom: 30px;
 }
 
 .read_more {
@@ -409,6 +411,20 @@ footer {
 
 .img-100{
   width: 100px;
+}
+
+.atr{
+  color: white;
+
+}
+
+.hr_atr{
+  margin-top: 30px;
+  margin-bottom: 15px;
+  text-align: center;
+  width: 20%;
+  border: 1px solid rgba(255,255,255,0.3);
+
 }
 
 @media screen and (max-width: 800px) {

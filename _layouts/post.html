@@ -9,12 +9,30 @@ layout: default
 
 <h1 class="post_title center">{{page.title}} </h1>
 <div class="center">
+  
+  <div class="date_post">{{page.date | date: '%B %d, %Y'}}</div>
+  
   {% for tag in page.tags %}
+
     <a class="tag chip_post" href="/tag#{{ tag | slugify }}">{{ tag }}</a>
+    
   {% endfor %}
 </div>
 
-<div class="center date_post">{{page.date | date: '%B %d, %Y'}}</div>
+
+<hr class="hr_atr">
+
+{% assign words = content | number_of_words %}
+
+<div class="center atr">
+  {% if words < 360 %}
+  <i class="fa fa-clock-o"></i>  1 min de lectura
+  {% else %}
+   <i class="fa fa-clock-o"></i> {{ words | divided_by:180 }} mins de lectura
+  {% endif %}
+</div>
+
+
 <div class="container main-content ">
 
 
