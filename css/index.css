@@ -266,6 +266,23 @@ ul#menu li {
   font-size: 1.3em;
 }
 
+.post ul > li{
+  
+  list-style: outside;
+
+}
+
+.post {
+  text-align : justify;
+
+}
+
+.post ul{
+  padding-left: 40px;
+  padding-top: 6px;
+  padding-bottom: 15px;
+}
+
 .menu-item {
   font-size: 1.2em;
   font-weight: bold;
@@ -339,7 +356,9 @@ h5 {
 
 .date_post {
   color: white;
-  margin-top: 30px;
+  padding-right: 25px;
+  font-style: italic;
+  padding-bottom: 30px;
 }
 
 .read_more {
@@ -390,7 +409,32 @@ footer {
   margin-top: 20px;
 }
 
-@media screen and (max-width: 480px) {
+.img-100{
+  width: 100px;
+}
+
+.atr{
+  color: white;
+
+}
+
+.hr_atr{
+  margin-top: 30px;
+  margin-bottom: 15px;
+  text-align: center;
+  width: 20%;
+  border: 1px solid rgba(255,255,255,0.3);
+
+}
+
+@media screen and (max-width: 800px) {
+
+.post {
+  margin-bottom: 40px;
+  padding-right: 8px;
+  padding-left: 8px;
+  padding-top: 15px;
+}
   h1 {
     font-size: 2em;
   }
