@@ -6,6 +6,7 @@ description: Primer episodio donde explico que decisiones tomé en el diseño UX
 summary: En esta serie, explicaré que decisiones he tomado para el desarrollo y el diseño de Creavelas. En este primer episodio toca la parte de UX & UI, una parte esencial en el diseño web. Esta parte nos asegura poder ofrecer una experciencia agradable a todos los tipos de usuarios de nuestra página web.
 title-page: Creavelas tutorial de UX y UI
 image: creavelas
+lang: es
 tags: [Proyectos, UX, UI, Creavelas]
 ---
 

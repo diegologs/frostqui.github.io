@@ -6,6 +6,7 @@ description: ¿Qué es AJAX en desarrollo web? ¿Cómo se usa? ¿Para qué sirve
 summary: Con este sencillo ejemplo puedes entender cómo funcionan las peticiones AJAX, las cuáles son muy útiles cuando queremos llamar a una API y mostrar el resultado sin tener que recargar la página completamente.
 title-page: Tutorial AJAX - Citas aleatorias
 image: quotes
+lang: es
 tags: [AJAX, Javascript, HTML, CSS]
 ---
 

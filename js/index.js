@@ -6,10 +6,11 @@ $(document).ready(function(){
 
 
     var currentTime = new Date()
+    var currentTime2 = new Date()
     var month = currentTime.getMonth() + 1
     var total = month;
     var src = "/images/";
-  
+
     
     // Verano
     //if (total >=6 && total <= 7)

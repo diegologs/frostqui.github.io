@@ -6,6 +6,7 @@ description: Tutorial de Dart junto con WebGL para la creación de gráficos en 
 summary: Dart es un lenguaje tipado con orientación a objetos desarrollado por Google. En este sencillo tutorial aprenderemos a usarlo junto con WebGL, una API creada para el desarrollo de gráficos en 3D que podremos visualizar en cualquier navegador que soporte WebGL. 
 title-page: Tutorial WebGl y Dart
 image: dart
+lang: es
 tags: [Dart, WebGL]
 ---
 

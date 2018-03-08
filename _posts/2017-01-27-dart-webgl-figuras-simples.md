@@ -6,6 +6,7 @@ description: WebGL y Dart, cómo dibujar figuras simples. Qué son los shaders y
 summary: En este artículo veremos como podemos dibujar círculos y triángulos. Crearemos buffers para estas figuras y los usaremos. Veremos que son los shaders y cómo los podemos usar en nuestra escena para ahorrar recursos y optimizar.
 title-page: Tutorial WebGl y Dart
 image: dart2
+lang: es
 tags: [Dart, WebGL]
 ---
 

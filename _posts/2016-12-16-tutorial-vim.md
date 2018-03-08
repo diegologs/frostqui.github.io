@@ -6,6 +6,7 @@ description: En este articulo veremos como podemos hacer orientacion a objetos u
 summary: ¿Quires programar usando VIM y no sabes por donde empezar? ¿Has abierto VIM y no sabes como cerrarlo? ¿Quieres descubrir los mejores plugins de VIM? Entonces te recomiendo que leas esto. Explicare los atajos básicos, como configurar vim a nuestro gusto y como añadir plugins.
 title-page: Guia VIM para principiantes
 image: vim
+lang: es
 tags: [VIM]
 ---
 
