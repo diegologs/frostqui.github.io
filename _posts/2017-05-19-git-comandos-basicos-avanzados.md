@@ -6,6 +6,7 @@ description: Vamos a ver cómo usar git de forma fácil y eficaz y cómo instala
 summary: Git tiene a tu disposición numerosos comandos y muchos de ellos no son muy conocidos. Tanto si eres usuario experto como si nunca has usado git, te aseguro que esta lista de servira de gran ayuda para mantener un control de versiones
 title-page: Git, comandos básicos y avanzados
 image: git
+lang: es
 tags: [Git] 
 ---
 

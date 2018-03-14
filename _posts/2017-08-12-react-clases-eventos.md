@@ -6,6 +6,7 @@ description: Cómo podemos crear clases en React y cómo podemos usar los estado
 summary: Los componentes de clase en React tienen estado y ciclos de vida. En esta ocasión veremos cómo actualizar el estado de los componentes y cómo modificar su ciclo de vida
 title-page: React - Clases estados y ciclos de vida
 image: react2
+lang: es
 tags: [React] 
 ---
 

@@ -6,6 +6,7 @@ description: ¿Cuáles son las mejores tecnologías para crear páginas web? ¿C
 summary: Hoy en día existen muchísimas tecnologías para desarrollar web. En este artículo voy a motrar cuáles son los frameworks más interesantes y populares para del desarrollo web en el año 2018.
 title-page: ¿Cuántas tecnologías web existen?
 image: tecnologias-web
+lang: es
 tags: [Web] 
 ---
 

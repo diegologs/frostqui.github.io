@@ -6,6 +6,7 @@ description: Electron es un framework de atom que nos permite crear aplicaciones
 summary: En este post echaremos un vistazo a Electron, un framework creado por el equipo de Atom para la creación de apps de escritorio multiplataforma. También veremos como podemos usar Electron para desarrollar una app para tomar notas y apintar recordatorios de una manera muy sencilla. 
 title-page: Tutorial Electron - Cómo crear una aplicación de notas cross platform
 image: task
+lang: es
 tags: [Electron, NodeJS, ExpressJS, MongoDB, Moongose ] 
 ---
 

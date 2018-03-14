@@ -6,6 +6,7 @@ description: Como instalar y usar Calabash para hacer testing de aplicaciones An
 summary: Antiguamente las aplicaciones y los programas se testeaban a mano, es decir teniamos que comprobar por nuestra cuenta que todo funcionaba correctamente. Hoy en dia podemos dejar que las aplicaciones se prueben automaticamente. Para este tutorial vamos a usar Cucumber para escribir que pruebas queremos que nuestra aplicación compruebe y Calabash para ejecutar dichas pruebas.
 title-page: Calabash para realizar testing automatico
 image: calabash
+lang: es
 tags: [Android, Testing, Calabash] 
 ---
 

@@ -8,7 +8,10 @@ author:
   bio: Estudiando Software en la URJC. En esta página encontarás todo tipo de articulos y tutoriales sobre el desarrollo web y el mundo de la programación en general.
 
 
-
+languages: ["es", "en"]
+default_lang: "es"
+exclude_from_localization: ["javascript", "images", "css"]
+parallel_localization: true
 
 baseurl: 
 exclude: ['README.md']
@@ -18,3 +21,4 @@ plugins:
   - jekyll-redirect-from
   - jekyll-sitemap
   - jekyll-seo-tag
+  - jekyll-polyglot
