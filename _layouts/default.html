@@ -10,63 +10,10 @@
 
 
 <body>
-  <script src="{{site.baseurl}}/js/prism.js"></script>
-  <script src="{{site.baseurl}}/js/index.js"></script>
 
   {{content}}
-
-
-  <!-- Call the script -->
-  <script src="{{site.baseurl}}/js/granim.min.js"></script>
-
-  <!-- Create a Granim instance -->
-  <script>
-    var granimInstance = new Granim({
-      element: '#granim-canvas',
-      name: 'granim',
-      opacity: [1, .6, .2],
-      isPausedWhenNotInView: true,
-      states: {
-        "default-state": {
-          gradients: [
-            ['#834D9B', '#D04ED6'],
-            ['#1CD8D2', '#93EDC7']
-          ],
-          transitionSpeed: 20000
-        }
-      }
-    });
-  </script>
-
-  <script>
-
-    function getRandomColor() {
-  var letters = '0123456789ABCDEF';
-  var color = '#';
-  for (var i = 0; i < 6; i++) {
-    color += letters[Math.floor(Math.random() * 16)];
-  }
-  return color;
-}
-
-    var granimInstance = new Granim({
-      element: '#post-canvas',
-      name: 'granim',
-      opacity: [1, .7, 0],
-      isPausedWhenNotInView: true,
-      states: {
-        "default-state": {
-          gradients: [
-            [getRandomColor(), getRandomColor()],
-            ['#1CD8D2', '#93EDC7'],
-            ['#ccef73', '#f9925e']
-
-          ],
-          transitionSpeed: 20000
-        }
-      }
-    });
-  </script>
+  <script src="{{site.baseurl}}/js/prism.js"></script>
+  <script src="{{site.baseurl}}/js/index.js"></script>
 
 </body>
 

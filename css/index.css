@@ -1,6 +1,17 @@
-body{
+/*  ------ CSS HELPERS ------*/ 
 
-  font-family: 'IBM Plex Sans', sans-serif !important;
+body{
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  padding: 0.05em 0;
 }
 
 .responsive-img {
@@ -24,9 +35,21 @@ body{
 
 }
 
-#header_logo {
-  max-width: 200px;
+.container {
+  width: 1000px;
+  max-width: 92%;
+  margin: 0px auto;
+}
 
+
+/*  ------ HEADER ------*/ 
+
+#header_logo {
+  max-width: 240px;
+
+}
+#header_slogan {
+  font-style: italic;
 }
 
 #header_menu{
@@ -40,30 +63,58 @@ body{
   padding-right: 30px;
 }
 
-header{
-  background-color: #d9e8e9;
+.main_header{
+  padding-top: 30px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.main_header{
+  color: white;
 }
 
-.container {
-  width: 1000px;
-  max-width: 92%;
-  margin: 0px auto;
+.main_header a{
+  color: white;
 }
 
+
+/*  ------ MAIN SECTION ------*/ 
+
+.main_section{
+  padding-top: 20px;
+}
+.posts {
+  padding-top: 20px;
+}
 .posts_info {
   padding-left: 1%;
 }
 
-.posts_summary {
-  text-align: justify;
+.posts_title {
+  font-family: 'Lato', sans-serif !important;
 }
 
+.posts_summary {
+  text-align: justify;
+  font-family: 'Merriweather', serif !important;
+}
+
+.posts_read_more{
+  font-style: italic;
+}
+
+/*  ------ MEDIA QUERYS ------*/ 
 
 @media screen and (max-width: 1000px) {
   .thumb {
     width: 100%;
     height: auto;
     max-height: 300px;
+
+  }
+
+  #header_logo {
+    max-width: 170px;
 
   }
 }
