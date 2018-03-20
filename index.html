@@ -3,81 +3,28 @@ layout: default
 ---
 
 
-<canvas id="granim-canvas"></canvas>
+{% include header.html %}
 
+<main class="container">
+  <section>
+    <h3>Ültimos artículos</h3>
+    <div class="posts">
 
-<h1 class="center main_title">.code&#40; &#41; & beer  <i class="fa fa-beer" aria-hidden="true"></i></h1>
-<h3 class="center sub_title">Blog sobre desarrollo web y software</h3>
+      {% for post in site.posts limit:10 %}
 
+        <article class="flex three">
+          <div class="full fourth-1000"><span>
+            <img class="responsive-img thumb posts_image" src="{{site.baseurl}}/images/posts/{{post.image}}.jpg"></img>
+          </span></div>
+          <div class="full three-fourth-1000 posts_info"><span>
+              <h4 class="posts_title">{{post.title}}</h4>
+              <p class="posts_summary">{{post.summary}}</p>
+          </span></div>
+        </article>
+        <hr>
 
+      {% endfor %} 
 
-  
-<div class="container posts">
-
-<ul class="row">
-  {% for post in site.posts limit:10 %}
-
-  
-  <li class="post">
-  
-      
-   
-  
-     <a href="{{site.baseurl}}{{post.url}}" ><h2 class="post-title" >{{post.title}}</h2></a>
-     <div class="crop" style="background-image: linear-gradient( rgba(136, 251, 255, 0.30), rgba(126, 229, 255, 0.30)), url({{site.baseurl}}/images/posts/{{post.image}}.jpg)">
-     
-      </div>
-  
-    </br>
-    <a class="date"> <i class="fa fa-calendar" aria-hidden="true"></i>  {{post.date | date: '%B %d, %Y'}}  </a>
-
-    <div class="tags">
-    {% for tag in post.tags %}
-                <a class="tag chip" href="/tag#{{ tag | slugify }}">{{ tag }}</a>
-          {% endfor %}
     </div>
-      
-      <p class="post-description">
-      {{ post.summary }}
-    </p>
-
-
-    <a class="waves-effect waves-light btn cyan darken-1" href="{{site.baseurl}}{{post.url}}">> Leer más</a>
- 
-  
-<hr class="hr-posts">
-
-
-  </li>
-
-
-  {% endfor %} 
-
-</ul>
-
-<h3 class="more_posts">¿Ya no hay más posts? Tranquilo, en la sección <a href="https://frostqui.github.io/blog"><b>BLOG</b></a> hay muchos más.</h3>
-
-
-
-</div>
-
- <div class="elevator">
-                    <svg class="sweet-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve" height="100px" width="100px">
-                        <path d="M70,47.5H30c-1.4,0-2.5,1.1-2.5,2.5v40c0,1.4,1.1,2.5,2.5,2.5h40c1.4,0,2.5-1.1,2.5-2.5V50C72.5,48.6,71.4,47.5,70,47.5z   M47.5,87.5h-5v-25h5V87.5z M57.5,87.5h-5v-25h5V87.5z M67.5,87.5h-5V60c0-1.4-1.1-2.5-2.5-2.5H40c-1.4,0-2.5,1.1-2.5,2.5v27.5h-5  v-35h35V87.5z"/>
-                        <path d="M50,42.5c1.4,0,2.5-1.1,2.5-2.5V16l5.7,5.7c0.5,0.5,1.1,0.7,1.8,0.7s1.3-0.2,1.8-0.7c1-1,1-2.6,0-3.5l-10-10  c-1-1-2.6-1-3.5,0l-10,10c-1,1-1,2.6,0,3.5c1,1,2.6,1,3.5,0l5.7-5.7v24C47.5,41.4,48.6,42.5,50,42.5z"/>
-                    </svg>
-                    Back to Top
-</div>
-
-<script>
-
-            // Simple elevator usage.
-            var elementButton = document.querySelector('.elevator');
-            var elevator = new Elevator({
-                element: elementButton,
-                mainAudio: '{{ site.url }}/music/elevator.mp3', // Music from http://www.bensound.com/
-                endAudio:  '{{ site.url }}/music/ding.mp3'
-            });
-
-</script>
-
+  </section>
+</main>

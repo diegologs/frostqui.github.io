@@ -1,447 +1,69 @@
-body {
-  background-color: #F9F9F9;
-  font-family: 'Open Sans', sans-serif;
+body{
+
+  font-family: 'IBM Plex Sans', sans-serif !important;
 }
 
-h1 {
-  font-size: 3.2em;
-  font-weight: bold;
-}
-
-h2 {
-  font-size: 2em;
-  font-weight: bold;
-}
-
-h3 {
-  font-size: 2em;
-}
-
-h4 {
-  font-size: 1.5em;
-  font-weight: bold;
-}
-
-h3 {
-  font-size: 1.6em;
-}
-
-.mynav {
-  background-color: rgba(0, 0, 0, 0.2);
-}
-
-nav {
-  background-color: transparent;
-}
-
-#granim-canvas {
-  position: absolute;
-  display: block;
+.responsive-img {
   width: 100%;
-  height: 400px;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: -1;
-  background-image: url("https://ak6.picdn.net/shutterstock/videos/9228407/thumb/1.jpg");
+  height: auto;
+
 }
 
-#post-canvas {
-  position: absolute;
-  display: block;
-  width: 100%;
-  height: 500px;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: -1;
-  background-position: center;
-  background-size: cover;
+.center {
+  text-align: center;
+  margin: 0px auto;
+
 }
 
-.main_title {
-  margin-top: 100px;
-  color: white;
-}
-
-.sub_title {
-  color: white !important;
-}
-
-.label-newsletter {
-  color: white;
-}
-
-.email {
-  z-index: 1;
-  padding-left: 10px;
-}
-
-.parallax {
-  /* The image used */
-  z-index: 2;
-  color: white;
+.thumb{
   position: relative;
-  background: linear-gradient( rgba(0, 130, 230, 0.7), rgba(0, 130, 230, 0.7)), url('http://miriadna.com/desctopwalls/images/max/Lake-in-the-mountains.jpg');
-  background-size: cover;
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.crop {
-  margin-top: 30px;
-  position: relative;
-  height: 150px;
+  object-fit: cover;
+  width:230px;
+  height:230px;
   overflow: hidden;
-  background-position: center;
+
 }
 
-.crop img {
-  opacity: .7
+#header_logo {
+  max-width: 200px;
+
 }
 
-.posts {
-  margin-top: 150px
+#header_menu{
+  list-style: none;
+  display: inline-block;
 }
 
-.text_header {
-  padding: 120px;
+#header_item{
+  display: inline-block;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
-strong{
-  font-weight: bold !important;
-}
-
-.parallax2 {
-  /* The image used */
-  z-index: -1;
-  color: white;
-  position: relative;
-  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('http://vignette1.wikia.nocookie.net/prydain/images/7/7f/Mountains.jpg/revision/latest?cb=20130328022425');
-  background-size: cover;
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.contenidos {
-  color: #555;
-  background-color: #ddd;
-  width: 100%;
-  padding: 30px;
-}
-
-.contenidos h3 {
-  font-weight: bold;
+header{
+  background-color: #d9e8e9;
 }
 
 .container {
-  background-color: #F9F9F9;
-}
-
-.main-content {
-  margin-top: 150px;
-  font-family: 'Droid Serif', serif;
-  font-size: 1.125rem;
-  background-color: #F9F9F9;
-  line-height: 1.6;
-  padding-left: 4.5%;
-  padding-right: 4.5%;
-}
-
-.main-content h2 {
-  font-family: 'Open Sans', sans-serif;
-  margin-top: 50px;
-}
-
-.post-title {
-  font-family: 'Open Sans', sans-serif;
-  color: #0babc6;
-  font-weight: bold;
-  margin-bottom: -5px;
-}
-
-.hr-posts {
-  opacity: 0.16;
-  margin-top: 40px;
-}
-
-.post_title {
-  font-family: 'Open Sans', sans-serif;
-  color: white;
-  font-weight: bold;
-  margin-top: 150px;
-}
-
-.more_posts {
-  text-align: center;
-  padding-bottom: 70px;
-  font-style: italic;
-}
-
-.post-description {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 1.3em;
-}
-
-.footer {
-  color: white;
-  font-size: 0.7em;
-}
-
-.footer-text {
-  font-size: 1.2em;
-  position: fixed;
-  bottom: 10px;
-  width: 100%;
-  font-weight: bold;
-  -webkit-text-stroke: 0.5px black;
-  color: #f35626;
-  background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -webkit-animation: hue 60s infinite linear;
-  ;
-}
-
-@-webkit-keyframes hue {
-  from {
-    -webkit-filter: hue-rotate(0deg);
-  }
-  to {
-    -webkit-filter: hue-rotate(360deg);
-  }
-}
-
-.social {
-  overflow: auto;
-}
-
-.social li {
-  list-style-type: none;
-  float: left;
-}
-
-.date {
-  color: #9D9D9D;
-  font-style: italic;
-}
-
-.logo {
-  margin-top: 2px;
-  margin-left: 20px;
-}
-
-#lights {
-  position: absolute;
-  margin-left: auto;
-  margin-right: auto;
-  left: 0;
-  top: 64px;
-  z-index: 1;
-}
-
-#candy {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  height: 10px;
-  background-image: url(/images/candy.png);
-  background-repeat: repeat-x;
-  z-index: 2;
-}
-
-ul#menu li {
-  display: inline;
-  padding-left: 2%;
-  padding-right: 2%;
-  font-weight: bold;
-  font-size: 1.3em;
-}
-
-.post ul > li{
-  
-  list-style: outside;
-
-}
-
-.post {
-  text-align : justify;
-
-}
-
-.post ul{
-  padding-left: 40px;
-  padding-top: 6px;
-  padding-bottom: 15px;
-}
-
-.menu-item {
-  font-size: 1.2em;
-  font-weight: bold;
-}
-
-.post {
-  margin-bottom: 40px;
-  padding-right: 30px;
-  padding-left: 30px;
-  padding-top: 15px;
-}
-
-.project {
-  padding: 30px;
-}
-
-.project-text {
-  padding: 20px;
-  padding-bottom: 60px;
-}
-
-h5 {
-  font-weight: bold;
-}
-
-#about_me {
-  padding: 30px;
-}
-
-#contact_button {
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
-
-#contact_message {
-  color: black;
-  height: 160px;
-}
-
-#contact_email {
-  color: black;
-}
-
-#contact_form {
-  width: 80%;
+  width: 1000px;
+  max-width: 92%;
   margin: 0px auto;
 }
 
-#post-image {
-  max-width: 78%;
+.posts_info {
+  padding-left: 1%;
 }
 
-.tags {
-  margin-left: 20px;
-  display: inline;
+.posts_summary {
+  text-align: justify;
 }
 
-.tag {
-  padding-left: 15px;
-}
 
-.chip_post {
-  display: inline;
-  background-color: rgba(0, 0, 0, 0.3);
-  color: white;
-  border-radius: 35px;
-  padding: 10px 25px 10px 25px;
-  margin-left: 7px;
-  margin-right: 7px;
-}
+@media screen and (max-width: 1000px) {
+  .thumb {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
 
-.date_post {
-  color: white;
-  padding-right: 25px;
-  font-style: italic;
-  padding-bottom: 30px;
-}
-
-.read_more {
-  display: block;
-  padding: 10px;
-  padding-top: 2px;
-  width: 100px;
-  color: white;
-}
-
-.related {
-  margin-top: 25px;
-  margin-bottom: 100px;
-}
-
-.related-posts {
-  padding-left: 25px;
-}
-
-.btn {
-  margin-top: 15px;
-  margin-bottom: 15px;
-}
-
-.elevator {
-  text-align: center;
-  cursor: pointer;
-  width: 140px;
-  margin: auto;
-}
-
-.elevator:hover {
-  opacity: 0.7;
-}
-
-.elevator svg {
-  width: 40px;
-  height: 40px;
-  display: block;
-  margin: auto;
-  margin-bottom: 5px;
-}
-
-footer {
-  background-color: #eee;
-  width: 100%;
-  padding: 10px;
-  margin-top: 20px;
-}
-
-.img-100{
-  width: 100px;
-}
-
-.atr{
-  color: white;
-
-}
-
-.hr_atr{
-  margin-top: 30px;
-  margin-bottom: 15px;
-  text-align: center;
-  width: 20%;
-  border: 1px solid rgba(255,255,255,0.3);
-
-}
-
-@media screen and (max-width: 800px) {
-
-.post {
-  margin-bottom: 40px;
-  padding-right: 8px;
-  padding-left: 8px;
-  padding-top: 15px;
-}
-  h1 {
-    font-size: 2em;
-  }
-  h2 {
-    font-size: 1.5em;
-  }
-  hr {
-    width: 90%;
   }
 }
