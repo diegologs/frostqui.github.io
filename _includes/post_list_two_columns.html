@@ -1,0 +1,17 @@
+<div class="posts_half flex two ">
+
+    {% for post in site.posts limit:5 %}
+      {% if post.lang == site.active_lang %}
+        <article class="half post_half_bg" style="background-image: linear-gradient( rgba(54, 75, 94, 0.2), rgba(54, 75, 94, 0.9) ), url({{site.baseurl}}/images/posts/{{post.image}}.jpg)">
+         
+          <div class="half_bottom">
+            <h3 class="half_title">{{post.title}}</h3>
+          
+          </div>
+         
+        </article>
+      
+      {% endif %} 
+    {% endfor %} 
+
+  </div>

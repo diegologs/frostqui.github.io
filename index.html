@@ -5,29 +5,13 @@ layout: default
 
 {% include header.html %}
 
-<main class="container">
-  <section class="main_section">
-    <h2>Últimos artículos</h2>
-    <div class="posts">
+<main class="">
+  
 
-      {% for post in site.posts limit:10 %}
-        {% if post.lang == site.active_lang %}
-        <article class="flex three">
-          <div class="full fourth-1000"><span>
-              <img class="responsive-img thumb posts_image" src="{{site.baseurl}}/images/posts/{{post.image}}.jpg"></img>
-          </span></div>
-          <div class="full three-fourth-1000 posts_info">
-              <h3 class="posts_title">{{post.title}}</h3>
-              <small><span class="posts_date"> {{post.date | date: '%B %d, %Y'}} </span></small>
-              <p class="posts_summary">{{post.summary}}</p>
-              <a class="posts_read_more" href="{{site.baseurl}}{{post.url}}">Leer más</a>
-          </div>
-        </article>
-        <hr>
+    {% include post_list_two_columns.html %}
 
-      {% endif %} 
-      {% endfor %} 
+    <div class="container">
+    {% include post_list_one_column.html %}
+  </div>
 
-    </div>
-  </section>
 </main>
