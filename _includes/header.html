@@ -1,16 +1,23 @@
 <header id="header" class="main_header">
   <div class="center">
     <a href="{{site.baseurl}}/">
-      <img class="img-responsive center" id="header_logo" src="/images/logo2.png" />
+      <img alt="Frostq" class="img-responsive center" id="header_logo" src="/images/logo2.png" />
     </a>
-    <h4 id="header_slogan">Web developing tutorials for maniacs</h4>
+    <h2 id="header_slogan">Web developing tutorials for maniacs</h2>
+
+    
 
   </div>
 
 </header>
 
 <nav class="center">
-  <ul id="header_menu">
+
+    <!-- responsive-->
+    <input id="bmenub" type="checkbox" class="show">
+    <label for="bmenub" class="burger pseudo button"><i class="fa fa-bars"></i></label>
+
+  <ul id="header_menu" class="menu">
     <a href="/blog">
       <li id="header_item">BLOG</li>
     </a>

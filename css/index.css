@@ -20,20 +20,25 @@ h6 {
   padding: 0.05em 0;
 }
 
-nav{
+nav {
   position: relative;
-  height: 50px;
+  min-height: 50px;
 }
 
-a{
-  color: #880ad6;
+a {
+  color: white;
+  font-weight: bold;
 }
 
-footer{
-  min-height: 400px;
-  background-image: linear-gradient( rgba(54, 75, 94, 0.9), rgba(154, 75, 94, 0.9) ), url('/images/bgs/footer.gif');
-  background-size: cover;
+a:hover {
+  color: rgb(192, 63, 234) !important;
 }
+
+.white {
+  color: white !important;
+}
+
+
 
 .responsive-img {
   width: 100%;
@@ -103,6 +108,10 @@ hr:after {
   margin: 0px auto;
 }
 
+.fa-calendar{
+  padding-right: 6px;
+}
+
 /*  ------ HEADER ------*/
 
 #header_logo {
@@ -141,6 +150,42 @@ hr:after {
   color: white;
 }
 
+.fa-bars {
+  color: black;
+  font-size: 1.4em;
+  padding-top: 12px;
+  text-align: left !important;
+}
+
+nav .brand, nav .menu, nav .burger {
+  float: none;
+  -webkit-transform: unset;
+  transform: unset;
+  top: 0;
+}
+
+/*  ------ FOOTER ------*/
+
+footer {
+  padding: 40px;
+  color: white !important;
+  min-height: 40px;
+  background-image: linear-gradient( rgba(54, 75, 94, 0.9), rgba(154, 75, 94, 0.9)), url('/images/bgs/footer.gif');
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+footer a{
+  color: white !important;
+}
+
+#footer_menu{
+  margin:0;
+}
+
+
+
+
 /*  ------ MAIN SECTION ------*/
 
 .main_section {
@@ -157,6 +202,14 @@ hr:after {
 
 .posts_title {
   font-family: 'Lato', sans-serif !important;
+}
+
+.posts_title a {
+  color: black !important;
+}
+
+.posts_title a:hover {
+  color: rgb(192, 63, 234) !important;
 }
 
 .posts_summary {
@@ -176,8 +229,6 @@ hr:after {
 .post_half_bg {
   position: relative;
   min-height: 400px;
-  
-
   background-position: 50% 50% !important;
 }
 
@@ -185,7 +236,6 @@ hr:after {
   padding: 5px;
   font-size: 1.8em;
   font-weight: 600;
- 
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
 }

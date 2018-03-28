@@ -23,21 +23,48 @@
     return 'winter';
   }
 
+
+
   let header = document.getElementById('header');
+  let a = document.getElementsByTagName("a");
+
+
+
   switch (getCurrentSeason()) {
     case 'winter':
-      header.style.backgroundImage = "linear-gradient( rgba(86, 156, 230, 0.9), rgba(192, 63, 234, 0.9) ), url('/images/bgs/winter.gif')";
-    break;
+      if (header) {
+        header.style.backgroundImage = "linear-gradient( rgba(86, 156, 230, 0.9), rgba(192, 63, 234, 0.9) ), url('/images/bgs/winter.gif')";
+      }
+      for (let i = 0; i < a.length; i++) {
+        a[i].style.color = "rgb(192, 63, 234)";
+      }
+      break;
     case 'spring':
-      header.style.backgroundImage = "linear-gradient( rgba(67, 160, 145, 0.7), rgba(138, 142, 42, 0.9) ), url('/images/bgs/spring.gif')";
-    break;
+      if (header) {
+        header.style.backgroundImage = "linear-gradient( rgba(67, 160, 145, 0.7), rgba(138, 142, 42, 0.9) ), url('/images/bgs/spring.gif')";
+      }
+      for (let i = 0; i < a.length; i++) {
+        a[i].style.color = "rgb(138, 142, 42)";
+      }
+      break;
     case 'summer':
-      header.style.backgroundImage = "linear-gradient( rgba(229, 209, 119, 0.7), rgba(142, 42, 79, 0.9) ), url('/images/bgs/summer.gif')";
-    break;
+      if (header) {
+        header.style.backgroundImage = "linear-gradient( rgba(229, 209, 119, 0.7), rgba(142, 42, 79, 0.9) ), url('/images/bgs/summer.gif')";
+      }
+      for (let i = 0; i < a.length; i++) {
+        a[i].style.color = "rgb(142, 42, 79)";
+      }
+      break;
     case 'autumn':
-      header.style.backgroundImage = "linear-gradient( rgba(150, 103, 87, 0.7), rgba(132, 45, 126, 0.9) ), url('/images/bgs/autumm.gif')";
-    break;
+      if (header) {
+        header.style.backgroundImage = "linear-gradient( rgba(150, 103, 87, 0.7), rgba(132, 45, 126, 0.9) ), url('/images/bgs/autumm.gif')";
+      }
+      for (let i = 0; i < a.length; i++) {
+        a[i].style.color = "rgb(132, 45, 126)";
+      }
+      break;
   }
+
 })();
 
 
@@ -52,4 +79,3 @@ function getRandomColor() {
   }
   return color;
 }
-
