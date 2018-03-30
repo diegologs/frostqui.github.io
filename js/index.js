@@ -3,24 +3,29 @@
     var now = new Date();
     var currentYear = now.getFullYear();
 
-    if (now < new Date(currentYear, 2, 1)) {
+    if (now == new Date(currentYear, 9, 31)) {
+      
+      return 'halloween';
+    }
+
+    if (now < new Date(currentYear, 2, 20)) {
       // [Jan 1 ~ Mar 1)
       return 'winter';
     }
-    if (now < new Date(currentYear, 5, 1)) {
+    if (now < new Date(currentYear, 5, 15)) {
       // [Mar 1 ~ Jun 1)
       return 'spring';
     }
-    if (now < new Date(currentYear, 8, 1)) {
+    if (now < new Date(currentYear, 8, 15)) {
       // [Jun 1 ~ Sep 1)
       return 'summer';
     }
-    if (now < new Date(currentYear, 11, 1)) {
+    if (now < new Date(currentYear, 11, 18)) {
       // [Sep 1 ~ Dec 1)
       return 'autumn';
     }
     // [Dec 1 ~ Dec 31]
-    return 'winter';
+    return 'christmas';
   }
 
 
@@ -63,6 +68,24 @@
         a[i].style.color = "rgb(132, 45, 126)";
       }
       break;
+    case 'christmas':
+    if (header) {
+      header.style.backgroundImage = "linear-gradient( rgba(38, 81, 46, 0.65), rgba(122, 18, 46, 0.65) ), url('/images/bgs/christmas.gif')";
+    }
+    for (let i = 0; i < a.length; i++) {
+      a[i].style.color = "rgb(122, 18, 46)";
+    }
+    break;
+
+    case 'halloween':
+    if (header) {
+      header.style.backgroundImage = "linear-gradient( rgba(46, 30, 68, 0.65), rgba(130, 86, 26, 0.65) ), url('/images/bgs/halloween.gif')";
+    }
+    for (let i = 0; i < a.length; i++) {
+      a[i].style.color = "rgb(122, 18, 46)";
+    }
+    break;
+
   }
 
 })();
