@@ -11,9 +11,16 @@ layout: default
     {% include post_list_two_columns.html %}
 
     <div class="container">
-    {% include post_list_one_column.html %}
+    
+      {% include post_list_one_column.html %}
+      {% if site.active_lang == 'es' %}
+      <p class="advise center">Si estás buscando más posts los puedes encontrar <a href="/blog">aquí <span class="visuallyhidden">encontrarás mas posts escritos por mí</span></a></p>
+      {% endif %} 
 
-    <p class="advise center">Si estás buscando más posts los puedes encontrar <a href="/blog">aquí <span class="visuallyhidden">En este enlace encontrarás mas posts escritos por mí</span></a></p>
+      {% if site.active_lang == 'en' %}
+      <p class="advise center">If you are looking for more articles you can go to the <a href="/blog">blog section <span class="visuallyhidden">to read more articles</span></a></p>
+      {% endif %} 
+
   </div>
 
 </main>

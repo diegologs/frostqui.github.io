@@ -1,21 +1,23 @@
 <div class="posts_half flex two ">
 
-  {% for post in site.posts limit:1 %}
-  {% if post.lang == site.active_lang %}
-    <article class="full post_half_bg" style="background-image: linear-gradient( rgba(54, 75, 94, 0.2), rgba(54, 75, 94, 0.9) ), url({{site.baseurl}}/images/posts/{{post.image}}.jpg)">
-     
-      <div class="half_bottom">
-       <h3 class="half_title"> <a class="white" href="{{site.baseurl}}{{post.url}}">{{post.title}}</a></h3>
-      
-      </div>
-     
-    </article>
-  
-  {% endif %} 
-{% endfor %} 
+  {% assign counter = 0 %}
 
-    {% for post in site.posts limit:5 offset:1 %}
+    {% for post in site.posts limit:6 %}
+   
       {% if post.lang == site.active_lang %}
+      {% assign counter=counter | plus:1 %}
+      {% if counter == 1 %}
+      <article class="full post_half_bg" style="background-image: linear-gradient( rgba(54, 75, 94, 0.2), rgba(54, 75, 94, 0.9) ), url({{site.baseurl}}/images/posts/{{post.image}}.jpg)">
+     
+        <div class="half_bottom">
+         <h3 class="half_title"> <a class="white" href="{{site.baseurl}}{{post.url}}">{{post.title}}</a></h3>
+        
+        </div>
+       
+      </article>
+      {% endif %} 
+
+      {% if counter != 1 %}
         <article class="full half-500 post_half_bg" style="background-image: linear-gradient( rgba(54, 75, 94, 0.2), rgba(54, 75, 94, 0.9) ), url({{site.baseurl}}/images/posts/{{post.image}}.jpg)">
          
           <div class="half_bottom">
@@ -24,6 +26,11 @@
           </div>
          
         </article>
+
+        {% endif %} 
+
+       
+   
       
       {% endif %} 
     {% endfor %} 

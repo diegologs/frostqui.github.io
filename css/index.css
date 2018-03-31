@@ -1,7 +1,7 @@
 /*  ------ CSS HELPERS ------*/
 
 body {
-  font-size: 14px;
+  font-size: 15px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #eee;
@@ -11,11 +11,11 @@ h3 {
   font-size: 1.4em;
 }
 
-h1{
+h1 {
   font-size: 2.2em;
 }
 
-h2{
+h2 {
   font-size: 1.9em;
 }
 
@@ -46,12 +46,9 @@ a:hover {
   color: white !important;
 }
 
-
-
 .responsive-img {
   max-width: 850px;
   height: auto;
- 
 }
 
 .center {
@@ -117,18 +114,25 @@ hr:after {
   margin: 0px auto;
 }
 
-.fa-calendar{
+.fa-calendar {
   padding-right: 6px;
 }
 
-.tags{
+.tags {
   background-color: black;
   color: white !important;
   padding-left: 8px;
   padding-right: 8px;
   padding-top: 5px;
   padding-bottom: 5px;
+}
 
+code {
+  font-size: 1em;
+}
+
+.all_posts{
+  list-style: none;
 }
 
 /*  ------ HEADER ------*/
@@ -176,11 +180,29 @@ hr:after {
   text-align: left !important;
 }
 
-nav .brand, nav .menu, nav .burger {
+.navbar .brand,
+.navbar .menu,
+.navbar .burger {
   float: none;
   -webkit-transform: unset;
   transform: unset;
   top: 0;
+}
+
+.main_nav{
+
+  background: linear-gradient(to right, rgba(67, 160, 145, 1), rgba(138, 142, 42, 1));
+
+}
+
+.main_nav a{
+  color: white !important;
+
+}
+
+.main_nav .menu{
+  margin-top: 3px;
+
 }
 
 /*  ------ FOOTER ------*/
@@ -194,16 +216,13 @@ footer {
   background-position: 50% 50%;
 }
 
-footer a{
+footer a {
   color: white !important;
 }
 
-#footer_menu{
-  margin:0;
+#footer_menu {
+  margin: 0;
 }
-
-
-
 
 /*  ------ MAIN SECTION ------*/
 
@@ -215,7 +234,7 @@ footer a{
   padding-top: 15px;
 }
 
-.post_list{
+.post_list {
   padding-top: 15px;
 }
 
@@ -273,49 +292,66 @@ footer a{
 
 /*  ------ POST ------*/
 
-.post_header{
+.post_header {
   min-height: 300px;
   background-position: center center;
-
 }
 
-.post_header_content{
+.post_header_content {
   color: white !important;
   padding-top: 85px;
 }
 
-.post_content{
+.post_content {
   margin-top: 40px;
 }
 
-.post_date{
+.post_date {
   margin-top: 10px;
 }
 
-.post_tags{
+.post_tags {
   margin-top: 15px;
-
 }
 
-.post_read_time{
+.post_read_time {
   margin-top: 15px;
   padding-bottom: 70px;
 }
 
-.post_content{
-  text-align: justify;
-}
-
-.related ul{
+.post_content ul {
   list-style: none;
 }
 
-.related_post{
+.post_content p {
+  text-align: justify;
+  font-size: 16px;
+}
+
+.post_content h2 {
+  margin-top: 25px;
+}
+
+.post_content h3 {
+  margin-top: 15px;
+}
+
+.related ul {
+ 
+}
+
+.related_post {
   font-size: 1.7em;
 }
 
-.related{
+.related {
   margin-top: 60px;
+}
+
+/*  ------ OTHER PAGES ------*/
+
+.blog_archive{
+  padding-top: 20px;
 }
 
 /*  ------ MEDIA QUERYS ------*/
@@ -329,12 +365,15 @@ footer a{
   #header_logo {
     max-width: 170px;
   }
-
-  h1{
+  h1 {
     font-size: 1.6em;
   }
-  .container{
+  .container {
     padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  ul{
     padding-left: 10px;
   }
 }
