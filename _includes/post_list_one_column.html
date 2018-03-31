@@ -1,30 +1,38 @@
-<div class="posts">
-
+<div class="post_list">
   <h2>Latest stuff</h2>
-    {% for post in site.posts limit:11 offset:6%}
-      {% if post.lang == site.active_lang %}
-        <article class="flex two single_post">
-          <div class="full fourth-1000"><span>
-              <img class="responsive-img thumb posts_image" src="{{site.baseurl}}/images/posts/{{post.image}}.jpg"></img>
-          </span></div>
-          <div class="full three-fourth-1000 posts_info">
-            <h3 class="posts_title"><a href="{{site.baseurl}}{{post.url}}">{{post.title}}</a></h3>
-            <small><span class="posts_date"> <i aria-hidden="true" class="fa fa-calendar"></i>{{post.date | date: '%B %d, %Y'}} </span></small>
-            <p class="posts_summary">{{post.summary}}</p>
 
-            {% if site.active_lang == 'es' %} 
-              <a class="posts_read_more" href="{{site.baseurl}}{{post.url}}">Leer más <span class="visuallyhidden">Leer más acerca de {{post.title}}</span></a>
-            {% endif %} 
+  <div class="posts">
 
-            {% if site.active_lang == 'en' %} 
-              <a class="posts_read_more" href="{{site.baseurl}}{{post.url}}">Read more <span class="visuallyhidden">Read more about {{post.title}}</span></a>
-            {% endif %} 
+    {% for post in site.posts limit:11 offset:6%} {% if post.lang == site.active_lang %}
+    <article class="flex two single_post">
+      <div class="full fourth-1000">
+        <span>
+          <img class="responsive-img thumb posts_image" src="{{site.baseurl}}/images/posts/{{post.image}}.jpg"></img>
+        </span>
+      </div>
+      <div class="full three-fourth-1000 posts_info">
+        <h3 class="posts_title">
+          <a href="{{site.baseurl}}{{post.url}}">{{post.title}}</a>
+        </h3>
+        <small>
+          <span class="posts_date">
+            <i aria-hidden="true" class="fa fa-calendar"></i>{{post.date | date: '%B %d, %Y'}} </span>
+        </small>
+        <p class="posts_summary">{{post.summary}}</p>
 
-          </div>
-        </article>
-        <hr aria-hidden="true">
+        {% if site.active_lang == 'es' %}
+        <a class="posts_read_more" href="{{site.baseurl}}{{post.url}}">Leer más
+          <span class="visuallyhidden">Leer más acerca de {{post.title}}</span>
+        </a>
+        {% endif %} {% if site.active_lang == 'en' %}
+        <a class="posts_read_more" href="{{site.baseurl}}{{post.url}}">Read more
+          <span class="visuallyhidden">Read more about {{post.title}}</span>
+        </a>
+        {% endif %}
 
-      {% endif %} 
-    {% endfor %} 
+      </div>
+    </article>
+    <hr aria-hidden="true"> {% endif %} {% endfor %}
 
   </div>
+</div>
