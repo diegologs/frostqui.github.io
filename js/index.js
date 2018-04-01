@@ -45,7 +45,7 @@
         nav.style.backgroundImage = "linear-gradient(to right, rgba(86, 156, 230, 1), rgba(192, 63, 234, 1) ), url('/images/bgs/winter.gif')";
       }
       for (let i = 0; i < a.length; i++) {
-        a[i].style.color = "rgb(192, 63, 234)";
+        a[i].style.color = "rgb(6, 156, 230)";
       }
       break;
     case 'spring':

@@ -28,10 +28,7 @@ h6 {
   padding: 0.05em 0;
 }
 
-nav {
-  position: relative;
-  min-height: 50px;
-}
+
 
 a {
   color: white;
@@ -135,7 +132,7 @@ code {
   list-style: none;
 }
 
-/*  ------ HEADER ------*/
+/*  ------ HEADER & NAVBAR------*/
 
 #header_logo {
   max-width: 240px;
@@ -173,6 +170,8 @@ code {
   color: white;
 }
 
+
+
 .fa-bars {
   color: black;
   font-size: 1.4em;
@@ -189,6 +188,12 @@ code {
   top: 0;
 }
 
+
+#header_slogan{
+  font-size: 1.3em;
+
+}
+
 .main_nav{
 
   background: linear-gradient(to right, rgba(67, 160, 145, 1), rgba(138, 142, 42, 1));
@@ -200,9 +205,45 @@ code {
 
 }
 
+.main_nav .fa-bars{
+  color: white !important;
+
+}
+
 .main_nav .menu{
   margin-top: 3px;
 
+}
+
+.nav_transparent{
+  position: absolute;
+  background: transparent;
+}
+
+.nav_transparent a{
+  color: white !important;
+
+}
+
+.nav_transparent .fa-bars{
+  color: white !important;
+
+}
+
+.nav_transparent .menu{
+  margin-top: 3px;
+
+}
+
+nav {
+  position: relative;
+  min-height: 50px;
+}
+
+.navbar_logo{
+  max-width: 130px;
+  height: auto;
+  
 }
 
 /*  ------ FOOTER ------*/
@@ -336,9 +377,7 @@ footer a {
   margin-top: 15px;
 }
 
-.related ul {
- 
-}
+
 
 .related_post {
   font-size: 1.7em;
@@ -375,5 +414,10 @@ footer a {
 
   ul{
     padding-left: 10px;
+  }
+
+  .main_nav a{
+    color:black !important;
+  
   }
 }
