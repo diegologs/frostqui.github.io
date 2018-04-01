@@ -2,6 +2,8 @@
 layout: default
 ---
 
+{% include navbar_transparent.html %}
+
 
 <div class="post_header" style="background-image: linear-gradient( rgba(23, 45, 65, 0.5), rgba(54, 75, 94, 0.9) ), url({{site.baseurl}}/images/posts/{{page.image}}.jpg)">
     <div class="container post_header_content">
@@ -45,6 +47,7 @@ layout: default
       
             </div>
           </article>
+          <br>
            {% endif %} {% endif %} {% endfor %}
       
 </div>

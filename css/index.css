@@ -106,7 +106,7 @@ hr:after {
 }
 
 .container {
-  width: 1000px;
+  width: 900px;
   max-width: 92%;
   margin: 0px auto;
 }
@@ -218,6 +218,7 @@ code {
 .nav_transparent{
   position: absolute;
   background: transparent;
+  box-shadow: none;
 }
 
 .nav_transparent a{
@@ -360,13 +361,16 @@ footer a {
   padding-bottom: 70px;
 }
 
-.post_content ul {
-  list-style: none;
-}
+
 
 .post_content p {
   text-align: justify;
-  font-size: 16px;
+  font-size: 17px;
+}
+
+.post_content ul {
+  text-align: justify;
+  font-size: 17px;
 }
 
 .post_content h2 {
@@ -385,6 +389,7 @@ footer a {
 
 .related {
   margin-top: 60px;
+  margin-bottom: 100px;
 }
 
 /*  ------ OTHER PAGES ------*/

@@ -55,6 +55,28 @@ layout: default
     {{content}}
   </div>
 
+  {% if page.serie  %}
+  
+  <div class="related">
+
+  <h2>Este artículo es parte de una serie:</h2>
+  <ul>
+  {% assign count = '0' %}
+  {% assign idx = '0' %}
+  {% for post in site.posts %}
+      {% if post.serie == page.serie %}
+          {% capture count %}{{ count | plus: '1' }}{% endcapture %}
+         <li>
+          <h5><a class="related_post" href="{{post.url}}">{{count}}. {{post.title}}</a></h5>
+         </li>    
+
+      {% endif %}
+  {% endfor %}
+</ul>
+</div>
+
+
+{% else %}
   <div class="related">
     <h2>Posts recomendados</h2>
     <ul class="related_posts">
@@ -72,6 +94,7 @@ layout: default
   </div>
 
 </div>
+{% endif %}
 
 
 
