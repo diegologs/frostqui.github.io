@@ -1,0 +1,54 @@
+---
+layout: default
+---
+
+
+<div class="post_header" style="background-image: linear-gradient( rgba(23, 45, 65, 0.5), rgba(54, 75, 94, 0.9) ), url({{site.baseurl}}/images/posts/{{page.image}}.jpg)">
+    <div class="container post_header_content">
+      <h1 class="post_title">{{page.title}} </h1>
+      <p>{{page.description}}</p>
+  
+  
+    </div>
+  </div>
+
+
+{{content}}
+
+<div class="posts container">
+
+
+        {% assign counter = 0 %}
+      
+          {% for post in site.posts %} {% if post.lang == site.active_lang %} {% if post.serie == page.serie %} {% assign counter=counter | plus:1 %}
+          <article class="single_post">
+          
+            <div class="posts_info">
+              <h3 class="posts_title">
+                <a href="{{site.baseurl}}{{post.url}}">{{counter}}.  {{post.title}}</a>
+              </h3>
+              <small>
+                <span class="posts_date">
+                  <i aria-hidden="true" class="fa fa-calendar"></i>{{post.date | date: '%B %d, %Y'}} </span>
+              </small>
+              <p class="posts_summary">{{post.summary}}</p>
+      
+              {% if site.active_lang == 'es' %}
+              <a class="posts_read_more" href="{{site.baseurl}}{{post.url}}">Leer más
+                <span class="visuallyhidden">Leer más acerca de {{post.title}}</span>
+              </a>
+              {% endif %} {% if site.active_lang == 'en' %}
+              <a class="posts_read_more" href="{{site.baseurl}}{{post.url}}">Read more
+                <span class="visuallyhidden">Read more about {{post.title}}</span>
+              </a>
+              {% endif %}
+      
+            </div>
+          </article>
+           {% endif %} {% endif %} {% endfor %}
+      
+</div>
+
+{% if counter == 0 %} 
+<h3 class="center">Actualmente no tenemos posts sobre esta serie, estamos trabajando en ello</h3>
+{% endif %}
