@@ -11,7 +11,7 @@ tags: [PHP, Telegram, Heroku]
 ---
 
 
-<b>Telegram</b> es una aplicación de mensajeria open source. Entre otras cosas, permite la creación de bots que pueden ejecutar ciertas acciones. En este tutorial aprenderemos a crear un bot con <b>PHP</b> usando la plataforma cloud de <b>Heroku</b>
+Telegrames una aplicación de mensajeria open source. Entre otras cosas, permite la creación de bots que pueden ejecutar ciertas acciones. En este tutorial aprenderemos a crear un bot con <b>PHP</b> usando la plataforma cloud de <b>Heroku</b>
 
 Lo primero que tenemos que hacer es dirigirnos a Telegram e iniciar una conversación con un @BotFather, un bot creado para crear y administrar bots.
 https://telegram.me/botfather

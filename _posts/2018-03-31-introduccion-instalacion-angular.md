@@ -84,6 +84,7 @@ Cuando generamos un proyecto con Angular cli nos genera la siguiente estructura 
  - **node_modules**: En esta carpeta se encuentran las librerías de angular y sus dependencias, cuando instalemos librerías se añadiran aquí. Generalmente no hay que tocar nada de esta carpeta.
  - **src**: Aquí se encuentran los archivos que componen nuestra aplicación 
     - **app**: Aquí se donde se van a encontrar los componentes, vistas, y servicios de la app. Por el momento hay un componente llamado app con sus respectivos archivos (css, html controlador, tests, etc)
+      - **app.module.ts**: En este archivo se especifica los componentes que vamos a usar en la app web. Cuando creemos un componente tenemos que importarlo en este archivo.
     - **favicon**: El favicon de la web
     - **index.html**: Punto de entrada a nuestra web, este archivo se carga en todas las webs, por lo que puedes poner código para que se incluya en todas las vistas.
     - **main.ts**: Algunas configuraciones de Angular, de momento no nos hace falta tocarlo.

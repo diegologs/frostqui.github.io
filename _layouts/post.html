@@ -63,7 +63,7 @@ layout: default
   <ul>
   {% assign count = '0' %}
   {% assign idx = '0' %}
-  {% for post in site.posts %}
+  {% for post in site.posts reversed %}
       {% if post.serie == page.serie %}
           {% capture count %}{{ count | plus: '1' }}{% endcapture %}
          <li>

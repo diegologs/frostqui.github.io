@@ -22,7 +22,7 @@ layout: default
 
         {% assign counter = 0 %}
       
-          {% for post in site.posts %} {% if post.lang == site.active_lang %} {% if post.serie == page.serie %} {% assign counter=counter | plus:1 %}
+          {% for post in site.posts reversed %} {% if post.lang == site.active_lang %} {% if post.serie == page.serie %} {% assign counter=counter | plus:1 %}
           <article class="single_post">
           
             <div class="posts_info">

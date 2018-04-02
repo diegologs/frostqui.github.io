@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Angular - Componentes y Routing
+title: Angular - Vistas y bindings
 meta: ¿Cómo crear formularios con Angular? Aprende como usar FormControl, FormGroup y FormBuilder en Angular
 description: ¿Cómo crear formularios con Angular? Aprende como usar FormControl, FormGroup y FormBuilder en Angular
 summary: Una vista general sobre qué es Angular y cómo se instala. 

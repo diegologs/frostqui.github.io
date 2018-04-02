@@ -2,7 +2,7 @@
 
   {% assign counter = 0 %}
 
-    {% for post in site.posts limit:6 %}
+    {% for post in site.posts limit:5 %}
    
       {% if post.lang == site.active_lang %}
       {% assign counter=counter | plus:1 %}
