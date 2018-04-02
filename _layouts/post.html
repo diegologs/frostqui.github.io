@@ -24,7 +24,7 @@ layout: default
   {% assign words = content | number_of_words %}
 
     <div class="post_read_time">
-      {% if words < 360 %}
+      {% if words < 340 %}
         <i class="fa fa-clock-o"></i>  1 min read
       {% else %}
         <i class="fa fa-clock-o"></i> {{ words | divided_by:180 }} min read
