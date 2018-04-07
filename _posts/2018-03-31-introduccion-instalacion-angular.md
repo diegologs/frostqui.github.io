@@ -119,11 +119,14 @@ por poner un ejemplo, si ahora abres la página (si no tienes funcionando el com
 
 Como ves, existe una variable llamada **title** (Typescript tiene inferencia de tipos y no hace falta que especifiques de que tipo es la variable) que automáticamente se pinta en el html, para ello si abres el archivo **app.component.html** verás que en la 4ª linea hay:
 
+{% raw %}
 ```html
 Welcome to {{ title }}!
 ```
 
 Con {{ nombre_variable }} puedes pintar variables creadas en el controlador (archivos ts) de su correspondiente componente (en este caso el componente es app).
+
+{% endraw %}
 
 ## Conclusiones
 

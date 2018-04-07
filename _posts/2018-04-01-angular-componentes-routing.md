@@ -21,7 +21,7 @@ Un componente se puede componer de varios archivos: vista, estilos, controladore
 La vista (html) y los estilos (css), definen qué y cómo queremos representar la web. En los controladores se encuenta la lógica de los componentes. Desde este archivo podemos inicializar las variables para la vista, actualizarlos, llamar a otros archivos, crear funciones, etc. Desde los servicios es donde se hacen las llamadas para gestionar los datos, por ejemplo guardar datos, es decir, desde los controladores es mejor no gestionar datos directamente, sino que lo mejor es delegar estas funciones a los servicios.
 
 
-## Creando componentees en Angular
+## Creando componentes en Angular
 
 Para crear los componentes en Angular existen dos maneras de hacerlo: la método sencillo y el manual.
 
