@@ -55,13 +55,140 @@ Ya podemos usar los métodos del servicio en el componente **service.nombreFunci
 
 Hasta ahora con lo que sabemos podemos usar los servicios para leer y escribir datos, pero simulados o guardados en la memoria del navegador, para leer o escribir de una API Rest tenemos que hacer llamadas HTTP.
 
-Para usar HttpClient de Angular en cualquier parte, tenemos que importar el módulo HttpClientModule, en la sección imports de el **app.module.ts**:
+Para usar HttpClient de Angular en cualquier parte, tenemos que importar el módulo HttpClientModule, en la sección **imports** de el **app.module.ts**:
 
 ```typescript
 import { HttpClientModule } from '@angular/common/http';
 ```
 
 HttpClient usa Observables de RxJS. Los observables son una colección de futuros eventos que llegan de forma asíncrona. Si quieres aprender más de RxJS puedes visitar su web oficial: [http://reactivex.io/rxjs/](http://reactivex.io/rxjs/).
+
+Aunque lo hayamos importado en la página de forma global, también tenemos que importarlo y inyectarlo en los constructores de los servicios desde los que vayamos a realizar llamadas Htpp:
+
+```typescript
+import { HttpClient } from '@angular/common/http';
+
+@Injectable()
+export class ServiceName {
+
+  constructor(private http: HttpClient){
+  }
+
+}
+```
+
+Ahora para realizar llamadas http podemos invocar cualquiera de los siguiente métodos definidos en el HtppClient:
+
+- get
+- post
+- put
+- delete
+- patch
+- head
+- jsonp
+
+Por ejemplo para hacer una llamada get a la API de github:
+
+```typescript
+getSeeschweiler(){
+  this.http.get('https://api.github.com/users/seeschweiler').subscribe(data => {
+    console.log(data);
+  });
+}
+```
+
+Si ahora inyectamos como dependencia el servicio, llamamos al método getSeeschweiler() que acabamos de crear y abrimos la consola del navegador, podemos observar que la llamada la hace correctamente.
+
+ <img src="https://i.imgur.com/uTYBv68.png" class="responsive-img" alt="La consola del navegador muestra un objeto con varios parámetros"> 
+
+Con esto podemos hacer llamadas http desde sercicios, pero, **¿y si queremos mostrar o enviar desde los controladores información a los servicios?**
+
+Para hacer esto, en lugar de hacer el subscribe en el servcio, tenemos que devolver un **Observable** de la llamada http, es decir:
+
+```typescript
+getSeeschweiler(): Observable<any>{
+  return this.http.get('https://api.github.com/users/seeschweiler');
+}
+```
+No sin antes importar los observables en el servicio:
+
+```typescript
+import { Observable } from 'rxjs/Observable';
+```
+En este caso he declarado el Observable de tipo **any** pero lo suyo sería crear un **modelo** con los parámtros que vaya a devolver la API, para declarar el Observable de ese tipo.
+
+Ahora, en el controlador, cuando queramos llamar al servicio (siempre y cuando lo hayamos inyectado en el controlador), tenemos que subscribirnos para recibir la información, es decir:
+
+```typescript
+this.service.getSeeschweiler().subscribe(
+  data => {
+    this.data = data;
+    console.log(data);
+  }
+);
+```
+**this.data** en este caso es una variable que he declarado del mismo tipo que el observable que devuelve el servicio, y data asecas es la información que viene de la llamada http (service es el nombre que le he puesto al servicio al hacer la inyección de dependencias en el constructor). 
+
+### Cómo enviar información con llamadas HTTP
+
+Para realizar una llamada POST, o una llamada PUT, por ejemplo, necesitamos pasar información o un objeto al servidor. Para conseguir esto simplemente al realizar la llamada que corresponda, desde el servicio pasamos el objeto correspondiente, por ejemplo:
+
+```typescript
+postExample(test_object: ObjectType): Observable<any>{
+  return this.http.post('http://jsonplaceholder.typicode.com/posts', {
+        title: 'foo',
+        body: 'bar',
+        userId: 1
+      });
+}
+```
+
+Y también podemos pasar como parámetro el objeto para que lo reciba desde fuera:
+
+```typescript
+postExample(test_object: ObjectType): Observable<any>{
+  return this.http.post('http://jsonplaceholder.typicode.com/posts', test_object});
+}
+```
+
+En este ejemplo he usado la página de **jsonplacer** que permite hacer pruebas de API REST. Si probamos a hacer un POST y hacemos un **console.log** de lo que llega tras hacerlo, recibiremos un objeto confirmando que el objeto se ha creado correctamente.
+
+### Tratamiento de errores
+
+Al hacer subscribe, ya sea en el servicio o en el controlador, podemos poner un parámetro para saber si se ha producido un error:
+
+```typescript
+data => {
+    this.data = data;
+    console.log(data);
+},
+err => {
+  console.log("Error.")
+}
+```
+
+Si necesitas más información específica, puedes declarar el parámtro de eror de tipo **HttpErrorResponse** (lo tienes que importar desde @angular/common/http), por ejemplo:
+
+```typescript
+this.http.get<UserResponse>('https://api.github.com/users/seeschweiler').subscribe(
+    data => {
+      console.log("User Login: " + data.login);
+      console.log("Bio: " + data.bio);
+      console.log("Company: " + data.company);
+    },
+    (err: HttpErrorResponse) => {
+      if (err.error instanceof Error) {
+        console.log("Client-side error");
+      } else {
+        console.log("Server-side error");
+      }
+    }
+);
+```
+
+## Conclusiones
+
+Con lo que hemos visto en este artículo y con todo lo anterior, no deberías tener problemas en hacer una web entera con Angular, ya que hemos cubierto los conceptos más básicos. Aún asi todavía quedan muchas características que Angular puede ofrecer y que todavía no hemos visto, por lo que te animo a que eches un vistazo a su documentación oficial: [https://angular.io/docs](https://angular.io/docs)
 
 
 
