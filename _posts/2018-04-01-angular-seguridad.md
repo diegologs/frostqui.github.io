@@ -11,3 +11,11 @@ tags: [Angular]
 serie: angular
 
 ---
+
+## Introducción
+
+## ¿Qué son los guards?
+
+## Creando un guard para asegurar que el usuario está logueado
+
+## Conclusiones

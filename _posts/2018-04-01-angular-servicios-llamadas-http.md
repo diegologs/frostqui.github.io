@@ -129,6 +129,18 @@ this.service.getSeeschweiler().subscribe(
 ```
 **this.data** en este caso es una variable que he declarado del mismo tipo que el observable que devuelve el servicio, y data asecas es la información que viene de la llamada http (service es el nombre que le he puesto al servicio al hacer la inyección de dependencias en el constructor). 
 
+**IMPORTANTE** Cuando carga un componente que hace llamadas http, si mostramos una variable que viene de una petición http, no se cargará y tirará error porque en el isntante en el que se abre la página, la petición aún no se ha realizado. Para arreglar esto tenemos que poner un **ngIf** a la variable que viene desde la petición antes de mostrarla en la vista:
+
+{% raw %}
+```html
+<div *ngIf="data">
+
+{{data}}
+
+</div>
+```
+{% endraw %}
+
 ### Cómo enviar información con llamadas HTTP
 
 Para realizar una llamada POST, o una llamada PUT, por ejemplo, necesitamos pasar información o un objeto al servidor. Para conseguir esto simplemente al realizar la llamada que corresponda, desde el servicio pasamos el objeto correspondiente, por ejemplo:

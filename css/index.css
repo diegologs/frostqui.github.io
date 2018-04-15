@@ -281,7 +281,8 @@ footer a {
 }
 
 .posts_info {
-  padding-left: 3.5%;
+  padding-left: 8%;
+ 
 }
 
 .posts_title {
@@ -424,5 +425,9 @@ footer a {
   .main_nav a{
     color:black !important;
   
+  }
+
+  .posts_info{
+    padding-left: 20px;
   }
 }

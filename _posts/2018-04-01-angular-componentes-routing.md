@@ -105,7 +105,14 @@ Ahora, imaginemos que queremos crear una página para mostrar en detalle los ite
  { path: 'hero/:id', component: ItemDetailComponent }
 ```
 
-**:id** indica que se generarán rutas con distintos id, luego dentro del controlador del detalle de item, recogeremos este valor y mostraremos el item correspondiente. Pero esto lo veremos en detalle en artículos posteriores.
+**:id** indica que se generarán rutas con distintos id, luego dentro del controlador del detalle de item, recogeremos este valor y mostraremos el item correspondiente. 
+Para recoger este valor, en el componente, tenemos que incluir en el constructor:
+
+```typescript
+this.myId = activatedRoute.snapshot.params['id'];
+```
+**this.id** es una variable que he creado en el componente.
+
 
 Y si queremos iuna página 404 que aparezca cuando una ruta no coincide con alguna de las anteriores:
 
@@ -159,6 +166,21 @@ Dentro de esta etiqueta especial es donde se cargarán las vistas de las rutas. 
 ```html
 <app-navbar></app-navbar>
 ```
+
+### Componentes hijos
+
+Para que un componente tenga componentes hijos asociados, lo tenemos que especificar en el routing:
+
+```typescript
+const appRoutes = [
+    { path: '', component: ItemListComponent,  pathMatch: 'full'},
+    { path: '', component: ItemListComponent, },
+];
+```
+
+Los componentes hijos se dibujarán en el router outlet que coloquemos en el padre, es decir por ejemplo, podemos crear un componente padre que sea AdminComponent y dentro componentes hijos para cada página dentro de la sección de admin, de esta forma, si colocamos el navbar, por ejemplo, en el componente padre (además del router outlet), el navbar se dibujará en todas las páginas hijas. 
+
+Por defecto, todos los componentes de la página son hijos del componete AppComponent por lo que podemos usar este componente para incluir funcionalidad en todos los componentes de la página.
 
 ### ¿Y en el navbar cómo podemos poner links a páginas de nuestra web? 
 

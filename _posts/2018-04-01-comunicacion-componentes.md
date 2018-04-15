@@ -11,3 +11,17 @@ tags: [Angular]
 serie: angular
 
 ---
+
+## Introducción
+
+## Desde padre al hijo mediante input
+
+## Desde hijo al padre mediante input
+
+## Desde padre al hijo mediante output y eventos
+
+## Desde hijo al padre mediante output y eventos
+
+## Usando ngrx
+
+## Conclusiones
