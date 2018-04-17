@@ -56,7 +56,7 @@
         nav.style.backgroundImage = "linear-gradient( to right, rgba(67, 160, 145, 1), rgba(138, 142, 22, 1) ), url('/images/bgs/spring.gif')";
       }
       for (let i = 0; i < a.length; i++) {
-        a[i].style.color = "rgb(138, 142, 42)";
+        a[i].style.color = "rgb(19, 153, 86)";
       }
       break;
     case 'summer':
