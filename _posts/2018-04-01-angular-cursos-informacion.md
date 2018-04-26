@@ -11,3 +11,23 @@ tags: [Angular]
 serie: angular
 
 ---
+
+## Introducción
+
+## Cursos
+
+https://www.udemy.com/angular-5/
+
+https://www.udemy.com/angular-4-front-to-back/?siteID=QhjctqYUCD0-SnrWNKNff6O5p2NUFOq6ng&LSNPUBID=QhjctqYUCD0
+
+## Charlas, vídeos y conferencias
+
+## Libros
+
+https://books.ninja-squad.com/angular
+
+https://legacy.gitbook.com/book/rangle-io/ngcourse2/details
+
+## Artículos
+
+## Conclusiones

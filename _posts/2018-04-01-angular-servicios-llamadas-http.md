@@ -165,6 +165,76 @@ postExample(test_object: ObjectType): Observable<any>{
 
 En este ejemplo he usado la página de **jsonplacer** que permite hacer pruebas de API REST. Si probamos a hacer un POST y hacemos un **console.log** de lo que llega tras hacerlo, recibiremos un objeto confirmando que el objeto se ha creado correctamente.
 
+### Enviar en las llamdas HTTP los headers de sesión
+
+Si queremos enviar headers de autorización (por ejemplo si una API está protegida y para usarla previamente te has logueado), lo mejor es crear un arhchivo .ts a parte para crear un método para cada llamada Http para inyectar los headers. 
+
+En este ejemplo, sessionData es una clase que tengo para almacenar la sesión. Dentro de este archivo tengo un método para generar los headers Basic auth:
+
+```typescript
+   public generateAuthString(username: String, password: String) {
+        return 'Basic ' + btoa(username + ':' + password);
+    }
+
+```
+
+```typescript
+import { Injectable, OnInit } from '@angular/core';
+import { Http, Headers, RequestOptions } from '@angular/http';
+
+@Injectable()
+export class HttpWithHeaders {
+
+    public sessionData: SessionData;
+
+
+    constructor(private http: Http) {
+        this.sessionData = new SessionData();
+    }
+
+    generateHeaders() {
+        const headers = new Headers();
+
+        if (this.sessionData.amILogged()) {
+            headers.append('Authorization', this.sessionData.authToken());
+        }
+
+        return headers;
+    }
+
+    get(url) {
+        return this.http.get(url, {
+            headers: this.generateHeaders()
+        });
+    }
+
+
+    post(url, data) {
+        return this.http.post(url, data, {
+            headers: this.generateHeaders()
+        });
+    }
+
+    put(url, data) {
+        return this.http.put(url, data, {
+            headers: this.generateHeaders()
+        });
+    }
+
+    delete(url) {
+        return this.http.delete(url, {
+            headers: this.generateHeaders()
+        });
+    }
+}
+```
+
+**this.sessionData.authToken()** simplemente devuelve los headers de sesión.
+
+Para usar esta clase que acabamos se crear, simplemente lo importamos en el servicio que queramos y llamamos a cada uno de los métodos pasando la url como parámetro para que ejecute la petición http junto con los headers.
+
+Agradecimientos a [@ExtremoBlando](https://github.com/ExtremoBlando) por enseñarme ésta técnica.
+
 ### Tratamiento de errores
 
 Al hacer subscribe, ya sea en el servicio o en el controlador, podemos poner un parámetro para saber si se ha producido un error:
