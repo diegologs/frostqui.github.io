@@ -3,7 +3,7 @@ layout: post
 title: Proyecto Creavelas - Episodio 0 UX & UI
 meta: Creavelas, diseñando UX y UI. 
 description: Primer episodio donde explico que decisiones tomé en el diseño UX & UI de Creavelas, una red social donde la gente puede encender velas.
-summary: En esta serie, explicaré que decisiones he tomado para el desarrollo y el diseño de Creavelas. En este primer episodio toca la parte de UX & UI, una parte esencial en el diseño web. Esta parte nos asegura poder ofrecer una experciencia agradable a todos los tipos de usuarios de nuestra página web.
+excerpt: En esta serie, explicaré que decisiones he tomado para el desarrollo y el diseño de Creavelas. En este primer episodio toca la parte de UX & UI, una parte esencial en el diseño web. Esta parte nos asegura poder ofrecer una experciencia agradable a todos los tipos de usuarios de nuestra página web.
 title-page: Creavelas tutorial de UX y UI
 image: creavelas
 lang: es

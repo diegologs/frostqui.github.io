@@ -5,6 +5,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #eee;
+  font-family: 'Lato', sans-serif;
 }
 
 h3 {
@@ -48,6 +49,10 @@ a:hover {
   height: auto;
 }
 
+.main_content{
+  margin-top: 20px !important;
+}
+
 .center {
   text-align: center;
   margin: 0px auto;
@@ -59,6 +64,10 @@ a:hover {
   width: 230px;
   height: 230px;
   overflow: hidden;
+}
+
+.advise{
+  padding-bottom: 30px;
 }
 
 .thumb2 {
@@ -122,6 +131,8 @@ hr:after {
   padding-right: 8px;
   padding-top: 5px;
   padding-bottom: 5px;
+  margin-left: 2px;
+  margin-right: 2px;
 }
 
 code {
@@ -255,7 +266,9 @@ footer {
   min-height: 40px;
   background-image: linear-gradient( rgba(54, 75, 94, 0.9), rgba(154, 75, 94, 0.9)), url('/images/bgs/footer.gif');
   background-size: cover;
-  background-position: 50% 50%;
+  background-position: 50% 30%;
+  padding-left: 70px;
+  padding-bottom: 50px;
 }
 
 footer a {
@@ -263,9 +276,44 @@ footer a {
 }
 
 #footer_menu {
-  margin: 0;
+  margin: 0px;
+  margin-top: 20px;
+
 }
 
+#footer_menu li {
+  
+  margin-top: 10px;
+
+}
+
+#mc_embed_signup{
+  max-width: 75%;
+}
+
+
+
+.footer_menu{
+  width: 40%;
+  margin: 0px auto;
+}
+
+.footer_posts{
+  margin: 0px;
+  margin-top: 20px;
+}
+
+
+.footer_posts li{
+  
+  margin-top: 10px;
+}
+
+.footer_button{
+  margin-top: 20px;
+  background: rgb(91, 222, 255);
+  color: black;
+}
 /*  ------ MAIN SECTION ------*/
 
 .main_section {
@@ -286,9 +334,16 @@ footer a {
 }
 
 .posts_title {
-  font-family: 'Lato', sans-serif !important;
+  
 }
 
+.posts_date{
+  padding-right: 20px;
+}
+
+.posts_title{
+  margin-bottom: 10px;
+}
 .posts_title a {
   color: black !important;
 }
@@ -299,7 +354,8 @@ footer a {
 
 .posts_summary {
   text-align: justify;
-  font-family: 'Merriweather', serif !important;
+
+  font-family: 'Titillium Web', sans-serif !important;
 }
 
 .posts_read_more {
@@ -323,6 +379,11 @@ footer a {
   font-weight: 600;
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
+  
+}
+
+.half_summary{
+  padding-bottom: 10px;
 }
 
 .half_bottom {
@@ -331,6 +392,8 @@ footer a {
   bottom: 10%;
   left: 30px;
   right: 30px;
+  padding-left: 40px;
+
 }
 
 /*  ------ POST ------*/
@@ -351,6 +414,7 @@ footer a {
 
 .post_date {
   margin-top: 10px;
+  
 }
 
 .post_tags {
@@ -366,20 +430,24 @@ footer a {
 
 .post_content p {
   text-align: justify;
-  font-size: 17px;
+  font-size: 18px;
+
+  font-family: 'Titillium Web', sans-serif !important;
+  
 }
 
 .post_content ul {
   text-align: justify;
-  font-size: 17px;
+  font-size: 18px;
+  font-family: 'Titillium Web', sans-serif !important;
 }
 
 .post_content h2 {
-  margin-top: 25px;
+  margin-top: 30px;
 }
 
 .post_content h3 {
-  margin-top: 15px;
+  margin-top: 20px;
 }
 
 
@@ -390,13 +458,44 @@ footer a {
 
 .related {
   margin-top: 60px;
-  margin-bottom: 100px;
+  margin-bottom: 60px;
 }
 
 /*  ------ OTHER PAGES ------*/
 
 .blog_archive{
   padding-top: 20px;
+}
+
+.tags_style{
+  list-style: none;
+}
+
+.tags_page_title{
+  margin-bottom: 20px;
+}
+
+.about_img{
+  width: 100%;
+}
+
+.about_me{
+  padding-left: 30px;
+}
+
+.posts_year{
+  margin-top: 30px;
+}
+/*  ------ PROJECTS ------*/
+
+.project{
+  margin-top: 35px;
+  margin-bottom: 35px;
+}
+
+.project_title{
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 /*  ------ MEDIA QUERYS ------*/
@@ -417,6 +516,12 @@ footer a {
     padding-right: 10px;
     padding-left: 10px;
   }
+
+  .nav_transparent a{
+    color: black !important;
+  
+  }
+  
 
   ul{
     padding-left: 10px;

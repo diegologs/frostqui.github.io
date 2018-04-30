@@ -3,7 +3,7 @@ layout: post
 title: Las mejores librerías Javascript para este 2017
 meta: Librerías y frameworks gratis para hacer páginas web con Javascript  
 description: Librerías y frameworks gratis para hacer páginas web con Javascript  
-summary: En esta lista expongo las que, en mi opninión, son las librerías javascript más útiles o interesantes para el desarrollo web en este 2017. La lista no sigue ningún orden en particular. Si eres desarrollador web quizás descubras alguna utilidad nueva para tu página web
+excerpt: En esta lista expongo las que, en mi opninión, son las librerías javascript más útiles o interesantes para el desarrollo web en este 2017. La lista no sigue ningún orden en particular. Si eres desarrollador web quizás descubras alguna utilidad nueva para tu página web
 title-page: Mejores librerías JavaScript 2017
 image: library
 lang: es

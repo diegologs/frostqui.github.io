@@ -3,7 +3,7 @@ layout: post
 title: Angular - FormControl y FormGroup para crear formularios reactivos
 meta: ¿Cómo crear formularios con Angular? Aprende como usar FormControl, FormGroup y FormBuilder en Angular
 description: ¿Cómo crear formularios con Angular? Aprende como usar FormControl, FormGroup y FormBuilder en Angular
-summary: Una manera de ahorrar código en Angular y mantenerlo limpio y mantenible es usar FormControl y FormGorup para crear formularios reactivos. Además echaremos un ojo a FormBuilder, azúcar sintáctico para no tener que usar FormGroup y FormBuilder
+excerpt: Una manera de ahorrar código en Angular y mantenerlo limpio y mantenible es usar FormControl y FormGorup para crear formularios reactivos. Además echaremos un ojo a FormBuilder, azúcar sintáctico para no tener que usar FormGroup y FormBuilder
 title-page: Angular - FormGroup y FormBuilder 
 image: angular-forms
 lang: es

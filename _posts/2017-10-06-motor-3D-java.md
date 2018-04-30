@@ -3,7 +3,7 @@ layout: post
 title: Cómo crear un motor 3D en Java para videojuegos
 meta: Crear juegos 3D en Java  
 description: Iniciación para crear juegos 3D en Java. Construiremos nuestro propio motor 3D desde 0 que podremos usar de base para crear videojuegos.
-summary: Quizás Java no sea uno de los mejores lenguajes para la creación de videojuegos, mucho menos para videojuegos en 3D, pero como veremos en este artículo, podemos crear un motor gráfico en 3D bastante decente como base para muchos juegos.
+excerpt: Quizás Java no sea uno de los mejores lenguajes para la creación de videojuegos, mucho menos para videojuegos en 3D, pero como veremos en este artículo, podemos crear un motor gráfico en 3D bastante decente como base para muchos juegos.
 title-page: Cómo crear un motor 3D en Java para videojuegos
 image: java-3D
 lang: es

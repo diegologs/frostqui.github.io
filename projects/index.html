@@ -1,43 +1,31 @@
----
-layout: default
-title-page: Trabajos de Frostq - Diego López García
-meta: Todos los proyectos más importantes en forma de lista que he realizado hasta la fecha
-description: Todos los proyectos más importantes en forma de lista que he realizado hasta la fecha
----
+--- 
+layout: default 
+title-page: Trabajos de Frostq - Diego López García 
+meta: Todos los proyectos más importantes en forma de lista que he realizado hasta la fecha 
+description: Todos los proyectos más importantes en forma de lista que he realizado hasta la fecha 
+--- 
 
-<canvas id="granim-canvas" style="background-image: url('{{site.baseurl}}/images/posts/blog.jpg');"></canvas>
+{% include navbar.html %}
 
-<h1 class="main_title center">~./proyectos/</h1>
-<h3 class="center sub_title">Una recopilación de trabajos realizados por mí</h3>
-<br>
 
-<div class="container main-content">
-<ul>
- {% for project in site.pages %}
+<main class="container main_content ">
+  <h2>Mis proyectos</h2>
+    {% for project in site.pages %}
     {% if project.type == 'project' %}
-
-<li>
-<a href="{{site.baseurll}}{{project.url}}">
-    <div class="row project">
-      <div class="col s12 m4">
+    <article class="project">
         <img class="responsive-img" src="{{site.baseurl}}/images/projects/{{project.image}}">
-      </div>
-      <div class="col s12 m8">
-          <a class="post-title" href="{{project.url}}"><h3 class="post-title">{{project.title}}</h3></a>
-          <p>{{project.description}}</p>
-           {% for tag in project.tenol %}
-                <a class="tag chip" href="/tag#{{ tag | slugify }}">{{ tag }}</a>
-          {% endfor %}
-          
-        </div>
-      </div>
-</a>
+        <a class="post-title" href="{{project.url}}">
+          <h3 class="post-title">{{project.title}}</h3>
+        </a>
+        <p>{{project.description}}</p>
+        {% for tag in project.tenol %}
+        <a class="tags" href="/tag#{{ tag | slugify }}">{{ tag }}</a>
+        {% endfor %}
 
-
-</li>
- {% endif %}
-  {% endfor %}
-  </ul>
-</div>
+      </article>
+    <hr aria-hidden="true"> 
+    {% endif %} 
+    {% endfor %}
+</main>
 
 

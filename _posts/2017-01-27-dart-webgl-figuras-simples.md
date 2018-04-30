@@ -3,7 +3,7 @@ layout: post
 title: WebGL con Dart 02 - Renderizando figuras simples
 meta: WebGL y Dart, cómo dibujar figuras simples. Qué son los shaders y como usarlos. Usando buffers
 description: WebGL y Dart, cómo dibujar figuras simples. Qué son los shaders y como usarlos. 
-summary: En este artículo veremos como podemos dibujar círculos y triángulos. Crearemos buffers para estas figuras y los usaremos. Veremos que son los shaders y cómo los podemos usar en nuestra escena para ahorrar recursos y optimizar.
+excerpt: En este artículo veremos como podemos dibujar círculos y triángulos. Crearemos buffers para estas figuras y los usaremos. Veremos que son los shaders y cómo los podemos usar en nuestra escena para ahorrar recursos y optimizar.
 title-page: WebGL y Dart, renderizando figuras simples
 image: dart2
 lang: es

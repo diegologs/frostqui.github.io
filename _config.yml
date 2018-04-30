@@ -1,5 +1,5 @@
 title: Frostq - Blog de desarrollo web
-description: Artículos sobre desarrollo de páginas webs. Creación y diseño de páginas webs en Illescas. Página personal de Diego López García.
+description: Coding beers. Blog sobre desarrollo web y software.
 
 author:
   name: Diego López
@@ -22,3 +22,4 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-polyglot
+  - jekyll-feed

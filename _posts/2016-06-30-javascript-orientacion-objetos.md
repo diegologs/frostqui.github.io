@@ -3,7 +3,7 @@ layout: post
 title: Javascript orientado a objetos 
 meta: ¿Cómo hacer orientacion a objetos usando JavaScript? ¿Qué son los prototipos en JavaScript?
 description: ¿Cómo hacer orientacion a objetos usando JavaScript? ¿Qué son los prototipos en JavaScript?
-summary: La programación orientada a objetos es vital para el desarrollo web y de software, por lo que es esencial que sepamos como funciona. La programación orientada a objetos tamboén se puede aplicar a JavaScprit.
+excerpt: La programación orientada a objetos es vital para el desarrollo web y de software, por lo que es esencial que sepamos como funciona. La programación orientada a objetos tamboén se puede aplicar a JavaScprit.
 title-page: Programacion orientada a objetos en javascript con ejemplos
 image: poo
 lang: es

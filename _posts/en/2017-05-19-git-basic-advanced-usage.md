@@ -3,7 +3,7 @@ layout: post
 title: Git - Basic usage and advanced commands 
 meta: We are going to see how to use git in a simple way, and how to intall git in Windows and Linux. Furthermore we are goint to review basic and advanced git commands.
 description: We are going to see how to use git in a simple way, and how to intall git in Windows and Linux. Furthermore we are goint to review basic and advanced git commands.
-summary: Git has a lot of commands and many of them are not popular. If you are a beginner of an advanced user of git, I assure you that this list of commands will give you so much help to you
+excerpt: Git has a lot of commands and many of them are not popular. If you are a beginner of an advanced user of git, I assure you that this list of commands will give you so much help to you
 title-page: Git, basic and advanced commands. 
 image: git
 lang: en

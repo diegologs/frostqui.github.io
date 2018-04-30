@@ -3,7 +3,7 @@ layout: post
 title: Bot en Telegram con PHP 
 meta: Cómo crear un bot en Telegram usando PHP y Heroku. Tutorial básico en español.
 description: Cómo crear un bot en Telegram usando PHP y Heroku. Tutorial básico en español.
-summary: ¿Quires tener tu propio blog y no sabes por donde empezar? En este artículo veremos desde la creación y configuración del bot hasta su despliegue en una plataforma cloud, en este caso Heroku, para que responda cuando pongamos un comando. Para este artículo programaremos el bot en PHP. Si no tienes conocimientos de PHP, no te preocupes, pues el tutorial está pensado para todo tipo de personas.
+excerpt: ¿Quires tener tu propio blog y no sabes por donde empezar? En este artículo veremos desde la creación y configuración del bot hasta su despliegue en una plataforma cloud, en este caso Heroku, para que responda cuando pongamos un comando. Para este artículo programaremos el bot en PHP. Si no tienes conocimientos de PHP, no te preocupes, pues el tutorial está pensado para todo tipo de personas.
 title-page: Bot de Telegram con PHP
 image: telegram
 lang: es

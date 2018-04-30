@@ -15,11 +15,20 @@
         <h3 class="posts_title">
           <a href="{{site.baseurl}}{{post.url}}">{{post.title}}</a>
         </h3>
-        <small>
+        <small class="posts_date_tags">
           <span class="posts_date">
             <i aria-hidden="true" class="fa fa-calendar"></i>{{post.date | date: '%B %d, %Y'}} </span>
-        </small>
-        <p class="posts_summary">{{post.summary}}</p>
+
+            {% for tag in post.tags %}
+              <a class="tags" href="/tag#{{ tag | slugify }}">{{ tag }}</a>
+            {% endfor %}
+
+          </small>
+        <p class="posts_summary">{{post.excerpt}}</p>
+
+       
+       
+     
 
         {% if site.active_lang == 'es' %}
         <a class="posts_read_more" href="{{site.baseurl}}{{post.url}}">Leer más
@@ -51,7 +60,11 @@
           <span class="posts_date">
             <i aria-hidden="true" class="fa fa-calendar"></i>{{post.date | date: '%B %d, %Y'}} </span>
         </small>
-        <p class="posts_summary">{{post.summary}}</p>
+        <p class="posts_summary">{{post.excerpt}}</p>
+
+        {% for tag in post.tags %}
+          <a class="tags" href="/tag#{{ tag | slugify }}">{{ tag }}</a>
+        {% endfor %}
 
         {% if site.active_lang == 'es' %}
         <a class="posts_read_more" href="{{site.baseurl}}{{post.url}}">Leer más

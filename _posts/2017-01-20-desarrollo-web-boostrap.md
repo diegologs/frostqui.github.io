@@ -3,7 +3,7 @@ layout: post
 title: Bootstrap. Tutorial para principiantes
 meta: ¿Qué es Bootstrap? ¿Cómo el grid y las columnas en Boostrap? ¿Cómo hacer un diseño responsive?
 description: ¿Qué es Bootstrap? ¿Cómo el grid y las columnas en Boostrap? ¿Cómo hacer un diseño responsive?
-summary: Una de las tareas más difíciles que tenemos como desarrolladores webs es la obligación de adaptar el contenido de nuestra web a todas las pantallas. Afortunadamente contamos con Bootstrap, un framework capaz de adaptar todo nuestro contenido. En este artículo veremos como podemos hacer uso de Bootstrap para sacarle todo el partido.
+excerpt: Una de las tareas más difíciles que tenemos como desarrolladores webs es la obligación de adaptar el contenido de nuestra web a todas las pantallas. Afortunadamente contamos con Bootstrap, un framework capaz de adaptar todo nuestro contenido. En este artículo veremos como podemos hacer uso de Bootstrap para sacarle todo el partido.
 title-page: Desarrollo web con Bootstrap. Cómo crear columnas y componentes responsive
 tags: [Bootstrap, Desarrollo web] 
 lang: es

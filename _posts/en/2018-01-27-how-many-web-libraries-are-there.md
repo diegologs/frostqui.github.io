@@ -4,7 +4,7 @@ title: How many web frameworks are there?
 meta: What are the best web frameworks for developing websites? What are the most popular nowadays?
 description: What are the best web frameworks for developing websites? What are the most popular nowadays?
 summary: Hoy en día existen muchísimas tecnologías para desarrollar web. En este artículo voy a motrar cuáles son los frameworks más interesantes y populares para del desarrollo web en el año 2018.
-summary: Nowadays the are multiple options to choose the best framework to develop web pages. In this post I'll guide you through the best technologies and frameworks for the year 2018.
+excerpt: Nowadays the are multiple options to choose the best framework to develop web pages. In this post I'll guide you through the best technologies and frameworks for the year 2018.
 title-page: How many frameworks are there?
 image: tecnologias-web
 lang: en

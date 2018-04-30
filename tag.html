@@ -33,25 +33,24 @@ The following part removes dulpicated tags and invalid tags like blank tag.
 		{% endunless %}
 	{% endif %}
 {% endfor %}
-<canvas id="granim-canvas" style="background-image: url('{{site.baseurl}}/images/posts/poo.jpg');"></canvas>
 
-<h1 class="main_title center">~./tags/</h1>
-<h3 class="center sub_title">Los artículos del blog ordenados por categorías</h3>
-<br>
+{% include navbar.html %}
 
-<div class="container main-content">
+
+<main class="container main_content">
+<h2 class="tags_page_title">Tags</h2>
 {% for tag in tags %}
 	<h2 id="{{ tag | slugify }}">{{ tag }}</h2>
-	<ul>
+	<ul class="tags_style">
 	 {% for post in site.posts %}
 		 {% if post.tags contains tag %}
 		 <li>
 		
-		 <a href="{{site.baseurl}}{{post.url}}" ><h4 class="post-title" >{{post.title}}</h4></a> <small class="date">{{ post.date | date_to_string }}</small>
+		 <a href="{{site.baseurl}}{{post.url}}" ><h3 class="post-title" >{{post.title}}</h3></a> <small class="date">{{ post.date | date_to_string }}</small>
 		 </li>
 		 {% endif %}
      
 	 {% endfor %}
 	</ul>
 {% endfor %}
-</div>
+</main>

@@ -3,7 +3,7 @@ layout: post
 title: React - Clases, estados y ciclos de vida
 meta: Cómo podemos crear clases en React y cómo podemos usar los estados y los ciclos de vida de los componentes
 description: Cómo podemos crear clases en React y cómo podemos usar los estados y los ciclos de vida de los componentes  
-summary: Los componentes de clase en React tienen estado y ciclos de vida. En esta ocasión veremos cómo actualizar el estado de los componentes y cómo modificar su ciclo de vida
+excerpt: Los componentes de clase en React tienen estado y ciclos de vida. En esta ocasión veremos cómo actualizar el estado de los componentes y cómo modificar su ciclo de vida
 title-page: React - Clases estados y ciclos de vida
 image: react2
 lang: es

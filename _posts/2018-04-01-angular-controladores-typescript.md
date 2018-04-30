@@ -3,7 +3,7 @@ layout: post
 title: Angular - Controladores y introducción a Typescript
 meta: ¿Cómo crear formularios con Angular? Aprende como usar FormControl, FormGroup y FormBuilder en Angular
 description: CAMBIAR
-summary: No confundir con los controladores de AngularJS, estos son diferentes. Por controladores me refiero al archivo .ts que controla la vista y la lógica del componente. Además explico por encima los conceptos fundamentales de TypeScript
+excerpt: No confundir con los controladores de AngularJS, estos son diferentes. Por controladores me refiero al archivo .ts que controla la vista y la lógica del componente. Además explico por encima los conceptos fundamentales de TypeScript
 title-page: Qué es Angular y cómo se instala
 image: angular-forms
 lang: es
