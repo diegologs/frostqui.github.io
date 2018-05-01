@@ -5,7 +5,7 @@ meta: ¿Cómo crear formularios con Angular? Aprende como usar FormControl, Form
 description: ¿Cómo crear formularios con Angular? Aprende como usar FormControl, FormGroup y FormBuilder en Angular
 excerpt: Una vista general sobre qué es Angular y cómo se instala. 
 title-page: Qué es Angular y cómo se instala
-image: angular-forms
+image: angular-login
 lang: es
 tags: [Angular] 
 serie: angular

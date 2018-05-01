@@ -13,11 +13,11 @@ h3 {
 }
 
 h1 {
-  font-size: 2.2em;
+  font-size: 2.7em;
 }
 
 h2 {
-  font-size: 1.9em;
+  font-size: 2.3em;
 }
 
 h1,
@@ -151,6 +151,7 @@ code {
 
 #header_slogan {
   font-style: italic;
+  font-size: 1.2em;
 }
 
 #header_menu {
@@ -200,10 +201,6 @@ code {
 }
 
 
-#header_slogan{
-  font-size: 1.3em;
-
-}
 
 .main_nav{
 
@@ -264,15 +261,20 @@ footer {
   padding: 40px;
   color: white !important;
   min-height: 40px;
-  background-image: linear-gradient( rgba(54, 75, 94, 0.9), rgba(154, 75, 94, 0.9)), url('/images/bgs/footer.gif');
+  background-image: linear-gradient( rgba(54, 75, 94, 0.875), rgba(154, 75, 94, 0.92)), url('/images/bgs/footer.gif');
   background-size: cover;
-  background-position: 50% 30%;
-  padding-left: 70px;
+  background-position: 50% 25%;
+  padding-left: 130px;
   padding-bottom: 50px;
 }
 
 footer a {
   color: white !important;
+}
+
+.icon_footer{
+ 
+  padding-left: 10px;
 }
 
 #footer_menu {
@@ -333,6 +335,10 @@ footer a {
  
 }
 
+.latest{
+  font-size: 1.7em;
+}
+
 .posts_title {
   
 }
@@ -373,8 +379,13 @@ footer a {
   background-position: 50% 50% !important;
 }
 
+.post_half_bg p{
+  font-size: 1.25em;
+ 
+}
+
 .half_title {
-  padding: 5px;
+ 
   font-size: 1.8em;
   font-weight: 600;
   -webkit-box-decoration-break: clone;
@@ -389,10 +400,11 @@ footer a {
 .half_bottom {
   color: white;
   position: absolute;
-  bottom: 10%;
-  left: 30px;
-  right: 30px;
+  bottom: 12%;
+  left: 60px;
+  right: 40px;
   padding-left: 40px;
+  max-width: 900px;
 
 }
 
@@ -483,6 +495,10 @@ footer a {
   padding-left: 30px;
 }
 
+.about_me_page{
+  padding-bottom: 50px;
+}
+
 .posts_year{
   margin-top: 30px;
 }
@@ -534,5 +550,9 @@ footer a {
 
   .posts_info{
     padding-left: 20px;
+  }
+
+  footer{
+    padding-left: 25px;
   }
 }

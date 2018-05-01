@@ -5,7 +5,7 @@ meta: ¿Cómo crear formularios con Angular? Aprende como usar FormControl, Form
 description: CAMBIAR
 excerpt: No confundir con los controladores de AngularJS, estos son diferentes. Por controladores me refiero al archivo .ts que controla la vista y la lógica del componente. Además explico por encima los conceptos fundamentales de TypeScript
 title-page: Qué es Angular y cómo se instala
-image: angular-forms
+image: angular-controllers
 lang: es
 tags: [Angular] 
 serie: angular
