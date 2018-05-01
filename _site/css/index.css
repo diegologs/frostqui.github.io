@@ -589,7 +589,7 @@ footer a {
    top: 0px;
    left: 0px;
    right: 0px;
-   padding: 15px 15px 15px 15px;
+   padding: 35px 15px 15px 15px;
   
   }
 
@@ -601,5 +601,9 @@ footer a {
     margin-top: 3px;
     max-width: 110px;
 
+  }
+
+  #header_item{
+    display: block;
   }
 }
