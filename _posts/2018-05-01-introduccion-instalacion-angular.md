@@ -1,9 +1,9 @@
 ---
 layout: post
 title: Angular - Introducción e instalación
-meta: ¿Cómo crear formularios con Angular? Aprende como usar FormControl, FormGroup y FormBuilder en Angular
-description: ¿Cómo crear formularios con Angular? Aprende como usar FormControl, FormGroup y FormBuilder en Angular
-excerpt: Una vista general sobre qué es Angular y cómo se instala. 
+meta: ¿Qué es Angular? En este tutorial miraremos pará que sirve Angular y cómo se instala para usarlo como framework para crear webs SPA
+description: ¿Qué es Angular? En este tutorial miraremos para qué sirve Angular y cómo se instala para usarlo como framework para crear webs SPA
+excerpt: Primer artículo de una serie de artículos sobre Angular que voy a empezar a publicar. En este post voy a explicar qué es Angular y cómo instalarlo para empezar a desarrollar aplicaciones web.
 title-page: Qué es Angular y cómo se instala
 image: angular-intro
 lang: es
@@ -15,21 +15,21 @@ serie: angular
 ## Qué es Angular
 
 Angular es un framework para la creación de páginas web SPA mantenido por Google. SPA es el acrónimo de 'Single Page Application' o lo que es lo mismo, 
-cuando un usuario entra en una web SPA, se carga todo a la vez en una misma página y Angular lo que hace pòr debajo es cambiar la vista al navegar por la página para que de la apariencia de una web normal. ¿Qué ventajas tiene esto?
+cuando un usuario entra en una web SPA, se carga todo a la vez en una misma página y Angular lo que hace pòr debajo es cambiar la vista al navegar por la página para que de la apariencia de una web normal. ¿Qué ventajas tiene?
 
 - Velocidad de carga lenta la primera vez que se abre la web, pero luego navegar por la web es instantáneo debido a que se carga toda la web de golpe.
 - Cómo SPA es una página solo hay una ruta que tiene que enviar el servidor.
 - Aplicaciones modulares y escalares.
 
-Entre las características de Angular destacan:
+### Ventajas de Angular
 
 - Lenguaje Typescript, tiene una sintaxis muy parecida a Java, con tipado estático.
 - Sigue el patrón MVC, con la vista separada de los controladores.
 - Basado en componentes, es decir, podemos escribir componentes web con vista y lógica para después reutilizarlos en otras páginas.
 - Comunidad muy grande con multitud de tutoriales y librerías.
 - Inyección de dependencias, un patrón de diseño que se basa en pasar las dependencias directamente a los objetos en lugar de crearlas localmente.
-- Programación reactiva, la vista de actualiza automáticamente a los cambios.
-- Disponde de asistente por línea de comandos para crear proyectos base.
+- Programación reactiva, la vista se actualiza automáticamente a los cambios.
+- Dispone de asistente por línea de comandos para crear proyectos base (Angular cli).
 - Se integra bien con herramientas de testing.
 - Se integra bien con Ionic, para adaptar aplicaciones web a dispositivos móviles.
 
@@ -68,11 +68,19 @@ ng serve --open
 
 El flag --open sirve para que se abra automáticamente el navegador web con la web. Por defecto Angular se ejecuta en el puerto 4200.
 
-Si todo ha ido bien, veremos una web como esta (si no se te ha abierto el nevegador, abre http://localhost:4200/):
+Si todo ha ido bien, veremos una web como ésta (si no se te ha abierto el nevegador, abre http://localhost:4200/):
 
  <img src="https://i.imgur.com/eFs6dpB.png" class="responsive-img" alt="Verás el logo de Angular y un menú de navegación con 3 links"> 
 
-## Hello world
+ Angular cli también permite compilar una web para subirla a producción, para hacerlo introducce este comando:
+
+ ```bash
+ ng build
+ ```
+
+ De esta forma Angular se encargará de comprimir todos los archivos Typescript en archivos Javascript entendibles por el navegador.
+
+## Estructura básica de una app creada con Angular
 
 Cuando generamos un proyecto con Angular cli nos genera la siguiente estructura (en mi caso he llamado a la aplicación tutoApp:
 
@@ -80,8 +88,8 @@ Cuando generamos un proyecto con Angular cli nos genera la siguiente estructura 
 
  Voy a pasar a explicar por encima para que sirve cada archivo y carpeta:
 
- - **e2e**: Esta carpeta por el momento no nos es útil, aqui se encuentra el código para escribir tests end to end que prueben la aplicación
- - **node_modules**: En esta carpeta se encuentran las librerías de angular y sus dependencias, cuando instalemos librerías se añadiran aquí. Generalmente no hay que tocar nada de esta carpeta.
+ - **e2e**: Esta carpeta por el momento no nos es útil, aquí se encuentra el código para escribir tests end to end que prueben la aplicación
+ - **node_modules**: En esta carpeta se encuentran las librerías de angular y sus dependencias, cuando instalemos librerías se añadirán aquí. Generalmente no hay que tocar nada de esta carpeta.
  - **src**: Aquí se encuentran los archivos que componen nuestra aplicación 
     - **app**: Aquí se donde se van a encontrar los componentes, vistas, y servicios de la app. Por el momento hay un componente llamado app con sus respectivos archivos (css, html controlador, tests, etc)
       - **app.module.ts**: En este archivo se especifica los componentes que vamos a usar en la app web. Cuando creemos un componente tenemos que importarlo en este archivo.
@@ -98,7 +106,7 @@ Cuando generamos un proyecto con Angular cli nos genera la siguiente estructura 
 - **.gitignore**: Archivo para que git ignore ciertas carpetas que no hace falta subir, como node_modules (cuando te bajas el proyecto ejecutas npm install para que descargue las dependencias en node_modules).
 - **karma.conf.js**: Más configuraciones para los tests, esta vez los de Karma.
 - **package-lock.json**: Árbol de dependencias que se crea automáticamente
-- **package.json**: Archivo con las dependecias instaladas y los comandos que se pueden ejecutar con npm
+- **package.json**: Archivo con las dependencias instaladas y los comandos que se pueden ejecutar con npm
 - **protractor.conf.js**: Configuración para protractor, una herramienta para realizar tests en el navegador.
 - **README.md** Archivo readme con información de la aplicación.
 - **tsconfig.json**: Configuración para Typescript, el lenguaje de Angular.
@@ -130,4 +138,6 @@ Con {{ nombre_variable }} puedes pintar variables creadas en el controlador (arc
 
 ## Conclusiones
 
-Recapitulando, hemos visto qué es Angular, como instalarlo, cómo crear el esqueleto de una app, y una idea aproximada de para qué sirven los archivos y carpetas que crea por defecto. Te animo a que pruebes y cambies cosas del código para que vayas viendo como funciona Angular y Typescript. Si quieres encontrar más info de Angular lo puedes hacer en su página oficial: [https://angular.io/](https://angular.io/)
+Recapitulando, hemos visto qué es Angular, como instalarlo, cómo crear el esqueleto de una app, y una idea aproximada de para qué sirven los archivos y carpetas que crea por defecto. Te animo a que pruebes y cambies cosas del código para que vayas viendo como funciona Angular y Typescript. Si quieres encontrar más info de Angular lo puedes hacer en su página oficial: [https://angular.io/](https://angular.io/).
+
+Este artículo es el primero de una serie que estoy preparando sobre Angular. Si quieres descubrir cómo funciona Angular. Estate atento al blog para que no te pierdas ningún artículo de la serie.

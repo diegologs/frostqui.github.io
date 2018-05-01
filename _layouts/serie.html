@@ -8,7 +8,7 @@ layout: default
 <div class="post_header" style="background-image: linear-gradient( rgba(23, 45, 65, 0.5), rgba(54, 75, 94, 0.9) ), url({{site.baseurl}}/images/posts/{{page.image}}.jpg)">
     <div class="container post_header_content">
       <h1 class="post_title">{{page.title}} </h1>
-      <p>{{page.description}}</p>
+      <p>{{page.excerpt}}</p>
   
   
     </div>
@@ -33,7 +33,7 @@ layout: default
                 <span class="posts_date">
                   <i aria-hidden="true" class="fa fa-calendar"></i>{{post.date | date: '%B %d, %Y'}} </span>
               </small>
-              <p class="posts_summary">{{post.summary}}</p>
+              <p class="posts_summary">{{post.excerpt}}</p>
       
               {% if site.active_lang == 'es' %}
               <a class="posts_read_more" href="{{site.baseurl}}{{post.url}}">Leer más
@@ -49,6 +49,9 @@ layout: default
           </article>
           <br>
            {% endif %} {% endif %} {% endfor %}
+
+           <p class="center">Suscríbete a mi blog por correo y no te pierdas futuros artículos sobre la serie.</p>
+           <br>
       
 </div>
 

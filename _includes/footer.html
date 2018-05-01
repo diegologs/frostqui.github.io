@@ -7,7 +7,7 @@
                     id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
                     <div id="mc_embed_signup_scroll">
                         <h2>Newsletter <i class="fa fa-envelope icon_footer" aria-hidden="true"></i></h2>
-                        <p>Sigue el blog por email. Introducce tu dirección de correo electrónico para que te mande un correo
+                        <p>Sigue el blog por email. Introduce tu dirección de correo electrónico para que te mande un correo
                             cuando publique un nuevo artículo en este blog</p>
 
                         <div class="mc-field-group">
@@ -57,8 +57,16 @@
         </div>
         <div class="full third-1000">
             <ul class="footer_posts">
-                    {% for post in site.posts limit:4%}
+                    {% assign counter = 0 %}
+
+                    {% for post in site.posts %}
+                    {% if site.active_lang == post.lang %}
+                    {% assign counter=counter | plus:1 %}
+
+                    {% if counter < 5 %}
                     <a href="{{post.url}}"><li><h4>{{post.title}}</h4></li></a>
+                    {% endif %}
+                    {% endif %}
                     {% endfor %}
 
             </ul>

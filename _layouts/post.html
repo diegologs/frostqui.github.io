@@ -1,7 +1,6 @@
----
+--- 
 layout: default
----
-
+--- 
 
 {% include navbar_transparent.html %}
 
@@ -9,26 +8,25 @@ layout: default
 <div class="post_header" style="background-image: linear-gradient( rgba(23, 45, 65, 0.5), rgba(54, 75, 94, 0.9) ), url({{site.baseurl}}/images/posts/{{page.image}}.jpg)">
   <div class="container post_header_content">
     <h1 class="post_title">{{page.title}} </h1>
-    
+
 
     <div class="post_date">{{page.date | date: '%B %d, %Y'}}</div>
-    
+
     <div class="post_tags">
-    {% for tag in page.tags %}
+      {% for tag in page.tags %}
 
       <a class="tags" href="/tag#{{ tag | slugify }}">{{ tag }}</a>
-      
-    {% endfor %}
-  </div>
 
-  {% assign words = content | number_of_words %}
+      {% endfor %}
+    </div>
+
+    {% assign words = content | number_of_words %}
 
     <div class="post_read_time">
-      {% if words < 340 %}
-        <i class="fa fa-clock-o"></i>  1 min read
-      {% else %}
-        <i class="fa fa-clock-o"></i> {{ words | divided_by:180 }} min read
-      {% endif %}
+      {% if words
+      < 340 %} <i class="fa fa-clock-o">
+        </i> 1 min read {% else %}
+        <i class="fa fa-clock-o"></i> {{ words | divided_by:180 }} min read {% endif %}
     </div>
 
   </div>
@@ -38,76 +36,85 @@ layout: default
 <div class="container">
 
 
-     <div align="center">
-      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-      <!-- Ad -->
-      <ins class="adsbygoogle"
-        style="display:block"
-        data-ad-client="ca-pub-7551074192374685"
-        data-ad-slot="4480248215"
-        data-ad-format="auto"></ins>
-      <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-      </script>
-    </div>
-    
-  <div class="post_content">
-    {{content}}
-  </div>
-
-  {% if page.serie  %}
-  
-  <div class="related">
-
-  <h2>Este artículo es parte de la serie de <a href="{{site.baseurl}}/series/{{page.serie}}">{{page.serie}}</a>:</h2>
-  <ul>
-  {% assign count = '0' %}
-  {% assign idx = '0' %}
-  {% for post in site.posts reversed %}
-      {% if post.serie == page.serie %}
-          {% capture count %}{{ count | plus: '1' }}{% endcapture %}
-         <li>
-          <h5><a class="related_post" href="{{post.url}}">{{count}}. {{post.title}}</a></h5>
-         </li>    
-
-      {% endif %}
-  {% endfor %}
-</ul>
-</div>
-
-
-{% else %}
-  <div class="related">
-    <h2>Posts recomendados</h2>
-    <ul class="related_posts">
-      {% for post in site.related_posts limit:3 %}
-        <li>
-          <h5>
-            <a href="{{ post.url }}" class="related_post">
-              {{ post.title }}
-             
-            </a>
-          </h5>
-        </li>
-      {% endfor %}
-    </ul>
-  </div>
-
-</div>
-{% endif %}
-
-
-
-<div align="center">
+  <div align="center">
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <!-- Ad -->
-    <ins class="adsbygoogle"
-      style="display:block"
-      data-ad-client="ca-pub-7551074192374685"
-      data-ad-slot="4480248215"
-      data-ad-format="auto"></ins>
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7551074192374685" data-ad-slot="4480248215" data-ad-format="auto"></ins>
     <script>
       (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
   </div>
 
+  <div class="post_content">
+    {{content}}
+  </div>
+
+  {% if page.serie %}
+
+  <br>
+
+    {% assign counter = '0' %} 
+    
+    {% for post in site.posts reversed %} 
+    
+        {% if post.serie == page.serie %} 
+            
+        {% assign counter=counter | plus:1 %}
+    
+    {% endif %} {% endfor %}
+
+      {% if counter > 2 %}
+
+  <div class="related">
+
+    <h2>Este artículo es parte de la serie de
+      <a href="{{site.baseurl}}/series/{{page.serie}}">{{page.serie}}</a>:</h2>
+    <ul>
+      {% assign count = '0' %} {% assign idx = '0' %} {% for post in site.posts reversed %} {% if post.serie == page.serie %} {%
+      capture count %}{{ count | plus: '1' }}{% endcapture %}
+      <li>
+        <h5>
+          <a class="related_post" href="{{post.url}}">{{count}}. {{post.title}}</a>
+        </h5>
+      </li>
+
+      {% endif %} {% endfor %}
+    </ul>
+  </div>
+
+  {% endif %} 
+
+  {% else %}
+  <div class="related">
+    <h2>Posts recomendados</h2>
+    <ul class="related_posts">
+      {% for post in site.related_posts limit:5 %}
+      {% if post.lang == site.active_lang %}
+      <li>
+        <h5>
+          <a href="{{ post.url }}" class="related_post">
+            {{ post.title }}
+
+          </a>
+        </h5>
+      </li>
+      {% endif %} 
+      {% endfor %}
+    </ul>
+  </div>
+
+
+{% endif %}
+
+</div>
+
+
+
+<div align="center">
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <!-- Ad -->
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7551074192374685" data-ad-slot="4480248215" data-ad-format="auto"></ins>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div>

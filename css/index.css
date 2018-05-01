@@ -9,15 +9,15 @@ body {
 }
 
 h3 {
-  font-size: 1.4em;
+  font-size: 1.5em;
 }
 
 h1 {
-  font-size: 2.7em;
+  font-size: 2.6em;
 }
 
 h2 {
-  font-size: 2.3em;
+  font-size: 2.12em;
 }
 
 h1,
@@ -45,7 +45,8 @@ a:hover {
 }
 
 .responsive-img {
-  max-width: 850px;
+  
+  max-width: 100%;
   height: auto;
 }
 
@@ -62,6 +63,7 @@ a:hover {
   position: relative;
   object-fit: cover;
   width: 230px;
+  max-width: 250px;
   height: 230px;
   overflow: hidden;
 }
@@ -76,6 +78,12 @@ a:hover {
   width: 100%;
   max-height: 600px;
   overflow: hidden;
+}
+
+.btn_outline{
+  color: black;
+  background-color: rgb(162, 128, 255);
+  padding: 8px 25px 8px 25px;
 }
 
 hr {
@@ -118,6 +126,7 @@ hr:after {
   width: 800px;
   max-width: 92%;
   margin: 0px auto;
+  
 }
 
 .fa-calendar {
@@ -324,6 +333,7 @@ footer a {
 
 .posts {
   padding-top: 15px;
+  min-height: 35vh;
 }
 
 .post_list {
@@ -380,8 +390,15 @@ footer a {
 }
 
 .post_half_bg p{
-  font-size: 1.25em;
+  font-size: 1.18em;
  
+}
+
+.advert_info{
+  color: white;
+  padding-top: 130px;
+  max-width: 1000px;
+  margin: 0px auto;
 }
 
 .half_title {
@@ -475,6 +492,10 @@ footer a {
 
 /*  ------ OTHER PAGES ------*/
 
+.project_page{
+  padding-bottom: 30px;
+}
+
 .blog_archive{
   padding-top: 20px;
 }
@@ -505,8 +526,8 @@ footer a {
 /*  ------ PROJECTS ------*/
 
 .project{
-  margin-top: 35px;
-  margin-bottom: 35px;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .project_title{
@@ -531,6 +552,7 @@ footer a {
   .container {
     padding-right: 10px;
     padding-left: 10px;
+   
   }
 
   .nav_transparent a{
@@ -554,5 +576,26 @@ footer a {
 
   footer{
     padding-left: 25px;
+  }
+
+  .half_bottom {
+   color: white;
+   position: relative;
+   padding: 0px;
+   top: 0px;
+   left: 0px;
+   right: 0px;
+   padding: 15px 15px 15px 15px;
+  
+  }
+
+  .about_me{
+    padding: 0px;
+  }
+
+  .navbar_logo{
+    margin-top: 12px;
+    max-width: 110px;
+
   }
 }

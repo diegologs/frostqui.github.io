@@ -2,9 +2,11 @@
   <h2 class="latest">Latest stuff</h2>
 
   <div class="posts">
-
+    {% assign counter = 0 %}
     {% if site.active_lang == 'es' %}
-    {% for post in site.posts limit:11 offset:5%} {% if post.lang == site.active_lang %}
+    {% for post in site.posts %} {% if post.lang == site.active_lang %}
+    {% assign counter=counter | plus:1 %}
+    {% if counter > 5 and counter < 16 %}
     <article class="flex two single_post">
       <div class="full fourth-1000">
         <span>
@@ -42,7 +44,7 @@
 
       </div>
     </article>
-    <hr aria-hidden="true"> {% endif %} {% endfor %} {% endif %} 
+    <hr aria-hidden="true"> {% endif %} {% endif %} {% endfor %} {% endif %} 
 
     {% if site.active_lang != 'es' %}
     {% for post in site.posts %} {% if post.lang == site.active_lang %}
@@ -62,10 +64,7 @@
         </small>
         <p class="posts_summary">{{post.excerpt}}</p>
 
-        {% for tag in post.tags %}
-          <a class="tags" href="/tag#{{ tag | slugify }}">{{ tag }}</a>
-        {% endfor %}
-
+       
         {% if site.active_lang == 'es' %}
         <a class="posts_read_more" href="{{site.baseurl}}{{post.url}}">Leer más
           <span class="visuallyhidden">Leer más acerca de {{post.title}}</span>

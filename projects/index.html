@@ -9,7 +9,17 @@ description: Todos los proyectos más importantes en forma de lista que he reali
 
 
 <main class="container main_content ">
-  <h2>Mis proyectos</h2>
+
+{% if site.active_lang == 'es' %}
+<h2>Mis proyectos</h2>
+
+{% endif %}
+
+{% if site.active_lang == 'en' %}
+<h2>My project (in spanish)</h2>
+
+{% endif %}
+
     {% for project in site.pages %}
     {% if project.type == 'project' %}
     <article class="project">
