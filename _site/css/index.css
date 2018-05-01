@@ -1,0 +1,601 @@
+/*  ------ CSS HELPERS ------*/
+
+body {
+  font-size: 15px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #eee;
+  font-family: 'Lato', sans-serif;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+h1 {
+  font-size: 2.6em;
+}
+
+h2 {
+  font-size: 2.12em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0.05em 0;
+}
+
+
+
+a {
+  color: rgb(117, 31, 255);
+  font-weight: bold;
+}
+
+a:hover {
+  color: rgb(192, 63, 234) !important;
+}
+
+.white {
+  color: white !important;
+}
+
+.responsive-img {
+  
+  max-width: 100%;
+  height: auto;
+}
+
+.main_content{
+  margin-top: 20px !important;
+}
+
+.center {
+  text-align: center;
+  margin: 0px auto;
+}
+
+.thumb {
+  position: relative;
+  object-fit: cover;
+  width: 230px;
+  max-width: 250px;
+  height: 230px;
+  overflow: hidden;
+}
+
+.advise{
+  padding-bottom: 30px;
+}
+
+.thumb2 {
+  position: relative;
+  object-fit: cover;
+  width: 100%;
+  max-height: 600px;
+  overflow: hidden;
+}
+
+.btn_outline{
+  color: black;
+  background-color: rgb(162, 128, 255);
+  padding: 8px 25px 8px 25px;
+}
+
+hr {
+  border-top: 1px solid #8c8b8b;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+hr:after {
+  content: '❄';
+  display: inline-block;
+  position: relative;
+  top: -14px;
+  margin-bottom: 10px;
+  padding: 0 10px;
+  background: #eee;
+  color: #8c8b8b;
+  font-size: 18px;
+  -webkit-transform: rotate(60deg);
+  -moz-transform: rotate(60deg);
+  transform: rotate(60deg);
+}
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.img-100 {
+  width: 100px;
+}
+
+.container {
+  width: 800px;
+  max-width: 92%;
+  margin: 0px auto;
+  
+}
+
+.fa-calendar {
+  padding-right: 6px;
+}
+
+.tags {
+  background-color: black;
+  color: white !important;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+code {
+  font-size: 1em;
+}
+
+.all_posts{
+  list-style: none;
+}
+
+/*  ------ HEADER & NAVBAR------*/
+
+#header_logo {
+  max-width: 240px;
+}
+
+#header_slogan {
+  font-style: italic;
+  font-size: 1.2em;
+}
+
+#header_menu {
+  list-style: none;
+  display: inline-block;
+}
+
+#header_item {
+  display: inline-block;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.main_header {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  min-height: 300px;
+}
+
+.main_header {
+  color: white;
+}
+
+.main_header a {
+  color: white;
+}
+
+
+
+.fa-bars {
+  color: black;
+  font-size: 1.4em;
+  padding-top: 12px;
+  text-align: left !important;
+}
+
+.navbar .brand,
+.navbar .menu,
+.navbar .burger {
+  float: none;
+  -webkit-transform: unset;
+  transform: unset;
+  top: 0;
+}
+
+
+
+.main_nav{
+
+  background: linear-gradient(to right, rgba(67, 160, 145, 1), rgba(138, 142, 42, 1));
+
+}
+
+.main_nav a{
+  color: white !important;
+
+}
+
+.main_nav .fa-bars{
+  color: white !important;
+
+}
+
+.main_nav .menu{
+  margin-top: 3px;
+
+}
+
+.nav_transparent{
+  position: absolute;
+  background: transparent;
+  box-shadow: none;
+}
+
+.nav_transparent a{
+  color: white !important;
+
+}
+
+.nav_transparent .fa-bars{
+  color: white !important;
+
+}
+
+.nav_transparent .menu{
+  margin-top: 3px;
+
+}
+
+nav {
+  position: relative;
+  min-height: 50px;
+}
+
+.navbar_logo{
+  max-width: 130px;
+  height: auto;
+  
+}
+
+/*  ------ FOOTER ------*/
+
+footer {
+  padding: 40px;
+  color: white !important;
+  min-height: 40px;
+  background-image: linear-gradient( rgba(54, 75, 94, 0.875), rgba(154, 75, 94, 0.92)), url('/images/bgs/footer.gif');
+  background-size: cover;
+  background-position: 50% 25%;
+  padding-left: 130px;
+  padding-bottom: 50px;
+}
+
+footer a {
+  color: white !important;
+}
+
+.icon_footer{
+ 
+  padding-left: 10px;
+}
+
+#footer_menu {
+  margin: 0px;
+  margin-top: 20px;
+
+}
+
+#footer_menu li {
+  
+  margin-top: 10px;
+
+}
+
+#mc_embed_signup{
+  max-width: 75%;
+}
+
+
+
+.footer_menu{
+  width: 40%;
+  margin: 0px auto;
+}
+
+.footer_posts{
+  margin: 0px;
+  margin-top: 20px;
+}
+
+
+.footer_posts li{
+  
+  margin-top: 10px;
+}
+
+.footer_button{
+  margin-top: 20px;
+  background: rgb(91, 222, 255);
+  color: black;
+}
+/*  ------ MAIN SECTION ------*/
+
+.main_section {
+  padding-top: 20px;
+}
+
+.posts {
+  padding-top: 15px;
+  min-height: 35vh;
+}
+
+.post_list {
+  padding-top: 15px;
+}
+
+.posts_info {
+  padding-left: 8%;
+ 
+}
+
+.latest{
+  font-size: 1.7em;
+}
+
+.posts_title {
+  
+}
+
+.posts_date{
+  padding-right: 20px;
+}
+
+.posts_title{
+  margin-bottom: 10px;
+}
+.posts_title a {
+  color: black !important;
+}
+
+.posts_title a:hover {
+  color: rgb(192, 63, 234) !important;
+}
+
+.posts_summary {
+  text-align: justify;
+
+  font-family: 'Titillium Web', sans-serif !important;
+}
+
+.posts_read_more {
+  font-style: italic;
+}
+
+.single_post {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.post_half_bg {
+  position: relative;
+  min-height: 400px;
+  background-position: 50% 50% !important;
+}
+
+.post_half_bg p{
+  font-size: 1.18em;
+ 
+}
+
+.advert_info{
+  color: white;
+  padding-top: 130px;
+  max-width: 1000px;
+  margin: 0px auto;
+}
+
+.half_title {
+ 
+  font-size: 1.8em;
+  font-weight: 600;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  
+}
+
+.half_summary{
+  padding-bottom: 10px;
+}
+
+.half_bottom {
+  color: white;
+  position: absolute;
+  bottom: 12%;
+  left: 60px;
+  right: 40px;
+  padding-left: 40px;
+  max-width: 900px;
+
+}
+
+/*  ------ POST ------*/
+
+.post_header {
+  min-height: 300px;
+  background-position: center center;
+}
+
+.post_header_content {
+  color: white !important;
+  padding-top: 85px;
+}
+
+.post_content {
+  margin-top: 40px;
+}
+
+.post_date {
+  margin-top: 10px;
+  
+}
+
+.post_tags {
+  margin-top: 15px;
+}
+
+.post_read_time {
+  margin-top: 15px;
+  padding-bottom: 70px;
+}
+
+
+
+.post_content p {
+  text-align: justify;
+  font-size: 18px;
+
+  font-family: 'Titillium Web', sans-serif !important;
+  
+}
+
+.post_content ul {
+  text-align: justify;
+  font-size: 18px;
+  font-family: 'Titillium Web', sans-serif !important;
+}
+
+.post_content h2 {
+  margin-top: 30px;
+}
+
+.post_content h3 {
+  margin-top: 20px;
+}
+
+
+
+.related_post {
+  font-size: 1.7em;
+}
+
+.related {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+/*  ------ OTHER PAGES ------*/
+
+.project_page{
+  padding-bottom: 30px;
+}
+
+.blog_archive{
+  padding-top: 20px;
+}
+
+.tags_style{
+  list-style: none;
+}
+
+.tags_page_title{
+  margin-bottom: 20px;
+}
+
+.about_img{
+  width: 100%;
+}
+
+.about_me{
+  padding-left: 30px;
+}
+
+.about_me_page{
+  padding-bottom: 50px;
+}
+
+.posts_year{
+  margin-top: 30px;
+}
+/*  ------ PROJECTS ------*/
+
+.project{
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.project_title{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/*  ------ MEDIA QUERYS ------*/
+
+@media screen and (max-width: 1000px) {
+  .thumb {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+  }
+  #header_logo {
+    max-width: 170px;
+  }
+  h1 {
+    font-size: 1.6em;
+  }
+  .container {
+    padding-right: 10px;
+    padding-left: 10px;
+   
+  }
+
+  .nav_transparent a{
+    color: black !important;
+  
+  }
+  
+
+  ul{
+    padding-left: 10px;
+  }
+
+  .main_nav a{
+    color:black !important;
+  
+  }
+
+  .posts_info{
+    padding-left: 20px;
+  }
+
+  footer{
+    padding-left: 25px;
+  }
+
+  .half_bottom {
+   color: white;
+   position: relative;
+   padding: 0px;
+   top: 0px;
+   left: 0px;
+   right: 0px;
+   padding: 15px 15px 15px 15px;
+  
+  }
+
+  .about_me{
+    padding: 0px;
+  }
+
+  .navbar_logo{
+    margin-top: 3px;
+    max-width: 110px;
+
+  }
+}

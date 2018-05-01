@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-7551074192374685",
+    enable_page_level_ads: true
+  });
+</script>
+
+<link rel="shortcut icon" type="image/png" href="/images/favicon.png" />
+
+<link href="https://fonts.googleapis.com/css?family=Lato|Titillium+Web" rel="stylesheet">
+
+<link href="/css/prism.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/ficons@1.1.52/dist/ficons/font.css" rel="stylesheet">
+<link rel="stylesheet" href="/css/picnic.min.css">
+<link rel="stylesheet" href="/css/index.css">
+
+
+  <title>Creavelas tutorial de UX y UI</title>
+  <meta name="twitter:title" content="Creavelas tutorial de UX y UI">
+
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:creator" content="@Frostq_">
+<meta property="og:site_name" content="Frostq - Coding beers">
+<meta property="article:author" content="Diego López García (Frostq)">
+
+
+  <meta name="twitter:description" content="Primer episodio donde explico que decisiones tomé en el diseño UX & UI de Creavelas, una red social donde la gente puede encender velas.">
+  <meta name="description" content="Primer episodio donde explico que decisiones tomé en el diseño UX & UI de Creavelas, una red social donde la gente puede encender velas.">
+  <meta property='og:description' content="Primer episodio donde explico que decisiones tomé en el diseño UX & UI de Creavelas, una red social donde la gente puede encender velas." />
+
+
+<meta name="theme-color" content="#9c95ed">
+
+
+
+  
+    <meta name="twitter:image:src" content="http://localhost:4000/images/posts/creavelas.jpg">
+    <meta property='og:image' content="http://localhost:4000/images/posts/creavelas.jpg" />
+    
+
+
+
+  <meta name="twitter:url" content="http://localhost:4000/proyecto-creavelas-ep0-uxui">
+  <meta property='og:url' content="http://localhost:4000/proyecto-creavelas-ep0-uxui" />
+ 
+
+<script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-87066592-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
+
+
+</head>
+
+
+<body>
+
+  
+  
+<nav class="nav_transparent">
+    <a href="/" class="brand">
+      <img class="navbar_logo" src="/images/logo_horizontal.png"  />
+      
+    </a>
+  
+    <!-- responsive-->
+    <input id="bmenub" type="checkbox" class="show">
+    <label for="bmenub" class="burger pseudo button"><i class="fa fa-bars"></i></label>
+  
+    <div class="menu">
+      <ul>
+        <a href="/blog">
+          <li id="header_item">BLOG</li>
+        </a>
+        <a href="/projects">
+          <li id="header_item">PROJECTS</li>
+        </a>
+        <a href="/about">
+          <li id="header_item">ABOUT ME</li>
+        </a>
+        <a href="/feed.xml">
+          <li id="header_item">RSS</li>
+        </a>
+    
+      </ul>
+    </div>
+  </nav>
+
+
+<div class="post_header" style="background-image: linear-gradient( rgba(23, 45, 65, 0.5), rgba(54, 75, 94, 0.9) ), url(/images/posts/creavelas.jpg)">
+  <div class="container post_header_content">
+    <h1 class="post_title">Proyecto Creavelas - Episodio 0 UX & UI </h1>
+
+
+    <div class="post_date">November 18, 2016</div>
+
+    <div class="post_tags">
+      
+
+      <a class="tags" href="/tag#proyectos">Proyectos</a>
+
+      
+
+      <a class="tags" href="/tag#ux">UX</a>
+
+      
+
+      <a class="tags" href="/tag#ui">UI</a>
+
+      
+
+      <a class="tags" href="/tag#creavelas">Creavelas</a>
+
+      
+    </div>
+
+    
+
+    <div class="post_read_time">
+      
+        <i class="fa fa-clock-o"></i> 3 min read 
+    </div>
+
+  </div>
+</div>
+
+
+<div class="container">
+
+
+  <div align="center">
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- Ad -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7551074192374685" data-ad-slot="4480248215" data-ad-format="auto"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>
+
+  <div class="post_content">
+    <p>Empiezo nuevo proyecto, esta vez , como excusa para indagar y aprender sobre el diseño y la programación de una web. Esta web va a ser construida desde 0, pasado por todas las fases del desarrollo, es decir, desarrollo Full-Stack.</p>
+
+<h2>La idea</h2>
+
+<p>Para empezar describiré el proyecto de desarrollo web que quiero hacer. Creavelas, como su propio nombre indica, es un espacio donde la gente crea y comparte velas virtuales. Al registrarse, puede encender una vela, en la que tiene que seleccionar un tipo de vela (vela de la suerte, vela del amor, vela del dinero, etc), escribir la leyenda de la vela, y, opcionalmente, elegir hacia personas esta destinada la vela. Al crear la vela, esta se queda encendida durante un día, tras esto automáticamente se elimina. Mediante un botón en la vela, otros usuarios pueden aumentar el tiempo de vida de las velas. Es decir quiero que la web tenga un enfoque de red social.</p>
+
+<p>Bien, una vez definido lo que quiero hacer es hora de pensar los primeros diseños y logotipos para tener una base hacia la que empezar a desarrollar. Lo primero que hice fue diseñar el logotipo.</p>
+
+<p>Quiero que mi página sea muy sencilla por lo tanto el logotipo tiene que ir en consonancia. Un logotipo tiene que ser legible independientemente del tamaño que elijamos por eso decidí hacerlo con formas muy sencillas de forma que se apreciara perfectamente que se trata de una vela. Mas que un logotipo, he diseñado un isotipo ya que únicamente tiene un icono. Decidí hacerlo redondo porque el círculo representa la propia luz que emite la vela. Quiero que la web tenga colores pastel, colores suaves que transmitan tranquilidad.</p>
+
+<p><img src="http://i.imgur.com/8kS9GFs.png" class="responsive-img" /></p>
+
+<h2>Diseño UX &amp; UI</h2>
+
+<p>Toca hacer los mockups, una parte muy importante del desarrollo web, para tener una idea de como va a ser el diseño de la web. Para hacer los mockups yo utilizo Photoshop aunque también hay otras herramientas mas especializadas.</p>
+
+<p>Para el navbar, he decidido poner el logotipo junto con las letras de Creavelas, la barra de búsqueda, el botón para crear velas, y la imagen de nuestro perfil si hemos iniciado sesión. Como veis es un diseño muy simple e intuitivo , sin recargar el navbar.</p>
+
+<p>Para la página principal he decidido mostrar las velas. Para facilitar la navegación en puesto un pequeño menú con tres opciones, inicio, para ver las velas populares, suscripciones, para ver las velas de las personas a las que sigues y cercanas, como su nombre indica, para ver las velas de la gente vive cerca nuestra.</p>
+
+<p>A la derecha he puesto un sidebar, o menú lateral para dirigirse a nuestro perfil, o a los ajustes, entre otros. Este menú es provisional y estoy pensando en quitarlo ya que ocupa demasiado espacio.</p>
+
+<p>En cuanto al diseño de cada vela, una imagen a la derecha, representando el tipo de vela que es, ya que cada vela tiene asociada una imagen, y a la derecha el texto de la vela con el autor. Todavía falta por incorporar un boton para aumentar la duraccion de la vela o el tiempo que queda hasta que la vela se apague, como digo no es el diseño final ni mucho menos, simplemente lo voy a utilizar de referencia.</p>
+
+<p><img src="http://i.imgur.com/JUtD7U9.jpg" class="responsive-img" alt="ux ui desarrollo web" /></p>
+
+<p>Para la página personal para cada usuario, he decidido meter una imagen de cabecera la cual se puede personalizar para cada usuario. La página, por ahora, simplemente muestra las velas de cada usuario.</p>
+
+<p><img src="http://i.imgur.com/WQi2lLx.jpg" class="responsive-img" alt="ux ui desarrollo web" /></p>
+
+<p>Por último he diseñado la página de registro, simplemente un formulario para rellenar con los datos y una imagen de fondo.</p>
+
+<p><img src="http://i.imgur.com/XAhJzWN.jpg" class="responsive-img" alt="ux ui desarrollo web" /></p>
+
+<p>Quedan por diseñar mas páginas pero con lo que tengo me sirve para empezar.</p>
+
+<p>Esto es todo por este episodio espero tener las ganas y la inspiración suficientes para seguir adelante con el proyecto. Para cualquier duda o sugerencia puedes contactar conmigo desde la sección contacto. Un saludo.</p>
+
+
+  </div>
+
+  
+  <div class="related">
+    <h2>Posts recomendados</h2>
+    <ul class="related_posts">
+      
+      
+      <li>
+        <h5>
+          <a href="/introduccion-instalacion-angular" class="related_post">
+            Angular - Introducción e instalación
+
+          </a>
+        </h5>
+      </li>
+       
+      
+      
+      <li>
+        <h5>
+          <a href="/angular-formularios" class="related_post">
+            Angular - FormControl y FormGroup para crear formularios reactivos
+
+          </a>
+        </h5>
+      </li>
+       
+      
+       
+      
+      
+      <li>
+        <h5>
+          <a href="/cuantas-tecnologias-web-existen" class="related_post">
+            ¿Cuántas tecnologías para el desarollo web existen?
+
+          </a>
+        </h5>
+      </li>
+       
+      
+      
+      <li>
+        <h5>
+          <a href="/optimizar-angular" class="related_post">
+            Optimizar aplicaciones Angular 2 para aumentar la velocidad de carga
+
+          </a>
+        </h5>
+      </li>
+       
+      
+    </ul>
+  </div>
+
+
+
+
+</div>
+
+
+
+<div align="center">
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <!-- Ad -->
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7551074192374685" data-ad-slot="4480248215" data-ad-format="auto"></ins>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div>
+
+
+
+  <footer>
+    <div class="flex three">
+        <div class="full half-1000">
+
+            <div id="mc_embed_signup">
+                <form action="https://github.us14.list-manage.com/subscribe/post?u=cd16a671a63cd217caf6b2f3f&amp;id=bb3cc69837" method="post"
+                    id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                    <div id="mc_embed_signup_scroll">
+                        <h2>Newsletter <i class="fa fa-envelope icon_footer" aria-hidden="true"></i></h2>
+                        <p>Sigue el blog por email. Introduce tu dirección de correo electrónico para que te mande un correo
+                            cuando publique un nuevo artículo en este blog</p>
+
+                        <div class="mc-field-group">
+                            <label for="mce-EMAIL">Tu email
+                                <span class="asterisk">*</span>
+                            </label>
+                            <input type="email" style="color:black;" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Introducce tu dirección de correo electrónico">
+                        </div>
+                        <div id="mce-responses" class="clear">
+                            <div class="response" id="mce-error-response" style="display:none"></div>
+                            <div class="response" id="mce-success-response" style="display:none"></div>
+                        </div>
+                        <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                        <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                            <input type="text" name="b_cd16a671a63cd217caf6b2f3f_bb3cc69837" tabindex="-1" value="">
+                        </div>
+                        <div class="clear">
+                            <input type="submit" value="Suscribirse por email" name="subscribe" id="mc-embedded-subscribe" class="button footer_button">
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <!--End mc_embed_signup-->
+
+        </div>
+        <div class="full sixth-1000">
+          
+              
+                <ul id="footer_menu">
+                   
+                    <a href="/blog">
+                        <li><h4>Blog</h4></li>
+                    </a>
+                    <a href="/projects">
+                        <li><h4></h>Projects</h4></li>
+                    </a>
+                    <a href="/about">
+                        <li><h4>About me<h4></li>
+                    </a>
+                    <a href="/feed.xml">
+                        <li><h4>Rss</h4></li>
+                    </a>
+
+                </ul>
+           
+        </div>
+        <div class="full third-1000">
+            <ul class="footer_posts">
+                    
+
+                    
+                    
+                    
+
+                    
+                    <a href="/introduccion-instalacion-angular"><li><h4>Angular - Introducción e instalación</h4></li></a>
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    <a href="/angular-formularios"><li><h4>Angular - FormControl y FormGroup para crear formularios reactivos</h4></li></a>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    <a href="/cuantas-tecnologias-web-existen"><li><h4>¿Cuántas tecnologías para el desarollo web existen?</h4></li></a>
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    <a href="/optimizar-angular"><li><h4>Optimizar aplicaciones Angular 2 para aumentar la velocidad de carga</h4></li></a>
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+                    
+
+            </ul>
+        </div>
+
+
+
+
+
+    </div>
+</footer>
+
+
+
+
+  <script src="/js/prism.js"></script>
+  <script src="/js/index.js"></script>
+
+
+
+</body>
+
+
+
+
+
+
+
+</html>

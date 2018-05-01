@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-7551074192374685",
+    enable_page_level_ads: true
+  });
+</script>
+
+<link rel="shortcut icon" type="image/png" href="/images/favicon.png" />
+
+<link href="https://fonts.googleapis.com/css?family=Lato|Titillium+Web" rel="stylesheet">
+
+<link href="/css/prism.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/ficons@1.1.52/dist/ficons/font.css" rel="stylesheet">
+<link rel="stylesheet" href="/css/picnic.min.css">
+<link rel="stylesheet" href="/css/index.css">
+
+
+  <title>Calabash para realizar testing automatico</title>
+  <meta name="twitter:title" content="Calabash para realizar testing automatico">
+
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:creator" content="@Frostq_">
+<meta property="og:site_name" content="Frostq - Coding beers">
+<meta property="article:author" content="Diego López García (Frostq)">
+
+
+  <meta name="twitter:description" content="Como instalar y usar Calabash para hacer testing de aplicaciones Android de forma automatizada.">
+  <meta name="description" content="Como instalar y usar Calabash para hacer testing de aplicaciones Android de forma automatizada.">
+  <meta property='og:description' content="Como instalar y usar Calabash para hacer testing de aplicaciones Android de forma automatizada." />
+
+
+<meta name="theme-color" content="#9c95ed">
+
+
+
+  
+    <meta name="twitter:image:src" content="http://localhost:4000/images/posts/calabash.jpg">
+    <meta property='og:image' content="http://localhost:4000/images/posts/calabash.jpg" />
+    
+
+
+
+  <meta name="twitter:url" content="http://localhost:4000/testing-calabash">
+  <meta property='og:url' content="http://localhost:4000/testing-calabash" />
+ 
+
+<script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-87066592-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
+
+
+</head>
+
+
+<body>
+
+  
+  
+<nav class="nav_transparent">
+    <a href="/en/" class="brand">
+      <img class="navbar_logo" src="/images/logo_horizontal.png"  />
+      
+    </a>
+  
+    <!-- responsive-->
+    <input id="bmenub" type="checkbox" class="show">
+    <label for="bmenub" class="burger pseudo button"><i class="fa fa-bars"></i></label>
+  
+    <div class="menu">
+      <ul>
+        <a href="/en/blog">
+          <li id="header_item">BLOG</li>
+        </a>
+        <a href="/en/projects">
+          <li id="header_item">PROJECTS</li>
+        </a>
+        <a href="/en/about">
+          <li id="header_item">ABOUT ME</li>
+        </a>
+        <a href="/en/feed.xml">
+          <li id="header_item">RSS</li>
+        </a>
+    
+      </ul>
+    </div>
+  </nav>
+
+
+<div class="post_header" style="background-image: linear-gradient( rgba(23, 45, 65, 0.5), rgba(54, 75, 94, 0.9) ), url(/images/posts/calabash.jpg)">
+  <div class="container post_header_content">
+    <h1 class="post_title">Usando Calabash para hacer testing de aplicaciones Android </h1>
+
+
+    <div class="post_date">April 19, 2016</div>
+
+    <div class="post_tags">
+      
+
+      <a class="tags" href="/tag#android">Android</a>
+
+      
+
+      <a class="tags" href="/tag#testing">Testing</a>
+
+      
+
+      <a class="tags" href="/tag#calabash">Calabash</a>
+
+      
+    </div>
+
+    
+
+    <div class="post_read_time">
+      
+        <i class="fa fa-clock-o"></i> 2 min read 
+    </div>
+
+  </div>
+</div>
+
+
+<div class="container">
+
+
+  <div align="center">
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- Ad -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7551074192374685" data-ad-slot="4480248215" data-ad-format="auto"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>
+
+  <div class="post_content">
+    <p><b>Calabash</b> es un framework open source que permite el testing automatizado de aplicaciones moviles desarrollado por Xamarin; para ello utiliza <b>Cucumber</b>, software escrito en Ruby pensado para el testing de software, aunque es independiente del lenguaje utilizado. También podemos utilizarlo para el desarrollo web usando Selenium, aunque en este articulo veremos como usarlo para las aplicaciones Android.</p>
+
+<p>Calabash ejecuta una serie de pruebas funcionales automatizadas contra la interfaz de usuario de una aplicación. Está pensado para ser usado en un modelo de Testing BDD.</p>
+
+<h2>Instalación y funcionamiento</h2>
+
+<p>Para empezar a instalarlo, tienes que tener instalado Ruby, si no lo tienes lo puedes instalar desde aquí: <a href="http://RubyInstaller.org">RubyInstaller.org</a></p>
+
+<p>También, tienes que tener instalado el JDK (Java Development Kit), que lo puedes descargar de <a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html">aqui </a>y el SDK de Android, lo puedes descargar desde <a href="http://developer.android.com/intl/es/sdk/">aqui</a></p>
+
+<p>Una vez instalado todo esto tienes que ejecutar el siguiente comando para instalarlo:</p>
+<ul>
+ 	<li><em><b><code>gem install calabash-android</code></b></em></li>
+</ul>
+<p>Si ya has instalado calabash, puedes generar un esqueleto Cucumber con el siguiente comando:</p>
+<ul>
+ 	<li><em><b><code>calabash-android gen</code></b></em></li>
+</ul>
+<p>Automáticamente generará las carpetas con los archivos .feature y .rb</p>
+
+<p>En el archivo con extension .feature se especifica lo que queremos que Calabash ejecute automáticamente. Por ejemplo un feature con un escenario para el login muy sencillo, de una aplicación quedaría de esta manera:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="n">Feature</span><span class="p">:</span> <span class="n">Login</span> <span class="n">Feature</span>
+    <span class="n">Scenario</span><span class="p">:</span> <span class="n">As</span> <span class="n">a</span> <span class="n">valid</span> <span class="n">user</span> <span class="n">I</span> <span class="n">can</span> <span class="n">log</span> <span class="n">into</span> <span class="n">my</span> <span class="n">app</span>
+    <span class="n">Given</span> <span class="n">I</span> <span class="n">enter</span> <span class="n">text</span> <span class="s">"luisca_jl"</span> <span class="n">into</span> <span class="n">field</span> <span class="k">with</span> <span class="nb">id</span> <span class="s">"txtLogin"</span> <span class="o">//</span><span class="n">pasamos</span> <span class="n">los</span> <span class="nb">id</span> <span class="n">de</span> <span class="n">los</span> <span class="n">elementos</span> <span class="n">como</span> <span class="n">string</span>
+    <span class="n">And</span> <span class="n">I</span> <span class="n">enter</span> <span class="s">"1234"</span> <span class="n">into</span> <span class="nb">input</span> <span class="n">field</span> <span class="n">number</span> <span class="mi">2</span>
+    <span class="n">And</span> <span class="n">I</span> <span class="n">go</span> <span class="n">back</span> <span class="o">//</span><span class="n">Vuelve</span> <span class="n">atras</span> <span class="n">para</span> <span class="n">cerrar</span> <span class="n">el</span> <span class="n">teclado</span>
+    <span class="n">When</span> <span class="n">I</span> <span class="n">press</span> <span class="s">"btnLogin"</span>
+    <span class="n">Then</span> <span class="n">I</span> <span class="n">see</span> <span class="s">"Bienvenido de nuevo"</span> 
+</code></pre></div></div>
+
+<p>Puedes ejecutar el testing en la maquina virtual de Android que viene con el SDK o directamenete en nuestro dispositivo si esta conectado a nuestro ordenador.</p>
+
+<p>Por último ejecutamos el comando para que empiece automáticamente a testear la aplicación:</p>
+<ul>
+ 	<li><em><b><code>calabash-android run &lt;apk&amp;gt</code></b></em></li>
+</ul>
+<p>Y automáticamente abrirá la aplicación en la maquina virtual o en nuestro dispositivo si lo tenemos conectado.</p>
+
+<p><img class="responsive-img" src="http://i1.wp.com/frostq.ml/wp-content/uploads/2016/04/Animation.gif" alt="Testing de aplicaciones Android usando Calabash" /></p>
+
+  </div>
+
+  
+  <div class="related">
+    <h2>Posts recomendados</h2>
+    <ul class="related_posts">
+      
+       
+      
+       
+      
+      
+      <li>
+        <h5>
+          <a href="/en/how-many-web-libraries-are-there" class="related_post">
+            How many web frameworks are there?
+
+          </a>
+        </h5>
+      </li>
+       
+      
+       
+      
+       
+      
+    </ul>
+  </div>
+
+
+
+
+</div>
+
+
+
+<div align="center">
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <!-- Ad -->
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7551074192374685" data-ad-slot="4480248215" data-ad-format="auto"></ins>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div>
+
+
+
+
+
+
+  <script src="/js/prism.js"></script>
+  <script src="/js/index.js"></script>
+
+
+
+</body>
+
+
+
+
+
+
+
+</html>

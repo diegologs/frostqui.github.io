@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-7551074192374685",
+    enable_page_level_ads: true
+  });
+</script>
+
+<link rel="shortcut icon" type="image/png" href="/images/favicon.png" />
+
+<link href="https://fonts.googleapis.com/css?family=Lato|Titillium+Web" rel="stylesheet">
+
+<link href="/css/prism.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/ficons@1.1.52/dist/ficons/font.css" rel="stylesheet">
+<link rel="stylesheet" href="/css/picnic.min.css">
+<link rel="stylesheet" href="/css/index.css">
+
+
+  <title>Programacion orientada a objetos en javascript con ejemplos</title>
+  <meta name="twitter:title" content="Programacion orientada a objetos en javascript con ejemplos">
+
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:creator" content="@Frostq_">
+<meta property="og:site_name" content="Frostq - Coding beers">
+<meta property="article:author" content="Diego López García (Frostq)">
+
+
+  <meta name="twitter:description" content="¿Cómo hacer orientacion a objetos usando JavaScript? ¿Qué son los prototipos en JavaScript?">
+  <meta name="description" content="¿Cómo hacer orientacion a objetos usando JavaScript? ¿Qué son los prototipos en JavaScript?">
+  <meta property='og:description' content="¿Cómo hacer orientacion a objetos usando JavaScript? ¿Qué son los prototipos en JavaScript?" />
+
+
+<meta name="theme-color" content="#9c95ed">
+
+
+
+  
+    <meta name="twitter:image:src" content="http://localhost:4000/images/posts/poo.jpg">
+    <meta property='og:image' content="http://localhost:4000/images/posts/poo.jpg" />
+    
+
+
+
+  <meta name="twitter:url" content="http://localhost:4000/javascript-orientacion-objetos">
+  <meta property='og:url' content="http://localhost:4000/javascript-orientacion-objetos" />
+ 
+
+<script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-87066592-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
+
+
+</head>
+
+
+<body>
+
+  
+  
+<nav class="nav_transparent">
+    <a href="/en/" class="brand">
+      <img class="navbar_logo" src="/images/logo_horizontal.png"  />
+      
+    </a>
+  
+    <!-- responsive-->
+    <input id="bmenub" type="checkbox" class="show">
+    <label for="bmenub" class="burger pseudo button"><i class="fa fa-bars"></i></label>
+  
+    <div class="menu">
+      <ul>
+        <a href="/en/blog">
+          <li id="header_item">BLOG</li>
+        </a>
+        <a href="/en/projects">
+          <li id="header_item">PROJECTS</li>
+        </a>
+        <a href="/en/about">
+          <li id="header_item">ABOUT ME</li>
+        </a>
+        <a href="/en/feed.xml">
+          <li id="header_item">RSS</li>
+        </a>
+    
+      </ul>
+    </div>
+  </nav>
+
+
+<div class="post_header" style="background-image: linear-gradient( rgba(23, 45, 65, 0.5), rgba(54, 75, 94, 0.9) ), url(/images/posts/poo.jpg)">
+  <div class="container post_header_content">
+    <h1 class="post_title">Javascript orientado a objetos </h1>
+
+
+    <div class="post_date">June 30, 2016</div>
+
+    <div class="post_tags">
+      
+
+      <a class="tags" href="/tag#javascript">Javascript</a>
+
+      
+    </div>
+
+    
+
+    <div class="post_read_time">
+      
+        <i class="fa fa-clock-o"></i> 3 min read 
+    </div>
+
+  </div>
+</div>
+
+
+<div class="container">
+
+
+  <div align="center">
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- Ad -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7551074192374685" data-ad-slot="4480248215" data-ad-format="auto"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>
+
+  <div class="post_content">
+    <p>JavaScript es un lenguaje que surgió para el desarrollo web, para poder interaccionar con el usuario y hacer ciertas acciones básicas. En la actualidad JavaScript se ha ampliado ofreciendo nuevas funcionalidades. Se utiliza principalmente en su forma del lado del cliente, aunque existe una versión para el lado del servidor. JavaScript puede tener todo lo que un lenguaje orientado a objetos, tiene que ofrecer.</p>
+
+<p>Para entender como funciona la orientación a objetos en JavaScript, primero hay que empezar definiendo que es la orientación a objetos.</p>
+
+<p>Programación orientada a objetos (POO) es un modelo de lenguaje de programación organizada alrededor de los objetos en lugar de “acciones” y datos en lugar de la lógica. Nos interesa mas saber como vamos a relacionar los objetos y la lógica del programa que los propios datos.</p>
+
+<p>Tenemos que saber algunos términos asociados a la orientación de objetos:</p>
+<ul>
+    <quote>
+        <li><strong>Clase</strong>: Definimos como va a ser nuestro objeto.</li>
+        <li><strong>Objeto</strong>: Una instancia de una clase</li>
+        <li><strong>Métodos y propiedades</strong>: Características concretas del objeto y acciones que puede realizar.</li>
+        <li><strong>Constructor</strong>: Con este método inicializamos las propiedades con los valores que le pasamos. Este método se ejecuta al crear un objeto.</li>
+        <li><strong>Herencia</strong>: Con la herencia podemos hacer que una clase adquiera las características de otra.</li>
+        <li><strong>Polimorfismo</strong>: Las clases podrían definir el mismo método o propiedad.</li>
+    </quote>
+</ul>
+<p><a href="http://i.imgur.com/xsxithS.jpg"><img class="responsive-img" src="http://i.imgur.com/xsxithS.jpg" alt="jvacript programacion orientada a objetos" width="523" height="260" /></a></p>
+<h2>Programación orientada a objetos en JavaScript</h2>
+<p>Crear una clase con JavaScript tiene esta pinta:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">Car</span><span class="p">(){}</span>
+</code></pre></div></div>
+
+<p>Con esto definimos que nuestros coches tienen una serie de caracteristicas (4 ruedas, 1 motor, 5 asientos).</p>
+
+<p>En JavaScript no necesitamos crear un método específicamente para el constructor sino que podemos usar la función que creamos antes para inicializar las características de nuestra clase.</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">Car</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">wheels</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">engines</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">seats</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+      <span class="p">};</span>
+</code></pre></div></div>
+<p>Para crear una instancia de la clase que acabamos de crear simplemente llamamos a la palabra <em><strong>new </strong></em>que indica a JavaScript que estas creando un objeto nuevo.</p>
+<pre class="lang:default decode:true">var myCar = new Car();</pre>
+<p>Pero si lo que queremos es que cada instancia tenga diferentes características pero con la misma estructura, tenemos que añadir paramentos a nuestro constructor</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">Car</span><span class="p">(</span><span class="nx">wheels</span><span class="p">,</span> <span class="nx">seats</span><span class="p">,</span> <span class="nx">engines</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">wheels</span> <span class="o">=</span> <span class="nx">wheels</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">seats</span> <span class="o">=</span> <span class="nx">seats</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">engines</span> <span class="o">=</span> <span class="nx">engines</span><span class="p">;</span>
+<span class="p">};</span>
+<span class="kd">var</span> <span class="nx">myCar</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Car</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+</code></pre></div></div>
+<p>De esta forma, al crear el objeto nuevo, le pasamos los valores que queramos, siguiendo la estructura definida en el constructor.</p>
+
+<p>Para que una clase herede de otra, tenemos que usar su prototipo. Cada objeto tiene un prototipo. De este prototipo hereda todas las propiedades y métodos, por eso si queremos hacer que una clase herede de otra lo que tenemos que hacer es cambiar el prototipo de la clase hija por el de la clase del padre.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">Dad</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">atributoDad</span><span class="o">=</span><span class="mi">4</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">Son</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">atributoSon</span><span class="o">=</span><span class="mi">5</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nx">Son</span><span class="p">.</span><span class="nx">prototype</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Dad</span><span class="p">;</span>
+</code></pre></div></div>
+
+  </div>
+
+  
+  <div class="related">
+    <h2>Posts recomendados</h2>
+    <ul class="related_posts">
+      
+       
+      
+       
+      
+      
+      <li>
+        <h5>
+          <a href="/en/how-many-web-libraries-are-there" class="related_post">
+            How many web frameworks are there?
+
+          </a>
+        </h5>
+      </li>
+       
+      
+       
+      
+       
+      
+    </ul>
+  </div>
+
+
+
+
+</div>
+
+
+
+<div align="center">
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <!-- Ad -->
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7551074192374685" data-ad-slot="4480248215" data-ad-format="auto"></ins>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div>
+
+
+
+
+
+
+  <script src="/js/prism.js"></script>
+  <script src="/js/index.js"></script>
+
+
+
+</body>
+
+
+
+
+
+
+
+</html>

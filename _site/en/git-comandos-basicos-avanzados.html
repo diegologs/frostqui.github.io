@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-7551074192374685",
+    enable_page_level_ads: true
+  });
+</script>
+
+<link rel="shortcut icon" type="image/png" href="/images/favicon.png" />
+
+<link href="https://fonts.googleapis.com/css?family=Lato|Titillium+Web" rel="stylesheet">
+
+<link href="/css/prism.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/ficons@1.1.52/dist/ficons/font.css" rel="stylesheet">
+<link rel="stylesheet" href="/css/picnic.min.css">
+<link rel="stylesheet" href="/css/index.css">
+
+
+  <title>Git, comandos básicos y avanzados</title>
+  <meta name="twitter:title" content="Git, comandos básicos y avanzados">
+
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:creator" content="@Frostq_">
+<meta property="og:site_name" content="Frostq - Coding beers">
+<meta property="article:author" content="Diego López García (Frostq)">
+
+
+  <meta name="twitter:description" content="Vamos a ver cómo usar git de forma fácil y eficaz y cómo instalar git en Windows y en Linux. Además repasaremos los mejores comandos y algunos avanzados">
+  <meta name="description" content="Vamos a ver cómo usar git de forma fácil y eficaz y cómo instalar git en Windows y en Linux. Además repasaremos los mejores comandos y algunos avanzados">
+  <meta property='og:description' content="Vamos a ver cómo usar git de forma fácil y eficaz y cómo instalar git en Windows y en Linux. Además repasaremos los mejores comandos y algunos avanzados" />
+
+
+<meta name="theme-color" content="#9c95ed">
+
+
+
+  
+    <meta name="twitter:image:src" content="http://localhost:4000/images/posts/git.jpg">
+    <meta property='og:image' content="http://localhost:4000/images/posts/git.jpg" />
+    
+
+
+
+  <meta name="twitter:url" content="http://localhost:4000/git-comandos-basicos-avanzados">
+  <meta property='og:url' content="http://localhost:4000/git-comandos-basicos-avanzados" />
+ 
+
+<script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-87066592-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
+
+
+</head>
+
+
+<body>
+
+  
+  
+<nav class="nav_transparent">
+    <a href="/en/" class="brand">
+      <img class="navbar_logo" src="/images/logo_horizontal.png"  />
+      
+    </a>
+  
+    <!-- responsive-->
+    <input id="bmenub" type="checkbox" class="show">
+    <label for="bmenub" class="burger pseudo button"><i class="fa fa-bars"></i></label>
+  
+    <div class="menu">
+      <ul>
+        <a href="/en/blog">
+          <li id="header_item">BLOG</li>
+        </a>
+        <a href="/en/projects">
+          <li id="header_item">PROJECTS</li>
+        </a>
+        <a href="/en/about">
+          <li id="header_item">ABOUT ME</li>
+        </a>
+        <a href="/en/feed.xml">
+          <li id="header_item">RSS</li>
+        </a>
+    
+      </ul>
+    </div>
+  </nav>
+
+
+<div class="post_header" style="background-image: linear-gradient( rgba(23, 45, 65, 0.5), rgba(54, 75, 94, 0.9) ), url(/images/posts/git.jpg)">
+  <div class="container post_header_content">
+    <h1 class="post_title">Git - Comandos básicos y avanzados </h1>
+
+
+    <div class="post_date">May 19, 2017</div>
+
+    <div class="post_tags">
+      
+
+      <a class="tags" href="/tag#git">Git</a>
+
+      
+    </div>
+
+    
+
+    <div class="post_read_time">
+      
+        <i class="fa fa-clock-o"></i> 7 min read 
+    </div>
+
+  </div>
+</div>
+
+
+<div class="container">
+
+
+  <div align="center">
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- Ad -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7551074192374685" data-ad-slot="4480248215" data-ad-format="auto"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>
+
+  <div class="post_content">
+    <p>¡Saludos! En el post de hoy veremos algunos de los comandos más utilizados, pero tranquilo, si ya eres un usuario más avanzado de git, no te preocupes, también veremos algunos comandos más menos conocidos y avanzados pero igualmente útiles.</p>
+
+<p>Pero antes de todo esto, no está de más recordar qúe es git y para qué sirve por si hay alguien que se quiere iniciar en git.</p>
+
+<p>Git es una herramienta que sirve para gestionar el control de versiones. Pero, ¿qué es el control de versiones? Pues es simplemente una forma de tener controlados todos los cambios que realizamos sobre cualquier tipo de archivos. Este control se puede efectuar a mano, aunque es recomendable usar una herramienta que nos facilite la vida como por ejemplo git, aunque hay muchas más.</p>
+
+<h2 id="instalación-y-configuración-de-git">Instalación y configuración de Git.</h2>
+
+<p>Lo primero es tener instalado git en nuestra máquina para tener acceso a todos sus comandos. Para descargar e instalar git lo puedes hacer desde su página oficial:</p>
+
+<p>Si estás en Windows, puedes descargarlo directamente desde aquí:</p>
+
+<p><a href="https://git-scm.com/download/win">https://git-scm.com/download/win</a></p>
+
+<p>Si usas otro sistema puedas buscar el tuyo aquí:</p>
+
+<p><a href="https://git-scm.com/downloads">https://git-scm.com/downloads</a></p>
+
+<p>Una vez instalado git, puedes configurar tu identidad ejecutando en la terminal (si estás en windows se te habrá instalado un programa llamado Git bash):</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config <span class="nt">--global</span> user.name <span class="s2">"Tu nombre aquí"</span>
+git config <span class="nt">--global</span> user.email ejemplo@example.com
+</code></pre></div></div>
+
+<h2 id="comandos-básicos">Comandos básicos</h2>
+
+<p>Bien, pongámonos en la situación de que tenemos un proyecto que estamos dearrollando y queremos cambiar algo drástico. Lo mejor es usar git para llevar el control de estos cambios por si queremos revertirlos.</p>
+
+<p>El primer paso es abrir la terminal de git, o la terminal de nuestro sistema, para dirigirnos a la carpeta donde tengamos guardado el proyecto que estemos desarrollando, y ejecutar el siguiente comando:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git init
+</code></pre></div></div>
+<p>Con este comando lo que estamos haciendo es decirle a git que este pendiente de los cambios que se produzcan en los archivos de ese directorio. 
+Este comando solo lo tenemos que ejecutar una sola vez para cada proyecto que estemos realizando.</p>
+
+<p>Ahora podemos continuar desarrollando nuestro proyecto.</p>
+
+<p>Cuando queramos guardar los cambios con git tenemos que hacer lo siguiente:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git status
+</code></pre></div></div>
+
+<p><img src="http://i.imgur.com/fBoD8Uk.png" class="responsive-img" alt="Git status" /></p>
+
+<p>Este comando imprimirá los archivos que van a ser guardados, el siguiente paso es ejecutar:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add <span class="nb">.</span>
+</code></pre></div></div>
+<p>Con esto añadiremos todos los archivos que aparecían anteriormente para ser guardados. Si queremos añadir un archivo o carpeta en concreto lo podemos hacer mediante</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add NOMBREDELARCHIVO
+</code></pre></div></div>
+<p>Si queremos eliminar los archivos que acabamos de añadir para ser guardados lo podemos hacer con</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git <span class="nb">rm</span> <span class="nb">.</span>
+</code></pre></div></div>
+<p>Con estos comandos hemos añadido o hemos quitado archivos pero aún no han sido guardados, para ello:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git commit <span class="nt">-m</span> <span class="s2">"Nombre descriptivo del cambio que hemos realizado"</span>
+</code></pre></div></div>
+<p>Acabamos de hacer nuestro primer commit, un commit es un guardado con mensaje de los cambios que hemos realizado en un momento determinado en nuestro proyecto</p>
+
+<p>Para imprimir todos los commits que hemos realizado tenemos el comando:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git log
+</code></pre></div></div>
+<p>La cadena de números y letras que aparece al lado de la palabra “commit” es el identificador que podemos usar para revertir los cambios y volver atrás a ese punto. Para ello ejecutamos:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git reset <span class="nt">--hard</span> IDENTIFICADOR
+</code></pre></div></div>
+<p>Sustituimos IDENTIFICADOR por el identificador que comentaba anteriormente, eliminando así, todos los commits posteriores a ese commit.</p>
+
+<p>Con <em>git revert</em> se crea un nuevo commit que revierte los cambios realizados en el último commit, pero no elimina dicho commit.</p>
+
+<h2 id="administrando-proyectos-git">Administrando proyectos git</h2>
+
+<p>Ahora, imaginemos que queremos administrar un proyecto ubicado en otro servidor o en un almacén de repositorios como es Github</p>
+
+<p>Si queremos bajarnos el proyecto para empezar a gestionarlo lo podemos hacer usando:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone git://servidor/ruta/a/los/archivos 
+</code></pre></div></div>
+<p>Por ejemplo, para GitHub:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/proyectogithub
+</code></pre></div></div>
+<p>Si alguien hace un cambio desde otro sitio a este mismo repositorio, tenemos que bajarnos el cambio a nuestra máquina, para ello:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git pull
+</code></pre></div></div>
+<p>Pero, si tenemos cambios sin guardar, tenemos que guardarlos haciendo commit, antes de bajarnos nada.</p>
+
+<p>Tras hacer commit de cambios nuevos, podemos subirlos al repositorio remoto:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git push origin master
+</code></pre></div></div>
+<p>Donde origin es la dirección del repositiorio remoto y master es la rama a la que estamos subiendo los cambios.</p>
+
+<p>Para añadir la dirección de un repositorio remoto a origin, lo podemos hacer así:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git remote add origin https://github.com/user/repo.git
+</code></pre></div></div>
+<p>De esta forma, podemos usar la palabra origin para referirnos a esa dirección.</p>
+
+<h2 id="ramas-en-git">Ramas en git</h2>
+<p>Muy bien, pero antes has dicho que has subido los cambios a una rama, ¿qué es una rama?</p>
+
+<p>Las ramas sirven para llevar un control de cambios independiente en el mismo repositorio, es decir, podemos crear una rama a partir de la rama base, o rama master, con otra serie de cambios, posteriormente podemos subir estos cambios a la rama master haciendo una combinación de ambas ramas:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git push origin master
+</code></pre></div></div>
+
+<p>Si quires ver los cambios que has realizado desde el último commit lo puedes hacer con:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git diff
+</code></pre></div></div>
+<p>En verde, saldrán las líneas que has añadido, y en rojo las que has eliminado desde la última vez.</p>
+
+<p>Para posicionarnos en una rama escribe:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git checkout nombre_de_la_rama
+</code></pre></div></div>
+<p>Y para crear una rama:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git checkout <span class="nt">-b</span> rama_nueva
+</code></pre></div></div>
+<h2 id="comandos-avanzados">Comandos avanzados</h2>
+
+<h4 id="alias">Alias</h4>
+
+<p>Para no tener que estar escribiendo todo el rato “commit” o “checkout” podemos crear alias, los alias sirven para decirle a git que comando tiene que ejecutar para el alias que le hemos indicado, estos son los alias más comunes, aunque puedes crear y configurar más.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config <span class="nt">--global</span> alias.co checkout
+git config <span class="nt">--global</span> alias.br branch
+git config <span class="nt">--global</span> alias.ci commit
+git config <span class="nt">--global</span> alias.st status
+</code></pre></div></div>
+<p>De esta forma, al escribir <em>git st</em>, git ejecutará el comando <em>git status</em> ahorrándonos mucho tiempo.</p>
+
+<h4 id="descartar-temporalmente-cambios">Descartar temporalmente cambios</h4>
+
+<p>Si estas trabajando en una rama y quieres cambiarte a otra, git no te dejará porque tienes cambios sin guardar, una forma de solucionar esto es haciendo un commit, pero si no queremos hacerlo lo que podemos hacer es descartar los cambios temporalmente, para ello:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git stash
+</code></pre></div></div>
+
+<p>Posteriormente si los quieres recuperar:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git stash pop
+</code></pre></div></div>
+
+<h4 id="pull-de-un-solo-commit">Pull de un solo commit</h4>
+
+<p>Si por cualquier motivo, necesitas hacer un pull pero solo de un determinado commit lo que puedes hacer es usar este comando:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git cherry-pick &lt;commitSHA&gt;
+</code></pre></div></div>
+
+<h4 id="git-log-avanzado">Git log avanzado</h4>
+
+<p>Hay veces en las que el comando git log ofrece demasiada información, pero esto se puede personalizar, por ejemplo:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git log <span class="nt">--online</span>
+</code></pre></div></div>
+<p>Se imprimirá en cada linea un commit, con su identificador y el texto del commit.</p>
+
+<p>Otro parámetro bastante útil del log es el de git graph</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git log <span class="nt">--graph</span> <span class="nt">--oneline</span>
+</code></pre></div></div>
+
+<p><img src="http://i.imgur.com/M1ZTdBb.png" class="responsive-img" alt="Git log --graph --oneline" /></p>
+
+<p>Esto imprimira la lista de commits y mediante caracteres ASCII, representara el árbol con las ramas y los cambios entre ellas.</p>
+
+<p>También podemos filtrar los commits, por ejemplo:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git log <span class="nt">--author</span><span class="o">=</span><span class="s2">"John"</span>
+git log <span class="nt">--after</span><span class="o">=</span><span class="s2">"2014-7-1"</span>
+git log <span class="nt">--</span> foo.py bar.py
+</code></pre></div></div>
+<p>Estos comandos filtarán los commits por autor, por fecha y por los archivos que fueron modificados respectivamente.</p>
+
+<h2 id="conclusiones">Conclusiones</h2>
+
+<p>Git es una herramienta muy potente que ofrece muchísmos comandos para la gestios de versiónes de nuestros proyectos. Los commmits que he explicado son unos cuantos, me dejo muchos de ellos, pero te animo a que eches un vistazo a la documentación oficial de git para que descubras muchos mas comandos y configuraciones.</p>
+
+  </div>
+
+  
+  <div class="related">
+    <h2>Posts recomendados</h2>
+    <ul class="related_posts">
+      
+       
+      
+       
+      
+      
+      <li>
+        <h5>
+          <a href="/en/how-many-web-libraries-are-there" class="related_post">
+            How many web frameworks are there?
+
+          </a>
+        </h5>
+      </li>
+       
+      
+       
+      
+       
+      
+    </ul>
+  </div>
+
+
+
+
+</div>
+
+
+
+<div align="center">
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <!-- Ad -->
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7551074192374685" data-ad-slot="4480248215" data-ad-format="auto"></ins>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div>
+
+
+
+
+
+
+  <script src="/js/prism.js"></script>
+  <script src="/js/index.js"></script>
+
+
+
+</body>
+
+
+
+
+
+
+
+</html>

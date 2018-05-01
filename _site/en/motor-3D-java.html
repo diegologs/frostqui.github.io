@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-7551074192374685",
+    enable_page_level_ads: true
+  });
+</script>
+
+<link rel="shortcut icon" type="image/png" href="/images/favicon.png" />
+
+<link href="https://fonts.googleapis.com/css?family=Lato|Titillium+Web" rel="stylesheet">
+
+<link href="/css/prism.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/ficons@1.1.52/dist/ficons/font.css" rel="stylesheet">
+<link rel="stylesheet" href="/css/picnic.min.css">
+<link rel="stylesheet" href="/css/index.css">
+
+
+  <title>Cómo crear un motor 3D en Java para videojuegos</title>
+  <meta name="twitter:title" content="Cómo crear un motor 3D en Java para videojuegos">
+
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:creator" content="@Frostq_">
+<meta property="og:site_name" content="Frostq - Coding beers">
+<meta property="article:author" content="Diego López García (Frostq)">
+
+
+  <meta name="twitter:description" content="Iniciación para crear juegos 3D en Java. Construiremos nuestro propio motor 3D desde 0 que podremos usar de base para crear videojuegos.">
+  <meta name="description" content="Iniciación para crear juegos 3D en Java. Construiremos nuestro propio motor 3D desde 0 que podremos usar de base para crear videojuegos.">
+  <meta property='og:description' content="Iniciación para crear juegos 3D en Java. Construiremos nuestro propio motor 3D desde 0 que podremos usar de base para crear videojuegos." />
+
+
+<meta name="theme-color" content="#9c95ed">
+
+
+
+  
+    <meta name="twitter:image:src" content="http://localhost:4000/images/posts/java-3D.jpg">
+    <meta property='og:image' content="http://localhost:4000/images/posts/java-3D.jpg" />
+    
+
+
+
+  <meta name="twitter:url" content="http://localhost:4000/motor-3D-java">
+  <meta property='og:url' content="http://localhost:4000/motor-3D-java" />
+ 
+
+<script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-87066592-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
+
+
+</head>
+
+
+<body>
+
+  
+  
+<nav class="nav_transparent">
+    <a href="/en/" class="brand">
+      <img class="navbar_logo" src="/images/logo_horizontal.png"  />
+      
+    </a>
+  
+    <!-- responsive-->
+    <input id="bmenub" type="checkbox" class="show">
+    <label for="bmenub" class="burger pseudo button"><i class="fa fa-bars"></i></label>
+  
+    <div class="menu">
+      <ul>
+        <a href="/en/blog">
+          <li id="header_item">BLOG</li>
+        </a>
+        <a href="/en/projects">
+          <li id="header_item">PROJECTS</li>
+        </a>
+        <a href="/en/about">
+          <li id="header_item">ABOUT ME</li>
+        </a>
+        <a href="/en/feed.xml">
+          <li id="header_item">RSS</li>
+        </a>
+    
+      </ul>
+    </div>
+  </nav>
+
+
+<div class="post_header" style="background-image: linear-gradient( rgba(23, 45, 65, 0.5), rgba(54, 75, 94, 0.9) ), url(/images/posts/java-3D.jpg)">
+  <div class="container post_header_content">
+    <h1 class="post_title">Cómo crear un motor 3D en Java para videojuegos </h1>
+
+
+    <div class="post_date">October 06, 2017</div>
+
+    <div class="post_tags">
+      
+
+      <a class="tags" href="/tag#java">Java</a>
+
+      
+
+      <a class="tags" href="/tag#juegos">Juegos</a>
+
+      
+    </div>
+
+    
+
+    <div class="post_read_time">
+      
+        <i class="fa fa-clock-o"></i> 45 min read 
+    </div>
+
+  </div>
+</div>
+
+
+<div class="container">
+
+
+  <div align="center">
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- Ad -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7551074192374685" data-ad-slot="4480248215" data-ad-format="auto"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>
+
+  <div class="post_content">
+    <h2 id="introducción">Introducción</h2>
+
+<p>Java no sea uno de los mejores lenguajes para la creación de videojuegos, mucho menos para videojuegos en 3D, pero para muchos (me incluyo), es uno de los lenguajes con los que empezamos a programar. Aunque este artículo este escrito usando Java, se pueden usar las ideas y conceptos que expongo en otros lenguajes consiguiendo resultados parecidos. Este artículo esta basado en los juegos de Notch (creador de minecraft).</p>
+
+<p>Este es el resultado final de la base de motor gráfico que vamos a realizar hoy:</p>
+
+<p><img src="https://i.imgur.com/uJu4Obw.png" class="responsive-img" alt="Motor gráfico Java, renderizando bloques" /></p>
+
+<h2 id="primeros-pasos">Primeros pasos</h2>
+
+<p>Lo primero que hacemos es crear un proyecto Java vacío con nuestro IDE favorito, en mi caso voy a usar eclipse (<a href="https://www.eclipse.org/">https://www.eclipse.org/</a>).</p>
+
+<p>Creamos la clase principal del proyecto con el método <strong>main</strong>, es decir el primer método que va a ejecutarse, y hacemos que esta clase principal herede de la clase Canvas y implemente la case Runnable. A continuación definimos las variables que van a contener las medidas de la ventana del juego:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">private</span> <span class="kd">final</span> <span class="kd">static</span> <span class="kt">long</span> <span class="n">serialVersionUID</span> <span class="o">=</span> <span class="mi">1L</span><span class="o">;</span>
+<span class="kd">private</span> <span class="kd">final</span> <span class="kd">static</span> <span class="kt">int</span> <span class="n">scale</span> <span class="o">=</span> <span class="mi">2</span><span class="o">;</span>
+<span class="kd">private</span> <span class="kd">final</span> <span class="kd">static</span> <span class="kt">int</span> <span class="n">WIDTH</span> <span class="o">=</span> <span class="mi">320</span><span class="o">;</span>
+<span class="kd">private</span> <span class="kd">final</span> <span class="kd">static</span> <span class="kt">int</span> <span class="n">HEIGHT</span> <span class="o">=</span> <span class="n">WIDTH</span> <span class="o">/</span> <span class="mi">16</span> <span class="o">*</span> <span class="mi">9</span><span class="o">;</span>
+	
+<span class="kd">private</span> <span class="n">JFrame</span> <span class="n">frame</span><span class="o">;</span>
+<span class="kd">private</span> <span class="kt">boolean</span> <span class="n">running</span> <span class="o">=</span> <span class="kc">false</span><span class="o">;</span>	
+	
+<span class="kd">public</span> <span class="nf">Game</span><span class="o">()</span> <span class="o">{</span>
+    <span class="n">Dimension</span> <span class="n">dimension</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Dimension</span><span class="o">(</span><span class="n">WIDTH</span><span class="o">*</span><span class="n">scale</span><span class="o">,</span> <span class="n">HEIGHT</span><span class="o">*</span><span class="n">scale</span><span class="o">);</span>
+	<span class="n">setPreferredSize</span><span class="o">(</span><span class="n">dimension</span><span class="o">);</span>
+	<span class="n">frame</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JFrame</span><span class="o">();</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>Como ves, he creado un jFrame que será la ventana del juego, y una variable para saber si el juego se está ejecutando. También he creado el constructor de nuestro juego, inicializando las dimensiones que creamos anteriormente y inicializando el JFrame.</p>
+
+<p>Ahora, en el método <strong>main</strong> configuramos el JFrame del juego:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+	<span class="n">Game</span> <span class="n">game</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Game</span><span class="o">();</span>
+	<span class="n">game</span><span class="o">.</span><span class="na">frame</span><span class="o">.</span><span class="na">setTitle</span><span class="o">(</span><span class="s">"Motor gráfico 3D"</span><span class="o">);</span>
+	<span class="n">game</span><span class="o">.</span><span class="na">frame</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">game</span><span class="o">);</span>
+	<span class="n">game</span><span class="o">.</span><span class="na">frame</span><span class="o">.</span><span class="na">pack</span><span class="o">();</span>
+	<span class="n">game</span><span class="o">.</span><span class="na">frame</span><span class="o">.</span><span class="na">setDefaultCloseOperation</span><span class="o">(</span><span class="n">JFrame</span><span class="o">.</span><span class="na">EXIT_ON_CLOSE</span><span class="o">);</span>
+	<span class="n">game</span><span class="o">.</span><span class="na">frame</span><span class="o">.</span><span class="na">setLocationRelativeTo</span><span class="o">(</span><span class="kc">null</span><span class="o">);</span>
+	<span class="n">game</span><span class="o">.</span><span class="na">frame</span><span class="o">.</span><span class="na">setVisible</span><span class="o">(</span><span class="kc">true</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
+<p>Si ahora ejecutamos el código veremos una ventana vacía.</p>
+
+<h2 id="game-loop">Game loop</h2>
+
+<p>El game loop es lo que permite que un juego se actualice, es decir cada muy poco tiempo (ticks) actualiza todos los elementos del juego. También pinta todos los elementos en pantalla cada poco tiempo (fps). Es muy importante que los ticks se actualicen siempre de manera constante. Esto es por si por ejemplo, el juego se ejecuta en una máquina con menos recursos, el juego ira más lento de fps y si las animaciones dependen de este número se ejecutaran a cámara lenta.</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">synchronized</span> <span class="kt">void</span> <span class="nf">start</span><span class="o">()</span> <span class="o">{</span>
+	<span class="k">if</span> <span class="o">(</span><span class="n">running</span><span class="o">)</span> <span class="k">return</span><span class="o">;</span>
+		<span class="n">running</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span>
+		<span class="n">Thread</span> <span class="n">thread</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Thread</span><span class="o">(</span><span class="k">this</span><span class="o">);</span>
+		<span class="n">thread</span><span class="o">.</span><span class="na">start</span><span class="o">();</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="kd">public</span> <span class="kd">synchronized</span> <span class="kt">void</span> <span class="nf">stop</span><span class="o">()</span> <span class="o">{</span>
+	<span class="k">if</span> <span class="o">(!</span><span class="n">running</span><span class="o">)</span> <span class="k">return</span><span class="o">;</span>
+		<span class="n">running</span> <span class="o">=</span> <span class="kc">false</span><span class="o">;</span>
+	<span class="k">try</span> <span class="o">{</span>
+		<span class="n">thread</span><span class="o">.</span><span class="na">join</span><span class="o">();</span>
+	<span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">InterruptedException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+		<span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+	<span class="o">}</span>	
+<span class="o">}</span>
+
+<span class="nd">@Override</span>
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">()</span> <span class="o">{</span>
+	<span class="k">while</span><span class="o">(</span><span class="n">running</span><span class="o">)</span> <span class="o">{</span>		
+		<span class="n">tick</span><span class="o">();</span>
+        <span class="n">render</span><span class="o">();</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="kd">private</span> <span class="kt">void</span> <span class="nf">render</span><span class="o">()</span> <span class="o">{</span>
+	<span class="c1">// TODO Auto-generated method stub</span>
+<span class="o">}</span>
+
+
+<span class="kd">private</span> <span class="kt">void</span> <span class="nf">tick</span><span class="o">()</span> <span class="o">{</span>
+	<span class="c1">// TODO Auto-generated method stub</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>Como ves, el método start() simplemente comprueba si el juego se esta ejecutando, y si no lo está crea un thread y lo inicializa, mientras que el método stop() para su ejecución. El método run() es el que se ejecutará mientras el thread este ejecutándose. En este método simplemente llamamos a otros dos métodos que aún no hemos creado, uno para actualizar los elementos del juego y otro para pintar el juego en pantalla;</p>
+
+<p>Pintar en pantalla píxel a píxel puede causar problemas en el renderizado, es por ello que tenemos que crear un frame (que no está a la vista) donde pintaremos todos estos píxeles, cuando todo el frame esta calculado, sustituimos el frame que esté en ese momento en pantalla por el nuevo frame, es decir en pantalla, se pinta frame a frame y por debajo se van pintando los píxeles.</p>
+
+<p>Pero hay otro problema, tener que esperar a que el frame este pintado aprovecha poco los recursos, por eso podemos crear otro frame para ser calculado en paralelo. Es por eso que tenemos que crear 3 frames.</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">private</span> <span class="kt">void</span> <span class="nf">render</span><span class="o">()</span> <span class="o">{</span>
+	<span class="n">BufferStrategy</span> <span class="n">bs</span> <span class="o">=</span> <span class="n">getBufferStrategy</span><span class="o">();</span>
+
+	<span class="k">if</span> <span class="o">(</span><span class="n">bs</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+		<span class="n">createBufferStrategy</span><span class="o">(</span><span class="mi">3</span><span class="o">);</span>
+		<span class="k">return</span><span class="o">;</span>
+	<span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h2 id="bitmap-y-screen">Bitmap y Screen</h2>
+
+<p>Ahora vamos a crear estas dos clases, empecemos por el Bitmap. Un Bitmap es un conjunto de bits que corresponden a una image. Para nuestra clase vamos a crear tres variables, width y height para establecer sus dimensiones y un array de pixels.</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Bitmap</span> <span class="o">{</span>
+
+    <span class="kd">public</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">width</span><span class="o">;</span>
+    <span class="kd">public</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">height</span><span class="o">;</span>
+    <span class="kd">public</span> <span class="kd">final</span> <span class="kt">int</span><span class="o">[]</span> <span class="n">pixels</span><span class="o">;</span>
+
+    <span class="kd">public</span> <span class="nf">Bitmap</span><span class="o">(</span><span class="kt">int</span> <span class="n">width</span><span class="o">,</span> <span class="kt">int</span> <span class="n">height</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">width</span> <span class="o">=</span> <span class="n">width</span><span class="o">;</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">height</span> <span class="o">=</span> <span class="n">height</span><span class="o">;</span>
+        <span class="n">pixels</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="n">width</span> <span class="o">*</span> <span class="n">height</span><span class="o">];</span>
+
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">draw</span><span class="o">(</span><span class="n">Bitmap</span> <span class="n">bitmap</span><span class="o">,</span> <span class="kt">int</span> <span class="n">xOffs</span><span class="o">,</span> <span class="kt">int</span> <span class="n">yOffs</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">y</span> <span class="o">&lt;</span> <span class="n">bitmap</span><span class="o">.</span><span class="na">height</span><span class="o">;</span> <span class="n">y</span><span class="o">++)</span> <span class="o">{</span>
+            <span class="kt">int</span> <span class="n">yPix</span> <span class="o">=</span> <span class="n">y</span> <span class="o">+</span> <span class="n">yOffs</span><span class="o">;</span>
+            <span class="k">if</span> <span class="o">(</span><span class="n">yPix</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="o">||</span> <span class="n">yPix</span> <span class="o">&gt;=</span> <span class="n">height</span><span class="o">)</span>
+                <span class="k">continue</span><span class="o">;</span>
+
+            <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">bitmap</span><span class="o">.</span><span class="na">width</span><span class="o">;</span> <span class="n">x</span><span class="o">++)</span> <span class="o">{</span>
+                <span class="kt">int</span> <span class="n">xPix</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">xOffs</span><span class="o">;</span>
+                <span class="k">if</span> <span class="o">(</span><span class="n">xPix</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="o">||</span> <span class="n">xPix</span> <span class="o">&gt;=</span> <span class="n">width</span><span class="o">)</span>
+                    <span class="k">continue</span><span class="o">;</span>
+
+                <span class="n">pixels</span><span class="o">[</span><span class="n">xPix</span> <span class="o">+</span> <span class="n">yPix</span> <span class="o">*</span> <span class="n">width</span><span class="o">]</span> <span class="o">=</span> <span class="n">bitmap</span><span class="o">.</span><span class="na">pixels</span><span class="o">[</span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span> <span class="o">*</span> <span class="n">bitmap</span><span class="o">.</span><span class="na">width</span><span class="o">];</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>La función draw se encarga de meter en el array de píxeles otro array que se le pasa, esto se usará en la clase Screen que usará este método para inicializar sus píxeles con los del bitmap.
+Las variables xOffs y yOffs son para desplazar los píxeles.</p>
+
+<p>La clase screen:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Screen</span> <span class="kd">extends</span> <span class="n">Bitmap</span> <span class="o">{</span>
+
+	<span class="kd">private</span> <span class="n">Bitmap</span> <span class="n">testBitmap</span><span class="o">;</span>
+
+	<span class="kd">public</span> <span class="nf">Screen</span><span class="o">(</span><span class="kt">int</span> <span class="n">width</span><span class="o">,</span> <span class="kt">int</span> <span class="n">height</span><span class="o">)</span> <span class="o">{</span>
+		
+		<span class="kd">super</span><span class="o">(</span><span class="n">width</span><span class="o">,</span> <span class="n">height</span><span class="o">);</span>
+		<span class="n">Random</span> <span class="n">random</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Random</span><span class="o">();</span>
+		<span class="n">testBitmap</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Bitmap</span><span class="o">(</span><span class="mi">128</span><span class="o">,</span> <span class="mi">128</span><span class="o">);</span>
+
+		<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">testBitmap</span><span class="o">.</span><span class="na">width</span> <span class="o">*</span> <span class="n">testBitmap</span><span class="o">.</span><span class="na">height</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+			<span class="n">testBitmap</span><span class="o">.</span><span class="na">pixels</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="o">(</span><span class="kt">int</span><span class="o">)</span><span class="n">System</span><span class="o">.</span><span class="na">nanoTime</span><span class="o">();</span>
+		<span class="o">}</span>
+	<span class="o">}</span>
+
+	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">render</span><span class="o">()</span> <span class="o">{</span>
+
+		<span class="n">draw</span><span class="o">(</span><span class="n">testBitmap</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">);</span>
+	<span class="o">}</span>
+
+	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">clear</span><span class="o">()</span> <span class="o">{</span>
+		<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">pixels</span><span class="o">.</span><span class="na">length</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+			<span class="n">pixels</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+		<span class="o">}</span>
+	<span class="o">}</span>
+
+	<span class="kd">public</span> <span class="kt">int</span><span class="o">[]</span> <span class="nf">getPixels</span><span class="o">()</span> <span class="o">{</span>
+		<span class="k">return</span> <span class="n">pixels</span><span class="o">;</span>
+	<span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>La clase Screen hereda de Bitmap. En el método render() simplemente llamamos al método draw() heredado con el bitmap de prueba que hemos creado. Con esto inicializaremos los píxeles con los del Bitmap de prueba. El método clear() sirve para borrar la pantalla simplemente poniendo los píxeles a cero, esto se tiene que llamar antes de volver a pintar los pixeles para que los anteriores se borren y no hayan problemas gráficos.</p>
+
+<p>Para probar todo esto, en la clase Game principal, en el método render, añadimos:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">private</span> <span class="kt">void</span> <span class="nf">render</span><span class="o">()</span> <span class="o">{</span>
+    <span class="n">BufferStrategy</span> <span class="n">bs</span> <span class="o">=</span> <span class="n">getBufferStrategy</span><span class="o">();</span>
+
+    <span class="k">if</span> <span class="o">(</span><span class="n">bs</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+
+        <span class="n">createBufferStrategy</span><span class="o">(</span><span class="mi">3</span><span class="o">);</span>
+
+        <span class="k">return</span><span class="o">;</span>
+
+    <span class="o">}</span>
+    
+    <span class="n">screen</span><span class="o">.</span><span class="na">clear</span><span class="o">();</span>
+    <span class="n">screen</span><span class="o">.</span><span class="na">render</span><span class="o">();</span>
+
+    <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">WIDTH</span> <span class="o">*</span> <span class="n">HEIGHT</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+        <span class="n">pixels</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">screen</span><span class="o">.</span><span class="na">pixels</span><span class="o">[</span><span class="n">i</span><span class="o">];</span>
+    <span class="o">}</span>
+
+    <span class="n">Graphics</span> <span class="n">g</span> <span class="o">=</span> <span class="n">bs</span><span class="o">.</span><span class="na">getDrawGraphics</span><span class="o">();</span>
+    <span class="n">g</span><span class="o">.</span><span class="na">drawImage</span><span class="o">(</span><span class="n">image</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="n">WIDTH</span> <span class="o">*</span> <span class="n">scale</span><span class="o">,</span> <span class="n">HEIGHT</span> <span class="o">*</span> <span class="n">scale</span><span class="o">,</span> <span class="kc">null</span><span class="o">);</span>
+
+    <span class="n">g</span><span class="o">.</span><span class="na">dispose</span><span class="o">();</span>
+    <span class="n">bs</span><span class="o">.</span><span class="na">show</span><span class="o">();</span>
+
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>Si ejecutamos el código veremos en pantalla un sprite con colores aleatorios.</p>
+
+<h2 id="espacio-3d">Espacio 3D</h2>
+
+<p>Hasta aquí hemos trabajado en 2 dimensiones. La tercera dimensión la tenemos que sacar a partir de las dos anteriores, para ello, empezaremos creando la clase Bitmap3D, que heredará de Bitmap:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Bitmap3D</span> <span class="kd">extends</span> <span class="n">Bitmap</span> <span class="o">{</span>
+
+	<span class="kd">public</span> <span class="nf">Bitmap3D</span><span class="o">(</span><span class="kt">int</span> <span class="n">width</span><span class="o">,</span> <span class="kt">int</span> <span class="n">height</span><span class="o">)</span> <span class="o">{</span>
+		<span class="kd">super</span><span class="o">(</span><span class="n">width</span><span class="o">,</span> <span class="n">height</span><span class="o">);</span>
+		<span class="c1">// TODO Auto-generated constructor stub</span>
+	<span class="o">}</span>
+
+	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">render</span><span class="o">()</span> <span class="o">{</span>
+		<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">y</span> <span class="o">&lt;</span> <span class="n">height</span><span class="o">;</span> <span class="n">y</span><span class="o">++)</span> <span class="o">{</span>
+			<span class="kt">double</span> <span class="n">yd</span> <span class="o">=</span> <span class="o">(</span><span class="n">y</span> <span class="o">+</span> <span class="mf">0.5</span> <span class="o">-</span> <span class="n">height</span> <span class="o">/</span> <span class="mf">2.0</span><span class="o">)</span> <span class="o">/</span> <span class="n">height</span><span class="o">;</span>
+
+			<span class="k">if</span> <span class="o">(</span><span class="n">yd</span> <span class="o">==</span> <span class="mi">0</span><span class="o">)</span>
+				<span class="k">continue</span><span class="o">;</span>
+
+			<span class="kt">double</span> <span class="n">z</span> <span class="o">=</span> <span class="mi">6</span> <span class="o">/</span> <span class="n">yd</span><span class="o">;</span>
+
+			<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">width</span><span class="o">;</span> <span class="n">x</span><span class="o">++)</span> <span class="o">{</span>
+				<span class="kt">double</span> <span class="n">xd</span> <span class="o">=</span> <span class="o">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">width</span> <span class="o">/</span> <span class="mf">2.0</span><span class="o">)</span> <span class="o">/</span> <span class="n">height</span><span class="o">;</span>
+				<span class="n">xd</span> <span class="o">*=</span> <span class="n">z</span><span class="o">;</span>
+				<span class="kt">int</span> <span class="n">xx</span> <span class="o">=</span> <span class="o">(</span><span class="kt">int</span><span class="o">)</span> <span class="n">xd</span> <span class="o">&amp;</span> <span class="mi">15</span><span class="o">;</span>
+				<span class="kt">int</span> <span class="n">zz</span> <span class="o">=</span> <span class="o">(</span><span class="kt">int</span><span class="o">)</span> <span class="n">z</span> <span class="o">&amp;</span> <span class="mi">15</span><span class="o">;</span>
+				<span class="n">pixels</span><span class="o">[</span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span> <span class="o">*</span> <span class="n">width</span><span class="o">]</span> <span class="o">=</span> <span class="o">(</span><span class="n">xx</span> <span class="o">*</span> <span class="mi">16</span><span class="o">)</span> <span class="o">|</span> <span class="o">(</span><span class="n">zz</span> <span class="o">*</span> <span class="mi">16</span><span class="o">)</span> <span class="o">&lt;&lt;</span> <span class="mi">8</span><span class="o">;</span>
+			<span class="o">}</span>
+		<span class="o">}</span>
+	<span class="o">}</span>
+
+<span class="o">}</span>
+</code></pre></div></div>
+<p><img src="https://i.imgur.com/D7akMKP.png" class="responsive-img" alt="Motor gráfico Java, renderizando espacio 3D" /></p>
+
+<p>El método RenderFloor me sirve para hacer pruebas de renderizado de un pseudoespacio 3D. Para ello empezamos poniendo dos bucles for para recorrer las dos dimensiones. Para la tercera dimensión empiezo creado variables auxiliares.</p>
+
+<p>La primera variable, <strong>yd</strong>, se encarga de coger la variable de la altura para que conforme aumente, <strong>yd</strong> vaya disminuyendo, pero cuando llega al centro de la pantalla, esta variable vuelve a aumentar. Esto sirve para dibujar los pixeles objetos que se encuentren cerca más grandes y mas pequeños si estan lejos.</p>
+
+<p>Creamos la variable z dividiendo 6 entre <strong>yd</strong> para que los valores sean más grandes.</p>
+
+<p>Dentro del bucle de la coordenada x, creamos la variable <strong>xd</strong>, y hacemos lo mismo, ya que los objetos en pantalla se tienen que ver de distinto tamaño si están en el centro o si están en los laterales.</p>
+
+<p>Por último metemos en el array de píxeles las variables anteriores multiplicando y desplazando los bits para que pinte “cuadrados”.</p>
+
+<p>Con la unión de estas varibles conseguimos el efecto de entorno tridimensional ya que dependiendo de estas 3 coordenadas los objetos se representaran con diferente tamaño.</p>
+
+<p>Para pintar esto en pantalla, creamos un bitmap3D en la clase screen y llamamos a su método render(), luego al método draw() para que se dibuje en pantalla.</p>
+
+<p>Podemos crear la clase Art, esta clase se encargará por el momento de cargar una imagen formada por sprites de 8x8, para ello:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">java.awt.image.BufferedImage</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">javax.imageio.ImageIO</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">gui.Bitmap</span><span class="o">;</span>
+
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Art</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="n">Bitmap</span> <span class="n">floors</span> <span class="o">=</span> <span class="n">loadBitmap</span><span class="o">(</span><span class="s">"/assets/floors.png"</span><span class="o">);</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="n">Bitmap</span> <span class="nf">loadBitmap</span><span class="o">(</span><span class="n">String</span> <span class="n">filename</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">try</span> <span class="o">{</span>
+            <span class="n">BufferedImage</span> <span class="n">img</span> <span class="o">=</span> <span class="n">ImageIO</span><span class="o">.</span><span class="na">read</span><span class="o">(</span><span class="n">Art</span><span class="o">.</span><span class="na">class</span><span class="o">.</span><span class="na">getResource</span><span class="o">(</span><span class="n">filename</span><span class="o">));</span>
+
+            <span class="kt">int</span> <span class="n">w</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="na">getWidth</span><span class="o">();</span>
+            <span class="kt">int</span> <span class="n">h</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="na">getHeight</span><span class="o">();</span>
+
+            <span class="n">Bitmap</span> <span class="n">result</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Bitmap</span><span class="o">(</span><span class="n">w</span><span class="o">,</span> <span class="n">h</span><span class="o">);</span>
+            <span class="n">img</span><span class="o">.</span><span class="na">getRGB</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="n">w</span><span class="o">,</span> <span class="n">h</span><span class="o">,</span> <span class="n">result</span><span class="o">.</span><span class="na">pixels</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="n">w</span><span class="o">);</span>
+            <span class="k">return</span> <span class="n">result</span><span class="o">;</span>
+        <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">Exception</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+            <span class="k">throw</span> <span class="k">new</span> <span class="nf">RuntimeException</span><span class="o">(</span><span class="n">e</span><span class="o">);</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>No tiene mucho misterio, simplemente carga la ruta de la imagen y coge sus píxeles. Ahora podemos cambiar los colores que salían por la textura, para ello cambiamos el método render() de la clase Bitmap3D como se muestra:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kt">void</span> <span class="nf">render</span><span class="o">()</span> <span class="o">{</span>
+
+		<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">y</span> <span class="o">&lt;</span> <span class="n">height</span><span class="o">;</span> <span class="n">y</span><span class="o">++)</span> <span class="o">{</span>
+			<span class="kt">double</span> <span class="n">yd</span> <span class="o">=</span> <span class="o">(</span><span class="n">y</span> <span class="o">+</span> <span class="mf">0.5</span> <span class="o">-</span> <span class="n">height</span> <span class="o">/</span> <span class="mf">2.0</span><span class="o">)</span> <span class="o">/</span> <span class="n">height</span><span class="o">;</span>
+
+			<span class="kt">double</span> <span class="n">z</span> <span class="o">=</span> <span class="mi">8</span> <span class="o">/</span> <span class="n">yd</span><span class="o">;</span>
+
+			<span class="k">if</span> <span class="o">(</span><span class="n">yd</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="o">)</span>
+				<span class="n">z</span> <span class="o">=</span> <span class="mi">4</span> <span class="o">/</span> <span class="o">-</span><span class="n">yd</span><span class="o">;</span>
+
+			<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">width</span><span class="o">;</span> <span class="n">x</span><span class="o">++)</span> <span class="o">{</span>
+				<span class="kt">double</span> <span class="n">xd</span> <span class="o">=</span> <span class="o">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">width</span> <span class="o">/</span> <span class="mf">2.0</span><span class="o">)</span> <span class="o">/</span> <span class="n">height</span><span class="o">;</span>
+				<span class="n">xd</span> <span class="o">*=</span> <span class="n">z</span><span class="o">;</span>
+				<span class="kt">int</span> <span class="n">xx</span> <span class="o">=</span> <span class="o">(</span><span class="kt">int</span><span class="o">)</span> <span class="n">xd</span> <span class="o">&amp;</span> <span class="mi">7</span><span class="o">;</span>
+				<span class="kt">int</span> <span class="n">yy</span> <span class="o">=</span> <span class="o">(</span><span class="kt">int</span><span class="o">)</span> <span class="n">z</span> <span class="o">&amp;</span> <span class="mi">7</span><span class="o">;</span>
+				<span class="n">pixels</span><span class="o">[</span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span> <span class="o">*</span> <span class="n">width</span><span class="o">]</span> <span class="o">=</span> <span class="n">Art</span><span class="o">.</span><span class="na">floors</span><span class="o">.</span><span class="na">pixels</span><span class="o">[</span><span class="n">xx</span> <span class="o">+</span> <span class="n">yy</span> <span class="o">*</span> <span class="mi">64</span><span class="o">];</span>
+			<span class="o">}</span>
+		<span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>Recuerda que la imagen tiene que estar formada de tiles de 8x8.</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kt">void</span> <span class="nf">render</span><span class="o">(</span><span class="n">Game</span> <span class="n">game</span><span class="o">)</span> <span class="o">{</span>
+	<span class="kt">int</span> <span class="n">floorHeight</span> <span class="o">=</span> <span class="mi">6</span><span class="o">;</span>
+	<span class="kt">int</span> <span class="n">ceilingHeight</span> <span class="o">=</span> <span class="mi">10</span><span class="o">;</span>
+	
+	<span class="n">xCam</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+	<span class="n">yCam</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+	<span class="n">zCam</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+
+	<span class="kt">double</span> <span class="n">rot</span> <span class="o">=</span> <span class="n">Math</span><span class="o">.</span><span class="na">sin</span><span class="o">(</span><span class="mi">0</span> <span class="o">/</span> <span class="mf">40.0</span><span class="o">)</span> <span class="o">*</span> <span class="mf">0.5</span><span class="o">;</span>
+
+	<span class="n">rCos</span> <span class="o">=</span> <span class="n">Math</span><span class="o">.</span><span class="na">cos</span><span class="o">(</span><span class="n">rot</span><span class="o">);</span>
+	<span class="n">rSin</span> <span class="o">=</span> <span class="n">Math</span><span class="o">.</span><span class="na">sin</span><span class="o">(</span><span class="n">rot</span><span class="o">);</span>
+
+	<span class="n">fov</span> <span class="o">=</span> <span class="n">height</span><span class="o">;</span>
+
+	<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">y</span> <span class="o">&lt;</span> <span class="n">height</span><span class="o">;</span> <span class="n">y</span><span class="o">++)</span> <span class="o">{</span>
+		<span class="kt">double</span> <span class="n">yd</span> <span class="o">=</span> <span class="o">((</span><span class="n">y</span> <span class="o">+</span> <span class="mf">0.5</span><span class="o">)</span> <span class="o">-</span> <span class="n">height</span> <span class="o">/</span> <span class="mf">2.0</span><span class="o">)</span> <span class="o">/</span> <span class="n">fov</span><span class="o">;</span>
+
+		<span class="kt">double</span> <span class="n">zd</span> <span class="o">=</span> <span class="o">(</span><span class="n">floorHeight</span> <span class="o">+</span> <span class="n">zCam</span><span class="o">)</span> <span class="o">/</span> <span class="n">yd</span><span class="o">;</span>
+		<span class="k">if</span> <span class="o">(</span><span class="n">yd</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
+			<span class="n">zd</span> <span class="o">=</span> <span class="o">(</span><span class="n">ceilingHeight</span> <span class="o">-</span> <span class="n">zCam</span><span class="o">)</span> <span class="o">/</span> <span class="o">-</span><span class="n">yd</span><span class="o">;</span>
+		<span class="o">}</span>
+
+		<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">width</span><span class="o">;</span> <span class="n">x</span><span class="o">++)</span> <span class="o">{</span>
+			<span class="kt">double</span> <span class="n">xd</span> <span class="o">=</span> <span class="o">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">width</span> <span class="o">/</span> <span class="mf">2.0</span><span class="o">)</span> <span class="o">/</span> <span class="n">fov</span><span class="o">;</span>
+			<span class="n">xd</span> <span class="o">*=</span> <span class="n">zd</span><span class="o">;</span>
+
+			<span class="kt">double</span> <span class="n">xx</span> <span class="o">=</span> <span class="n">xd</span> <span class="o">*</span> <span class="n">rCos</span> <span class="o">+</span> <span class="n">zd</span> <span class="o">*</span> <span class="n">rSin</span> <span class="o">+</span> <span class="o">(</span><span class="n">xCam</span> <span class="o">+</span> <span class="mf">0.5</span><span class="o">)</span> <span class="o">*</span> <span class="mi">8</span><span class="o">;</span>
+			<span class="kt">double</span> <span class="n">yy</span> <span class="o">=</span> <span class="n">zd</span> <span class="o">*</span> <span class="n">rCos</span> <span class="o">-</span> <span class="n">xd</span> <span class="o">*</span> <span class="n">rSin</span> <span class="o">+</span> <span class="o">(</span><span class="n">yCam</span> <span class="o">+</span> <span class="mf">0.5</span><span class="o">)</span> <span class="o">*</span> <span class="mi">8</span><span class="o">;</span>
+
+			<span class="kt">int</span> <span class="n">xPix</span> <span class="o">=</span> <span class="o">(</span><span class="kt">int</span><span class="o">)</span> <span class="o">(</span><span class="n">xx</span><span class="o">);</span>
+			<span class="kt">int</span> <span class="n">yPix</span> <span class="o">=</span> <span class="o">(</span><span class="kt">int</span><span class="o">)</span> <span class="o">(</span><span class="n">yy</span><span class="o">);</span>
+			<span class="k">if</span> <span class="o">(</span><span class="n">xx</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="o">)</span>
+				<span class="n">xPix</span><span class="o">--;</span>
+			<span class="k">if</span> <span class="o">(</span><span class="n">yy</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="o">)</span>
+				<span class="n">yPix</span><span class="o">--;</span>
+
+			<span class="n">pixels</span><span class="o">[</span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span> <span class="o">*</span> <span class="n">width</span><span class="o">]</span> <span class="o">=</span> <span class="n">Art</span><span class="o">.</span><span class="na">floors</span><span class="o">.</span><span class="na">pixels</span><span class="o">[(</span><span class="n">xPix</span> <span class="o">&amp;</span> <span class="mi">7</span><span class="o">)</span> <span class="o">+</span> <span class="o">(</span><span class="n">yPix</span> <span class="o">&amp;</span> <span class="mi">7</span><span class="o">)</span> <span class="o">*</span> <span class="mi">64</span><span class="o">];</span>
+		<span class="o">}</span>
+	<span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><img src="https://i.imgur.com/tGekcQD.jpg" class="responsive-img" alt="Motor gráfico Java, renderizando espacio 3D" /></p>
+
+<p>Para empezar, he añadido dos nuevas variables que definen la distancia del centro del suelo y del techo. Luego he añadido otras tres variables para definir la posicion en el espacio de la cámara (xCam, yCam, zCam), y otra variable más para su rotación en el eje de las x  (rot). Para calcular esta rotación hay que hacer uso de los senos y cosenos. A continuación se hace uso de estos valores para transformar el espacio en función de la posición y rotación de la cámara.</p>
+
+<p>Con esto ya tenemos un “espacio” en 3D, lo siguiente que vamos a hacer es dibujar paredes.</p>
+
+<h2 id="paredes-y-cubos-en-3d">Paredes y cubos en 3D</h2>
+
+<p>Un cubo esta formado por caras o “paredes” por lo tanto para pintar cubos en el espaio 3D antes tenemos que pintar las caras. Para ello vamos a crear una función en la clase Bitmap3D.</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">private</span> <span class="kt">void</span> <span class="nf">renderWall</span><span class="o">(</span><span class="kt">double</span> <span class="n">x0</span><span class="o">,</span> <span class="kt">double</span> <span class="n">y0</span><span class="o">,</span> <span class="kt">double</span> <span class="n">x1</span><span class="o">,</span> <span class="kt">double</span> <span class="n">y1</span><span class="o">)</span> <span class="o">{</span>
+	<span class="kt">double</span> <span class="n">xo0</span> <span class="o">=</span> <span class="o">((</span><span class="n">x0</span> <span class="o">-</span> <span class="mf">0.5</span><span class="o">)</span> <span class="o">-</span> <span class="n">xCam</span><span class="o">)</span> <span class="o">*</span> <span class="mi">2</span><span class="o">;</span>
+	<span class="kt">double</span> <span class="n">yo0</span> <span class="o">=</span> <span class="o">((</span><span class="n">y0</span> <span class="o">-</span> <span class="mf">0.5</span><span class="o">)</span> <span class="o">-</span> <span class="n">yCam</span><span class="o">)</span> <span class="o">*</span> <span class="mi">2</span><span class="o">;</span>
+
+	<span class="kt">double</span> <span class="n">xx0</span> <span class="o">=</span> <span class="n">xo0</span> <span class="o">*</span> <span class="n">rCos</span> <span class="o">-</span> <span class="n">yo0</span> <span class="o">*</span> <span class="n">rSin</span><span class="o">;</span>
+	<span class="kt">double</span> <span class="n">u0</span> <span class="o">=</span> <span class="o">((-</span><span class="mf">0.5</span><span class="o">)</span> <span class="o">-</span> <span class="n">zCam</span><span class="o">)</span> <span class="o">*</span> <span class="mi">2</span><span class="o">;</span>
+	<span class="kt">double</span> <span class="n">l0</span> <span class="o">=</span> <span class="o">((+</span><span class="mf">0.5</span><span class="o">)</span> <span class="o">-</span> <span class="n">zCam</span><span class="o">)</span> <span class="o">*</span> <span class="mi">2</span><span class="o">;</span>
+	<span class="kt">double</span> <span class="n">zz0</span> <span class="o">=</span> <span class="n">yo0</span> <span class="o">*</span> <span class="n">rCos</span> <span class="o">+</span> <span class="n">xo0</span> <span class="o">*</span> <span class="n">rSin</span><span class="o">;</span>
+
+	<span class="kt">double</span> <span class="n">xo1</span> <span class="o">=</span> <span class="o">((</span><span class="n">x1</span> <span class="o">-</span> <span class="mf">0.5</span><span class="o">)</span> <span class="o">-</span> <span class="n">xCam</span><span class="o">)</span> <span class="o">*</span> <span class="mi">2</span><span class="o">;</span>
+	<span class="kt">double</span> <span class="n">yo1</span> <span class="o">=</span> <span class="o">((</span><span class="n">y1</span> <span class="o">-</span> <span class="mf">0.5</span><span class="o">)</span> <span class="o">-</span> <span class="n">yCam</span><span class="o">)</span> <span class="o">*</span> <span class="mi">2</span><span class="o">;</span>
+
+	<span class="kt">double</span> <span class="n">xx1</span> <span class="o">=</span> <span class="n">xo1</span> <span class="o">*</span> <span class="n">rCos</span> <span class="o">-</span> <span class="n">yo1</span> <span class="o">*</span> <span class="n">rSin</span><span class="o">;</span>
+	<span class="kt">double</span> <span class="n">u1</span> <span class="o">=</span> <span class="o">((-</span><span class="mf">0.5</span><span class="o">)</span> <span class="o">-</span> <span class="n">zCam</span><span class="o">)</span> <span class="o">*</span> <span class="mi">2</span><span class="o">;</span>
+	<span class="kt">double</span> <span class="n">l1</span> <span class="o">=</span> <span class="o">((+</span><span class="mf">0.5</span><span class="o">)</span> <span class="o">-</span> <span class="n">zCam</span><span class="o">)</span> <span class="o">*</span> <span class="mi">2</span><span class="o">;</span>
+	<span class="kt">double</span> <span class="n">zz1</span> <span class="o">=</span> <span class="n">yo1</span> <span class="o">*</span> <span class="n">rCos</span> <span class="o">+</span> <span class="n">xo1</span> <span class="o">*</span> <span class="n">rSin</span><span class="o">;</span>
+
+	<span class="kt">double</span> <span class="n">xPixel0</span> <span class="o">=</span> <span class="o">(</span><span class="n">xx0</span> <span class="o">/</span> <span class="n">zz0</span> <span class="o">*</span> <span class="n">fov</span> <span class="o">+</span> <span class="n">width</span> <span class="o">/</span> <span class="mi">2</span><span class="o">);</span>
+	<span class="kt">double</span> <span class="n">xPixel1</span> <span class="o">=</span> <span class="o">(</span><span class="n">xx1</span> <span class="o">/</span> <span class="n">zz1</span> <span class="o">*</span> <span class="n">fov</span> <span class="o">+</span> <span class="n">width</span> <span class="o">/</span> <span class="mi">2</span><span class="o">);</span>
+
+	<span class="k">if</span> <span class="o">(</span><span class="n">xPixel0</span> <span class="o">&gt;=</span> <span class="n">xPixel1</span><span class="o">)</span>
+		<span class="k">return</span><span class="o">;</span>
+	<span class="kt">int</span> <span class="n">xp0</span> <span class="o">=</span> <span class="o">(</span><span class="kt">int</span><span class="o">)</span> <span class="n">Math</span><span class="o">.</span><span class="na">floor</span><span class="o">(</span><span class="n">xPixel0</span><span class="o">);</span>
+	<span class="kt">int</span> <span class="n">xp1</span> <span class="o">=</span> <span class="o">(</span><span class="kt">int</span><span class="o">)</span> <span class="n">Math</span><span class="o">.</span><span class="na">floor</span><span class="o">(</span><span class="n">xPixel1</span><span class="o">);</span>
+	<span class="k">if</span> <span class="o">(</span><span class="n">xp0</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="o">)</span>
+		<span class="n">xp0</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+	<span class="k">if</span> <span class="o">(</span><span class="n">xp1</span> <span class="o">&gt;</span> <span class="n">width</span><span class="o">)</span>
+		<span class="n">xp1</span> <span class="o">=</span> <span class="n">width</span><span class="o">;</span>
+
+	<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="n">xp0</span><span class="o">;</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">xp1</span><span class="o">;</span> <span class="n">x</span><span class="o">++)</span> <span class="o">{</span>
+		<span class="kt">double</span> <span class="n">pr</span> <span class="o">=</span> <span class="o">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">xPixel0</span><span class="o">)</span> <span class="o">/</span> <span class="o">(</span><span class="n">xPixel1</span> <span class="o">-</span> <span class="n">xPixel0</span><span class="o">);</span>
+
+		<span class="kt">double</span> <span class="n">u</span> <span class="o">=</span> <span class="o">(</span><span class="n">u0</span><span class="o">)</span> <span class="o">+</span> <span class="o">(</span><span class="n">u1</span> <span class="o">-</span> <span class="n">u0</span><span class="o">)</span> <span class="o">*</span> <span class="n">pr</span><span class="o">;</span>
+		<span class="kt">double</span> <span class="n">l</span> <span class="o">=</span> <span class="o">(</span><span class="n">l0</span><span class="o">)</span> <span class="o">+</span> <span class="o">(</span><span class="n">l1</span> <span class="o">-</span> <span class="n">l0</span><span class="o">)</span> <span class="o">*</span> <span class="n">pr</span><span class="o">;</span>
+		<span class="kt">double</span> <span class="n">zz</span> <span class="o">=</span> <span class="o">(</span><span class="n">zz0</span><span class="o">)</span> <span class="o">+</span> <span class="o">(</span><span class="n">zz1</span> <span class="o">-</span> <span class="n">zz0</span><span class="o">)</span> <span class="o">*</span> <span class="n">pr</span><span class="o">;</span>
+
+		<span class="kt">double</span> <span class="n">yPixel0</span> <span class="o">=</span> <span class="o">(</span><span class="kt">int</span><span class="o">)</span> <span class="o">(</span><span class="n">u</span> <span class="o">/</span> <span class="n">zz</span> <span class="o">*</span> <span class="n">fov</span> <span class="o">+</span> <span class="n">height</span> <span class="o">/</span> <span class="mi">2</span><span class="o">);</span>
+		<span class="kt">double</span> <span class="n">yPixel1</span> <span class="o">=</span> <span class="o">(</span><span class="kt">int</span><span class="o">)</span> <span class="o">(</span><span class="n">l</span> <span class="o">/</span> <span class="n">zz</span> <span class="o">*</span> <span class="n">fov</span> <span class="o">+</span> <span class="n">height</span> <span class="o">/</span> <span class="mi">2</span><span class="o">);</span>
+
+		<span class="k">if</span> <span class="o">(</span><span class="n">yPixel0</span> <span class="o">&gt;=</span> <span class="n">yPixel1</span><span class="o">)</span>
+			<span class="k">return</span><span class="o">;</span>
+		<span class="kt">int</span> <span class="n">yp0</span> <span class="o">=</span> <span class="o">(</span><span class="kt">int</span><span class="o">)</span> <span class="n">Math</span><span class="o">.</span><span class="na">floor</span><span class="o">(</span><span class="n">yPixel0</span><span class="o">);</span>
+		<span class="kt">int</span> <span class="n">yp1</span> <span class="o">=</span> <span class="o">(</span><span class="kt">int</span><span class="o">)</span> <span class="n">Math</span><span class="o">.</span><span class="na">floor</span><span class="o">(</span><span class="n">yPixel1</span><span class="o">);</span>
+		<span class="k">if</span> <span class="o">(</span><span class="n">yp0</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="o">)</span>
+			<span class="n">yp0</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+		<span class="k">if</span> <span class="o">(</span><span class="n">yp1</span> <span class="o">&gt;</span> <span class="n">height</span><span class="o">)</span>
+			<span class="n">yp1</span> <span class="o">=</span> <span class="n">height</span><span class="o">;</span>
+		<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">y</span> <span class="o">=</span> <span class="n">yp0</span><span class="o">;</span> <span class="n">y</span> <span class="o">&lt;</span> <span class="n">yp1</span><span class="o">;</span> <span class="n">y</span><span class="o">++)</span> <span class="o">{</span>
+			<span class="kt">double</span> <span class="n">pry</span> <span class="o">=</span> <span class="o">(</span><span class="n">y</span> <span class="o">-</span> <span class="n">yPixel0</span><span class="o">)</span> <span class="o">/</span> <span class="o">(</span><span class="n">yPixel1</span> <span class="o">-</span> <span class="n">yPixel0</span><span class="o">);</span>
+			<span class="n">pixels</span><span class="o">[</span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span> <span class="o">*</span> <span class="n">width</span><span class="o">]</span> <span class="o">=</span> <span class="mh">0xff00ff</span><span class="o">;</span>
+			<span class="n">zBuffer</span><span class="o">[</span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span> <span class="o">*</span> <span class="n">width</span><span class="o">]</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+		<span class="o">}</span>
+	<span class="o">}</span>		
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>Como puedes ver, lo primero que hacemos es crear la función pasandole 4 parámetros, los correspondientes a las 4 coordenadas de las esquinas de la pared. A continuación, creo nuevas variables auxiliares a las que voy a inicialiciar con los cálculos de las coordenadas con las coordenadas de la cámara de la escena.</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="kd">public</span> <span class="kt">void</span> <span class="nf">postProcess</span><span class="o">()</span> <span class="o">{</span>
+	<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">width</span> <span class="o">*</span> <span class="n">height</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+		<span class="kt">int</span> <span class="n">col</span> <span class="o">=</span> <span class="n">pixels</span><span class="o">[</span><span class="n">i</span><span class="o">];</span>
+		<span class="kt">int</span> <span class="n">brightness</span> <span class="o">=</span> <span class="o">(</span><span class="kt">int</span><span class="o">)</span> <span class="o">(</span><span class="mi">15000</span> <span class="o">/</span> <span class="o">(</span><span class="n">zBuffer</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">*</span> <span class="n">zBuffer</span><span class="o">[</span><span class="n">i</span><span class="o">]));</span>
+		<span class="k">if</span> <span class="o">(</span><span class="n">brightness</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="o">)</span>
+			<span class="n">brightness</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+		<span class="k">if</span> <span class="o">(</span><span class="n">brightness</span> <span class="o">&gt;</span> <span class="mi">255</span><span class="o">)</span>
+			<span class="n">brightness</span> <span class="o">=</span> <span class="mi">255</span><span class="o">;</span>
+
+		<span class="kt">int</span> <span class="n">r</span> <span class="o">=</span> <span class="o">(</span><span class="n">col</span> <span class="o">&gt;&gt;</span> <span class="mi">16</span><span class="o">)</span> <span class="o">&amp;</span> <span class="mh">0xff</span><span class="o">;</span>
+		<span class="kt">int</span> <span class="n">g</span> <span class="o">=</span> <span class="o">(</span><span class="n">col</span> <span class="o">&gt;&gt;</span> <span class="mi">8</span><span class="o">)</span> <span class="o">&amp;</span> <span class="mh">0xff</span><span class="o">;</span>
+		<span class="kt">int</span> <span class="n">b</span> <span class="o">=</span> <span class="o">(</span><span class="n">col</span><span class="o">)</span> <span class="o">&amp;</span> <span class="mh">0xff</span><span class="o">;</span>
+
+		<span class="n">r</span> <span class="o">=</span> <span class="n">r</span> <span class="o">*</span> <span class="n">brightness</span> <span class="o">/</span> <span class="mi">255</span><span class="o">;</span>
+		<span class="n">g</span> <span class="o">=</span> <span class="n">g</span> <span class="o">*</span> <span class="n">brightness</span> <span class="o">/</span> <span class="mi">255</span><span class="o">;</span>
+		<span class="n">b</span> <span class="o">=</span> <span class="n">b</span> <span class="o">*</span> <span class="n">brightness</span> <span class="o">/</span> <span class="mi">255</span><span class="o">;</span>
+
+		<span class="n">pixels</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">r</span> <span class="o">&lt;&lt;</span> <span class="mi">16</span> <span class="o">|</span> <span class="n">g</span> <span class="o">&lt;&lt;</span> <span class="mi">8</span> <span class="o">|</span> <span class="n">b</span><span class="o">;</span>
+	<span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>Este método sirve para coger los píxeles centrales de la escena para bajarles el brillo, de esta forma conseguimos que de la apariencia de que a lo lejos se vea menos.</p>
+
+<p>Para probar la creación de paredes voy a llamar a su método desde la función render de la clase Bitmap, en este caso voy a crear 5 paredes. La clase bitmap3D, por lo tanto, quedaría así:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">java.awt.MouseInfo</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.awt.Point</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.awt.PointerInfo</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.Random</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">Game.Art</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">Game.Game</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Bitmap3D</span> <span class="kd">extends</span> <span class="n">Bitmap</span> <span class="o">{</span>
+	<span class="kd">private</span> <span class="kt">double</span><span class="o">[]</span> <span class="n">zBuffer</span><span class="o">;</span>
+	<span class="kd">private</span> <span class="kt">double</span> <span class="n">xCam</span><span class="o">,</span> <span class="n">yCam</span><span class="o">,</span> <span class="n">zCam</span><span class="o">,</span> <span class="n">rCos</span><span class="o">,</span> <span class="n">rSin</span><span class="o">,</span> <span class="n">fov</span><span class="o">,</span> <span class="n">xCenter</span><span class="o">,</span> <span class="n">yCenter</span><span class="o">,</span> <span class="n">rot</span><span class="o">,</span> <span class="n">rotY</span><span class="o">;</span>
+	<span class="kd">private</span> <span class="kt">double</span><span class="o">[]</span> <span class="n">zBufferWall</span><span class="o">;</span>
+
+	<span class="kd">public</span> <span class="nf">Bitmap3D</span><span class="o">(</span><span class="kt">int</span> <span class="n">width</span><span class="o">,</span> <span class="kt">int</span> <span class="n">height</span><span class="o">)</span> <span class="o">{</span>
+		<span class="kd">super</span><span class="o">(</span><span class="n">width</span><span class="o">,</span> <span class="n">height</span><span class="o">);</span>
+		<span class="n">zBufferWall</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">double</span><span class="o">[</span><span class="n">width</span><span class="o">];</span>
+		<span class="n">zBuffer</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">double</span><span class="o">[</span><span class="n">width</span> <span class="o">*</span> <span class="n">height</span><span class="o">];</span>
+	<span class="o">}</span>
+
+	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">render</span><span class="o">(</span><span class="n">Game</span> <span class="n">game</span><span class="o">)</span> <span class="o">{</span>
+		
+		<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">width</span><span class="o">;</span> <span class="n">x</span><span class="o">++)</span> <span class="o">{</span>
+			<span class="n">zBufferWall</span><span class="o">[</span><span class="n">x</span><span class="o">]</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+		<span class="o">}</span>
+		<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">width</span> <span class="o">*</span> <span class="n">height</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+			<span class="n">zBuffer</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="mi">10000</span><span class="o">;</span>
+		<span class="o">}</span>
+		
+		<span class="kt">int</span> <span class="n">floorHeight</span> <span class="o">=</span> <span class="mi">4</span><span class="o">;</span>
+		<span class="kt">int</span> <span class="n">ceilingHeight</span> <span class="o">=</span> <span class="mi">4</span><span class="o">;</span>
+		
+		<span class="n">xCenter</span> <span class="o">=</span> <span class="n">width</span> <span class="o">/</span> <span class="mf">2.0</span><span class="o">;</span>
+		<span class="n">yCenter</span> <span class="o">=</span> <span class="n">height</span> <span class="o">/</span> <span class="mf">2.0</span><span class="o">;</span>
+
+		<span class="n">xCam</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+		<span class="n">yCam</span> <span class="o">=</span> <span class="o">-</span><span class="mf">0.6</span><span class="o">;</span>
+		<span class="n">zCam</span> <span class="o">=</span> <span class="o">-</span><span class="mi">0</span><span class="o">;</span>
+
+		<span class="n">PointerInfo</span> <span class="n">a</span> <span class="o">=</span> <span class="n">MouseInfo</span><span class="o">.</span><span class="na">getPointerInfo</span><span class="o">();</span>
+		<span class="n">Point</span> <span class="n">b</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="na">getLocation</span><span class="o">();</span>
+		<span class="kt">int</span> <span class="n">mouseX</span> <span class="o">=</span> <span class="o">(</span><span class="kt">int</span><span class="o">)</span> <span class="n">b</span><span class="o">.</span><span class="na">getX</span><span class="o">();</span>
+		<span class="kt">int</span> <span class="n">mouseY</span> <span class="o">=</span> <span class="o">(</span><span class="kt">int</span><span class="o">)</span> <span class="n">b</span><span class="o">.</span><span class="na">getY</span><span class="o">();</span>
+
+
+		<span class="kt">double</span> <span class="n">rot</span> <span class="o">=</span> <span class="n">Math</span><span class="o">.</span><span class="na">sin</span><span class="o">(</span><span class="mi">0</span> <span class="o">/</span> <span class="mf">40.0</span><span class="o">)</span> <span class="o">*</span> <span class="mf">0.75</span><span class="o">;</span>
+
+		<span class="kt">double</span> <span class="n">rotY</span> <span class="o">=</span> <span class="mf">2.0</span><span class="o">;</span>
+
+		<span class="n">rCos</span> <span class="o">=</span> <span class="n">Math</span><span class="o">.</span><span class="na">cos</span><span class="o">(</span><span class="n">rot</span><span class="o">);</span>
+		<span class="n">rSin</span> <span class="o">=</span> <span class="n">Math</span><span class="o">.</span><span class="na">sin</span><span class="o">(</span><span class="n">rot</span><span class="o">);</span>
+
+		<span class="n">fov</span> <span class="o">=</span> <span class="n">height</span><span class="o">;</span>
+
+		<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">y</span> <span class="o">&lt;</span> <span class="n">height</span><span class="o">;</span> <span class="n">y</span><span class="o">++)</span> <span class="o">{</span>
+			<span class="kt">double</span> <span class="n">yd</span> <span class="o">=</span> <span class="o">((</span><span class="n">y</span> <span class="o">+</span> <span class="mf">0.5</span><span class="o">)</span> <span class="o">-</span> <span class="n">height</span> <span class="o">/</span> <span class="n">rotY</span><span class="o">)</span> <span class="o">/</span> <span class="n">fov</span><span class="o">;</span>
+
+			<span class="kt">double</span> <span class="n">zd</span> <span class="o">=</span> <span class="o">(</span><span class="n">floorHeight</span> <span class="o">+</span> <span class="n">zCam</span><span class="o">)</span> <span class="o">/</span> <span class="n">yd</span><span class="o">;</span>
+			<span class="k">if</span> <span class="o">(</span><span class="n">yd</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
+				<span class="n">zd</span> <span class="o">=</span> <span class="o">(</span><span class="n">ceilingHeight</span> <span class="o">-</span> <span class="n">zCam</span><span class="o">)</span> <span class="o">/</span> <span class="o">-</span><span class="n">yd</span><span class="o">;</span>
+			<span class="o">}</span>
+
+			<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">width</span><span class="o">;</span> <span class="n">x</span><span class="o">++)</span> <span class="o">{</span>
+                <span class="kt">double</span> <span class="n">xd</span> <span class="o">=</span> <span class="o">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">xCenter</span><span class="o">)</span> <span class="o">/</span> <span class="n">fov</span><span class="o">;</span>
+                <span class="n">xd</span> <span class="o">*=</span> <span class="n">zd</span><span class="o">;</span>
+
+                <span class="kt">double</span> <span class="n">xx</span> <span class="o">=</span> <span class="n">xd</span> <span class="o">*</span> <span class="n">rCos</span> <span class="o">+</span> <span class="n">zd</span> <span class="o">*</span> <span class="n">rSin</span> <span class="o">+</span> <span class="o">(</span><span class="n">xCam</span> <span class="o">+</span> <span class="mf">0.5</span><span class="o">)</span> <span class="o">*</span> <span class="mi">8</span><span class="o">;</span>
+                <span class="kt">double</span> <span class="n">yy</span> <span class="o">=</span> <span class="n">zd</span> <span class="o">*</span> <span class="n">rCos</span> <span class="o">-</span> <span class="n">xd</span> <span class="o">*</span> <span class="n">rSin</span> <span class="o">+</span> <span class="o">(</span><span class="n">yCam</span> <span class="o">+</span> <span class="mf">0.5</span><span class="o">)</span> <span class="o">*</span> <span class="mi">8</span> <span class="o">+</span> <span class="mi">5</span><span class="o">;</span>
+
+                <span class="kt">int</span> <span class="n">xPix</span> <span class="o">=</span> <span class="o">(</span><span class="kt">int</span><span class="o">)</span> <span class="o">(</span><span class="n">xx</span><span class="o">);</span>
+                <span class="kt">int</span> <span class="n">yPix</span> <span class="o">=</span> <span class="o">(</span><span class="kt">int</span><span class="o">)</span> <span class="o">(</span><span class="n">yy</span><span class="o">);</span>
+                <span class="k">if</span> <span class="o">(</span><span class="n">xx</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="o">)</span>
+                    <span class="n">xPix</span><span class="o">--;</span>
+                <span class="k">if</span> <span class="o">(</span><span class="n">yy</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="o">)</span>
+                    <span class="n">yPix</span><span class="o">--;</span>
+
+                <span class="n">zBuffer</span><span class="o">[</span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span> <span class="o">*</span> <span class="n">width</span><span class="o">]</span> <span class="o">=</span> <span class="n">zd</span><span class="o">;</span>
+				<span class="n">pixels</span><span class="o">[</span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span> <span class="o">*</span> <span class="n">width</span><span class="o">]</span> <span class="o">=</span> <span class="n">Art</span><span class="o">.</span><span class="na">floors</span><span class="o">.</span><span class="na">pixels</span><span class="o">[(</span><span class="n">xPix</span> <span class="o">&amp;</span> <span class="mi">7</span><span class="o">)</span> <span class="o">+</span> <span class="o">(</span><span class="n">yPix</span> <span class="o">&amp;</span> <span class="mi">7</span><span class="o">)</span> <span class="o">*</span> <span class="mi">64</span><span class="o">];</span>
+			<span class="o">}</span>
+		<span class="o">}</span>
+
+		<span class="n">renderWall</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="mi">1</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">2</span><span class="o">);</span>
+		<span class="n">renderWall</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">1</span><span class="o">);</span>
+		<span class="n">renderWall</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">);</span>
+		<span class="n">renderWall</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">1</span><span class="o">,</span> <span class="mi">1</span><span class="o">);</span>
+		<span class="n">renderWall</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">1</span><span class="o">,</span> <span class="mi">1</span><span class="o">,</span> <span class="mi">0</span><span class="o">);</span>
+
+	<span class="o">}</span>
+
+	<span class="kd">private</span> <span class="kt">void</span> <span class="nf">renderWall</span><span class="o">(</span><span class="kt">double</span> <span class="n">x0</span><span class="o">,</span> <span class="kt">double</span> <span class="n">y0</span><span class="o">,</span> <span class="kt">double</span> <span class="n">x1</span><span class="o">,</span> <span class="kt">double</span> <span class="n">y1</span><span class="o">)</span> <span class="o">{</span>
+
+		<span class="kt">double</span> <span class="n">xc0</span> <span class="o">=</span> <span class="o">((</span><span class="n">x0</span> <span class="o">-</span> <span class="mf">0.5</span><span class="o">)</span> <span class="o">-</span> <span class="n">xCam</span><span class="o">)</span> <span class="o">*</span> <span class="mi">2</span><span class="o">;</span>
+		<span class="kt">double</span> <span class="n">yc0</span> <span class="o">=</span> <span class="o">((</span><span class="n">y0</span> <span class="o">-</span> <span class="mf">0.5</span><span class="o">)</span> <span class="o">-</span> <span class="n">yCam</span><span class="o">)</span> <span class="o">*</span> <span class="mf">1.5</span><span class="o">;</span>
+
+		<span class="kt">double</span> <span class="n">xx0</span> <span class="o">=</span> <span class="n">xc0</span> <span class="o">*</span> <span class="n">rCos</span> <span class="o">-</span> <span class="n">yc0</span> <span class="o">*</span> <span class="n">rSin</span><span class="o">;</span>
+		<span class="kt">double</span> <span class="n">u0</span> <span class="o">=</span> <span class="o">((-</span><span class="mf">0.5</span><span class="o">)</span> <span class="o">-</span> <span class="n">zCam</span><span class="o">)</span> <span class="o">*</span> <span class="mi">2</span><span class="o">;</span>
+		<span class="kt">double</span> <span class="n">l0</span> <span class="o">=</span> <span class="o">((+</span><span class="mf">0.5</span><span class="o">)</span> <span class="o">-</span> <span class="n">zCam</span><span class="o">)</span> <span class="o">*</span> <span class="mi">2</span><span class="o">;</span>
+		<span class="kt">double</span> <span class="n">zz0</span> <span class="o">=</span> <span class="n">yc0</span> <span class="o">*</span> <span class="n">rCos</span> <span class="o">+</span> <span class="n">xc0</span> <span class="o">*</span> <span class="n">rSin</span><span class="o">;</span>
+
+		<span class="kt">double</span> <span class="n">xc1</span> <span class="o">=</span> <span class="o">((</span><span class="n">x1</span> <span class="o">-</span> <span class="mf">0.5</span><span class="o">)</span> <span class="o">-</span> <span class="n">xCam</span><span class="o">)</span> <span class="o">*</span> <span class="mi">2</span><span class="o">;</span>
+		<span class="kt">double</span> <span class="n">yc1</span> <span class="o">=</span> <span class="o">((</span><span class="n">y1</span> <span class="o">-</span> <span class="mf">0.5</span><span class="o">)</span> <span class="o">-</span> <span class="n">yCam</span><span class="o">)</span> <span class="o">*</span> <span class="mf">1.5</span><span class="o">;</span>
+
+		<span class="kt">double</span> <span class="n">xx1</span> <span class="o">=</span> <span class="n">xc1</span> <span class="o">*</span> <span class="n">rCos</span> <span class="o">-</span> <span class="n">yc1</span> <span class="o">*</span> <span class="n">rSin</span><span class="o">;</span>
+		<span class="kt">double</span> <span class="n">u1</span> <span class="o">=</span> <span class="o">((-</span><span class="mf">0.5</span><span class="o">)</span> <span class="o">-</span> <span class="n">zCam</span><span class="o">)</span> <span class="o">*</span> <span class="mi">2</span><span class="o">;</span>
+		<span class="kt">double</span> <span class="n">l1</span> <span class="o">=</span> <span class="o">((+</span><span class="mf">0.5</span><span class="o">)</span> <span class="o">-</span> <span class="n">zCam</span><span class="o">)</span> <span class="o">*</span> <span class="mi">2</span><span class="o">;</span>
+		<span class="kt">double</span> <span class="n">zz1</span> <span class="o">=</span> <span class="n">yc1</span> <span class="o">*</span> <span class="n">rCos</span> <span class="o">+</span> <span class="n">xc1</span> <span class="o">*</span> <span class="n">rSin</span><span class="o">;</span>
+
+		<span class="kt">double</span> <span class="n">xt0</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+		<span class="kt">double</span> <span class="n">xt1</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span>
+		<span class="kt">double</span> <span class="n">zClip</span> <span class="o">=</span> <span class="mf">0.2</span><span class="o">;</span>
+		
+		<span class="n">xt0</span> <span class="o">*=</span> <span class="mi">8</span><span class="o">;</span>
+		<span class="n">xt1</span> <span class="o">*=</span> <span class="mi">8</span><span class="o">;</span>
+
+		<span class="k">if</span> <span class="o">(</span><span class="n">zz0</span> <span class="o">&lt;</span> <span class="n">zClip</span> <span class="o">&amp;&amp;</span> <span class="n">zz1</span> <span class="o">&lt;</span> <span class="n">zClip</span><span class="o">)</span>
+			<span class="k">return</span><span class="o">;</span>
+
+		<span class="k">if</span> <span class="o">(</span><span class="n">zz0</span> <span class="o">&lt;</span> <span class="n">zClip</span><span class="o">)</span> <span class="o">{</span>
+			<span class="kt">double</span> <span class="n">p</span> <span class="o">=</span> <span class="o">(</span><span class="n">zClip</span> <span class="o">-</span> <span class="n">zz0</span><span class="o">)</span> <span class="o">/</span> <span class="o">(</span><span class="n">zz1</span> <span class="o">-</span> <span class="n">zz0</span><span class="o">);</span>
+			<span class="n">zz0</span> <span class="o">=</span> <span class="n">zz0</span> <span class="o">+</span> <span class="o">(</span><span class="n">zz1</span> <span class="o">-</span> <span class="n">zz0</span><span class="o">)</span> <span class="o">*</span> <span class="n">p</span><span class="o">;</span>
+			<span class="n">xx0</span> <span class="o">=</span> <span class="n">xx0</span> <span class="o">+</span> <span class="o">(</span><span class="n">xx1</span> <span class="o">-</span> <span class="n">xx0</span><span class="o">)</span> <span class="o">*</span> <span class="n">p</span><span class="o">;</span>
+			<span class="n">xt0</span> <span class="o">=</span> <span class="n">xt0</span> <span class="o">+</span> <span class="o">(</span><span class="n">xt1</span> <span class="o">-</span> <span class="n">xt0</span><span class="o">)</span> <span class="o">*</span> <span class="n">p</span><span class="o">;</span>
+		<span class="o">}</span>
+
+		<span class="k">if</span> <span class="o">(</span><span class="n">zz1</span> <span class="o">&lt;</span> <span class="n">zClip</span><span class="o">)</span> <span class="o">{</span>
+			<span class="kt">double</span> <span class="n">p</span> <span class="o">=</span> <span class="o">(</span><span class="n">zClip</span> <span class="o">-</span> <span class="n">zz0</span><span class="o">)</span> <span class="o">/</span> <span class="o">(</span><span class="n">zz1</span> <span class="o">-</span> <span class="n">zz0</span><span class="o">);</span>
+			<span class="n">zz1</span> <span class="o">=</span> <span class="n">zz0</span> <span class="o">+</span> <span class="o">(</span><span class="n">zz1</span> <span class="o">-</span> <span class="n">zz0</span><span class="o">)</span> <span class="o">*</span> <span class="n">p</span><span class="o">;</span>
+			<span class="n">xx1</span> <span class="o">=</span> <span class="n">xx0</span> <span class="o">+</span> <span class="o">(</span><span class="n">xx1</span> <span class="o">-</span> <span class="n">xx0</span><span class="o">)</span> <span class="o">*</span> <span class="n">p</span><span class="o">;</span>
+			<span class="n">xt1</span> <span class="o">=</span> <span class="n">xt0</span> <span class="o">+</span> <span class="o">(</span><span class="n">xt1</span> <span class="o">-</span> <span class="n">xt0</span><span class="o">)</span> <span class="o">*</span> <span class="n">p</span><span class="o">;</span>
+		<span class="o">}</span>
+		<span class="kt">double</span> <span class="n">iz0</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="n">zz0</span><span class="o">;</span>
+		<span class="kt">double</span> <span class="n">iz1</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="n">zz1</span><span class="o">;</span>
+
+		<span class="kt">double</span> <span class="n">ixt0</span> <span class="o">=</span> <span class="n">xt0</span> <span class="o">*</span> <span class="n">iz0</span><span class="o">;</span>
+		<span class="kt">double</span> <span class="n">ixta</span> <span class="o">=</span> <span class="n">xt1</span> <span class="o">*</span> <span class="n">iz1</span> <span class="o">-</span> <span class="n">ixt0</span><span class="o">;</span>
+
+		<span class="kt">double</span> <span class="n">iza</span> <span class="o">=</span> <span class="n">iz1</span> <span class="o">-</span> <span class="n">iz0</span><span class="o">;</span>
+
+		<span class="kt">double</span> <span class="n">xPixel0</span> <span class="o">=</span> <span class="o">(</span><span class="n">xx0</span> <span class="o">/</span> <span class="n">zz0</span> <span class="o">*</span> <span class="n">fov</span> <span class="o">+</span> <span class="n">xCenter</span><span class="o">);</span>
+		<span class="kt">double</span> <span class="n">xPixel1</span> <span class="o">=</span> <span class="o">(</span><span class="n">xx1</span> <span class="o">/</span> <span class="n">zz1</span> <span class="o">*</span> <span class="n">fov</span> <span class="o">+</span> <span class="n">xCenter</span><span class="o">);</span>
+
+		<span class="k">if</span> <span class="o">(</span><span class="n">xPixel0</span> <span class="o">&gt;=</span> <span class="n">xPixel1</span><span class="o">)</span>
+			<span class="k">return</span><span class="o">;</span>
+		<span class="kt">int</span> <span class="n">xp0</span> <span class="o">=</span> <span class="o">(</span><span class="kt">int</span><span class="o">)</span> <span class="n">Math</span><span class="o">.</span><span class="na">floor</span><span class="o">(</span><span class="n">xPixel0</span><span class="o">);</span>
+		<span class="kt">int</span> <span class="n">xp1</span> <span class="o">=</span> <span class="o">(</span><span class="kt">int</span><span class="o">)</span> <span class="n">Math</span><span class="o">.</span><span class="na">floor</span><span class="o">(</span><span class="n">xPixel1</span><span class="o">);</span>
+		<span class="k">if</span> <span class="o">(</span><span class="n">xp0</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="o">)</span>
+			<span class="n">xp0</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+		<span class="k">if</span> <span class="o">(</span><span class="n">xp1</span> <span class="o">&gt;=</span> <span class="n">width</span><span class="o">)</span>
+			<span class="n">xp1</span> <span class="o">=</span> <span class="n">width</span> <span class="o">-</span> <span class="mi">1</span><span class="o">;</span>
+
+		<span class="kt">double</span> <span class="n">yPixel00</span> <span class="o">=</span> <span class="o">(</span><span class="n">u0</span> <span class="o">/</span> <span class="n">zz0</span> <span class="o">*</span> <span class="n">fov</span> <span class="o">+</span> <span class="n">yCenter</span><span class="o">)</span> <span class="o">+</span> <span class="mf">0.5</span><span class="o">;</span>
+		<span class="kt">double</span> <span class="n">yPixel01</span> <span class="o">=</span> <span class="o">(</span><span class="n">l0</span> <span class="o">/</span> <span class="n">zz0</span> <span class="o">*</span> <span class="n">fov</span> <span class="o">+</span> <span class="n">yCenter</span><span class="o">)</span> <span class="o">+</span> <span class="mf">0.5</span><span class="o">;</span>
+		<span class="kt">double</span> <span class="n">yPixel10</span> <span class="o">=</span> <span class="o">(</span><span class="n">u1</span> <span class="o">/</span> <span class="n">zz1</span> <span class="o">*</span> <span class="n">fov</span> <span class="o">+</span> <span class="n">yCenter</span><span class="o">)</span> <span class="o">+</span> <span class="mf">0.5</span><span class="o">;</span>
+		<span class="kt">double</span> <span class="n">yPixel11</span> <span class="o">=</span> <span class="o">(</span><span class="n">l1</span> <span class="o">/</span> <span class="n">zz1</span> <span class="o">*</span> <span class="n">fov</span> <span class="o">+</span> <span class="n">yCenter</span><span class="o">)</span> <span class="o">+</span> <span class="mf">0.5</span><span class="o">;</span>
+
+		
+		<span class="kt">double</span> <span class="n">iw</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="o">(</span><span class="n">xPixel1</span> <span class="o">-</span> <span class="n">xPixel0</span><span class="o">);</span>
+		
+		<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="n">xp0</span><span class="o">;</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">xp1</span><span class="o">;</span> <span class="n">x</span><span class="o">++)</span> <span class="o">{</span>
+			<span class="kt">double</span> <span class="n">pr</span> <span class="o">=</span> <span class="o">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">xPixel0</span><span class="o">)</span> <span class="o">*</span> <span class="n">iw</span><span class="o">;</span>
+
+			<span class="kt">double</span> <span class="n">iz</span> <span class="o">=</span> <span class="n">iz0</span> <span class="o">+</span> <span class="n">iza</span> <span class="o">*</span> <span class="n">pr</span><span class="o">;</span>
+			
+			<span class="k">if</span> <span class="o">(</span><span class="n">zBufferWall</span><span class="o">[</span><span class="n">x</span><span class="o">]</span> <span class="o">&gt;</span> <span class="n">iz</span><span class="o">)</span>
+				<span class="k">continue</span><span class="o">;</span>
+			<span class="n">zBufferWall</span><span class="o">[</span><span class="n">x</span><span class="o">]</span> <span class="o">=</span> <span class="n">iz</span><span class="o">;</span>
+
+			<span class="kt">int</span> <span class="n">xTex</span> <span class="o">=</span> <span class="o">(</span><span class="kt">int</span><span class="o">)</span> <span class="o">((</span><span class="n">ixt0</span> <span class="o">+</span> <span class="n">ixta</span> <span class="o">*</span> <span class="n">pr</span> <span class="o">)</span> <span class="o">/</span> <span class="n">iz</span><span class="o">);</span>
+
+			<span class="kt">double</span> <span class="n">yPixel0</span> <span class="o">=</span> <span class="n">yPixel00</span> <span class="o">+</span> <span class="o">(</span><span class="n">yPixel10</span> <span class="o">-</span> <span class="n">yPixel00</span><span class="o">)</span> <span class="o">*</span> <span class="n">pr</span><span class="o">;</span>
+			<span class="kt">double</span> <span class="n">yPixel1</span> <span class="o">=</span> <span class="n">yPixel01</span> <span class="o">+</span> <span class="o">(</span><span class="n">yPixel11</span> <span class="o">-</span> <span class="n">yPixel01</span><span class="o">)</span> <span class="o">*</span> <span class="n">pr</span><span class="o">;</span>
+
+			<span class="k">if</span> <span class="o">(</span><span class="n">yPixel0</span> <span class="o">&gt;=</span> <span class="n">yPixel1</span><span class="o">)</span>
+				<span class="k">return</span><span class="o">;</span>
+			<span class="kt">int</span> <span class="n">yp0</span> <span class="o">=</span> <span class="o">(</span><span class="kt">int</span><span class="o">)</span> <span class="n">Math</span><span class="o">.</span><span class="na">floor</span><span class="o">(</span><span class="n">yPixel0</span><span class="o">);</span>
+			<span class="kt">int</span> <span class="n">yp1</span> <span class="o">=</span> <span class="o">(</span><span class="kt">int</span><span class="o">)</span> <span class="n">Math</span><span class="o">.</span><span class="na">floor</span><span class="o">(</span><span class="n">yPixel1</span><span class="o">);</span>
+			<span class="k">if</span> <span class="o">(</span><span class="n">yp0</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="o">)</span>
+				<span class="n">yp0</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+			<span class="k">if</span> <span class="o">(</span><span class="n">yp1</span> <span class="o">&gt;</span> <span class="n">height</span><span class="o">)</span>
+				<span class="n">yp1</span> <span class="o">=</span> <span class="n">height</span><span class="o">;</span>
+			<span class="kt">double</span> <span class="n">ih</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="o">(</span><span class="n">yPixel1</span> <span class="o">-</span> <span class="n">yPixel0</span><span class="o">);</span>
+			<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">y</span> <span class="o">=</span> <span class="n">yp0</span><span class="o">;</span> <span class="n">y</span> <span class="o">&lt;</span> <span class="n">yp1</span><span class="o">;</span> <span class="n">y</span><span class="o">++)</span> <span class="o">{</span>
+				<span class="kt">double</span> <span class="n">pry</span> <span class="o">=</span> <span class="o">(</span><span class="n">y</span> <span class="o">-</span> <span class="n">yPixel0</span><span class="o">)</span> <span class="o">*</span> <span class="n">ih</span><span class="o">;</span>
+				<span class="kt">int</span> <span class="n">yTex</span> <span class="o">=</span> <span class="o">(</span><span class="kt">int</span><span class="o">)</span> <span class="o">(</span><span class="mi">8</span> <span class="o">*</span> <span class="n">pry</span><span class="o">);</span>
+				<span class="n">pixels</span><span class="o">[</span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span> <span class="o">*</span> <span class="n">width</span><span class="o">]</span> <span class="o">=</span> <span class="n">Art</span><span class="o">.</span><span class="na">floors</span><span class="o">.</span><span class="na">pixels</span><span class="o">[(</span><span class="n">xTex</span> <span class="o">&amp;</span> <span class="mi">7</span><span class="o">)</span> <span class="o">+</span> <span class="mi">8</span> <span class="o">+</span> <span class="o">(</span><span class="n">yTex</span> <span class="o">&amp;</span> <span class="mi">7</span><span class="o">)</span> <span class="o">*</span> <span class="mi">64</span><span class="o">];</span>
+				<span class="c1">//pixels[x + y * width] = 0xff00ff + xTex * 100;</span>
+				<span class="n">zBuffer</span><span class="o">[</span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span> <span class="o">*</span> <span class="n">width</span><span class="o">]</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="n">iz</span> <span class="o">*</span> <span class="mi">8</span><span class="o">;</span>
+			<span class="o">}</span>
+		<span class="o">}</span>
+
+	<span class="o">}</span>
+
+	<span class="kd">private</span> <span class="kt">void</span> <span class="nf">renderWall</span><span class="o">(</span><span class="kt">double</span> <span class="n">x0</span><span class="o">,</span> <span class="kt">double</span> <span class="n">y0</span><span class="o">,</span> <span class="kt">double</span> <span class="n">x1</span><span class="o">,</span> <span class="kt">double</span> <span class="n">y1</span><span class="o">,</span> <span class="kt">double</span> <span class="n">xt0</span><span class="o">,</span> <span class="kt">double</span> <span class="n">xt1</span><span class="o">)</span> <span class="o">{</span>
+		<span class="kt">double</span> <span class="n">xc0</span> <span class="o">=</span> <span class="o">((</span><span class="n">x0</span> <span class="o">-</span> <span class="mf">0.5</span><span class="o">)</span> <span class="o">-</span> <span class="n">xCam</span><span class="o">)</span> <span class="o">*</span> <span class="mi">2</span><span class="o">;</span>
+		<span class="kt">double</span> <span class="n">yc0</span> <span class="o">=</span> <span class="o">((</span><span class="n">y0</span> <span class="o">-</span> <span class="mf">0.5</span><span class="o">)</span> <span class="o">-</span> <span class="n">yCam</span><span class="o">)</span> <span class="o">*</span> <span class="mi">2</span><span class="o">;</span>
+
+		<span class="kt">double</span> <span class="n">xx0</span> <span class="o">=</span> <span class="n">xc0</span> <span class="o">*</span> <span class="n">rCos</span> <span class="o">-</span> <span class="n">yc0</span> <span class="o">*</span> <span class="n">rSin</span><span class="o">;</span>
+		<span class="kt">double</span> <span class="n">u0</span> <span class="o">=</span> <span class="o">((-</span><span class="mf">0.5</span><span class="o">)</span> <span class="o">-</span> <span class="n">zCam</span><span class="o">)</span> <span class="o">*</span> <span class="mi">2</span><span class="o">;</span>
+		<span class="kt">double</span> <span class="n">l0</span> <span class="o">=</span> <span class="o">((+</span><span class="mf">0.5</span><span class="o">)</span> <span class="o">-</span> <span class="n">zCam</span><span class="o">)</span> <span class="o">*</span> <span class="mi">2</span><span class="o">;</span>
+		<span class="kt">double</span> <span class="n">zz0</span> <span class="o">=</span> <span class="n">yc0</span> <span class="o">*</span> <span class="n">rCos</span> <span class="o">+</span> <span class="n">xc0</span> <span class="o">*</span> <span class="n">rSin</span><span class="o">;</span>
+
+		<span class="kt">double</span> <span class="n">xc1</span> <span class="o">=</span> <span class="o">((</span><span class="n">x1</span> <span class="o">-</span> <span class="mf">0.5</span><span class="o">)</span> <span class="o">-</span> <span class="n">xCam</span><span class="o">)</span> <span class="o">*</span> <span class="mi">2</span><span class="o">;</span>
+		<span class="kt">double</span> <span class="n">yc1</span> <span class="o">=</span> <span class="o">((</span><span class="n">y1</span> <span class="o">-</span> <span class="mf">0.5</span><span class="o">)</span> <span class="o">-</span> <span class="n">yCam</span><span class="o">)</span> <span class="o">*</span> <span class="mi">2</span><span class="o">;</span>
+
+		<span class="kt">double</span> <span class="n">xx1</span> <span class="o">=</span> <span class="n">xc1</span> <span class="o">*</span> <span class="n">rCos</span> <span class="o">-</span> <span class="n">yc1</span> <span class="o">*</span> <span class="n">rSin</span><span class="o">;</span>
+		<span class="kt">double</span> <span class="n">u1</span> <span class="o">=</span> <span class="o">((-</span><span class="mf">0.5</span><span class="o">)</span> <span class="o">-</span> <span class="n">zCam</span><span class="o">)</span> <span class="o">*</span> <span class="mi">2</span><span class="o">;</span>
+		<span class="kt">double</span> <span class="n">l1</span> <span class="o">=</span> <span class="o">((+</span><span class="mf">0.5</span><span class="o">)</span> <span class="o">-</span> <span class="n">zCam</span><span class="o">)</span> <span class="o">*</span> <span class="mi">2</span><span class="o">;</span>
+		<span class="kt">double</span> <span class="n">zz1</span> <span class="o">=</span> <span class="n">yc1</span> <span class="o">*</span> <span class="n">rCos</span> <span class="o">+</span> <span class="n">xc1</span> <span class="o">*</span> <span class="n">rSin</span><span class="o">;</span>
+
+		<span class="n">xt0</span> <span class="o">*=</span> <span class="mi">16</span><span class="o">;</span>
+		<span class="n">xt1</span> <span class="o">*=</span> <span class="mi">16</span><span class="o">;</span>
+
+		<span class="kt">double</span> <span class="n">zClip</span> <span class="o">=</span> <span class="mf">0.2</span><span class="o">;</span>
+
+		<span class="k">if</span> <span class="o">(</span><span class="n">zz0</span> <span class="o">&lt;</span> <span class="n">zClip</span> <span class="o">&amp;&amp;</span> <span class="n">zz1</span> <span class="o">&lt;</span> <span class="n">zClip</span><span class="o">)</span>
+			<span class="k">return</span><span class="o">;</span>
+
+		<span class="k">if</span> <span class="o">(</span><span class="n">zz0</span> <span class="o">&lt;</span> <span class="n">zClip</span><span class="o">)</span> <span class="o">{</span>
+			<span class="kt">double</span> <span class="n">p</span> <span class="o">=</span> <span class="o">(</span><span class="n">zClip</span> <span class="o">-</span> <span class="n">zz0</span><span class="o">)</span> <span class="o">/</span> <span class="o">(</span><span class="n">zz1</span> <span class="o">-</span> <span class="n">zz0</span><span class="o">);</span>
+			<span class="n">zz0</span> <span class="o">=</span> <span class="n">zz0</span> <span class="o">+</span> <span class="o">(</span><span class="n">zz1</span> <span class="o">-</span> <span class="n">zz0</span><span class="o">)</span> <span class="o">*</span> <span class="n">p</span><span class="o">;</span>
+			<span class="n">xx0</span> <span class="o">=</span> <span class="n">xx0</span> <span class="o">+</span> <span class="o">(</span><span class="n">xx1</span> <span class="o">-</span> <span class="n">xx0</span><span class="o">)</span> <span class="o">*</span> <span class="n">p</span><span class="o">;</span>
+			<span class="n">xt0</span> <span class="o">=</span> <span class="n">xt0</span> <span class="o">+</span> <span class="o">(</span><span class="n">xt1</span> <span class="o">-</span> <span class="n">xt0</span><span class="o">)</span> <span class="o">*</span> <span class="n">p</span><span class="o">;</span>
+		<span class="o">}</span>
+
+		<span class="k">if</span> <span class="o">(</span><span class="n">zz1</span> <span class="o">&lt;</span> <span class="n">zClip</span><span class="o">)</span> <span class="o">{</span>
+			<span class="kt">double</span> <span class="n">p</span> <span class="o">=</span> <span class="o">(</span><span class="n">zClip</span> <span class="o">-</span> <span class="n">zz0</span><span class="o">)</span> <span class="o">/</span> <span class="o">(</span><span class="n">zz1</span> <span class="o">-</span> <span class="n">zz0</span><span class="o">);</span>
+			<span class="n">zz1</span> <span class="o">=</span> <span class="n">zz0</span> <span class="o">+</span> <span class="o">(</span><span class="n">zz1</span> <span class="o">-</span> <span class="n">zz0</span><span class="o">)</span> <span class="o">*</span> <span class="n">p</span><span class="o">;</span>
+			<span class="n">xx1</span> <span class="o">=</span> <span class="n">xx0</span> <span class="o">+</span> <span class="o">(</span><span class="n">xx1</span> <span class="o">-</span> <span class="n">xx0</span><span class="o">)</span> <span class="o">*</span> <span class="n">p</span><span class="o">;</span>
+			<span class="n">xt1</span> <span class="o">=</span> <span class="n">xt0</span> <span class="o">+</span> <span class="o">(</span><span class="n">xt1</span> <span class="o">-</span> <span class="n">xt0</span><span class="o">)</span> <span class="o">*</span> <span class="n">p</span><span class="o">;</span>
+		<span class="o">}</span>
+
+		<span class="kt">double</span> <span class="n">xPixel0</span> <span class="o">=</span> <span class="n">xCenter</span> <span class="o">-</span> <span class="o">(</span><span class="n">xx0</span> <span class="o">/</span> <span class="n">zz0</span> <span class="o">*</span> <span class="n">fov</span><span class="o">);</span>
+		<span class="kt">double</span> <span class="n">xPixel1</span> <span class="o">=</span> <span class="n">xCenter</span> <span class="o">-</span> <span class="o">(</span><span class="n">xx1</span> <span class="o">/</span> <span class="n">zz1</span> <span class="o">*</span> <span class="n">fov</span><span class="o">);</span>
+
+		<span class="k">if</span> <span class="o">(</span><span class="n">xPixel0</span> <span class="o">&gt;=</span> <span class="n">xPixel1</span><span class="o">)</span>
+			<span class="k">return</span><span class="o">;</span>
+		<span class="kt">int</span> <span class="n">xp0</span> <span class="o">=</span> <span class="o">(</span><span class="kt">int</span><span class="o">)</span> <span class="n">Math</span><span class="o">.</span><span class="na">ceil</span><span class="o">(</span><span class="n">xPixel0</span><span class="o">);</span>
+		<span class="kt">int</span> <span class="n">xp1</span> <span class="o">=</span> <span class="o">(</span><span class="kt">int</span><span class="o">)</span> <span class="n">Math</span><span class="o">.</span><span class="na">ceil</span><span class="o">(</span><span class="n">xPixel1</span><span class="o">);</span>
+		<span class="k">if</span> <span class="o">(</span><span class="n">xp0</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="o">)</span>
+			<span class="n">xp0</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+		<span class="k">if</span> <span class="o">(</span><span class="n">xp1</span> <span class="o">&gt;</span> <span class="n">width</span><span class="o">)</span>
+			<span class="n">xp1</span> <span class="o">=</span> <span class="n">width</span><span class="o">;</span>
+
+		<span class="kt">double</span> <span class="n">yPixel00</span> <span class="o">=</span> <span class="o">(</span><span class="n">u0</span> <span class="o">/</span> <span class="n">zz0</span> <span class="o">*</span> <span class="n">fov</span> <span class="o">+</span> <span class="n">yCenter</span><span class="o">);</span>
+		<span class="kt">double</span> <span class="n">yPixel01</span> <span class="o">=</span> <span class="o">(</span><span class="n">l0</span> <span class="o">/</span> <span class="n">zz0</span> <span class="o">*</span> <span class="n">fov</span> <span class="o">+</span> <span class="n">yCenter</span><span class="o">);</span>
+		<span class="kt">double</span> <span class="n">yPixel10</span> <span class="o">=</span> <span class="o">(</span><span class="n">u1</span> <span class="o">/</span> <span class="n">zz1</span> <span class="o">*</span> <span class="n">fov</span> <span class="o">+</span> <span class="n">yCenter</span><span class="o">);</span>
+		<span class="kt">double</span> <span class="n">yPixel11</span> <span class="o">=</span> <span class="o">(</span><span class="n">l1</span> <span class="o">/</span> <span class="n">zz1</span> <span class="o">*</span> <span class="n">fov</span> <span class="o">+</span> <span class="n">yCenter</span><span class="o">);</span>
+
+		<span class="kt">double</span> <span class="n">iz0</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="n">zz0</span><span class="o">;</span>
+		<span class="kt">double</span> <span class="n">iz1</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="n">zz1</span><span class="o">;</span>
+
+		<span class="kt">double</span> <span class="n">iza</span> <span class="o">=</span> <span class="n">iz1</span> <span class="o">-</span> <span class="n">iz0</span><span class="o">;</span>
+
+		<span class="kt">double</span> <span class="n">ixt0</span> <span class="o">=</span> <span class="n">xt0</span> <span class="o">*</span> <span class="n">iz0</span><span class="o">;</span>
+		<span class="kt">double</span> <span class="n">ixta</span> <span class="o">=</span> <span class="n">xt1</span> <span class="o">*</span> <span class="n">iz1</span> <span class="o">-</span> <span class="n">ixt0</span><span class="o">;</span>
+		<span class="kt">double</span> <span class="n">iw</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="o">(</span><span class="n">xPixel1</span> <span class="o">-</span> <span class="n">xPixel0</span><span class="o">);</span>
+
+		<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="n">xp0</span><span class="o">;</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">xp1</span><span class="o">;</span> <span class="n">x</span><span class="o">++)</span> <span class="o">{</span>
+			<span class="kt">double</span> <span class="n">pr</span> <span class="o">=</span> <span class="o">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">xPixel0</span><span class="o">)</span> <span class="o">*</span> <span class="n">iw</span><span class="o">;</span>
+			<span class="kt">double</span> <span class="n">iz</span> <span class="o">=</span> <span class="n">iz0</span> <span class="o">+</span> <span class="n">iza</span> <span class="o">*</span> <span class="n">pr</span><span class="o">;</span>
+
+			<span class="k">if</span> <span class="o">(</span><span class="n">zBufferWall</span><span class="o">[</span><span class="n">x</span><span class="o">]</span> <span class="o">&gt;</span> <span class="n">iz</span><span class="o">)</span>
+				<span class="k">continue</span><span class="o">;</span>
+			<span class="n">zBufferWall</span><span class="o">[</span><span class="n">x</span><span class="o">]</span> <span class="o">=</span> <span class="n">iz</span><span class="o">;</span>
+			<span class="kt">int</span> <span class="n">xTex</span> <span class="o">=</span> <span class="o">(</span><span class="kt">int</span><span class="o">)</span> <span class="o">((</span><span class="n">ixt0</span> <span class="o">+</span> <span class="n">ixta</span> <span class="o">*</span> <span class="n">pr</span><span class="o">)</span> <span class="o">/</span> <span class="n">iz</span><span class="o">);</span>
+
+			<span class="kt">double</span> <span class="n">yPixel0</span> <span class="o">=</span> <span class="n">yPixel00</span> <span class="o">+</span> <span class="o">(</span><span class="n">yPixel10</span> <span class="o">-</span> <span class="n">yPixel00</span><span class="o">)</span> <span class="o">*</span> <span class="n">pr</span> <span class="o">-</span> <span class="mf">0.5</span><span class="o">;</span>
+			<span class="kt">double</span> <span class="n">yPixel1</span> <span class="o">=</span> <span class="n">yPixel01</span> <span class="o">+</span> <span class="o">(</span><span class="n">yPixel11</span> <span class="o">-</span> <span class="n">yPixel01</span><span class="o">)</span> <span class="o">*</span> <span class="n">pr</span><span class="o">;</span>
+
+			<span class="kt">int</span> <span class="n">yp0</span> <span class="o">=</span> <span class="o">(</span><span class="kt">int</span><span class="o">)</span> <span class="n">Math</span><span class="o">.</span><span class="na">ceil</span><span class="o">(</span><span class="n">yPixel0</span><span class="o">);</span>
+			<span class="kt">int</span> <span class="n">yp1</span> <span class="o">=</span> <span class="o">(</span><span class="kt">int</span><span class="o">)</span> <span class="n">Math</span><span class="o">.</span><span class="na">ceil</span><span class="o">(</span><span class="n">yPixel1</span><span class="o">);</span>
+			<span class="k">if</span> <span class="o">(</span><span class="n">yp0</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="o">)</span>
+				<span class="n">yp0</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+			<span class="k">if</span> <span class="o">(</span><span class="n">yp1</span> <span class="o">&gt;</span> <span class="n">height</span><span class="o">)</span>
+				<span class="n">yp1</span> <span class="o">=</span> <span class="n">height</span><span class="o">;</span>
+
+			<span class="kt">double</span> <span class="n">ih</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="o">(</span><span class="n">yPixel1</span> <span class="o">-</span> <span class="n">yPixel0</span><span class="o">);</span>
+			<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">y</span> <span class="o">=</span> <span class="n">yp0</span><span class="o">;</span> <span class="n">y</span> <span class="o">&lt;</span> <span class="n">yp1</span><span class="o">;</span> <span class="n">y</span><span class="o">++)</span> <span class="o">{</span>
+				<span class="kt">double</span> <span class="n">pry</span> <span class="o">=</span> <span class="o">(</span><span class="n">y</span> <span class="o">-</span> <span class="n">yPixel0</span><span class="o">)</span> <span class="o">*</span> <span class="n">ih</span><span class="o">;</span>
+				<span class="kt">int</span> <span class="n">yTex</span> <span class="o">=</span> <span class="o">(</span><span class="kt">int</span><span class="o">)</span> <span class="o">(</span><span class="mi">16</span> <span class="o">*</span> <span class="n">pry</span><span class="o">);</span>
+				<span class="n">pixels</span><span class="o">[</span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span> <span class="o">*</span> <span class="n">width</span><span class="o">]</span> <span class="o">=</span> <span class="mh">0xff00ff</span><span class="o">;</span>
+				<span class="c1">// zBuffer[x + y * width] = 1 / iz * 4;</span>
+			<span class="o">}</span>
+		<span class="o">}</span>
+	<span class="o">}</span>
+
+	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">postProcess</span><span class="o">()</span> <span class="o">{</span>
+		<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">width</span> <span class="o">*</span> <span class="n">height</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+			<span class="kt">int</span> <span class="n">col</span> <span class="o">=</span> <span class="n">pixels</span><span class="o">[</span><span class="n">i</span><span class="o">];</span>
+			<span class="kt">int</span> <span class="n">brightness</span> <span class="o">=</span> <span class="o">(</span><span class="kt">int</span><span class="o">)</span> <span class="o">(</span><span class="mi">60000</span> <span class="o">/</span> <span class="o">(</span><span class="n">zBuffer</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">*</span> <span class="n">zBuffer</span><span class="o">[</span><span class="n">i</span><span class="o">]));</span>
+			<span class="k">if</span> <span class="o">(</span><span class="n">brightness</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="o">)</span>
+				<span class="n">brightness</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+			<span class="k">if</span> <span class="o">(</span><span class="n">brightness</span> <span class="o">&gt;</span> <span class="mi">255</span><span class="o">)</span>
+				<span class="n">brightness</span> <span class="o">=</span> <span class="mi">255</span><span class="o">;</span>
+
+			<span class="kt">int</span> <span class="n">r</span> <span class="o">=</span> <span class="o">(</span><span class="n">col</span> <span class="o">&gt;&gt;</span> <span class="mi">16</span><span class="o">)</span> <span class="o">&amp;</span> <span class="mh">0xff</span><span class="o">;</span>
+			<span class="kt">int</span> <span class="n">g</span> <span class="o">=</span> <span class="o">(</span><span class="n">col</span> <span class="o">&gt;&gt;</span> <span class="mi">8</span><span class="o">)</span> <span class="o">&amp;</span> <span class="mh">0xff</span><span class="o">;</span>
+			<span class="kt">int</span> <span class="n">b</span> <span class="o">=</span> <span class="o">(</span><span class="n">col</span><span class="o">)</span> <span class="o">&amp;</span> <span class="mh">0xff</span><span class="o">;</span>
+
+			<span class="n">r</span> <span class="o">=</span> <span class="n">r</span> <span class="o">*</span> <span class="n">brightness</span> <span class="o">/</span> <span class="mi">255</span><span class="o">;</span>
+			<span class="n">g</span> <span class="o">=</span> <span class="n">g</span> <span class="o">*</span> <span class="n">brightness</span> <span class="o">/</span> <span class="mi">255</span><span class="o">;</span>
+			<span class="n">b</span> <span class="o">=</span> <span class="n">b</span> <span class="o">*</span> <span class="n">brightness</span> <span class="o">/</span> <span class="mi">255</span><span class="o">;</span>
+
+			<span class="n">pixels</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">r</span> <span class="o">&lt;&lt;</span> <span class="mi">16</span> <span class="o">|</span> <span class="n">g</span> <span class="o">&lt;&lt;</span> <span class="mi">8</span> <span class="o">|</span> <span class="n">b</span><span class="o">;</span>
+		<span class="o">}</span>
+	<span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><img src="https://i.imgur.com/uJu4Obw.png" class="responsive-img" alt="Motor gráfico Java, renderizando bloques" /></p>
+
+<p>Hasta aquí el tutorial <strong>:)</strong> El siguiente paso sería crear una clase Block con 6 paredes y una clase Level con un array de Blocks, por último pintar todos los bloques de la clase Level teniendo en cuenta las coordenadas para pintar las paredes formando bloques. 
+Java no es una tecnología que se use mucho en el desarrollo de videojuegos porque su rendimiento no llega a ser del todo óptimo, aunque como ves se puede llegar a hacer cosas bastante interesantes.</p>
+
+
+  </div>
+
+  
+  <div class="related">
+    <h2>Posts recomendados</h2>
+    <ul class="related_posts">
+      
+       
+      
+       
+      
+      
+      <li>
+        <h5>
+          <a href="/en/how-many-web-libraries-are-there" class="related_post">
+            How many web frameworks are there?
+
+          </a>
+        </h5>
+      </li>
+       
+      
+       
+      
+       
+      
+    </ul>
+  </div>
+
+
+
+
+</div>
+
+
+
+<div align="center">
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <!-- Ad -->
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7551074192374685" data-ad-slot="4480248215" data-ad-format="auto"></ins>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div>
+
+
+
+
+
+
+  <script src="/js/prism.js"></script>
+  <script src="/js/index.js"></script>
+
+
+
+</body>
+
+
+
+
+
+
+
+</html>

@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-7551074192374685",
+    enable_page_level_ads: true
+  });
+</script>
+
+<link rel="shortcut icon" type="image/png" href="/images/favicon.png" />
+
+<link href="https://fonts.googleapis.com/css?family=Lato|Titillium+Web" rel="stylesheet">
+
+<link href="/css/prism.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/ficons@1.1.52/dist/ficons/font.css" rel="stylesheet">
+<link rel="stylesheet" href="/css/picnic.min.css">
+<link rel="stylesheet" href="/css/index.css">
+
+
+  <title>React - Clases estados y ciclos de vida</title>
+  <meta name="twitter:title" content="React - Clases estados y ciclos de vida">
+
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:creator" content="@Frostq_">
+<meta property="og:site_name" content="Frostq - Coding beers">
+<meta property="article:author" content="Diego López García (Frostq)">
+
+
+  <meta name="twitter:description" content="Cómo podemos crear clases en React y cómo podemos usar los estados y los ciclos de vida de los componentes">
+  <meta name="description" content="Cómo podemos crear clases en React y cómo podemos usar los estados y los ciclos de vida de los componentes">
+  <meta property='og:description' content="Cómo podemos crear clases en React y cómo podemos usar los estados y los ciclos de vida de los componentes" />
+
+
+<meta name="theme-color" content="#9c95ed">
+
+
+
+  
+    <meta name="twitter:image:src" content="http://localhost:4000/images/posts/react2.jpg">
+    <meta property='og:image' content="http://localhost:4000/images/posts/react2.jpg" />
+    
+
+
+
+  <meta name="twitter:url" content="http://localhost:4000/react-clases-eventos">
+  <meta property='og:url' content="http://localhost:4000/react-clases-eventos" />
+ 
+
+<script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-87066592-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
+
+
+</head>
+
+
+<body>
+
+  
+  
+<nav class="nav_transparent">
+    <a href="/" class="brand">
+      <img class="navbar_logo" src="/images/logo_horizontal.png"  />
+      
+    </a>
+  
+    <!-- responsive-->
+    <input id="bmenub" type="checkbox" class="show">
+    <label for="bmenub" class="burger pseudo button"><i class="fa fa-bars"></i></label>
+  
+    <div class="menu">
+      <ul>
+        <a href="/blog">
+          <li id="header_item">BLOG</li>
+        </a>
+        <a href="/projects">
+          <li id="header_item">PROJECTS</li>
+        </a>
+        <a href="/about">
+          <li id="header_item">ABOUT ME</li>
+        </a>
+        <a href="/feed.xml">
+          <li id="header_item">RSS</li>
+        </a>
+    
+      </ul>
+    </div>
+  </nav>
+
+
+<div class="post_header" style="background-image: linear-gradient( rgba(23, 45, 65, 0.5), rgba(54, 75, 94, 0.9) ), url(/images/posts/react2.jpg)">
+  <div class="container post_header_content">
+    <h1 class="post_title">React - Clases, estados y ciclos de vida </h1>
+
+
+    <div class="post_date">August 12, 2017</div>
+
+    <div class="post_tags">
+      
+
+      <a class="tags" href="/tag#react">React</a>
+
+      
+    </div>
+
+    
+
+    <div class="post_read_time">
+      
+        <i class="fa fa-clock-o"></i> 7 min read 
+    </div>
+
+  </div>
+</div>
+
+
+<div class="container">
+
+
+  <div align="center">
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- Ad -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7551074192374685" data-ad-slot="4480248215" data-ad-format="auto"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>
+
+  <div class="post_content">
+    <h2 id="componentes-de-clase">Componentes de clase</h2>
+
+<p>Anteriormente, vimos que React tiene dos tipos de componentes: los funcionales y los de clase. En esta ocasión veremos los componentes de clase, que difiere de los funcionales en los estados y ciclos de vida. Los componentes de clase tienen dos propiedades, <b>this.state</b> y <b>this.props</b>
+Un ejemplo sencillo de componente de clase:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nx">Welcome</span> <span class="kd">extends</span> <span class="nx">React</span><span class="p">.</span><span class="nx">Component</span><span class="p">{</span>
+    <span class="nx">render</span><span class="p">(){</span>
+        <span class="k">return</span> <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Hello</span> <span class="nx">World</span><span class="o">!&lt;</span><span class="sr">/h1</span><span class="err">&gt;
+</span>    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Dentro de la función render(), se sitúa el elemento que queremos devolver.</p>
+
+<p>Para renderizarlo podemos hacerlos igual que cuando vimos los componentes funcionales, escribiendo su nombre dentro de una etiqueta HTML:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;Welcome/&gt;</span>
+</code></pre></div></div>
+<p>Para acceder a las propiedades de la clase, podemos hacerlo mediante this.props, por ejemplo:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nx">Welcome</span> <span class="kd">extends</span> <span class="nx">React</span><span class="p">.</span><span class="nx">Component</span><span class="p">{</span>
+    <span class="nx">render</span><span class="p">(){</span>
+        <span class="k">return</span> <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Message</span><span class="p">:</span> <span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">message</span><span class="p">}</span><span class="o">&lt;</span><span class="sr">/h1</span><span class="err">&gt;
+</span>    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;Welcome</span> <span class="na">message=</span><span class="s">"Hello World!"</span><span class="nt">/&gt;</span>
+</code></pre></div></div>
+
+<h2 id="estados">Estados</h2>
+
+<p>Dentro de los componentes de clase existe una función constructor que se utiliza para definir el estado inicial del componente. Es muy importante llamar a la función super() dentro del constructor para que los parámetros funcionen adecuadamente:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nx">Welcome</span> <span class="kd">extends</span> <span class="nx">React</span><span class="p">.</span><span class="nx">Component</span><span class="p">{</span>
+    <span class="kd">constructor</span><span class="p">(</span><span class="nx">props</span><span class="p">){</span>
+        <span class="k">super</span><span class="p">(</span><span class="nx">props</span><span class="p">)</span>
+    <span class="p">}</span>
+    <span class="nx">render</span><span class="p">(){</span>
+        <span class="k">return</span> <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span><span class="nx">Hello</span> <span class="nx">World</span><span class="o">!&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Para definir el estado inicial podemos hacerlo creando un objeto y pasándoselo a la variable <b>state</b>:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nx">Counter</span> <span class="kd">extends</span> <span class="nx">React</span><span class="p">.</span><span class="nx">Component</span><span class="p">{</span>
+    <span class="kd">constructor</span><span class="p">(</span><span class="nx">props</span><span class="p">){</span>
+        <span class="k">super</span><span class="p">(</span><span class="nx">props</span><span class="p">)</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">state</span> <span class="o">=</span> <span class="p">{</span><span class="na">foo</span><span class="p">:</span><span class="mi">123</span><span class="p">,</span><span class="na">bar</span><span class="p">:</span><span class="mi">456</span><span class="p">}</span>
+    <span class="p">}</span>
+    <span class="nx">render</span><span class="p">(){</span>
+        <span class="k">return</span> <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span><span class="nx">foo</span><span class="p">:{</span><span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">foo</span><span class="p">}</span> <span class="nl">bar</span><span class="p">:{</span><span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">bar</span><span class="p">}</span><span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>El método updateState se utiliza para actualizar el estado del componente. Recoge un objeto de actualización y actualiza el estado del componente fusionando  los atributos del objeto del actualizador con el estado del componente anterior. El método actualiza el estado de forma asíncrona, por lo que hay una opción de callback que se llamará una vez que el estado ha terminado de actualizar completamente. Para usar el método updateState(), debe ser referenciado llamando a this.updateState(). Por ejemplo:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nx">Counter</span> <span class="kd">extends</span> <span class="nx">React</span><span class="p">.</span><span class="nx">Component</span><span class="p">{</span>
+    <span class="kd">constructor</span><span class="p">(</span><span class="nx">props</span><span class="p">){</span>
+        <span class="k">super</span><span class="p">(</span><span class="nx">props</span><span class="p">)</span>
+        <span class="c1">//initial state set up</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">state</span> <span class="o">=</span> <span class="p">{</span><span class="na">message</span><span class="p">:</span><span class="s2">"initial message"</span><span class="p">}</span>
+    <span class="p">}</span>
+    <span class="nx">componentDidMount</span><span class="p">()</span>
+        <span class="c1">//updating state</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">({</span><span class="na">message</span><span class="p">:</span><span class="s2">"new message"</span><span class="p">})</span>
+    <span class="p">}</span>
+    <span class="nx">render</span><span class="p">(){</span>
+        <span class="k">return</span> <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span><span class="nx">Message</span><span class="p">:{</span><span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">message</span><span class="p">}</span><span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Hay que tener especial cuidado con los estados previos, puesto que cuando llamamos a la función para actualizar el estado actual no se cambia instantáneamente,sino que se añade a una cola esperando a procesarse. Si por ejemplo llamamos 4 veces seguidas para actualizar el estado, solo surtirá efecto la primera llamada.</p>
+
+<p>En este ejemplo podemos ver cómo actualizar el estado teniendo en cuenta estados previos:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nx">Counter</span> <span class="kd">extends</span> <span class="nx">React</span><span class="p">.</span><span class="nx">Component</span><span class="p">{</span>
+    <span class="kd">constructor</span><span class="p">(</span><span class="nx">props</span><span class="p">){</span>
+        <span class="k">super</span><span class="p">(</span><span class="nx">props</span><span class="p">)</span>
+        <span class="c1">//initial state set up</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">state</span> <span class="o">=</span> <span class="p">{</span><span class="na">message</span><span class="p">:</span><span class="s2">"initial message"</span><span class="p">}</span>
+    <span class="p">}</span>
+    <span class="nx">componentDidMount</span><span class="p">()</span>
+        <span class="c1">//updating state</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">((</span><span class="nx">prevState</span><span class="p">,</span> <span class="nx">props</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="p">{</span><span class="na">message</span><span class="p">:</span> <span class="nx">prevState</span><span class="p">.</span><span class="nx">message</span> <span class="o">+</span> <span class="s1">'!'</span><span class="p">}</span>
+        <span class="p">})</span>
+    <span class="p">}</span>
+    <span class="nx">render</span><span class="p">(){</span>
+        <span class="k">return</span> <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span><span class="nx">Message</span><span class="p">:{</span><span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">message</span><span class="p">}</span><span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>El estado es inmutable, eso quiere decir que no podemos cambiarlo manualmente actualizando sus variables. Por ejemplo la siguiente sentencia es incorrecta:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">message</span> <span class="o">=</span> <span class="s2">"new message"</span>
+</code></pre></div></div>
+
+<h2 id="ciclos-de-vida">Ciclos de vida</h2>
+
+<p>Los componentes de clase siguen unos ciclos de vida, pero sobreescribiendo estos métodos podemos incluir código para ser ejecutado en cada uno de los ciclos.</p>
+
+<p><b>Fase de montaje</b></p>
+
+<ul>
+  <li>
+    <p>constructor(props) - Cuando el componente se inicializa. Se ejecuta una sola vez.</p>
+  </li>
+  <li>
+    <p>componentWillMount() - Cuando el componente está a punto de ser montado.</p>
+  </li>
+  <li>
+    <p>render() - Cuando el componente ya se ha renderizado.</p>
+  </li>
+  <li>
+    <p>componentDidMount() - Cuando el componente ya se ha montado.</p>
+  </li>
+</ul>
+
+<p><b>Fase de actualización</b></p>
+
+<ul>
+  <li>
+    <p>componentWillReceiveProps(nextProps) - Cuando el componente esta recibiendo nuevos parámetros.</p>
+  </li>
+  <li>
+    <p>shouldComponentUpdate(nextProps, nextState) - Cuando el componente ha recibido todos los parámetros y está a punto de actualizarse.</p>
+  </li>
+  <li>
+    <p>componentWillUpdate(nextProps, nextState) - Cuando el componente va a actualizarse.</p>
+  </li>
+  <li>
+    <p>render() - Cuando el componente va a ser renderizado.</p>
+  </li>
+  <li>
+    <p>componentDidUpdate(prevProps, prevState) - Cuando el componente ha terminado de actualizarse.</p>
+  </li>
+  <li>
+    <p>componentWillUnmount() - Cuando el componente va a ser desmontado.</p>
+  </li>
+</ul>
+
+<h2 id="manipuladores-de-eventos">Manipuladores de eventos</h2>
+
+<p>Crear eventos en ReactJS es similar a crearlos en HTML con la diferencia de que el React se usan llaves:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="nx">button</span> <span class="nx">onClick</span> <span class="o">=</span> <span class="p">{</span><span class="nx">clickHandler</span><span class="p">}</span> <span class="o">&gt;</span><span class="nx">Click</span> <span class="nx">Me</span><span class="o">&lt;</span><span class="sr">/button</span><span class="err">&gt;
+</span></code></pre></div></div>
+
+<p>Para manipular estos eventos se pueden crear funciones dentro de las clases de React, por ejemplo:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nx">Counter</span> <span class="kd">extends</span> <span class="nx">React</span><span class="p">.</span><span class="nx">Component</span><span class="p">{</span>
+    <span class="kd">constructor</span><span class="p">(</span><span class="nx">props</span><span class="p">){</span>
+        <span class="k">super</span><span class="p">(</span><span class="nx">props</span><span class="p">)</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">state</span> <span class="o">=</span> <span class="p">{</span><span class="na">count</span><span class="p">:</span><span class="mi">0</span><span class="p">}</span>
+        <span class="c1">//binding is necessary to make `this` point to the correct object</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">clickHandler</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">clickHandler</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="k">this</span><span class="p">)</span>
+    <span class="p">}</span>
+    <span class="nx">clickHandler</span><span class="p">(){</span>
+     
+      <span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">((</span><span class="nx">prevState</span><span class="p">,</span><span class="nx">props</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="p">{</span><span class="na">count</span><span class="p">:</span> <span class="nx">prevState</span><span class="p">.</span><span class="nx">count</span> <span class="o">+</span> <span class="mi">1</span><span class="p">}</span>
+      <span class="p">})</span>
+    <span class="p">}</span>
+    <span class="nx">render</span><span class="p">(){</span>
+ 
+        <span class="k">return</span> <span class="o">&lt;</span><span class="nx">button</span> <span class="nx">onClick</span> <span class="o">=</span> <span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">clickHandler</span><span class="p">}</span><span class="o">&gt;</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">count</span><span class="p">}</span><span class="o">&lt;</span><span class="sr">/button</span><span class="err">&gt;
+</span>    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>La función bind(), que está en el constructor se usa para enlazar la palabra clave a la instancia del componente, si no incluimos este método, apuntará a un objeto incorrecto y por tanto la aplicación no funcionará correctamente.</p>
+
+<h2 id="elevando-los-estados-hacia-arriba">Elevando los estados hacia arriba</h2>
+
+<p>El método setState() sólo permite que los componentes actualicen su propio estado. Si queremos actualizar el estado de un componente a un componente hijo o hermano no lo podemos hacer directamente. Tenemos que elevar el estado hacia la clase principal para que enlace el estado una vez actualizado a los componentes que lo necesiten.</p>
+
+<p>Para ver cómo podemos aplicar esta técnica puedes echar un vistazo a este ejemplo:</p>
+
+<p><a href="https://codepen.io/benjlin/pen/OmaLqE">https://codepen.io/benjlin/pen/OmaLqE<a></a></a></p>
+
+<p><img src="https://i.imgur.com/qIiyFAb.png" class="responsive-img" alt="React sample app" /></p>
+
+<p>Como ves, el ejemplo consta de 4 botones con una descripción en la parte inferior que muestra el botón que está activo.</p>
+
+<p>Cuando pulsamos sobre un botón, este componente tendrá que actualizar los estados de los demás botones para que se vuelvan inactivos. Es por ello que tenemos que elevar el estado, es decir al controlador de eventos para que se encargue de coger el array de botones activos para volverlos inactivos.</p>
+
+
+  </div>
+
+  
+  <div class="related">
+    <h2>Posts recomendados</h2>
+    <ul class="related_posts">
+      
+      
+      <li>
+        <h5>
+          <a href="/introduccion-instalacion-angular" class="related_post">
+            Angular - Introducción e instalación
+
+          </a>
+        </h5>
+      </li>
+       
+      
+      
+      <li>
+        <h5>
+          <a href="/angular-formularios" class="related_post">
+            Angular - FormControl y FormGroup para crear formularios reactivos
+
+          </a>
+        </h5>
+      </li>
+       
+      
+       
+      
+      
+      <li>
+        <h5>
+          <a href="/cuantas-tecnologias-web-existen" class="related_post">
+            ¿Cuántas tecnologías para el desarollo web existen?
+
+          </a>
+        </h5>
+      </li>
+       
+      
+      
+      <li>
+        <h5>
+          <a href="/optimizar-angular" class="related_post">
+            Optimizar aplicaciones Angular 2 para aumentar la velocidad de carga
+
+          </a>
+        </h5>
+      </li>
+       
+      
+    </ul>
+  </div>
+
+
+
+
+</div>
+
+
+
+<div align="center">
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <!-- Ad -->
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7551074192374685" data-ad-slot="4480248215" data-ad-format="auto"></ins>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div>
+
+
+
+  <footer>
+    <div class="flex three">
+        <div class="full half-1000">
+
+            <div id="mc_embed_signup">
+                <form action="https://github.us14.list-manage.com/subscribe/post?u=cd16a671a63cd217caf6b2f3f&amp;id=bb3cc69837" method="post"
+                    id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                    <div id="mc_embed_signup_scroll">
+                        <h2>Newsletter <i class="fa fa-envelope icon_footer" aria-hidden="true"></i></h2>
+                        <p>Sigue el blog por email. Introduce tu dirección de correo electrónico para que te mande un correo
+                            cuando publique un nuevo artículo en este blog</p>
+
+                        <div class="mc-field-group">
+                            <label for="mce-EMAIL">Tu email
+                                <span class="asterisk">*</span>
+                            </label>
+                            <input type="email" style="color:black;" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Introducce tu dirección de correo electrónico">
+                        </div>
+                        <div id="mce-responses" class="clear">
+                            <div class="response" id="mce-error-response" style="display:none"></div>
+                            <div class="response" id="mce-success-response" style="display:none"></div>
+                        </div>
+                        <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                        <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                            <input type="text" name="b_cd16a671a63cd217caf6b2f3f_bb3cc69837" tabindex="-1" value="">
+                        </div>
+                        <div class="clear">
+                            <input type="submit" value="Suscribirse por email" name="subscribe" id="mc-embedded-subscribe" class="button footer_button">
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <!--End mc_embed_signup-->
+
+        </div>
+        <div class="full sixth-1000">
+          
+              
+                <ul id="footer_menu">
+                   
+                    <a href="/blog">
+                        <li><h4>Blog</h4></li>
+                    </a>
+                    <a href="/projects">
+                        <li><h4></h>Projects</h4></li>
+                    </a>
+                    <a href="/about">
+                        <li><h4>About me<h4></li>
+                    </a>
+                    <a href="/feed.xml">
+                        <li><h4>Rss</h4></li>
+                    </a>
+
+                </ul>
+           
+        </div>
+        <div class="full third-1000">
+            <ul class="footer_posts">
+                    
+
+                    
+                    
+                    
+
+                    
+                    <a href="/introduccion-instalacion-angular"><li><h4>Angular - Introducción e instalación</h4></li></a>
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    <a href="/angular-formularios"><li><h4>Angular - FormControl y FormGroup para crear formularios reactivos</h4></li></a>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    <a href="/cuantas-tecnologias-web-existen"><li><h4>¿Cuántas tecnologías para el desarollo web existen?</h4></li></a>
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    <a href="/optimizar-angular"><li><h4>Optimizar aplicaciones Angular 2 para aumentar la velocidad de carga</h4></li></a>
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+                    
+
+            </ul>
+        </div>
+
+
+
+
+
+    </div>
+</footer>
+
+
+
+
+  <script src="/js/prism.js"></script>
+  <script src="/js/index.js"></script>
+
+
+
+</body>
+
+
+
+
+
+
+
+</html>

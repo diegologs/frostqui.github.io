@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-7551074192374685",
+    enable_page_level_ads: true
+  });
+</script>
+
+<link rel="shortcut icon" type="image/png" href="/images/favicon.png" />
+
+<link href="https://fonts.googleapis.com/css?family=Lato|Titillium+Web" rel="stylesheet">
+
+<link href="/css/prism.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/ficons@1.1.52/dist/ficons/font.css" rel="stylesheet">
+<link rel="stylesheet" href="/css/picnic.min.css">
+<link rel="stylesheet" href="/css/index.css">
+
+
+  <title>Angular 2, cómo optimizar y aumentar el rendimiento de aplicaciones</title>
+  <meta name="twitter:title" content="Angular 2, cómo optimizar y aumentar el rendimiento de aplicaciones">
+
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:creator" content="@Frostq_">
+<meta property="og:site_name" content="Frostq - Coding beers">
+<meta property="article:author" content="Diego López García (Frostq)">
+
+
+  <meta name="twitter:description" content="Rendimiento en Angular 2 o posterior. 4 consejos clave para mejorar la velocidad y reducir los tiempos de espera">
+  <meta name="description" content="Rendimiento en Angular 2 o posterior. 4 consejos clave para mejorar la velocidad y reducir los tiempos de espera">
+  <meta property='og:description' content="Rendimiento en Angular 2 o posterior. 4 consejos clave para mejorar la velocidad y reducir los tiempos de espera" />
+
+
+<meta name="theme-color" content="#9c95ed">
+
+
+
+  
+    <meta name="twitter:image:src" content="http://localhost:4000/images/posts/angular-2.jpg">
+    <meta property='og:image' content="http://localhost:4000/images/posts/angular-2.jpg" />
+    
+
+
+
+  <meta name="twitter:url" content="http://localhost:4000/optimizar-angular">
+  <meta property='og:url' content="http://localhost:4000/optimizar-angular" />
+ 
+
+<script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-87066592-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
+
+
+</head>
+
+
+<body>
+
+  
+  
+<nav class="nav_transparent">
+    <a href="/" class="brand">
+      <img class="navbar_logo" src="/images/logo_horizontal.png"  />
+      
+    </a>
+  
+    <!-- responsive-->
+    <input id="bmenub" type="checkbox" class="show">
+    <label for="bmenub" class="burger pseudo button"><i class="fa fa-bars"></i></label>
+  
+    <div class="menu">
+      <ul>
+        <a href="/blog">
+          <li id="header_item">BLOG</li>
+        </a>
+        <a href="/projects">
+          <li id="header_item">PROJECTS</li>
+        </a>
+        <a href="/about">
+          <li id="header_item">ABOUT ME</li>
+        </a>
+        <a href="/feed.xml">
+          <li id="header_item">RSS</li>
+        </a>
+    
+      </ul>
+    </div>
+  </nav>
+
+
+<div class="post_header" style="background-image: linear-gradient( rgba(23, 45, 65, 0.5), rgba(54, 75, 94, 0.9) ), url(/images/posts/angular-2.jpg)">
+  <div class="container post_header_content">
+    <h1 class="post_title">Optimizar aplicaciones Angular 2 para aumentar la velocidad de carga </h1>
+
+
+    <div class="post_date">December 08, 2017</div>
+
+    <div class="post_tags">
+      
+
+      <a class="tags" href="/tag#angular">Angular</a>
+
+      
+    </div>
+
+    
+
+    <div class="post_read_time">
+      
+        <i class="fa fa-clock-o"></i> 11 min read 
+    </div>
+
+  </div>
+</div>
+
+
+<div class="container">
+
+
+  <div align="center">
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- Ad -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7551074192374685" data-ad-slot="4480248215" data-ad-format="auto"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>
+
+  <div class="post_content">
+    <h2 id="introducción">Introducción</h2>
+
+<p>¿Quieres que tu web cargue rápido cuando entran los usuarios? ¿Estas usando Angular 2 y tu aplicacion carga despacio? Pues en este artículo echaremos un vistazo a las técnicas clave para aumentar el rendimiento. Angular 2 al ser un framework para crear webs SPA (Single Page Application),carga todos los recursos y scripts al iniciar la página de forma que navegar entre las “páginas” sea instantáneo.</p>
+
+<h2 id="build-en-producción">Build en producción</h2>
+
+<p>Esta técnica es la más sencilla de implementar, simplemente cuando vamos hacer el build (compilar los archivos Angular) para subirlo a producción, tenemos que añadir el siguiente parámetro (Si el proyecto lo hemos creado usando Angular cli):</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ng build <span class="nt">--prod</span>
+</code></pre></div></div>
+<p>Con este parámetro le estamos indicando al compilador de Angular que se optimice para que el tamaño de los archivos compilados sea menor y por tanto que carguen antes.</p>
+
+<p>Si tu versión de angular cli es &lt; 1.0.0 entonces tienes que añadir también otro parámetro:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ng build <span class="nt">--prod</span> <span class="nt">--aot</span>
+</code></pre></div></div>
+
+<p>Con el parámetro <strong>–aot</strong> hacemos que el compilador revise el código para optimizarlo, en las versiones de angular cli superiores a la 1.0.0 (Angular 4) este parámetro no hace falta ponerlo ya que al poner <strong>–prod</strong> por defecto ya añade el <strong>aot</strong>.</p>
+
+<h2 id="server-side-rendering">Server Side Rendering</h2>
+
+<p>¿Que es server side rendering? Server side rendering (SSR) significa que el los scripts pueden ser ejecutados en un servidor para que cuando un usuario abra la página estén ya cargados, aumentando el rendimiento. La otra opción, la más habitual, es client side rendering, simplemente significa que el propio usuario carga los scripts en su ordenador. La desventaja principal de server side rendering es que se realizan más llamadas a servidor y por tanto navegar por la web es un poco más lento, pero la carga inicial es mucho más rápida que client side rendering.</p>
+
+<p><strong>Server side rendering</strong>:</p>
+
+<p><img src="https://i.imgur.com/Jy66YPC.png" class="responsive-img" alt="Server side rendering" /></p>
+
+<p><strong>Client side rendering</strong>:</p>
+
+<p><img src="https://i.imgur.com/9SaQIDy.png" class="responsive-img" alt="Client side rendering" /></p>
+
+<p>Para hacer que una aplicación web hecha con Angular tenemos que hacer uso de una librería llamada Angular Universal:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm <span class="nb">install</span> <span class="nt">--save</span> @angular/platform-server @nguniversal/module-map-ngfactory-loader ts-loader 
+</code></pre></div></div>
+
+<p>Lo primero que teenemos que hacer es añadir Angular Universal a AppModule:</p>
+
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">@</span><span class="nd">NgModule</span><span class="p">({</span>
+  <span class="na">bootstrap</span><span class="p">:</span> <span class="p">[</span><span class="nx">AppComponent</span><span class="p">],</span>
+  <span class="na">imports</span><span class="p">:</span> <span class="p">[</span>
+    <span class="c1">// El appId es un identificador único en la página</span>
+    <span class="nx">BrowserModule</span><span class="p">.</span><span class="nx">withServerTransition</span><span class="p">({</span><span class="na">appId</span><span class="p">:</span> <span class="s1">'my-app'</span><span class="p">}),</span>
+    <span class="p">...</span>
+  <span class="p">],</span>
+
+<span class="p">})</span>
+<span class="k">export</span> <span class="kd">class</span> <span class="nx">AppModule</span> <span class="p">{}</span>
+</code></pre></div></div>
+<p>El siguiente paso es crear un archivo en el mismo nivel que AppModule llamado app.server.module.ts</p>
+
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span><span class="nx">NgModule</span><span class="p">}</span> <span class="k">from</span> <span class="s1">'@angular/core'</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span><span class="nx">ServerModule</span><span class="p">}</span> <span class="k">from</span> <span class="s1">'@angular/platform-server'</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span><span class="nx">ModuleMapLoaderModule</span><span class="p">}</span> <span class="k">from</span> <span class="s1">'@nguniversal/module-map-ngfactory-loader'</span><span class="p">;</span>
+
+<span class="k">import</span> <span class="p">{</span><span class="nx">AppModule</span><span class="p">}</span> <span class="k">from</span> <span class="s1">'./app.module'</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span><span class="nx">AppComponent</span><span class="p">}</span> <span class="k">from</span> <span class="s1">'./app.component'</span><span class="p">;</span>
+
+<span class="k">import</span> <span class="p">{</span> <span class="nx">REQUEST</span> <span class="p">}</span> <span class="k">from</span> <span class="s1">'./request'</span><span class="p">;</span>
+
+
+<span class="k">export</span> <span class="kd">function</span> <span class="nx">getRequest</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">{</span><span class="na">cookie</span><span class="p">:</span> <span class="nb">document</span><span class="p">.</span><span class="nx">cookie</span><span class="p">};</span>
+<span class="p">}</span>
+
+<span class="p">@</span><span class="nd">NgModule</span><span class="p">({</span>
+  <span class="na">imports</span><span class="p">:</span> <span class="p">[</span>
+    
+    <span class="nx">AppModule</span><span class="p">,</span>
+    <span class="nx">ServerModule</span><span class="p">,</span> 
+    <span class="nx">ModuleMapLoaderModule</span> <span class="c1">// &lt;-- *Importante</span>
+  <span class="p">],</span>
+ 
+  <span class="na">bootstrap</span><span class="p">:</span> <span class="p">[</span><span class="nx">AppComponent</span><span class="p">],</span>
+
+  <span class="na">providers</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="na">provide</span><span class="p">:</span> <span class="nx">REQUEST</span><span class="p">,</span>
+      <span class="na">useFactory</span><span class="p">:</span> <span class="p">(</span><span class="nx">getRequest</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">]</span>
+
+<span class="p">})</span>
+<span class="k">export</span> <span class="kd">class</span> <span class="nx">AppServerModule</span> <span class="p">{}</span>
+
+</code></pre></div></div>
+
+<p>Tambíen creamos un archivo llamado request.ts:</p>
+
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">InjectionToken</span> <span class="p">}</span> <span class="k">from</span> <span class="s1">'@angular/core'</span><span class="p">;</span>
+
+<span class="k">export</span> <span class="kd">const</span> <span class="nx">REQUEST</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">InjectionToken</span><span class="o">&lt;</span><span class="nx">string</span><span class="o">&gt;</span><span class="p">(</span><span class="s1">'REQUEST'</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>Para configurar el servidor que vamos a crear para cargar los scripts, tenemos que crear un arhivo llamado main.server.ts en la raiz de <strong>src</strong>:</p>
+
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">InjectionToken</span> <span class="p">}</span> <span class="k">from</span> <span class="s1">'@angular/core'</span><span class="p">;</span>
+
+<span class="k">export</span> <span class="kd">const</span> <span class="nx">REQUEST</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">InjectionToken</span><span class="o">&lt;</span><span class="nx">string</span><span class="o">&gt;</span><span class="p">(</span><span class="s1">'REQUEST'</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>También creamos su archivo de configuracion json, llamado <strong>tsconfig.server.json</strong>:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"extends"</span><span class="p">:</span><span class="w"> </span><span class="s2">"../tsconfig.json"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"compilerOptions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+     
+      </span><span class="s2">"outDir"</span><span class="p">:</span><span class="w"> </span><span class="s2">"../out-tsc/app"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"baseUrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"./"</span><span class="p">,</span><span class="w">
+     
+      </span><span class="s2">"module"</span><span class="p">:</span><span class="w"> </span><span class="s2">"commonjs"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"types"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"exclude"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="s2">"test.ts"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"**/*.spec.ts"</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+   
+    </span><span class="s2">"angularCompilerOptions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"entryModule"</span><span class="p">:</span><span class="w"> </span><span class="s2">"app/app.server.module#AppServerModule"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Creamos en la raíz de nuestro proyecto el archivo <strong>server.js</strong>, el servidor express:</p>
+
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">require</span><span class="p">(</span><span class="s1">'zone.js/dist/zone-node'</span><span class="p">);</span>
+<span class="nx">require</span><span class="p">(</span><span class="s1">'reflect-metadata'</span><span class="p">);</span>
+
+<span class="kd">const</span> <span class="nx">express</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'express'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'fs'</span><span class="p">);</span>
+
+<span class="kd">const</span> <span class="p">{</span> <span class="nx">platformServer</span><span class="p">,</span> <span class="nx">renderModuleFactory</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'@angular/platform-server'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="p">{</span> <span class="nx">ngExpressEngine</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'@nguniversal/express-engine'</span><span class="p">);</span>
+
+<span class="kd">const</span> <span class="p">{</span><span class="nx">ModuleMapLoaderModule</span><span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'@nguniversal/module-map-ngfactory-loader'</span><span class="p">);</span>
+<span class="c1">// Import the AOT compiled factory for your AppServerModule.</span>
+<span class="c1">// This import will change with the hash of your built server bundle.</span>
+<span class="kd">const</span> <span class="p">{</span> <span class="nx">AppServerModuleNgFactory</span><span class="p">,</span> <span class="nx">LAZY_MODULE_MAP</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">`./dist-server/main.bundle`</span><span class="p">);</span>
+
+<span class="kd">const</span> <span class="p">{</span> <span class="nx">provideModuleMap</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'@nguniversal/module-map-ngfactory-loader'</span><span class="p">);</span>
+
+<span class="kd">const</span> <span class="nx">app</span> <span class="o">=</span> <span class="nx">express</span><span class="p">();</span>
+<span class="kd">const</span> <span class="nx">port</span> <span class="o">=</span> <span class="mi">8000</span><span class="p">;</span>
+<span class="kd">const</span> <span class="nx">baseUrl</span> <span class="o">=</span> <span class="s2">`http://localhost:</span><span class="p">${</span><span class="nx">port</span><span class="p">}</span><span class="s2">`</span><span class="p">;</span>
+
+<span class="c1">// Set the engine</span>
+<span class="nx">app</span><span class="p">.</span><span class="nx">engine</span><span class="p">(</span><span class="s1">'html'</span><span class="p">,</span> <span class="nx">ngExpressEngine</span><span class="p">({</span>
+  <span class="na">bootstrap</span><span class="p">:</span> <span class="nx">AppServerModuleNgFactory</span><span class="p">,</span>
+  <span class="na">providers</span><span class="p">:</span> <span class="p">[</span>
+    <span class="nx">provideModuleMap</span><span class="p">(</span><span class="nx">LAZY_MODULE_MAP</span><span class="p">)</span>
+  <span class="p">]</span>
+<span class="p">}));</span>
+
+<span class="nx">app</span><span class="p">.</span><span class="kd">set</span><span class="p">(</span><span class="s1">'view engine'</span><span class="p">,</span> <span class="s1">'html'</span><span class="p">);</span>
+
+<span class="nx">app</span><span class="p">.</span><span class="kd">set</span><span class="p">(</span><span class="s1">'views'</span><span class="p">,</span> <span class="s1">'./'</span><span class="p">);</span>
+<span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="s1">'/'</span><span class="p">,</span> <span class="nx">express</span><span class="p">.</span><span class="kr">static</span><span class="p">(</span><span class="s1">'./'</span><span class="p">,</span> <span class="p">{</span><span class="na">index</span><span class="p">:</span> <span class="kc">false</span><span class="p">}));</span>
+
+<span class="nx">app</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="s1">'*'</span><span class="p">,</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">res</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="s1">'index'</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">req</span><span class="p">,</span>
+    <span class="nx">res</span>
+  <span class="p">});</span>
+<span class="p">});</span>
+
+<span class="nx">app</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="nx">port</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">`Listening at </span><span class="p">${</span><span class="nx">baseUrl</span><span class="p">}</span><span class="s2">`</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<p>Por último queda modificar los scripts del archivo <strong>packcage.json</strong>, para que ejecuten y compilen adecuadamente el nuevo servidor express que hemos creado</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s2">"scripts"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="err">...</span><span class="w">
+    </span><span class="s2">"build:universal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ng build --prod &amp;&amp; ng build --prod --app 1 --output-hashing=false &amp;&amp; cpy ./server.js ./dist"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"serve:universal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"npm run build:universal &amp;&amp; cd dist &amp;&amp; node server"</span><span class="w">
+    </span><span class="err">...</span><span class="w">
+</span><span class="p">},</span><span class="w">
+
+</span></code></pre></div></div>
+
+<p>Si ejecutamos <strong>npm run serve:universal</strong> y abrimos en el navegador <strong>http://localhost:8000/</strong> se abrirá la aplicación angular pero habiendo cargado con anterioridad en el servidor express.</p>
+
+<h2 id="service-workers">Service workers</h2>
+
+<p>Imagina que vas conduciendo un coche con la radio puesta, las canciones van sonando sin que tengas que interaccionar con la radio pero si quieres cambiar de canción cambias la emisora. En este símil, la radio son los service workers, código en segundo plano que se ejecuta sin que el usuario tenga abierta la página. Esto sirve para cargar la web más rápido y para que la web funciona offline. Para añadir los web workers a la app Angular, primero instala los web workers:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm <span class="nb">install</span> @angular/service-worker <span class="nt">--save</span>
+</code></pre></div></div>
+
+<p>Para habilitarlos, ejecuta (versiones de angular cli superiores a la 1.6):</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ng set apps.0.serviceWorker=true
+</code></pre></div></div>
+
+<p>o añade manualmente en el archivo <strong>angular.cli.josn</strong>:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+
+  </span><span class="s2">"apps"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+
+    </span><span class="p">{</span><span class="w"> </span><span class="s2">"serviceWorker"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Ahora al hacer build, angular genera nuevos archivos js:</p>
+
+<ul>
+  <li><strong>ngsw-manifest.json</strong>: Manifest con todos los recursos de nuestra web</li>
+  <li><strong>sw_register</strong>: Archivo que registra el service worker</li>
+  <li><strong>worker-basic</strong>: Archivo de apoyo para el funcionamiento de los service workers.</li>
+</ul>
+
+<p>Si queremos que nuestra app pueda ser instalable en dispositivos móviles, añade un archivo llamado <strong>manifest.json</strong> dentro de la carpeta <strong>src</strong>:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Nombre de la app"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"short_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Nombre corto"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"theme_color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#FFFFFF"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"background_color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#3F51B5"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"start_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"standalone"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"orientation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"portrait"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"icons"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"src"</span><span class="p">:</span><span class="w"> </span><span class="s2">"</span><span class="se">\/</span><span class="s2">android-chrome-36x36.png"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"sizes"</span><span class="p">:</span><span class="w"> </span><span class="s2">"36x36"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"image</span><span class="se">\/</span><span class="s2">png"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"density"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.75"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"src"</span><span class="p">:</span><span class="w"> </span><span class="s2">"</span><span class="se">\/</span><span class="s2">android-chrome-48x48.png"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"sizes"</span><span class="p">:</span><span class="w"> </span><span class="s2">"48x48"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"image</span><span class="se">\/</span><span class="s2">png"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"density"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.0"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"src"</span><span class="p">:</span><span class="w"> </span><span class="s2">"</span><span class="se">\/</span><span class="s2">android-chrome-72x72.png"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"sizes"</span><span class="p">:</span><span class="w"> </span><span class="s2">"72x72"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"image</span><span class="se">\/</span><span class="s2">png"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"density"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.5"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"src"</span><span class="p">:</span><span class="w"> </span><span class="s2">"</span><span class="se">\/</span><span class="s2">android-chrome-96x96.png"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"sizes"</span><span class="p">:</span><span class="w"> </span><span class="s2">"96x96"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"image</span><span class="se">\/</span><span class="s2">png"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"density"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2.0"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"src"</span><span class="p">:</span><span class="w"> </span><span class="s2">"</span><span class="se">\/</span><span class="s2">android-chrome-144x144.png"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"sizes"</span><span class="p">:</span><span class="w"> </span><span class="s2">"144x144"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"image</span><span class="se">\/</span><span class="s2">png"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"density"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3.0"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"src"</span><span class="p">:</span><span class="w"> </span><span class="s2">"</span><span class="se">\/</span><span class="s2">android-chrome-192x192.png"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"sizes"</span><span class="p">:</span><span class="w"> </span><span class="s2">"192x192"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"image</span><span class="se">\/</span><span class="s2">png"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"density"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4.0"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<ul>
+  <li><strong>name</strong>: El nombre completo de la app</li>
+  <li><strong>short_name</strong>: Nombre corto que se muestra en el cajón de aplicaciones del movil, junto al icono</li>
+  <li><strong>theme_color</strong>: Color junto al icono de la app</li>
+  <li><strong>background_color</strong>: Color de fondo</li>
+  <li><strong>start_url</strong>: Punto de entrada a nuestra app</li>
+  <li><strong>display</strong>: Standalone para apps móviles</li>
+  <li><strong>orientation</strong>: Orientación de la app</li>
+  <li><strong>icons</strong>: Iconos de la app con sus respectivos tamaños para diferentes aplicaciones</li>
+</ul>
+
+<p>Ahora, al abrir la página web, en chrome, cuando abrimos las opciones de desarrollador, en la pestaña Application, observaremos que el service worker se ha registrado correctamente:</p>
+
+<p><img src="https://i.imgur.com/6yJf5Aa.png" class="responsive-img" alt="Service worker con Angular" /></p>
+
+<p>Si abrimos dos veces la web en el móvil usando Chrome, dejando pasar 5 minutos, aparecerá un cartel preguntando si instalar la app, al aceptar, automáticamente se añadirá la web junto a las aplicaciones del móvil.</p>
+
+<h2 id="conclusión">Conclusión</h2>
+
+<p>Aunque se puede optimizar aún más las aplicaciones Anagular mediante web workers (ejecutar la lógica de Angular en un thread aparte), es más complicado de implementar que las técnicas que he enseñado anteriormente. En mi caso con estas optimizaciones he logrado hacer que la web de Angular cargue en menos de 3 segundos la primera vez que se abre (antes tardaba más de 10 segundos), y que cargue casi instantáneamente cuando la tenemos cargada en la caché (antes tardaba unos segundos).</p>
+
+  </div>
+
+  
+  <div class="related">
+    <h2>Posts recomendados</h2>
+    <ul class="related_posts">
+      
+      
+      <li>
+        <h5>
+          <a href="/introduccion-instalacion-angular" class="related_post">
+            Angular - Introducción e instalación
+
+          </a>
+        </h5>
+      </li>
+       
+      
+      
+      <li>
+        <h5>
+          <a href="/angular-formularios" class="related_post">
+            Angular - FormControl y FormGroup para crear formularios reactivos
+
+          </a>
+        </h5>
+      </li>
+       
+      
+       
+      
+      
+      <li>
+        <h5>
+          <a href="/cuantas-tecnologias-web-existen" class="related_post">
+            ¿Cuántas tecnologías para el desarollo web existen?
+
+          </a>
+        </h5>
+      </li>
+       
+      
+      
+      <li>
+        <h5>
+          <a href="/motor-3D-java" class="related_post">
+            Cómo crear un motor 3D en Java para videojuegos
+
+          </a>
+        </h5>
+      </li>
+       
+      
+    </ul>
+  </div>
+
+
+
+
+</div>
+
+
+
+<div align="center">
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <!-- Ad -->
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7551074192374685" data-ad-slot="4480248215" data-ad-format="auto"></ins>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div>
+
+
+
+  <footer>
+    <div class="flex three">
+        <div class="full half-1000">
+
+            <div id="mc_embed_signup">
+                <form action="https://github.us14.list-manage.com/subscribe/post?u=cd16a671a63cd217caf6b2f3f&amp;id=bb3cc69837" method="post"
+                    id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                    <div id="mc_embed_signup_scroll">
+                        <h2>Newsletter <i class="fa fa-envelope icon_footer" aria-hidden="true"></i></h2>
+                        <p>Sigue el blog por email. Introduce tu dirección de correo electrónico para que te mande un correo
+                            cuando publique un nuevo artículo en este blog</p>
+
+                        <div class="mc-field-group">
+                            <label for="mce-EMAIL">Tu email
+                                <span class="asterisk">*</span>
+                            </label>
+                            <input type="email" style="color:black;" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Introducce tu dirección de correo electrónico">
+                        </div>
+                        <div id="mce-responses" class="clear">
+                            <div class="response" id="mce-error-response" style="display:none"></div>
+                            <div class="response" id="mce-success-response" style="display:none"></div>
+                        </div>
+                        <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                        <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                            <input type="text" name="b_cd16a671a63cd217caf6b2f3f_bb3cc69837" tabindex="-1" value="">
+                        </div>
+                        <div class="clear">
+                            <input type="submit" value="Suscribirse por email" name="subscribe" id="mc-embedded-subscribe" class="button footer_button">
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <!--End mc_embed_signup-->
+
+        </div>
+        <div class="full sixth-1000">
+          
+              
+                <ul id="footer_menu">
+                   
+                    <a href="/blog">
+                        <li><h4>Blog</h4></li>
+                    </a>
+                    <a href="/projects">
+                        <li><h4></h>Projects</h4></li>
+                    </a>
+                    <a href="/about">
+                        <li><h4>About me<h4></li>
+                    </a>
+                    <a href="/feed.xml">
+                        <li><h4>Rss</h4></li>
+                    </a>
+
+                </ul>
+           
+        </div>
+        <div class="full third-1000">
+            <ul class="footer_posts">
+                    
+
+                    
+                    
+                    
+
+                    
+                    <a href="/introduccion-instalacion-angular"><li><h4>Angular - Introducción e instalación</h4></li></a>
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    <a href="/angular-formularios"><li><h4>Angular - FormControl y FormGroup para crear formularios reactivos</h4></li></a>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    <a href="/cuantas-tecnologias-web-existen"><li><h4>¿Cuántas tecnologías para el desarollo web existen?</h4></li></a>
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    <a href="/optimizar-angular"><li><h4>Optimizar aplicaciones Angular 2 para aumentar la velocidad de carga</h4></li></a>
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+                    
+
+            </ul>
+        </div>
+
+
+
+
+
+    </div>
+</footer>
+
+
+
+
+  <script src="/js/prism.js"></script>
+  <script src="/js/index.js"></script>
+
+
+
+</body>
+
+
+
+
+
+
+
+</html>
