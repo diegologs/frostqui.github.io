@@ -60,12 +60,12 @@
                     {% assign counter = 0 %}
 
                     {% for post in site.posts %}
-                    {% if site.active_lang == post.lang %}
+                   
                     {% assign counter=counter | plus:1 %}
 
                     {% if counter < 5 %}
                     <a href="{{post.url}}"><li><h4>{{post.title}}</h4></li></a>
-                    {% endif %}
+                    
                     {% endif %}
                     {% endfor %}
 

@@ -5,7 +5,6 @@
 
     {% for post in site.posts %}
    
-      {% if post.lang == site.active_lang %}
       {% assign counter=counter | plus:1 %}
       {% if counter == 1 %}
       <article class="full post_half_bg" style="background-image: linear-gradient( rgba(52, 68, 83, 0.3), rgba(41, 56, 68, 0.9) ), url({{site.baseurl}}/images/posts/{{post.image}}.jpg)">
@@ -22,8 +21,9 @@
         </div>
        
       </article>
+      
       {% endif %} 
-
+      
       {% if counter != 1 %}
       {% if counter < 6 %}
         <article class="full half-500 post_half_bg" style="background-image: linear-gradient( rgba(52, 68, 83, 0.3), rgba(41, 56, 68, 0.9) ), url({{site.baseurl}}/images/posts/{{post.image}}.jpg)">
@@ -44,7 +44,7 @@
         {% endif %} 
         {% endif %} 
       
-      {% endif %} 
+      
     {% endfor %} 
 
   </div>

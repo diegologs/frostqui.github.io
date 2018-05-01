@@ -88,8 +88,8 @@ layout: default
   <div class="related">
     <h2>Posts recomendados</h2>
     <ul class="related_posts">
-      {% for post in site.related_posts limit:5 %}
-      {% if post.lang == site.active_lang %}
+      {% for post in site.related_posts limit:4 %}
+      
       <li>
         <h5>
           <a href="{{ post.url }}" class="related_post">
@@ -98,7 +98,7 @@ layout: default
           </a>
         </h5>
       </li>
-      {% endif %} 
+     
       {% endfor %}
     </ul>
   </div>

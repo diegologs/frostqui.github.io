@@ -3,8 +3,8 @@
 
   <div class="posts">
     {% assign counter = 0 %}
-    {% if site.active_lang == 'es' %}
-    {% for post in site.posts %} {% if post.lang == site.active_lang %}
+
+    {% for post in site.posts %} 
     {% assign counter=counter | plus:1 %}
     {% if counter > 5 and counter < 16 %}
     <article class="flex two single_post">
@@ -26,58 +26,22 @@
             {% endfor %}
 
           </small>
-        <p class="posts_summary">{{post.excerpt}}</p>
+        <p class="posts_summary">{{post.excerpt}}</p>         
 
        
+        <a class="posts_read_more" href="{{site.baseurl}}{{post.url}}">Leer más
+          <span class="visuallyhidden">Leer más acerca de {{post.title}}</span>
+        </a>
        
+      </div>
+    </article>
+    <hr aria-hidden="true"> 
      
+    {% endif %} 
+     
+     {% endfor %} 
 
-        {% if site.active_lang == 'es' %}
-        <a class="posts_read_more" href="{{site.baseurl}}{{post.url}}">Leer más
-          <span class="visuallyhidden">Leer más acerca de {{post.title}}</span>
-        </a>
-        {% endif %} {% if site.active_lang == 'en' %}
-        <a class="posts_read_more" href="{{site.baseurl}}{{post.url}}">Read more
-          <span class="visuallyhidden">Read more about {{post.title}}</span>
-        </a>
-        {% endif %}
-
-      </div>
-    </article>
-    <hr aria-hidden="true"> {% endif %} {% endif %} {% endfor %} {% endif %} 
-
-    {% if site.active_lang != 'es' %}
-    {% for post in site.posts %} {% if post.lang == site.active_lang %}
-    <article class="flex two single_post">
-      <div class="full fourth-1000">
-        <span>
-          <img class="responsive-img thumb posts_image" src="{{site.baseurl}}/images/posts/{{post.image}}.jpg"></img>
-        </span>
-      </div>
-      <div class="full three-fourth-1000 posts_info">
-        <h3 class="posts_title">
-          <a href="{{site.baseurl}}{{post.url}}">{{post.title}}</a>
-        </h3>
-        <small>
-          <span class="posts_date">
-            <i aria-hidden="true" class="fa fa-calendar"></i>{{post.date | date: '%B %d, %Y'}} </span>
-        </small>
-        <p class="posts_summary">{{post.excerpt}}</p>
-
-       
-        {% if site.active_lang == 'es' %}
-        <a class="posts_read_more" href="{{site.baseurl}}{{post.url}}">Leer más
-          <span class="visuallyhidden">Leer más acerca de {{post.title}}</span>
-        </a>
-        {% endif %} {% if site.active_lang == 'en' %}
-        <a class="posts_read_more" href="{{site.baseurl}}{{post.url}}">Read more
-          <span class="visuallyhidden">Read more about {{post.title}}</span>
-        </a>
-        {% endif %}
-
-      </div>
-    </article>
-    <hr aria-hidden="true"> {% endif %} {% endfor %}  {% endif %} 
+   
 
   </div>
 </div>

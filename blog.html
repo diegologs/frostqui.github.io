@@ -12,7 +12,7 @@ description: Artículos y tutoriales destacados sobre desarrollo web para inicia
     <h2>Blog archive</h2>
     <ul class="all_posts">
     {% for post in site.posts  %}
-        {% if post.lang == site.active_lang %}
+        
             {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
             {% capture next_year %}{{ post.previous.date | date: "%Y" }}{% endcapture %}
 
@@ -31,7 +31,7 @@ description: Artículos y tutoriales destacados sobre desarrollo web para inicia
                 <h2 id="{{ next_year }}-ref" class="posts_year">{{next_year}}</h2>
                 
                 {% endif %}
-            {% endif %}
+           
         {% endif %}
     {% endfor %}
 
