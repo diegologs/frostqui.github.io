@@ -274,6 +274,7 @@ footer {
   background-size: cover;
   background-position: 50% 25%;
   padding-left: 130px;
+  padding-right: 130px;
   padding-bottom: 50px;
 }
 
@@ -412,6 +413,7 @@ footer a {
 
 .half_summary{
   padding-bottom: 10px;
+  text-align: justify;
 }
 
 .half_bottom {
@@ -577,6 +579,7 @@ footer a {
 
   footer{
     padding-left: 25px;
+    padding-right: 25px;
   }
 
   .half_bottom {
