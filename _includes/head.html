@@ -26,7 +26,7 @@
   <meta name="twitter:title" content="{{ site.title }}">
 {% endif %}
 
-<meta name="twitter:card" content="summary">
+<meta content='summary_large_image' name='twitter:card'/>
 <meta name="twitter:creator" content="@Frostq_">
 <meta property="og:site_name" content="Frostq - Coding beers">
 <meta property="article:author" content="Diego López García (Frostq)">
@@ -60,6 +60,10 @@
 {% if page.url %}
   <meta name="twitter:url" content="{{ site.url }}{{ page.url }}">
   <meta property='og:url' content="{{ site.url }}{{ page.url }}" />
+{% endif %} 
+
+{% if page.date %}
+<meta property="article:published_time" content="{{page.date}}">
 {% endif %} 
 
 <script>
