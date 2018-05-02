@@ -80,10 +80,12 @@ a:hover {
   overflow: hidden;
 }
 
-.btn_outline{
+.btn_advert{
+  margin-top: 20px;
   color: black;
-  background-color: rgb(162, 128, 255);
+  background-color: rgb(128, 236, 255);
   padding: 8px 25px 8px 25px;
+  margin-bottom: 40px;
 }
 
 hr {
@@ -133,6 +135,10 @@ hr:after {
   padding-right: 6px;
 }
 
+.telegram_img{
+  max-width: 120px;
+  margin-bottom: 10px;
+}
 .tags {
   background-color: black;
   color: white !important;
@@ -397,9 +403,20 @@ footer a {
 
 .advert_info{
   color: white;
-  padding-top: 130px;
+  padding-top: 50px;
   max-width: 1000px;
   margin: 0px auto;
+}
+
+.advert_bg{
+
+ 
+
+}
+
+.summary_advert{
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .half_title {
@@ -515,6 +532,13 @@ footer a {
   width: 100%;
 }
 
+.icon_about{
+  padding-right: 20px;
+  padding-left: 20px;
+  color: black;
+  font-size: 1.3em;
+}
+
 .about_me{
   padding-left: 30px;
 }
@@ -605,5 +629,9 @@ footer a {
 
   #header_item{
     display: block;
+  }
+
+  .telegram_img{
+    max-width: 80px;
   }
 }
