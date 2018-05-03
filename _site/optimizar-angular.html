@@ -29,7 +29,7 @@
   <meta name="twitter:title" content="Angular 2, cómo optimizar y aumentar el rendimiento de aplicaciones">
 
 
-<meta name="twitter:card" content="summary">
+<meta content='summary_large_image' name='twitter:card'/>
 <meta name="twitter:creator" content="@Frostq_">
 <meta property="og:site_name" content="Frostq - Coding beers">
 <meta property="article:author" content="Diego López García (Frostq)">
@@ -53,6 +53,10 @@
 
   <meta name="twitter:url" content="http://localhost:4000/optimizar-angular">
   <meta property='og:url' content="http://localhost:4000/optimizar-angular" />
+ 
+
+
+<meta property="article:published_time" content="2017-12-08 00:00:00 +0100">
  
 
 <script>
@@ -129,7 +133,7 @@
 
     <div class="post_read_time">
       
-        <i class="fa fa-clock-o"></i> 11 min read 
+        <i class="fa fa-clock-o"></i> 14 min read 
     </div>
 
   </div>
@@ -148,6 +152,7 @@
     </script>
   </div>
 
+  
   <div class="post_content">
     <h2 id="introducción">Introducción</h2>
 
@@ -250,7 +255,7 @@
 <span class="k">export</span> <span class="kd">const</span> <span class="nx">REQUEST</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">InjectionToken</span><span class="o">&lt;</span><span class="nx">string</span><span class="o">&gt;</span><span class="p">(</span><span class="s1">'REQUEST'</span><span class="p">);</span>
 </code></pre></div></div>
 
-<p>También creamos su archivo de configuracion json, llamado <strong>tsconfig.server.json</strong>:</p>
+<p>También creamos su archivo de configuración json, llamado <strong>tsconfig.server.json</strong>:</p>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"extends"</span><span class="p">:</span><span class="w"> </span><span class="s2">"../tsconfig.json"</span><span class="p">,</span><span class="w">
@@ -320,7 +325,7 @@
 <span class="p">});</span>
 </code></pre></div></div>
 
-<p>Por último queda modificar los scripts del archivo <strong>packcage.json</strong>, para que ejecuten y compilen adecuadamente el nuevo servidor express que hemos creado</p>
+<p>También hay quue cambiar los scripts del archivo <strong>packcage.json</strong>, para que ejecuten y compilen adecuadamente el nuevo servidor express que hemos creado</p>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s2">"scripts"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="err">...</span><span class="w">
@@ -330,6 +335,100 @@
 </span><span class="p">},</span><span class="w">
 
 </span></code></pre></div></div>
+
+<p>Por último hay que añadir el nuevo server al archivo <strong>.angular-cli.json</strong>, en mi caso lo tengo así:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"$schema"</span><span class="p">:</span><span class="w"> </span><span class="s2">"./node_modules/@angular/cli/lib/config/schema.json"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"project"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"lavanda"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"ejected"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"apps"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"root"</span><span class="p">:</span><span class="w"> </span><span class="s2">"src"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"outDir"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dist"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"assets"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="s2">"assets"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"favicon.ico"</span><span class="w">
+      </span><span class="p">],</span><span class="w">
+      </span><span class="s2">"index"</span><span class="p">:</span><span class="w"> </span><span class="s2">"index.html"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"main"</span><span class="p">:</span><span class="w"> </span><span class="s2">"main.ts"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"polyfills"</span><span class="p">:</span><span class="w"> </span><span class="s2">"polyfills.ts"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"test"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test.ts"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"tsconfig"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tsconfig.app.json"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"testTsconfig"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tsconfig.spec.json"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"prefix"</span><span class="p">:</span><span class="w"> </span><span class="s2">"app"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"serviceWorker"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"styles"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="s2">"styles.css"</span><span class="w">
+      </span><span class="p">],</span><span class="w">
+      </span><span class="s2">"scripts"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+      </span><span class="s2">"environmentSource"</span><span class="p">:</span><span class="w"> </span><span class="s2">"environments/environment.ts"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"environments"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"dev"</span><span class="p">:</span><span class="w"> </span><span class="s2">"environments/environment.ts"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"prod"</span><span class="p">:</span><span class="w"> </span><span class="s2">"environments/environment.prod.ts"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"root"</span><span class="p">:</span><span class="w"> </span><span class="s2">"src"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"outDir"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dist/dist-server"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"assets"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="s2">"assets"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"manifest.json"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"favicon.ico"</span><span class="w">
+      </span><span class="p">],</span><span class="w">
+      </span><span class="s2">"platform"</span><span class="p">:</span><span class="w"> </span><span class="s2">"server"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"index"</span><span class="p">:</span><span class="w"> </span><span class="s2">"index.html"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"main"</span><span class="p">:</span><span class="w"> </span><span class="s2">"main.server.ts"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"test"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test.ts"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"tsconfig"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tsconfig.server.json"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"testTsconfig"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tsconfig.spec.json"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"prefix"</span><span class="p">:</span><span class="w"> </span><span class="s2">"app"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"styles"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="s2">"styles.css"</span><span class="w">
+      </span><span class="p">],</span><span class="w">
+      </span><span class="s2">"scripts"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+      </span><span class="s2">"environmentSource"</span><span class="p">:</span><span class="w"> </span><span class="s2">"environments/environment.ts"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"environments"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"dev"</span><span class="p">:</span><span class="w"> </span><span class="s2">"environments/environment.ts"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"prod"</span><span class="p">:</span><span class="w"> </span><span class="s2">"environments/environment.prod.ts"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="s2">"e2e"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"protractor"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"config"</span><span class="p">:</span><span class="w"> </span><span class="s2">"./protractor.conf.js"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"lint"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"project"</span><span class="p">:</span><span class="w"> </span><span class="s2">"src/tsconfig.app.json"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"exclude"</span><span class="p">:</span><span class="w"> </span><span class="s2">"**/node_modules/**"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"project"</span><span class="p">:</span><span class="w"> </span><span class="s2">"src/tsconfig.spec.json"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"exclude"</span><span class="p">:</span><span class="w"> </span><span class="s2">"**/node_modules/**"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"project"</span><span class="p">:</span><span class="w"> </span><span class="s2">"e2e/tsconfig.e2e.json"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"exclude"</span><span class="p">:</span><span class="w"> </span><span class="s2">"**/node_modules/**"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="s2">"test"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"karma"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"config"</span><span class="p">:</span><span class="w"> </span><span class="s2">"./karma.conf.js"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"defaults"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"styleExt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"css"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"component"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Si te das cuenta, he añadido otro objeto dentro del array de apps.</p>
 
 <p>Si ejecutamos <strong>npm run serve:universal</strong> y abrimos en el navegador <strong>http://localhost:8000/</strong> se abrirá la aplicación angular pero habiendo cargado con anterioridad en el servidor express.</p>
 

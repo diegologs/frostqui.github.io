@@ -122,7 +122,7 @@ import { InjectionToken } from '@angular/core';
 export const REQUEST = new InjectionToken<string>('REQUEST');
 ```
 
-También creamos su archivo de configuracion json, llamado __tsconfig.server.json__:
+También creamos su archivo de configuración json, llamado __tsconfig.server.json__:
 
 ```json
 {
@@ -194,7 +194,7 @@ app.listen(port, () => {
 });
 ```
 
-Por último queda modificar los scripts del archivo __packcage.json__, para que ejecuten y compilen adecuadamente el nuevo servidor express que hemos creado
+También hay quue cambiar los scripts del archivo __packcage.json__, para que ejecuten y compilen adecuadamente el nuevo servidor express que hemos creado
 
 ```json
 "scripts": {
@@ -205,6 +205,101 @@ Por último queda modificar los scripts del archivo __packcage.json__, para que 
 },
 
 ```
+
+Por último hay que añadir el nuevo server al archivo **.angular-cli.json**, en mi caso lo tengo así:
+
+```json
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "project": {
+    "name": "lavanda",
+    "ejected": false
+  },
+  "apps": [
+    {
+      "root": "src",
+      "outDir": "dist",
+      "assets": [
+        "assets",
+        "favicon.ico"
+      ],
+      "index": "index.html",
+      "main": "main.ts",
+      "polyfills": "polyfills.ts",
+      "test": "test.ts",
+      "tsconfig": "tsconfig.app.json",
+      "testTsconfig": "tsconfig.spec.json",
+      "prefix": "app",
+      "serviceWorker": true,
+      "styles": [
+        "styles.css"
+      ],
+      "scripts": [],
+      "environmentSource": "environments/environment.ts",
+      "environments": {
+        "dev": "environments/environment.ts",
+        "prod": "environments/environment.prod.ts"
+      }
+    },
+    {
+      "root": "src",
+      "outDir": "dist/dist-server",
+      "assets": [
+        "assets",
+        "manifest.json",
+        "favicon.ico"
+      ],
+      "platform": "server",
+      "index": "index.html",
+      "main": "main.server.ts",
+      "test": "test.ts",
+      "tsconfig": "tsconfig.server.json",
+      "testTsconfig": "tsconfig.spec.json",
+      "prefix": "app",
+      "styles": [
+        "styles.css"
+      ],
+      "scripts": [],
+      "environmentSource": "environments/environment.ts",
+      "environments": {
+        "dev": "environments/environment.ts",
+        "prod": "environments/environment.prod.ts"
+      }
+    }
+  ],
+  "e2e": {
+    "protractor": {
+      "config": "./protractor.conf.js"
+    }
+  },
+  "lint": [
+    {
+      "project": "src/tsconfig.app.json",
+      "exclude": "**/node_modules/**"
+    },
+    {
+      "project": "src/tsconfig.spec.json",
+      "exclude": "**/node_modules/**"
+    },
+    {
+      "project": "e2e/tsconfig.e2e.json",
+      "exclude": "**/node_modules/**"
+    }
+  ],
+  "test": {
+    "karma": {
+      "config": "./karma.conf.js"
+    }
+  },
+  "defaults": {
+    "styleExt": "css",
+    "component": {
+    }
+  }
+}
+```
+
+Si te das cuenta, he añadido otro objeto dentro del array de apps.
 
 Si ejecutamos __npm run serve:universal__ y abrimos en el navegador **http://localhost:8000/** se abrirá la aplicación angular pero habiendo cargado con anterioridad en el servidor express.
 
