@@ -377,8 +377,8 @@ footer a {
 
 .posts_summary {
   text-align: justify;
+  font-size: 16px;
 
-  font-family: 'Titillium Web', sans-serif !important;
 }
 
 .posts_read_more {
@@ -478,7 +478,7 @@ footer a {
 
 .post_content p {
   text-align: justify;
-  font-size: 18px;
+  font-size: 19px;
 
   font-family: 'Titillium Web', sans-serif !important;
   
@@ -486,7 +486,7 @@ footer a {
 
 .post_content ul {
   text-align: justify;
-  font-size: 18px;
+  font-size: 19px;
   font-family: 'Titillium Web', sans-serif !important;
 }
 
