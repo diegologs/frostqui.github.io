@@ -4,7 +4,7 @@ title: Angular - Components y Routing
 meta: Veremos cómo crear components en Angular 2+, cómo funciona el routing y cómo se crean componentes hijos en Angular 
 description: Veremos cómo crear components en Angular 2+, cómo funciona el routing y cómo se crean componentes hijos en Angular 
 excerpt: En este artículo veremos qué son los componentes de Angular y cómo crearlos, además vamos a aprender a configurar rutas en la página y a crear componentes hijos de otros.
-title-page: Componentes de Angulary routing
+title-page: Componentes de Angular y routing
 image: angular-components
 lang: es
 tags: [Angular] 
