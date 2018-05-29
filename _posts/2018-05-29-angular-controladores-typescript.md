@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Angular - Controladores y introducción a Typescript
-meta: ¿Cómo crear formularios con Angular? Aprende como usar FormControl, FormGroup y FormBuilder en Angular
-description: CAMBIAR
-excerpt: No confundir con los controladores de AngularJS, estos son diferentes. Por controladores me refiero al archivo .ts que controla la vista y la lógica del componente. Además explico por encima los conceptos fundamentales de TypeScript
-title-page: Qué es Angular y cómo se instala
+title: Angular - Introducción a Typescript y inyección de dependencias
+meta: Cómo es la sintaxis de Typescript y cómo hacer inyección de dependencias en Angular, además vemos la diferencia entre ngOnInit y el constructor
+description: Cómo es la sintaxis de Typescript y cómo hacer inyección de dependencias en Angular, además vemos la diferencia entre ngOnInit y el constructor
+excerpt: Angular se usa con typescript y para empezar con Angular hay que aprender antes su sintaxis. En este artículo explico la introducción y las principales características de Typescript. Además explico como se hace inyección de dependencias
+title-page: Introducción Typescript y inyección de dependencias
 image: angular-controllers
 lang: es
 tags: [Angular] 
@@ -50,7 +50,7 @@ la página que contiene el componente, es decir, se ejecuta al inicio.
 
 Pero también hay un método llamado **constructor()**, que también se ejecuta al cargar la página. El constructor también se utiliza para la inyección de dependencias.
 
-### ¿Qué diferencia hay entre ngOnInit() y el constructor()?
+### ¿Qué diferencia hay entre ngOnInit() y el constructor() en Angular?
 
 Como otros lenguajes, typescript también tiene un constructor de clase, en este caso el constructor se ejecuta antes que el ngOnInit().
 Normalmente se usa el constructor para inicializar variables, y el ngOnInit para inicializar o ejecutar tareras que tienen que ver con Angular. Todo esto lo podemos poner directamente en el constructor y funcionaría de la misma manera, pero no está de más tener más separado el código para que sea más mantenible.
