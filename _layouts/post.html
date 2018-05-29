@@ -68,14 +68,14 @@ layout: default
 
   <div class="related">
 
-    <h2>Este artículo es parte de la serie de
-      <a href="{{site.baseurl}}/series/{{page.serie}}">{{page.serie}}</a>:</h2>
+    <h2>Este artículo es parte de la serie: 
+      <a href="{{site.baseurl}}/series/{{page.serie}}">{{page.serie}}</a></h2>
     <ul>
       {% assign count = '0' %} {% assign idx = '0' %} {% for post in site.posts reversed %} {% if post.serie == page.serie %} {%
       capture count %}{{ count | plus: '1' }}{% endcapture %}
       <li>
         <h5>
-          <a class="related_post" href="{{post.url}}">{{count}}. {{post.title}}</a>
+          <a class="related_post" href="{{post.url}}">{{count}}. &ensp; {{post.title}}</a>
         </h5>
       </li>
 

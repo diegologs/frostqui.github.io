@@ -505,8 +505,12 @@ footer a {
 }
 
 .related {
-  margin-top: 60px;
+  margin-top: 40px;
   margin-bottom: 60px;
+}
+
+.related ul{
+  list-style: none;
 }
 
 /*  ------ OTHER PAGES ------*/
