@@ -162,6 +162,9 @@ code {
 
 #header_logo {
   max-width: 240px;
+  position: relative;
+  display: block;
+
 }
 
 #header_slogan {
@@ -566,6 +569,7 @@ footer a {
   padding-bottom: 20px;
 }
 
+
 /*  ------ MEDIA QUERYS ------*/
 
 @media screen and (max-width: 1000px) {
@@ -637,5 +641,10 @@ footer a {
 
   .telegram_img{
     max-width: 80px;
+  }
+
+  .posts_info {
+    padding-left: 10px;
+   
   }
 }
