@@ -16,7 +16,7 @@
       // [Mar 1 ~ Jun 1)
       return 'spring';
     }
-    if (now < new Date(currentYear, 8, 15)) {
+    if (now < new Date(currentYear, 8, 21)) {
       // [Jun 1 ~ Sep 1)
       return 'summer';
     }
@@ -61,10 +61,10 @@
       break;
     case 'summer':
       if (header) {
-        header.style.backgroundImage = "linear-gradient( rgba(229, 209, 119, 0.7), rgba(142, 42, 79, 0.9) ), url('/images/bgs/summer.gif')";
+        header.style.backgroundImage = "linear-gradient( rgba(229, 175, 119, 0.85), rgba(142, 42, 79, 0.9) ), url('/images/bgs/summer.gif')";
       }
       if (nav) {
-        nav.style.backgroundImage = "linear-gradient( to right, rgb(188, 150, 0), rgba(142, 42, 79, 1) ), url('/images/bgs/summer.gif')";
+        nav.style.backgroundImage = "linear-gradient( to right, rgb(232, 166, 0), rgba(142, 42, 79, 1) ), url('/images/bgs/summer.gif')";
       }
       for (let i = 0; i < a.length; i++) {
         a[i].style.color = "rgb(142, 42, 79)";
