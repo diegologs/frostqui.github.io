@@ -188,7 +188,7 @@ code {
   padding-bottom: 50px;
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: cover;
+  background-size: cover !important;
   min-height: 300px;
 }
 

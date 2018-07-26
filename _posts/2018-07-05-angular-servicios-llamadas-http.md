@@ -280,4 +280,3 @@ Te dejo también un par de artículos sobre servicios en Angular que me han resu
 - [Best practices: Building Angular Services using Facade design pattern for complex systems](https://medium.com/@balramchavan/best-practices-building-angular-services-using-facade-design-pattern-for-complex-systems-d8c516cb95eb)
 
 
-
