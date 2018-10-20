@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Git - Comandos básicos y avanzados
-meta: Vamos a ver cómo usar git de forma fácil y eficaz y cómo instalar git en Windows y en Linux. Además repasaremos los mejores comandos y algunos avanzados
-description: Vamos a ver cómo usar git de forma fácil y eficaz y cómo instalar git en Windows y en Linux. Además repasaremos los mejores comandos y algunos avanzados
+meta: Los mejores comandos para git. Cómo hacer tu primer commit y cómo funcionan las ramas. Guía de instalación de git
+description: Los mejores comandos para git. Cómo hacer tu primer commit y cómo funcionan las ramas. Guía de instalación de git
 excerpt: Git tiene a tu disposición numerosos comandos y muchos de ellos no son muy conocidos. Tanto si eres usuario experto como si nunca has usado git, te aseguro que esta lista de servira de gran ayuda para mantener un control de versiones
 title-page: Git, comandos básicos y avanzados
 image: git

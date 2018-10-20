@@ -1,8 +1,8 @@
 ---
 layout: post
-title: ¿Cuántas tecnologías para el desarollo web existen?
-meta:  ¿Cuáles son las mejores tecnologías para crear páginas web? ¿Cuáles son las más populares? 
-description: ¿Cuáles son las mejores tecnologías para crear páginas web? ¿Cuáles son las más populares? 
+title: ¿Cuántas tecnologías para el desarollo web existen? ¿Qué tipos hay?
+meta:  Las mejores y más populares tecnologías y frameworks para crear páginas web, tanto para frontend como para backend
+description: Las mejores y más populares tecnologías y frameworks para crear páginas web, tanto para frontend como para backend
 excerpt: Hoy en día existen muchísimas tecnologías para desarrollar web. En este artículo voy a motrar cuáles son los frameworks más interesantes y populares para del desarrollo web en el año 2018.
 title-page: ¿Cuántas tecnologías web existen?
 image: tecnologias-web
@@ -44,7 +44,7 @@ en etiquetas HTML para crear una web de una manera más sencilla.
 
 #### Frameworks JS/TS
 
-El más conocido y que lleva usándose muchos años es Jquery. Jquery sirve para tener que escribir menos código JS, que para proyectos sencillos está bien.
+El más conocido y que lleva usándose muchos años es Jquery. Jquery sirve para tener que escribir menos código JS, que para proyectos sencillos está bien, pero actualemente no recomiendo su uso.
 Para proyectos de dimensiones más grandes recomiendo los siguientes frameworks:
 
 - **Angular**: En su primera versión, AngularJS, su tenías que utilizar JS para usarlo, pero en las versiones actuales (Angular 4) se utiliza Typescript con lo cual si
@@ -117,9 +117,11 @@ Muchas de estas tecnologías se pueden usar junto con los frameworks para el fro
 #### Python
 
 - **Django**: El más popular dentro de python. Puedes crear aplicaciones web una forma muy sencilla y limpia
+- **Flask**: Es un microframework, sirve para exponer páginas o una API pero no implementa nada más.
 - **TurboGears**: Combina muchas librerías de python en una. Muy extensible y configurable.
 
  <img src="https://i.imgur.com/786krcK.png" class="responsive-img img-100" alt="Django logo"> 
+ <img src="http://flask.pocoo.org/static/logo.png" class="responsive-img img-100" alt="Flask logo"> 
  <img src="https://i.imgur.com/s61gMz1.png" class="responsive-img img-100" alt="TurboGears logo"> 
 
 #### NodeJS

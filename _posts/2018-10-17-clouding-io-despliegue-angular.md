@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Cómo desplegar Angular en un servidor Ubuntu en Clouding.io
-meta: Haciendo deploy de una aplicación Angular sobre Nginx en Clouding.io
-description: Haciendo deploy de una aplicación Angular sobre Nginx en Clouding.io
+title: Cómo desplegar Angular en un servidor Ubuntu 16.04 en Clouding.io
+meta: Haciendo deploy de Angular sobre Nginx en Clouding.io. Cómo crear tu propio servidor VPS
+description: Haciendo deploy de Angular sobre Nginx en Clouding.io. Cómo crear tu propio servidor VPS
 excerpt: Aparte de echar un vistazo rápido a lo que pueden ofrecer los servidores en clouding.io, hago un tutorial sobre el procedimiento para hacer deploy o despliegue de aplicaciones Angular usando Nginx
 title-page: Cómo desplegar Angular en un servidor Ubuntu en Clouding.io
 image: angular-deploy

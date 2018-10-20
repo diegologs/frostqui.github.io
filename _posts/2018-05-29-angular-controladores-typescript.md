@@ -61,11 +61,11 @@ Normalmente se usa el constructor para inicializar variables, y el ngOnInit para
     <img src="https://i.imgur.com/lpT6Mun.png" class="responsive-img center" alt="Logo de typescript"> 
 </div>
 
-Tipescript es un lenaguaje desarrollado y mantenido por Microsoft. Typescript extiende a Javascript, es decir, puedes insertar código JS dentro de archivos TS, que va a funcionar. Entre sus características, destacan:
+Typescript es un lenaguaje desarrollado y mantenido por Microsoft. Typescript extiende a Javascript, es decir, puedes insertar código JS dentro de archivos TS, que va a funcionar. Entre sus características, destacan:
 
 ### Tipado estático
 
-Añade tipado estático a Javascript, es decir, puedes crear variables con un tipo fijado (string, números, etc). El tipado estático es opcional por lo que deja al desarrollador si quiere utilizarlos.
+Typescript añade tipado estático a Javascript, es decir, puedes crear variables con un tipo fijado (string, números, etc). El tipado estático es opcional por lo que deja al desarrollador si quiere utilizarlos.
 
 Los tipos que vienen con typscript son:
 
@@ -78,7 +78,7 @@ Los tipos que vienen con typscript son:
 
 Las ventajas que ofrece tener tipado estático son que el compilador detecta errores más fácilmente y el código es mantenible y menos propenso a tener errores.
 
-### Programación orientada a objetos con clases
+### Programación orientada a objetos con clases en Typescript
 
 Para declarar las clases se utiliza la misma sintaxis que Javascript [ES6](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Classes), por ejemplo:
 

@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Las mejores librerías Javascript para este 2017
-meta: Librerías y frameworks gratis para hacer páginas web con Javascript  
-description: Librerías y frameworks gratis para hacer páginas web con Javascript  
+title: Javascript - Librerías interesantes para usar en cualquier proyecto de desarrollo web
+meta: Framenworks js interesantes para usar en el desarrollo de páginas webs. Los mejores para tener en cuenta este año 
+description: Framenworks js interesantes para usar en el desarrollo de páginas webs. Los mejores para tener en cuenta este año  
 excerpt: En esta lista expongo las que, en mi opninión, son las librerías javascript más útiles o interesantes para el desarrollo web en este 2017. La lista no sigue ningún orden en particular. Si eres desarrollador web quizás descubras alguna utilidad nueva para tu página web
 title-page: Mejores librerías JavaScript 2017
 image: library
@@ -11,10 +11,8 @@ tags: [Javascript]
 ---
 
 
-¡Saludos! Hoy os traigo una lista seleccionada personalmente por mí, con las que considero que son las mejores o más utilies librerías Javascript para este 2017.
-Decir que no he incluido JQuery por ejemplo al igual que tantas otras porque ya son conocidas por todos. 
-
-
+¡Saludos! Hoy os traigo una lista seleccionada personalmente por mí, con las que considero que son las mejores o más utilies librerías Javascript para este año.
+Decir que no he incluido JQuery por ejemplo al igual que tantas otras porque ya son conocidas por todos. También he omitido frameworks completos como Angular o React porque he querido enfocarlo hacia librerías que ofrezcan pequeñas funcionalidades pero útiles para usar en cualquier página web.
 
 ## Jquery FlexDataList
 

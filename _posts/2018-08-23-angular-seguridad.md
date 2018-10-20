@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Angular - Seguridad, protegiendo vistas
-meta: Qué es y como crear guards para el router en Angular. Protegiendo vistas privadas
+title: Angular - Seguridad, protegiendo vistas con guards
+meta: Qué es un guard en Angular y cómo usarlos para el router en Angular. Protegiendo vistas privadas
 description: Qué es y como crear guards para el router en Angular. Protegiendo vistas privadas
 excerpt: Si lo que quieres es proteger páginas en Angular para que determinados usuarios no puedan acceder a determinadas zonas de la web, éste es tu artículo. Además echar un vistazo a los guards básicos, también repasamos ciertos guards especiales que activan cuando el usuario abandona la página, por ejemplo.
 title-page: Guards en Angular

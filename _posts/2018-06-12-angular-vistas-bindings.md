@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Angular - Vistas y cómo crear una web para crear notas
-meta: Aprendemos cómo funciona las vistas en Angular, además echamos a un vistazo a una web de ejemplo creada con Angular para crear notas 
-description: Aprende cómo funciona las vistas en Angular, además echamos a un vistazo a una web de ejemplo creada con Angular para crear notas 
+title: Angular - Vistas, sintaxis de los bindings html
+meta: Cómo mostrar arrays, listas y elementos de forma condicional. Creamos una web para crear notas en Angular
+description: Cómo mostrar arrays, listas y elementos de forma condicional. Creamos una web para crear notas en Angular
 excerpt: Angular se encarga de mostrar qué datos y cómo se ven en la página, para ello, sigue el patrón MVC (Modelo Vista Controlador), por lo que quizás su sintaxis te resulte muy familiar. Además en este artículo, creamos una web de ejemplo para crear y mostrar notas aplicando lo aprendido hasta ahora.
 title-page: Vistas en Angular y cómo crear una web de notas
 image: angular-views

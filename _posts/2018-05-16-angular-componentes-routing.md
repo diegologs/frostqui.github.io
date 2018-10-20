@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Angular - Components y Routing
-meta: Veremos cómo crear components en Angular 2+, cómo funciona el routing y cómo se crean componentes hijos en Angular 
-description: Veremos cómo crear components en Angular 2+, cómo funciona el routing y cómo se crean componentes hijos en Angular 
+title: Angular - Qué es un componente y cómo crear rutas
+meta: Cómo crear componentes en Angular y cómo asignarlos a las rutas, además, veremos cómo crear rutas con componentes hijos
+description: Cómo crear componentes en Angular y cómo asignarlos a las rutas, además, veremos cómo crear rutas con componentes hijos
 excerpt: En este artículo veremos qué son los componentes de Angular y cómo crearlos, además vamos a aprender a configurar rutas en la página y a crear componentes hijos de otros.
 title-page: Componentes de Angular y routing
 image: angular-components
@@ -12,7 +12,7 @@ serie: angular
 
 ---
 
-## Qúe es un componente
+## Qué es un componente
 
 Como vimos [anteriormente]({{site.baseurl}}/introduccion-instalacion-angular), **Angular se basa en componentes**. Un componente se basa en la creación de fragmentos con vista, estilos y controladores de forma que puedan ser reutilizadas en distintas partes de la web. Por ejemplo, pongamos que creamos un componente que reciba una lista de elementos y los pinte en el html. Una vez creado podemos añadir este componente de lista que hemos creado en varios sitios de tal forma que le podemos pasar los elementos que queremos pintar para que los pinte. Esto ofrece la ventaja de tener el código modular, es decir, si tenemos que efectuar un cambio en la manera en la que visualizamos las listas, por ejemplo, solo lo tenemos que realizar una vez para todas las listas.
 

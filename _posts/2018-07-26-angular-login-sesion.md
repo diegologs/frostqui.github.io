@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Angular - Cómo hacer un login y cómo recordar la sesión iniciada
-meta: Login en Angular y manteniendo la sesión iniciada al refrescar la página
-description: Login en Angular y manteniendo la sesión iniciada al refrescar la página
+meta: Creando un sistema para iniciar sesión en una web Angular y manteniendo la sesión iniciada al refrescar la página
+description: Creando un sistema para iniciar sesión en una web Angular y manteniendo la sesión iniciada al refrescar la página
 excerpt: Realizando un formulario de login en Angular para enviar los datos de inicio de sesión a un backend. Además implemento un pequeño sistema para que Angular recuerde nuestros datos de sesión usando localStorage
 title-page: Cómo hacer un login en Angular
 image: angular-login

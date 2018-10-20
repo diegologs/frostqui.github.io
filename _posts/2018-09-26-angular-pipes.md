@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Angular - Pipes
-meta: Qué son las pipes en Angular y como se usan para evitar repetir código
-description: Qué son las pipes en Angular y como se usan para evitar repetir código
+title: Angular - Pipes, como se usan para dar formato en la vista
+meta: Qué son las pipes en Angular y cuáles son las que vienen por defecto para cambios de divisa por ejemplo
+description: Qué son las pipes en Angular y cuáles son las que vienen por defecto para cambios de divisa por ejemplo
 excerpt: Artículo muy cortito con información sobre las pìpes, muy útiles para el parseo de información en la vista sin tener que repetir código. Las pipes no son más que etiquetas que se utilizan dentro de la vista para transformar el valor de una variable.
 title-page: Pipes en Angular y cómo se usan
 image: angular-pipes
