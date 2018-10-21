@@ -1,20 +1,23 @@
 <footer>
     <div class="flex three">
-        <div class="full half-1000">
+        <div class="full half-1000 footer-section">
 
             <div id="mc_embed_signup">
-                <form action="https://github.us14.list-manage.com/subscribe/post?u=cd16a671a63cd217caf6b2f3f&amp;id=bb3cc69837" method="post"
-                    id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                <form action="https://github.us14.list-manage.com/subscribe/post?u=cd16a671a63cd217caf6b2f3f&amp;id=bb3cc69837"
+                    method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
+                    target="_blank" novalidate>
                     <div id="mc_embed_signup_scroll">
                         <h2>Newsletter <i class="fa fa-envelope icon_footer" aria-hidden="true"></i></h2>
-                        <p>Sigue el blog por email. Introduce tu dirección de correo electrónico para que te mande un correo
+                        <p>Sigue el blog por email. Introduce tu dirección de correo electrónico para que te mande un
+                            correo
                             cuando publique un nuevo artículo en este blog</p>
 
                         <div class="mc-field-group">
                             <label for="mce-EMAIL">Tu email
                                 <span class="asterisk">*</span>
                             </label>
-                            <input type="email" style="color:black;" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Introduce tu correo electrónico">
+                            <input type="email" style="color:black;" value="" name="EMAIL" class="required email" id="mce-EMAIL"
+                                placeholder="Introduce tu correo electrónico">
                         </div>
                         <div id="mce-responses" class="clear">
                             <div class="response" id="mce-error-response" style="display:none"></div>
@@ -25,7 +28,8 @@
                             <input type="text" name="b_cd16a671a63cd217caf6b2f3f_bb3cc69837" tabindex="-1" value="">
                         </div>
                         <div class="clear">
-                            <input type="submit" value="Suscribirse por email" name="subscribe" id="mc-embedded-subscribe" class="button footer_button">
+                            <input type="submit" value="Suscribirse por email" name="subscribe" id="mc-embedded-subscribe"
+                                class="button footer_button">
                         </div>
                     </div>
                 </form>
@@ -34,48 +38,58 @@
             <!--End mc_embed_signup-->
 
         </div>
-        <div class="full sixth-1000">
-          
-                <h3>Menú</h3>
-                <ul id="footer_menu">
-                   
-                    <a href="/blog">
-                        <li><h4>Blog</h4></li>
-                    </a>
-                    <a href="/projects">
-                        <li><h4></h>Projects</h4></li>
-                    </a>
-                    <a href="/about">
-                        <li><h4>About me<h4></li>
-                    </a>
-                    <a href="/feed.xml">
-                        <li><h4>Rss</h4></li>
-                    </a>
+        <div class="full sixth-1000 footer-section">
 
-                </ul>
-           
-        </div>
-        <div class="full third-1000">
-            <h3>Últimos artículos</h3>
-            <ul class="footer_posts">
-                    {% assign counter = 0 %}
+            <h3>Menú</h3>
+            <ul id="footer_menu">
 
-                    {% for post in site.posts %}
-                   
-                    {% assign counter=counter | plus:1 %}
-
-                    {% if counter < 5 %}
-                    <a href="{{post.url}}"><li><h4>{{post.title}}</h4></li></a>
-                    
-                    {% endif %}
-                    {% endfor %}
+                <a href="/blog">
+                    <li>
+                        <h4>Blog</h4>
+                    </li>
+                </a>
+                <a href="/projects">
+                    <li>
+                        <h4>
+                            </h>Projects</h4>
+                    </li>
+                </a>
+                <a href="/about">
+                    <li>
+                        <h4>About me<h4>
+                    </li>
+                </a>
+                <a href="/feed.xml">
+                    <li>
+                        <h4>Rss</h4>
+                    </li>
+                </a>
 
             </ul>
+
         </div>
+        <div class="full third-1000 footer-section">
+            <h3>Últimos artículos</h3>
+            <ul class="footer_posts">
+                {% assign counter = 0 %}
 
+                {% for post in site.posts %}
 
+                {% assign counter=counter | plus:1 %}
 
+                {% if counter < 5 %} <a href="{{post.url}}">
+                    <li>
+                        <h4>{{post.title}}</h4>
+                    </li></a>
 
-
+                    {% endif %}
+                    {% endfor %}
+            </ul>
+        </div>
+    </div>
+    <div class="contribute center">
+        <p><b>¿Te gustaría apoyar al blog para que pueda seguir sacando artículos?</b>&emsp;
+            Simplemente haciendo clic en la publicidad situada dentro de los artículos estás ayudando a que este proyecto siga adelante.
+        </p>
     </div>
 </footer>

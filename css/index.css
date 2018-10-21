@@ -299,7 +299,6 @@ footer a {
 #footer_menu {
   margin: 0px;
   margin-top: 20px;
-
 }
 
 #footer_menu li {
@@ -622,7 +621,10 @@ footer a {
     padding-left: 25px;
     padding-right: 25px;
   }
-
+  .footer-section {
+    margin: 1rem 0;
+  }
+  
   .half_bottom {
    color: white;
    position: relative;

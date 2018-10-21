@@ -109,7 +109,7 @@
       }
       if (header) {
         header.style.backgroundImage =
-          "linear-gradient(to left, rgba(46, 30, 68, 0.85), rgba(130, 86, 26, 0.45) ), url('/images/bgs/halloween.gif')";
+          "linear-gradient(to left, rgba(46, 30, 68, 0.85), rgba(79, 47, 11, 0.45) ), url('/images/bgs/halloween.gif')";
       }
 
       if (nav) {
