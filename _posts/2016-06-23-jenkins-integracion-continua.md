@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Jenkins - Integración continua y cómo usarlo
-meta: Cómo instalar jenkins para crear tareas y pipelines. Además decubrimos cuál el mejor plugin para jenkins. Tutorial en español
-description: Cómo instalar jenkins para crear tareas y pipelines. Además decubrimos cuál el mejor plugin para jenkins. Tutorial en español
+title: Jenkins - Integración continua y cómo empezar a usarlo
+meta: Tutorial en español. Cómo instalar jenkins para crear tareas y pipelines. Además decubrimos cuál es el mejor plugin para jenkins.
+description: Tutorial en español. Cómo instalar jenkins para crear tareas y pipelines. Además decubrimos cuál es el mejor plugin para jenkins.
 excerpt: La integración continua es una práctica de desarrollo de software y del desarrollo web, en la cual los desarrolladores de software suben su código a un repositorio central donde automáticamente pasan las pruebas métricas y de calidad. Y Jenkins es la herramienta perfecta para realizar integración continua, además es muy simple de utilizar.
 title-page: Jenkins tutorial en español, integración continua
 image: jenkins
