@@ -1,14 +1,39 @@
-<article class="full advert_bg center" style="background-image: linear-gradient( rgba(52, 68, 83, 0.2), rgba(41, 56, 68, 0.7) ), url({{site.baseurl}}/images/bg_telegram.jpg)">
-     
-    <div class="advert_info">
-       
-        <img class="img-responsive center telegram_img" src="{{site.baseurl}}/images/telegram.png" alt="Logotipo de Telegram. Únete a mi canal de Telegram t.me/frostqui">
+{% assign hour = site.time | date: "%H" | %}
+{% assign random = hour | modulo: 2 %}
+{% if random == 1 %}
+    <article class="full advert_bg center" style="background-image: linear-gradient( rgba(52, 68, 83, 0.2), rgba(41, 56, 68, 0.7) ), url({{site.baseurl}}/images/bg_telegram.jpg)">
 
-        <p class="summary_advert">Sigue el blog por Telegram. Si no te quieres perder ningún artículo de mi blog, puedes unirte a mi canal de Telegram. Además de publicar cuando escribo un artículo nuevo, también comparto enlaces y posts de Internet que me han resultado interesantes.</p>
+        <div class="advert_info">
 
-        <a href="https://t.me/frostqui" target="_blank"><button class="btn btn_advert">Más información</button></a>
-        
-        
+            <img class="img-responsive center telegram_img" src="{{site.baseurl}}/images/telegram.png" alt="Logotipo de Telegram. Únete a mi canal de Telegram t.me/frostqui">
+
+            <p class="summary_advert">Sigue el blog por Telegram. Si no te quieres perder ningún artículo de mi blog,
+                puedes unirte a mi canal de Telegram. Además de publicar cuando escribo un artículo nuevo, también comparto
+                enlaces y posts de Internet que me han resultado interesantes.</p>
+
+            <a href="https://t.me/frostqui" target="_blank"><button class="btn btn_advert">Más información</button></a>
+
         </div>
-   
-  </article>
+    </article>
+{% else %}
+    <article class="full advert_bg center" style="background-image: linear-gradient( rgba(31, 39, 48, 0.75), rgba(14, 24, 32, 0.9) ), url({{site.baseurl}}/images/posts/angular-2.jpg); background-position: center center;">
+
+        <div class="advert_info">
+
+            <img class="img-responsive center telegram_img" src="{{site.baseurl}}/images/angular.png" alt="Logotipo de Angular. Curso de Angular desde 0">
+
+            <div class="summary_advert">
+                <h2>Curso gratis de Angular desde cero</h2>
+                <p>
+                    No te pierdas esta serie de artículos sobre Angular, desde un nivel básico aprendiendo a cómo instalar y cómo empezar a usar Angular
+                    a un nivel mucho mas avanzado montando nuestro propio sistema de seguridad con registro de usuarios y testing unitario con este framework para el desarrollo web.
+                </p>
+            </div>
+
+            <a href="/series/angular" target="_blank"><button class="btn btn_advert">Más información</button></a>
+
+
+        </div>
+
+    </article>
+{% endif %}

@@ -6,52 +6,47 @@ layout: default
 
 
 <div class="post_header" style="background-image: linear-gradient( rgba(23, 45, 65, 0.5), rgba(54, 75, 94, 0.9) ), url({{site.baseurl}}/images/posts/{{page.image}}.jpg)">
-    <div class="container post_header_content">
-      <h1 class="post_title">{{page.title}} </h1>
-      <p>{{page.excerpt}}</p>
-  
-  
-    </div>
+  <div class="container post_header_content">
+    <h1 class="post_title">{{page.title}} </h1>
+    <p>{{page.excerpt}}</p>
   </div>
-
-
-
+</div>
 
 <div class="posts container">
 
-  {{content}}
+  <p class="series-content">{{content}}</p>
 
-        {% assign counter = 0 %}
-      
-          {% for post in site.posts reversed %} {% if post.serie == page.serie %} {% assign counter=counter | plus:1 %}
-          <article class="single_post">
-          
-            <div class="posts_info">
-              <h3 class="posts_title">
-                <a href="{{site.baseurl}}{{post.url}}">{{counter}}.  {{post.title}}</a>
-              </h3>
-              <small>
-                <span class="posts_date">
-                  <i aria-hidden="true" class="fa fa-calendar"></i>{{post.date | date: '%B %d, %Y'}} </span>
-              </small>
-              <p class="posts_summary">{{post.excerpt}}</p>
-      
-            
-              <a class="posts_read_more" href="{{site.baseurl}}{{post.url}}">Leer más
-                <span class="visuallyhidden">Leer más acerca de {{post.title}}</span>
-              </a>
-              
-      
-            </div>
-          </article>
-          <br>
-            {% endif %} {% endfor %}
+  {% assign counter = 0 %}
 
-           <h4 class="center">Suscríbete a mi blog por correo y no te pierdas futuros artículos sobre esta serie de artículos.</h4>
-           <br>
-      
+  {% for post in site.posts reversed %} {% if post.serie == page.serie %} {% assign counter=counter | plus:1 %}
+  <article class="single_post">
+
+    <div class="posts_info">
+      <h3 class="posts_title">
+        <a href="{{site.baseurl}}{{post.url}}">{{counter}}. {{post.title}}</a>
+      </h3>
+      <small>
+        <span class="posts_date">
+          <i aria-hidden="true" class="fa fa-calendar"></i>{{post.date | date: '%B %d, %Y'}} </span>
+      </small>
+      <p class="posts_summary">{{post.excerpt}}</p>
+
+
+      <a class="posts_read_more" href="{{site.baseurl}}{{post.url}}">Leer más
+        <span class="visuallyhidden">Leer más acerca de {{post.title}}</span>
+      </a>
+
+
+    </div>
+  </article>
+  <br>
+  {% endif %} {% endfor %}
+
+  <h4 class="center">Suscríbete a mi blog por correo y no te pierdas futuros artículos sobre esta serie de artículos.</h4>
+  <br>
+
 </div>
 
-{% if counter == 0 %} 
+{% if counter == 0 %}
 <h3 class="center">Actualmente no tenemos posts sobre esta serie, estamos trabajando en ello</h3>
 {% endif %}

@@ -411,11 +411,6 @@ footer a {
   margin: 0px auto;
 }
 
-.advert_bg{
-
- 
-
-}
 
 .summary_advert{
   padding-left: 30px;
@@ -447,6 +442,16 @@ footer a {
 
 }
 
+.course {
+  margin-top: 1rem;
+}
+
+.contact {
+  margin-top: 1rem;
+}
+.email {
+  margin-bottom: 1rem;
+}
 /*  ------ POST ------*/
 
 .post_header {
@@ -518,6 +523,10 @@ footer a {
 
 /*  ------ OTHER PAGES ------*/
 
+.series-content {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
 .project_page{
   padding-bottom: 30px;
 }
