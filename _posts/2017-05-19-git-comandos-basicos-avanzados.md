@@ -7,7 +7,8 @@ excerpt: Git tiene a tu disposición numerosos comandos y muchos de ellos no son
 title-page: Git, comandos básicos y avanzados
 image: git
 lang: es
-tags: [Git] 
+tags: [Git]
+lastmod: 2018-10-22T00:00:00+00:00
 ---
 
 

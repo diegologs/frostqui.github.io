@@ -3,11 +3,12 @@ layout: post
 title: Javascript - Librerías interesantes para usar en cualquier proyecto de desarrollo web
 meta: Framenworks js interesantes para usar en el desarrollo de páginas webs. Los mejores para tener en cuenta este año 
 description: Framenworks js interesantes para usar en el desarrollo de páginas webs. Los mejores para tener en cuenta este año  
-excerpt: En esta lista expongo las que, en mi opninión, son las librerías javascript más útiles o interesantes para el desarrollo web en este 2017. La lista no sigue ningún orden en particular. Si eres desarrollador web quizás descubras alguna utilidad nueva para tu página web
+excerpt: En esta lista expongo las que, en mi opninión, son las librerías javascript más útiles o interesantes para el desarrollo web en este 2018. La lista no sigue ningún orden en particular. Si eres desarrollador web quizás descubras alguna utilidad nueva para tu página web
 title-page: Mejores librerías JavaScript 2017
 image: library
 lang: es
-tags: [Javascript] 
+tags: [Javascript]
+lastmod: 2018-10-22T00:00:00+00:00
 ---
 
 

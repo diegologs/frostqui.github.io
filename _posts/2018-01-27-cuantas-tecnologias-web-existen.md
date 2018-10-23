@@ -7,7 +7,8 @@ excerpt: Hoy en día existen muchísimas tecnologías para desarrollar web. En e
 title-page: ¿Cuántas tecnologías web existen?
 image: tecnologias-web
 lang: es
-tags: [Web] 
+tags: [Web]
+lastmod: 2018-10-22T00:00:00+00:00
 ---
 
 ## Introducción

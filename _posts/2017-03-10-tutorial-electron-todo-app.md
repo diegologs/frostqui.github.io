@@ -7,7 +7,8 @@ excerpt: En este post echaremos un vistazo a Electron, un framework creado por e
 title-page: Tutorial Electron - Cómo crear una aplicación de notas cross platform
 image: task
 lang: es
-tags: [Electron, NodeJS, ExpressJS, MongoDB, Moongose ] 
+tags: [Electron, NodeJS, ExpressJS, MongoDB, Moongose ]
+lastmod: 2018-10-22T00:00:00+00:00
 ---
 
 

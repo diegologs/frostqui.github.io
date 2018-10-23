@@ -7,7 +7,8 @@ excerpt: La integración continua es una práctica de desarrollo de software y d
 title-page: Jenkins tutorial en español, integración continua
 image: jenkins
 lang: es
-tags: [Devops] 
+tags: [Devops]
+lastmod: 2018-10-22T00:00:00+00:00
 ---
 
 ## Introducción
