@@ -18,9 +18,9 @@
 <link rel="stylesheet" href="{{site.baseurl}}/css/picnic.min.css">
 <link rel="stylesheet" href="{{site.baseurl}}/css/index.css">
 
-{% if page.title-page %}
-  <title>{{page.title-page}}</title>
-  <meta name="twitter:title" content="{{page.title-page}}">
+{% if page.title %}
+  <title>{{page.title}}</title>
+  <meta name="twitter:title" content="{{page.title}}">
 {% else %}
   <title>{{ site.title }}</title>
   <meta name="twitter:title" content="{{ site.title }}">
@@ -62,8 +62,10 @@
   <meta property='og:url' content="{{ site.url }}{{ page.url }}" />
 {% endif %} 
 
-{% if page.date %}
-<meta property="article:published_time" content="{{page.date}}">
+{% if page.lastmod %}
+  <meta property="article:published_time" content="{{page.lastmod}}">
+{% else %}
+  <meta property="article:published_time" content="{{page.date}}">
 {% endif %} 
 
 <script>
