@@ -62,11 +62,11 @@
   <meta property='og:url' content="{{ site.url }}{{ page.url }}" />
 {% endif %} 
 
+<meta property="article:published_time" content="{{page.date}}">
+
 {% if page.lastmod %}
-  <meta property="article:published_time" content="{{page.lastmod}}">
-{% else %}
-  <meta property="article:published_time" content="{{page.date}}">
-{% endif %} 
+  <meta property="article:modified_time" content="{{page.lastmod}}">
+{% endif %}
 
 <script>
     (function (i, s, o, g, r, a, m) {

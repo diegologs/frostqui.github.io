@@ -14,29 +14,26 @@ layout: default
 
 <div class="posts container">
 
-  <p class="series-content">{{content}}</p>
-
+  <div class="series-content">{{content}}</div>
+  <hr aria-hidden="true"> 
   {% assign counter = 0 %}
 
   {% for post in site.posts reversed %} {% if post.serie == page.serie %} {% assign counter=counter | plus:1 %}
-  <article class="single_post">
-
-    <div class="posts_info">
+  <article class="flex two single_post">
+    <div class="full fifth-1000">
+      <span>
+          <a href="{{site.baseurl}}{{post.url}}"><img class="responsive-img series_image center" src="{{site.baseurl}}/images/posts/{{post.image}}.jpg"></img></a>
+      </span>
+    </div>
+    <div class="full four-fifth-1000 posts_info_series">
       <h3 class="posts_title">
         <a href="{{site.baseurl}}{{post.url}}">{{counter}}. {{post.title}}</a>
       </h3>
-      <small>
-        <span class="posts_date">
-          <i aria-hidden="true" class="fa fa-calendar"></i>{{post.date | date: '%B %d, %Y'}} </span>
-      </small>
-      <p class="posts_summary">{{post.excerpt}}</p>
-
-
+      <p class="posts_summary">{{post.description}}</p>         
       <a class="posts_read_more" href="{{site.baseurl}}{{post.url}}">Leer más
         <span class="visuallyhidden">Leer más acerca de {{post.title}}</span>
       </a>
-
-
+     
     </div>
   </article>
   <br>

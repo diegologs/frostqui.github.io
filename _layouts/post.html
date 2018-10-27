@@ -10,7 +10,11 @@ layout: default
     <h1 class="post_title">{{page.title}} </h1>
 
 
+    {% if page.lastmod %}
+    <div class="post_date">{{page.lastmod | date: '%B %d, %Y'}}</div>
+    {% else %}
     <div class="post_date">{{page.date | date: '%B %d, %Y'}}</div>
+    {% endif %}
 
     <div class="post_tags">
       {% for tag in page.tags %}

@@ -1,14 +1,15 @@
 ---
 layout: post
-title: Angular - Introducción e instalación
-meta: ¿Qué es Angular? En este tutorial miraremos pará que sirve Angular y cómo se instala para usarlo como framework para crear webs SPA
-description: ¿Qué es Angular? En este tutorial miraremos para qué sirve Angular y cómo se instala para usarlo como framework para crear webs SPA
+title: Angular - ¿Qué es Angular? ¿Cómo se instala?
+meta: En este tutorial miraremos pará que sirve Angular, sus ventajas, y cómo empezar a crear páginas webs SPA. Además explicamos la estructura de carpetas
+description: En este tutorial miraremos pará que sirve Angular, sus ventajas, y cómo empezar a crear páginas webs SPA. Además explicamos la estructura de carpetas
 excerpt: Primer artículo de una serie de artículos sobre Angular que voy a empezar a publicar. En este post voy a explicar qué es Angular y cómo instalarlo para empezar a desarrollar aplicaciones web.
 title-page: Qué es Angular y cómo se instala
 image: angular-intro
 lang: es
 tags: [Angular] 
 serie: angular
+lastmod: 2018-10-27T00:00:00+00:00
 
 ---
 
@@ -80,7 +81,7 @@ Si todo ha ido bien, veremos una web como ésta (si no se te ha abierto el neveg
 
  De esta forma Angular se encargará de comprimir todos los archivos Typescript en archivos Javascript entendibles por el navegador.
 
-## Estructura básica de una app creada con Angular
+## Cómo es la estructura de una app creada con Angular
 
 Cuando generamos un proyecto con Angular cli nos genera la siguiente estructura (en mi caso he llamado a la aplicación tutoApp:
 

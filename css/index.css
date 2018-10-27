@@ -168,8 +168,14 @@ code {
 }
 
 #header_slogan {
+  margin-top: 1.5rem;
   font-style: italic;
-  font-size: 1.2em;
+  font-size: 1.1em;
+}
+
+#header_title {
+  font-size: 1.3em;
+  font-weight: bold;
 }
 
 #header_menu {
@@ -469,7 +475,6 @@ footer a {
 
 .post_date {
   margin-top: 10px;
-  
 }
 
 .post_tags {
@@ -522,9 +527,31 @@ footer a {
 
 /*  ------ OTHER PAGES ------*/
 
+.series_image {
+   position: relative;
+  object-fit: cover;
+  width: 100%;
+  max-width: 250px;
+  height: 120px;
+  overflow: hidden;
+}
+
+.posts_info_series {
+  padding-left: 3%;
+}
+
 .series-content {
   margin-top: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
+}
+.series-content li{
+  margin-top: 0.6rem;
+  margin-bottom: 0.6rem;
+}
+
+.series-content h2{
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
 }
 .project_page{
   padding-bottom: 30px;

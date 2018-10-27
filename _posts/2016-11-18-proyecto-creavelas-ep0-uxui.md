@@ -7,7 +7,7 @@ excerpt: En esta serie, explicaré que decisiones he tomado para el desarrollo y
 title-page: Creavelas tutorial de UX y UI
 image: creavelas
 lang: es
-tags: [Proyectos, UX, UI, Creavelas]
+tags: [UX]
 ---
 
 
