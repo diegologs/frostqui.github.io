@@ -1,13 +1,14 @@
 ---
 layout: post
-title: Bootstrap. Tutorial para principiantes
-meta: ¿Qué es Bootstrap? ¿Cómo el grid y las columnas en Boostrap? ¿Cómo hacer un diseño responsive?
-description: ¿Qué es Bootstrap? ¿Cómo el grid y las columnas en Boostrap? ¿Cómo hacer un diseño responsive?
+title: Desarrollo web con Bootstrap 4. Tutorial básico en español
+meta: ¿Como funciona el sistema de grid y columnas o cols? ¿Cómo se crean los botones con este framework CSS?
+description: ¿Como funciona el sistema de grid y columnas o cols? ¿Cómo se crean los botones con este framework CSS?
 excerpt: Una de las tareas más difíciles que tenemos como desarrolladores webs es la obligación de adaptar el contenido de nuestra web a todas las pantallas. Afortunadamente contamos con Bootstrap, un framework capaz de adaptar todo nuestro contenido. En este artículo veremos como podemos hacer uso de Bootstrap para sacarle todo el partido.
 title-page: Desarrollo web con Bootstrap. Cómo crear columnas y componentes responsive
 tags: [Bootstrap] 
 lang: es
 image: bootstrap
+lastmod: 2018-10-22T00:00:00+00:00
 ---
 
 
@@ -69,10 +70,8 @@ Para usar los elementos de Bootstrap tenemos que usar sus clases dentro de los e
 
 <h3><b>Grid</b></h3>
 
-Estos son los elementos que, personalmente, me parecen más utilies y son los que más utilizo. Bootstrap tiene un sistema para crear columnas, las cuales adaptan su ancho dependiendo
-del dispositivo.
-Para usar este sistema tenemos que ponerle la clase <b>"row"</b> a un elemento div del html. Acabamos de crear la fila de una columna, pero esta vacía. Para meter columnas dentro de las filas tenemos 
-que meter elementos div con la clase <b>"col"</b>
+Estos son los elementos que, personalmente, me parecen más utilies y son los que más utilizo. Bootstrap tiene un sistema para crear columnas, las cuales adaptan su ancho dependiendo del dispositivo, aunque se pueden configurar para el tamaño que quieras en cada pantalla.
+Para usar este sistema tenemos que ponerle la clase <b>"row"</b> a un elemento div del html. Acabamos de crear la fila de una columna, pero esta vacía. Para meter columnas dentro de las filas tenemos que meter elementos div con la clase <b>"col"</b> La clase col se encarga de hacer saber a bootstrap que el elemento sobre el que se pone va a ser una columna. 
 
 ```html
 <div class="container"><!– Este elemento es un contenedor. Podemos meter elementos dentro de este contenedor para que se les aplique un margen y se centren –> 

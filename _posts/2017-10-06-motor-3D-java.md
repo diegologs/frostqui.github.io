@@ -1,13 +1,14 @@
 ---
 layout: post
-title: Java - Cómo crear un motor 3D para videojuegos. Creando un game loop
+title: Java - Cómo crear un motor 3D para videojuegos. Creando juegos con Java
 meta: Montando tu propio motor de renderizado 3D desde 0 para renderizar bloques estilo Minecraft en Java 
 description: Montando tu propio motor de renderizado 3D desde 0 para renderizar bloques estilo Minecraft en Java 
 excerpt: Quizás Java no sea uno de los mejores lenguajes para la creación de videojuegos, mucho menos para videojuegos en 3D, pero como veremos en este artículo, podemos crear un motor gráfico en 3D bastante decente como base para muchos juegos.
 title-page: Cómo crear un motor 3D en Java para videojuegos
 image: java-3D
 lang: es
-tags: [Java, Juegos] 
+tags: [Java, Juegos]
+lastmod: 2018-10-22T00:00:00+00:00
 ---
 
 ## Introducción

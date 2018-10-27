@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Git - Comandos básicos y avanzados
-meta: Los mejores comandos para git. Cómo hacer tu primer commit y cómo funcionan las ramas. Guía de instalación de git
-description: Los mejores comandos para git. Cómo hacer tu primer commit y cómo funcionan las ramas. Guía de instalación de git
+title: Git - Comandos básicos y avanzados. Cómo empezar a usarlo para el control de versiones
+meta: Los mejores comandos para git. Cómo hacer tu primer commit y cómo funcionan las ramas. Además veremos cómo administrar proyectos git.
+description: Los mejores comandos para git. Cómo hacer tu primer commit y cómo funcionan las ramas. Además veremos cómo administrar proyectos git.
 excerpt: Git tiene a tu disposición numerosos comandos y muchos de ellos no son muy conocidos. Tanto si eres usuario experto como si nunca has usado git, te aseguro que esta lista de servira de gran ayuda para mantener un control de versiones
 title-page: Git, comandos básicos y avanzados
 image: git
 lang: es
 tags: [Git]
-lastmod: 2018-10-22T00:00:00+00:00
+lastmod: 2018-10-27T00:00:00+00:00
 ---
 
 
-¡Saludos! En el post de hoy veremos algunos de los comandos más utilizados, pero tranquilo, si ya eres un usuario más avanzado de git, no te preocupes, también veremos algunos comandos más menos conocidos y avanzados pero igualmente útiles.
+En el post de hoy veremos algunos de los comandos más utilizados, pero tranquilo, si ya eres un usuario más avanzado de git, también veremos algunos comandos menos conocidos y avanzados pero igualmente útiles.
 
 Pero antes de todo esto, no está de más recordar qúe es git y para qué sirve por si hay alguien que se quiere iniciar en git.
 
@@ -29,7 +29,6 @@ Si estás en Windows, puedes descargarlo directamente desde aquí:
 Si usas otro sistema puedas buscar el tuyo aquí:
 
 [https://git-scm.com/downloads](https://git-scm.com/downloads) 
-
 
 Una vez instalado git, puedes configurar tu identidad ejecutando en la terminal (si estás en windows se te habrá instalado un programa llamado Git bash):
 

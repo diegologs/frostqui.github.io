@@ -1,13 +1,14 @@
 ---
 layout: post
-title: React - Cómo crear componentes para empezar a usarlo
-meta: ¿Qué es React? ¿Cómo instalar y configurar React? ¿Cómo crear componentes en React?
-description: ¿Qué es React? ¿Cómo instalar y configurar React? ¿Cómo crear componentes en React?  
+title: React - ¿Que es un componente web? ¿Qué tipos hay?
+meta: Aprendemos a instalar React para empezar a usarlo. También vemos cómo crear components con ReactJS
+description: Aprendemos a instalar React para empezar a usarlo. También vemos cómo crear components con ReactJS
 excerpt: React es una librería muy potente, es capaz de crear componentes y renderizarlos de forma muy rápida. En este artículos veremos cómo podemos usarlo en nuestros proyectos, como instalarlo y cómo crear componentes reutilizables.
 title-page: React, componentes y elementos
 image: react
 lang: es
-tags: [React] 
+tags: [React]
+lastmod: 2018-10-27T00:00:00+00:00
 ---
 
 ## ¿Qué es React?

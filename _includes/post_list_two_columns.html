@@ -12,7 +12,7 @@
         <div class="half_bottom">
          <h3 class="half_title"> <a class="white" href="{{site.baseurl}}{{post.url}}">{{post.title}}</a></h3>
 
-         <p class="half_summary">{{post.excerpt}}</p>
+         <p class="half_summary">{{post.description}}</p>
 
           {% for tag in post.tags %}
            <a class="tags" href="/tag#{{ tag | slugify }}">{{ tag }}</a>
@@ -31,7 +31,7 @@
           <div class="half_bottom">
            <h3 class="half_title"> <a class="white" href="{{site.baseurl}}{{post.url}}">{{post.title}}</a></h3>
 
-           <p class="half_summary">{{post.excerpt}}</p>
+           <p class="half_summary">{{post.description}}</p>
 
            {% for tag in post.tags %}
             <a class="tags" href="/tag#{{ tag | slugify }}">{{ tag }}</a>

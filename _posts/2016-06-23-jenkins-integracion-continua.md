@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Jenkins - Integración continua y cómo empezar a usarlo
-meta: Tutorial en español. Cómo instalar jenkins para crear tareas y pipelines. Además decubrimos cuál es el mejor plugin para jenkins.
-description: Tutorial en español. Cómo instalar jenkins para crear tareas y pipelines. Además decubrimos cuál es el mejor plugin para jenkins.
+title: Jenkins - Tutorial en español. Cómo hacer integración continua y cómo empezar a usarlo
+meta: Cómo instalar jenkins para crear tareas y pipelines. Además decubrimos cuál es el mejor plugin para jenkins.
+description: Cómo instalar jenkins para crear tareas y pipelines. Además decubrimos cuál es el mejor plugin para jenkins.
 excerpt: La integración continua es una práctica de desarrollo de software y del desarrollo web, en la cual los desarrolladores de software suben su código a un repositorio central donde automáticamente pasan las pruebas métricas y de calidad. Y Jenkins es la herramienta perfecta para realizar integración continua, además es muy simple de utilizar.
 title-page: Jenkins tutorial en español, integración continua
 image: jenkins
@@ -28,7 +28,7 @@ Ahora que has entendido a grandes rasgos que es la integración continua y cuál
 
 ## Qué es Jenkins
 
-Jenkins no es más que un sistema desplegado en un servidor que nos ayuda en la tarea de hacer integración continua y programar tareas automáticas cuando ocurra una determinada acción. A este tipo de servicios se los conoce como CI/CD (Coninuous integration / Continuous deploy) y no es el único existen un montón de sistemas parecidos, aunque en este post me voy a basar en Jenkins ya que es uno de los más conocidos, aunque te dejo enlaces a otros sistemas por si este no te convence y buscas otra opción:
+Jenkins (no confundir con jenkin) no es más que un sistema desplegado en un servidor que nos ayuda en la tarea de hacer integración continua y programar tareas automáticas cuando ocurra una determinada acción. A este tipo de servicios se los conoce como CI/CD (Coninuous integration / Continuous deploy) y no es el único existen un montón de sistemas parecidos, aunque en este post me voy a basar en Jenkins ya que es uno de los más conocidos, aunque te dejo enlaces a otros sistemas por si este no te convence y buscas otra opción:
 
 - [Travis CI](https://travis-ci.org/)
 - [Codeship](https://codeship.com/)
