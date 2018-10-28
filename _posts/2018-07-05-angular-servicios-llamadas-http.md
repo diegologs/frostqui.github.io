@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Angular - Servicios y cómo hacer llamadas a una API REST
+title: Angular - Cómo crear servicios y cómo hacer llamadas a una API REST
 meta: Aprende a crear servicios en Angular y a hacer peticiones HTTP para su comunicación con el backend
 description: Aprende a crear servicios en Angular y a hacer peticiones HTTP para su comunicación con el backend
 excerpt:  Lo normal en una aplicación web es que obtenga y envíe datos a un servidor o servidores. En este apartado veremos cómo se crean los servicios en Angular, destinados a hacer llamadas HTTP o comunicaciones con servidores
@@ -9,12 +9,12 @@ image: angular-services
 lang: es
 tags: [Angular] 
 serie: angular
-
+lastmod: 2018-10-28T00:00:00+00:00
 ---
 
-## ¿Qué es y para qué sirven los servicios en Angular?
+## ¿Qué es un servicio de Angular y cómo crear servicios?
 
-Los sericios sirven para implementar la parte de recogida y envío de datos, es decir, se recomienda que los componentes no traten con la comunicación con servidores o datos directamente sino que lo mejor es delegar esta funcionalidad a los servicios.
+Los servicios en Angular sirven para implementar la parte de recogida y envío de datos, es decir, se recomienda que los componentes no traten con la comunicación con servidores o datos directamente sino que lo mejor es delegar esta funcionalidad a los servicios.
 
 Para crear un servicio, podemos crear manualmente un archivo llamado **_nombre_componente.service.ts_**  (después tenemos que importarlo en el app.module.ts en la sección providers), o podemos dejar que angular cli lo cree por nosotros:
 

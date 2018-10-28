@@ -1,13 +1,14 @@
 ---
 layout: post
-title: Optimizar Angular para aumentar la velocidad y reducir los tiempos de carga
+title: Cómo aumentar la velocidad en Angular para que cargue más rápido
 meta: Cómo aumentar el rendimiento en Angular 2 o posterior. Cómo eliminar la carga inicial de la aplicación web
 description: Cómo aumentar el rendimiento en Angular 2 o posterior. Cómo eliminar la carga inicial de la aplicación web
 excerpt: Hoy en día en es muy importante que las páginas web carguen rápido. Angular al ser un framework para crear webs SPA, todos los scripts los carga al iniciar la página haciendo que tarde mucho en cargar. En este artículo veremos técnicas clave para aumentar el rendimiento.
 title-page: Angular 2, cómo optimizar y aumentar el rendimiento de aplicaciones 
 image: angular-2
 lang: es
-tags: [Angular] 
+tags: [Angular]
+lastmod: 2018-10-22T00:00:00+00:00
 ---
 
 

@@ -1,13 +1,14 @@
 ---
 layout: post
-title: Angular 2 para crear una web SPA básica
-meta: ¿Que son las webs SPA? ¿Cómo se instala Angular2? ¿Cómo se usa Angular2?
-description: ¿Que son las webs SPA? ¿Cómo se instala Angular2? ¿Cómo se usa Angular2?
+title: Angular 2 - Tutorial básico en español
+meta: Veremos qué es Angular2 y cómo se instala. Además aprendemos lo que son las webs SPA
+description: Veremos qué es Angular2 y cómo se instala. Además aprendemos lo que son las webs SPA
 excerpt: Angular2 nos ofrece la posibilidad de de crear páginas webs SPA, es decir páginas compuestas de una sola página, esto tiene la ventaja de ser rápida, para ofrecer la mejor experiencia a los usuarios de nuestra página web. En este artículo iniciaremos un acercamiento a Angular2 para ver que cosas nos puede ofrecer. 
 title-page: Cómo crear una página web SPA con Angular 2
 image: angular
 lang: es
 tags: [Angular]
+lastmod: 2018-10-22T00:00:00+00:00
 ---
 
 

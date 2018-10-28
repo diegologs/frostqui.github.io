@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Git - Comandos básicos y avanzados. Cómo empezar a usarlo para el control de versiones
+title: Git - Tutorial comandos básicos y avanzados. Cómo usarlo para el control de versiones
 meta: Los mejores comandos para git. Cómo hacer tu primer commit y cómo funcionan las ramas. Además veremos cómo administrar proyectos git.
 description: Los mejores comandos para git. Cómo hacer tu primer commit y cómo funcionan las ramas. Además veremos cómo administrar proyectos git.
 excerpt: Git tiene a tu disposición numerosos comandos y muchos de ellos no son muy conocidos. Tanto si eres usuario experto como si nunca has usado git, te aseguro que esta lista de servira de gran ayuda para mantener un control de versiones
@@ -8,11 +8,10 @@ title-page: Git, comandos básicos y avanzados
 image: git
 lang: es
 tags: [Git]
-lastmod: 2018-10-27T00:00:00+00:00
+lastmod: 2018-10-28T00:00:00+00:00
 ---
 
-
-En el post de hoy veremos algunos de los comandos más utilizados, pero tranquilo, si ya eres un usuario más avanzado de git, también veremos algunos comandos menos conocidos y avanzados pero igualmente útiles.
+En el post de hoy veremos algunos de los comandos git más utilizados, pero tranquilo, si ya eres un usuario más avanzado de git, también veremos algunos comandos menos conocidos y avanzados pero igualmente útiles.
 
 Pero antes de todo esto, no está de más recordar qúe es git y para qué sirve por si hay alguien que se quiere iniciar en git.
 
@@ -46,7 +45,8 @@ El primer paso es abrir la terminal de git, o la terminal de nuestro sistema, pa
 ```bash
 git init
 ``` 
-Con este comando lo que estamos haciendo es decirle a git que este pendiente de los cambios que se produzcan en los archivos de ese directorio. 
+Con este comando de git lo que estamos haciendo es decirle a git que este pendiente de los cambios que se produzcan en los archivos de ese directorio. 
+
 Este comando solo lo tenemos que ejecutar una sola vez para cada proyecto que estemos realizando.
 
 Ahora podemos continuar desarrollando nuestro proyecto.
@@ -82,7 +82,7 @@ git commit -m "Nombre descriptivo del cambio que hemos realizado"
 ```
 Acabamos de hacer nuestro primer commit, un commit es un guardado con mensaje de los cambios que hemos realizado en un momento determinado en nuestro proyecto
 
-Para imprimir todos los commits que hemos realizado tenemos el comando:
+Para imprimir todos los commits que hemos realizado tenemos el comando de git:
 
 ```bash
 git log
@@ -132,6 +132,7 @@ git remote add origin https://github.com/user/repo.git
 De esta forma, podemos usar la palabra origin para referirnos a esa dirección.
 
 ## Ramas en git
+
 Muy bien, pero antes has dicho que has subido los cambios a una rama, ¿qué es una rama?
 
 Las ramas sirven para llevar un control de cambios independiente en el mismo repositorio, es decir, podemos crear una rama a partir de la rama base, o rama master, con otra serie de cambios, posteriormente podemos subir estos cambios a la rama master haciendo una combinación de ambas ramas:
@@ -159,9 +160,11 @@ git checkout -b rama_nueva
 ```
 ## Comandos avanzados
 
-#### Alias
+Con este tutorial de comandos de git hemos visto los esenciales para cualquier proyecto, pero existen muchos más comandos, ahora voy a poner algunos que personalmente utilizo cada día y son algo más avanzados.
 
-Para no tener que estar escribiendo todo el rato "commit" o "checkout" podemos crear alias, los alias sirven para decirle a git que comando tiene que ejecutar para el alias que le hemos indicado, estos son los alias más comunes, aunque puedes crear y configurar más.
+#### Cómo crear alias en git
+
+Para no tener que estar escribiendo todo el rato "commit" o "checkout" podemos crear alias, los alias de git sirven para decirle a git que comando tiene que ejecutar para el alias que le hemos indicado, estos son los alias más comunes, aunque puedes crear y configurar más.
 
 ```bash
 git config --global alias.co checkout

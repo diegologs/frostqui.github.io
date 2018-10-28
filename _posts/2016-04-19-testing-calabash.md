@@ -7,7 +7,7 @@ excerpt: Antiguamente las aplicaciones y los programas se testeaban a mano, es d
 title-page: Calabash para realizar testing automatico
 image: calabash
 lang: es
-tags: [Android, Testing, Calabash] 
+tags: [Android, Testing, Calabash]
 ---
 
 

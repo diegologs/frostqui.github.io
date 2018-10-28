@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Javascript - Librerías interesantes para usar en cualquier proyecto de desarrollo web
+title: Javascript - Librerías interesantes para usar en cualquier proyecto
 meta: Framenworks js interesantes para usar en el desarrollo de páginas webs. Los mejores para tener en cuenta este año 
 description: Framenworks js interesantes para usar en el desarrollo de páginas webs. Los mejores para tener en cuenta este año  
 excerpt: En esta lista expongo las que, en mi opninión, son las librerías javascript más útiles o interesantes para el desarrollo web en este 2018. La lista no sigue ningún orden en particular. Si eres desarrollador web quizás descubras alguna utilidad nueva para tu página web
@@ -8,16 +8,16 @@ title-page: Mejores librerías JavaScript 2017
 image: library
 lang: es
 tags: [Javascript]
-lastmod: 2018-10-22T00:00:00+00:00
+lastmod: 2018-10-28T00:00:00+00:00
 ---
 
 
-¡Saludos! Hoy os traigo una lista seleccionada personalmente por mí, con las que considero que son las mejores o más utilies librerías Javascript para este año.
-Decir que no he incluido JQuery por ejemplo al igual que tantas otras porque ya son conocidas por todos. También he omitido frameworks completos como Angular o React porque he querido enfocarlo hacia librerías que ofrezcan pequeñas funcionalidades pero útiles para usar en cualquier página web.
+Hoy os traigo una lista seleccionada personalmente por mí, con las que considero que son las mejores o más utilies librerías para Javascript.
+Decir que no he incluido JQuery por ejemplo al igual que tantas otras porque ya son conocidas por todos. También he omitido frameworks completos como Angular o React porque he querido enfocarlo hacia librerías que ofrezcan pequeñas funcionalidades pero útiles para usar en cualquier página web. De todas formas si quieres encontrar frameworks para el desarrollo web te recomiendo que eches un vistazo a este post: [¿Cuantás tecnologías web existen?]({{site.baseurl}}/cuantas-tecnologias-web-existen)
 
 ## Jquery FlexDataList
 
-Empezamos con Jquery FlexDataList, una librería para incluir autocompletado en un página web. Para usarla tienes que seguir estos pasos:
+Empezamos con Jquery FlexDataList, una librería de Javascript incluir autocompletado en un página web. Para usarla tienes que seguir estos pasos:
 
 Incluimos la ruta de la librería en la seccion HEAD de nuestro archivo HTML y sustituimos /path/to/ por la ruta donde descargemos flexdatalist:
 
@@ -370,7 +370,7 @@ Aunque esto es una base, lo puedes personalizar todo lo que quieras, te animo a 
 
 ## Chart.js
 
-Para representar datos, una buena forma es mediante gráficos y tablas. Con esta herramienta resulta muy sencillo la creación de gráficas con JavaScript y con soporte para todo tipo de pantallas y dispositivos. La librería viene con un monton de tipos de gráficas y configuraciones, como por ejemplo, gráficas lineales, de barras, con círculos, con burbujas, etc.
+Librería JS para representar datos, una buena forma es mediante gráficos y tablas. Con esta herramienta resulta muy sencillo la creación de gráficas con JavaScript y con soporte para todo tipo de pantallas y dispositivos. La librería viene con un monton de tipos de gráficas y configuraciones, como por ejemplo, gráficas lineales, de barras, con círculos, con burbujas, etc.
 
 Descarga: [http://www.chartjs.org/](http://www.chartjs.org/)
 
@@ -502,7 +502,7 @@ notie.alert({
 
 ## Layzr.js
 
-Layzr ofrece una forma de incluir imágenes en una página web con carga perezosa, es decir, éstas imágenes no se renderizaran en pantalla hasta que no aparezcan. Por ejemplo, si tenemos una web con muchas imágenes, y que además, muchas de ellas no se ven hasta que el usuario hace scroll, este sistema hace que la 
+Layzr es una librería de Javascript que ofrece una forma de incluir imágenes en una página web con carga perezosa, es decir, éstas imágenes no se renderizaran en pantalla hasta que no aparezcan. Por ejemplo, si tenemos una web con muchas imágenes, y que además, muchas de ellas no se ven hasta que el usuario hace scroll, este sistema hace que la 
 página cargue mucho mas rápido, ofreciendo una mejor experiencia al usuario.
 
 Puedes descargartela de aqui [https://github.com/callmecavs/layzr.js/releases](https://github.com/callmecavs/layzr.js/releases) 

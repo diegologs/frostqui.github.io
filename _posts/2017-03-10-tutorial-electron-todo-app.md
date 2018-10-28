@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Electron - Cómo crear una aplicación de escritorio multiplataforma con Javascript  
+title: Tutorial Electron - Cómo crear una app con AngularJS de escritorio
 meta: Descubre cómo crear aplicaciones cross platform en usando tecnologías web. Cómo usarlo junto a AngularJS para crear una app de notas
 description: Descubre cómo crear aplicaciones cross platform en usando tecnologías web. Cómo usarlo junto a AngularJS para crear una app de notas
 excerpt: En este post echaremos un vistazo a Electron, un framework creado por el equipo de Atom para la creación de apps de escritorio multiplataforma. También veremos como podemos usar Electron para desarrollar una app para tomar notas y apintar recordatorios de una manera muy sencilla. 
@@ -8,11 +8,10 @@ title-page: Tutorial Electron - Cómo crear una aplicación de notas cross platf
 image: task
 lang: es
 tags: [Electron, NodeJS, ExpressJS, MongoDB, Moongose ]
-lastmod: 2018-10-22T00:00:00+00:00
+lastmod: 2018-10-27T00:00:00+00:00
 ---
 
-
-¡Saludos! En el día de hoy vamos a ver en que consiste Electron, y para ello vamos a desarrollar una app muy sencilla para la gestión de notas y recordatorios usando NodeJS y MongoDB.
+En el día de hoy vamos a ver en que consiste Electron js, una librería para crear aplicaciones de escritorio con tecnologías web, y para ello vamos a desarrollar una app muy sencilla para la gestión de notas y recordatorios usando ExpressJS, MongoDB y Angular JS (Stack MEAN).
 
 <h2>Introducción</h2>
 
@@ -22,7 +21,7 @@ Si manejas bien los lenguajes del desarrollo web como HTML, CSS y JavaScript, co
 Al utilizar HTML y CSS para representar los datos, es más sencillo crear apps responsive.
 Una vez entendidas las características de Electron vamos a crear un ejemplo sencillo para ver mejor como funciona. 
 
-<h2>Instalación de Electron y de todos los elementos que vamos a necesitar</h2>
+<h2>Cómo empezar a usar Electron con ExpressJS</h2>
 
 Antes de instalar Electron, tenemos que instalar Node y NPM en nuestro equipo. Nos dirigimos a su página, lo descargamos y lo instalamos: [https://nodejs.org/en/](https://nodejs.org/en/). NPM lo pudes bajar e instalar desde aquí: [https://www.npmjs.com/](https://www.npmjs.com/)
 Para instalar Electron, tenemos que abrir la terminal para introduccir el siguiente comando:
@@ -272,6 +271,8 @@ app.get('*', function(req, res) {
 
 ```
 Básicamente con esta API podemos gestionar las llamadas de GET, DELETE, y POST para crear, modificar y eliminar notas.
+
+<h2>Cómo usar AngularJS para crear una web de notas</h2>
 
 Ahora vamos a gestionar la parte del frontend, es decir, la representación de los datos. En el archivo <b>core.js</b>
 creamos las siguientes funciones:

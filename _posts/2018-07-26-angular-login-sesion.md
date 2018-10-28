@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Angular - Cómo hacer un login y cómo recordar la sesión iniciada
+title: Angular - Cómo hacer un sistema de login y cómo recordar la sesión iniciada
 meta: Creando un sistema para iniciar sesión en una web Angular y manteniendo la sesión iniciada al refrescar la página
 description: Creando un sistema para iniciar sesión en una web Angular y manteniendo la sesión iniciada al refrescar la página
 excerpt: Realizando un formulario de login en Angular para enviar los datos de inicio de sesión a un backend. Además implemento un pequeño sistema para que Angular recuerde nuestros datos de sesión usando localStorage
@@ -9,14 +9,14 @@ image: angular-login
 lang: es
 tags: [Angular] 
 serie: angular
-
+lastmod: 2018-10-27T00:00:00+00:00
 ---
 
 ## Introducción
 
 Con lo visto hasta ahora si has ido siguiendo la [serie de artículos sobre Angular]({{site.baseurl}}/series/angular) realmente ya puedes realizar llamadas HTTP para loguearte en una API REST. Simplemente tienes que enviar una petición POST con el nombre de usuario y la contraseña al la dirección del endpoint de la API REST preparada para login. Aún así voy a hacer un ejemplo de cómo hacerlo y de paso explico cómo mantener la sesión iniciada para que al cerrar o al refrescar la página sigamos logueados.
 
-## Creando el componente de login
+## Cómo empezar a crear un login con Angular
 
 Lo primero que vamos a necesitar es un componente de login para mostrar la página de login con el formulario junto a un servicio para realizar las llamadas HTTP al backend, suponiendo que ya tienes un proyecto en Angular, simplemente ejecutamos:
 

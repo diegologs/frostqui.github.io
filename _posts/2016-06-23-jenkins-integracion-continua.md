@@ -8,7 +8,7 @@ title-page: Jenkins tutorial en español, integración continua
 image: jenkins
 lang: es
 tags: [Devops]
-lastmod: 2018-10-22T00:00:00+00:00
+lastmod: 2018-10-28T00:00:00+00:00
 ---
 
 ## Introducción
@@ -36,8 +36,7 @@ Jenkins (no confundir con jenkin) no es más que un sistema desplegado en un ser
 
 Además te dejo una lista en la que hacen una comparación de todos los sistemas CI [https://github.com/ligurio/awesome-ci](https://github.com/ligurio/awesome-ci)
 
-
-Jenkins se integra a la perfección con Git para poder ejecutar tareas con determinadas acciones Git, por ejemplo cuando se lanza un pull request, cuando se pushea a una determinada rama, cuando se crea una rama, etc. Además de integrarse con Git, también tiene la posibilidad de instalar muchos plugins para extender su funcionalidad.
+Jenkins se integra a la perfección con Git para poder ejecutar tareas con determinadas acciones Git, por ejemplo cuando se lanza un pull request, cuando se pushea a una determinada rama, cuando se crea una rama, etc. Además de integrarse con Git, también tiene la posibilidad de instalar muchos plugins para extender su funcionalidad. En este tutorial de Jenkins vamos a ver cómo instalarlo y para disfrutar de las ventajas de la integración continua.
 
 ## Cómo instalar Jenkins
 
@@ -86,7 +85,7 @@ Por último nos va a pedir un usuario para usar con Jenkins, aunque también pod
 
 ## Primeros pasos con Jenkins: Cómo crear tareas
 
-Lo que vas a leer a continuación no se trata de un manual exhaustivo ni un tutorial en español de Jenkins en profundidad, simplemente esuna aproximación y una guia básica de funcionamiento. A partir de aquí cada uno tiene que adaptar lo que le interese para su caso de uso.
+Lo que vas a leer a continuación no se trata de un manual exhaustivo ni de una gúia o tutorial de cómo usar Jenkins, simplemente es una aproximación y una guia básica de funcionamiento. A partir de aquí cada uno tiene que adaptar lo que le interese para su caso de uso.
 
 Tras instalarlo la pantalla principal que aparecerá es como esta:
 
@@ -138,7 +137,7 @@ Si quieres mas información o necesitas un tutorial más exhaustivo sobre el plu
 
 ## Conclusiones
 
-Crear todo el sistema de integración continua es un rollo, si tienes un proyecto muy pequeño no sé si merece la pena el esfuerzo de montar todo, pero a la larga viene muy bien para no perder tanto tiempo al haciendo los builds, despliegues, etc, de forma manual. Para los proyectos open source también viene bien para restringir cada merge. Si el merge no cumple ciertos requisitos de estilo o no pasa los tests, el merge no se puede hacer. La integración continua es perfecta para tener un control de lo que pasa en el proyecto, para saber cómo de estable es un proyecto y para avisar a la gente cuando un build a producción ha salido mal.
+En este tutorial para Jenkins hemos visto por encima que crear todo el sistema de integración continua es un rollo, si tienes un proyecto muy pequeño no sé si merece la pena el esfuerzo de montar todo, pero a la larga viene muy bien para no perder tanto tiempo al haciendo los builds, despliegues, etc, de forma manual. Para los proyectos open source también viene bien para restringir cada merge. Si el merge no cumple ciertos requisitos de estilo o no pasa los tests, el merge no se puede hacer. La integración continua es perfecta para tener un control de lo que pasa en el proyecto, para saber cómo de estable es un proyecto y para avisar a la gente cuando un build a producción ha salido mal.
 
 Otra cosa que no he comentado es que se pueden hacer esquemas predefinidos para los proyectos, por ejemplo te puedes hacer un esquema para proyectos front con ciertos comandos, otro para proyectos backend etc, de esta forma una vez has creado uno crear los demás es cosa de dos clics. 
 
