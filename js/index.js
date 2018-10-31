@@ -4,7 +4,7 @@
     var currentYear = now.getFullYear();
 
     if (
-      now < new Date(currentYear, 9, 31) &&
+      now <= new Date(currentYear, 9, 31) &&
       now > new Date(currentYear, 9, 20)
     ) {
       return "halloween";
