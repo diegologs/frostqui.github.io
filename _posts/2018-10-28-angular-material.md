@@ -1,24 +1,27 @@
 ---
 layout: post
 title: Angular Material - Tutorial de la mejor librería de componentes material design
-meta: Cómo usar angular material design para crear componentes. Cómo crear iconos con angular material. Guía de componentes
-description: Cómo usar angular material design para crear componentes. Cómo crear iconos con angular material. Guía de componentes
+meta: Cómo usar angular material design para crear componentes. Cómo crear iconos con angular material. Guía de todo lo que puede ofrecer esta librería de componentes web
+description: Cómo usar angular material design para crear componentes. Cómo crear iconos con angular material. Guía de todo lo que puede ofrecer esta librería de componentes web
 excerpt: Echamos un vistazo a Angular Material, una librería de componentes web con un estilo material design de Google. Hacemos un repaso de algunos componentes interesantes listos para usar en tu proyecto Angular
 title-page: Angular Material- Tutorial de la mejor librería de componentes
 image: angular-material
 lang: es
 tags: [Angular] 
 serie: angular
+lastmod: 2018-11-04T00:00:00+00:00
+
 ---
 
 ## ¿Qué es Angular Material?
 
-Angular Material, como su nombre indica, es una librería para Angular de componentes web con un diseño Material design. ¿Y qué es material design?
-Pues un es una guía de estilo creada por Google para Android y para sus aplicaciones. En los últimos tiempos se ha puesto muy de moda el estilo material design, y han salido un montón de librerías y frameworks que implementan estos estilos, entre ellas Angular Material, para que no tengas que perder el tiempo consultando la guía de Google si quieres tener los mismos estilos. Aún así te recomiendo que le eches un vistazo a la [documentación oficial de material design](https://material.io/design/), más teniendo en cuenta que recientemente han cambiado muchas cosas y han sacado una nueva versión.
+**Angular Material**, como su nombre indica, es una librería de componentes web con un diseño Material design, una guía de estilo creada por Google para Android y para sus aplicaciones. En los últimos tiempos se ha puesto muy de moda el estilo material design, y han salido un montón de librerías y frameworks que lo implementan, entre ellas Angular Material.
+
+Te recomiendo que le eches un vistazo a la [documentación oficial de material design](https://material.io/design/), ya que aunque no uses Angular material, te puede servir para implementar material design en cualquier página, además de inspiración y de base para crear tu propia guía de estilos.
 
 ## ¿Cómo usar Angular Material?
 
-Bien, para esta guía voy a basarme en la librería de Angular Material para la versión 2 en adelante. Si quieres una librería para AngularJS te recomiendo que le eches un vistazo a la [documentación oficial para AngularJS](https://material.angularjs.org/latest/).
+Bien, para esta guía voy a basarme en la librería de Angular Material, en especifico desde Angular 2 en adelante. Tabién existe una **librería material para AngularJS** pero he preferido hacer esta guiá sobre las versiones mas modernas de Angular.
 
 Si estás empezando con Angular te recomiendo también mi [curso gratuito de Angular desde 0]({{site.baseurl}}series/angular)
 
@@ -34,7 +37,7 @@ Yarn:
 yarn add @angular/material @angular/cdk @angular/animations
 ```
 
-Si estás usando Angular 6 en adelante, puedes descargar Angular Material usando el comando de Angular CLI:
+Si estás usando Angular 6 en adelante, puedes **descargar Angular Material** usando el nuevo comando de Angular CLI:
 
 ```bash
 ng add @angular/material
@@ -66,18 +69,19 @@ import {MatButtonModule, MatCheckboxModule} from '@angular/material';
 
 Si no sabes que componentes usar no te preocupes porque si sigues leyendo vas a encontrar una guía de los componentes de Angular Material para que decidas qué componentes web material design vas a usar en tu proyecto.
 
-Para usar los temas de Angular material los tenemos que importar en el archivo **styles.css**, por ejemplo
+Los temas de Angular o themes sirven para cambiar rápidamente el color de los componentes. Para usarlos tenemos que importar en el archivo **styles.css**, por ejemplo:
 
 ```css
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 ```
-
-Los temas que vienen por defecto, en el momento de escribir este artículo, son:
+Los temas que trae Angular Maerial son:
 
 - deeppurple-amber.css
 - indigo-pink.css
 - pink-bluegrey.css
 - purple-green.css
+
+Yo voy a importar el theme **indigo-pink** pero esto es cuestión de gustos
 
 Por último tienes que instalar **hammerjs** una liberría que usa Angular Material por debajo para configurar los gestos de los sliders por ejemplo,para ello:
 
@@ -97,11 +101,13 @@ Y en el archivo **src/main.ts** simplemente añadimos:
 import 'hammerjs';
 ```
 
-Como paso opcional puedes añadir los iconos de Angular Material desde el CDN, añadiéndolos en el archivo **index.html**:
+Como paso opcional puedes añadir los **iconos de Angular Material** desde el CDN, añadiéndolos en el archivo **index.html**:
 
 ```html
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 ```
+
+Estos iconos no son específicos de Angular Material por lo que los puedes usar para cualquier página web.
 
 <br>
 
@@ -110,16 +116,13 @@ Como paso opcional puedes añadir los iconos de Angular Material desde el CDN, a
 
 <img src="https://i.imgur.com/Uf5tywB.png" class="responsive-img" alt="Componentes de Angular material"> 
 
-**¿Qué componentes hay en Angular Material design?** Vamos a verlos a continuación. He creado una serie de componentes usando esta librería de componentes para que los veas en acción. Para ver la vista previa de cada ejemplo solo tienes que hacer click en el botón **Run proyect**. No voy a mostrar todos los componentes que Angular Material puede ofrecer porque son demasiados pero sí que voy a poner los que me parecen más interesantes.
+**¿Qué componentes hay en Angular Material design?** Vamos a verlos a continuación. He incluído una serie de enlaces a ejemplos de Angular Material. para que puedas ver en funcionamiento cada componente. Los ejemplos no los he creado yo, son los que han creado Google. Dentro de los ejemplos puedes ver todos los archivos y los puedes editar en tiempo real para que veas su funcionamiento. No voy a mostrar todos los componentes que Angular Material puede ofrecer porque son demasiados pero sí que voy a poner los que me parecen más interesantes. Para usarlos tienes que importar el módulo que he dejado en el titulo de cada componente.
 
-## Botones
+## Botones - MatButtonModule
 
-Botones customizables. Para usarlos tienes que importar en el archivo .module.ts:
+Botones customizables mediante colores y sombras. Seguramente estos botones ya los has visto en muchas apps para Android.
 
-```typescript
-import {MatButtonModule} from '@angular/material/button';
-```
-Para customizarlos, este componente viene con una serie de parámetros:
+Para customizarlos, este componente viene con una serie de parámetros. Los parámetros se añaden directamente dentro de la etiqueta html:
 
 - mat-button: Botón básico sin color de fondo 
 - mat-raised-button: Botón con sombra y con color de fondo
@@ -143,18 +146,12 @@ import {MatIconModule} from '@angular/material/icon';
 </button>
 ```
 
-Ejemplos:
-<iframe width="100%" height="250px" src="https://stackblitz.com/edit/angular-zkgp3z?ctl=1&embed=1&file=app/button-overview-example.html&hideExplorer=1&hideNavigation=1&view=preview"></iframe>
+<a href="https://stackblitz.com/edit/angular-zkgp3z?file=app%2Fbutton-overview-example.html"><button class="btn">Ejemplo de botones Angular material</button></a> 
 
-### Botón toggler o seleccionable
 
-Para crear un botón de toggle (un botón seleccionable) tienes que importar:
+### Botón toggler o seleccionable - MatButtonToggleModule
 
-```typescript
-import {MatButtonToggleModule} from '@angular/material/button-toggle';
-```
-
-Estos botones no tienen los parámetros anteriores pero aceptan un parámetro llamado value que recoge el valor del botón que ha pulsado el usuario, por defecto los botones actúan como botones de radio (solo uno puede estar seleccionado)
+Estos botones no tienen los parámetros de los botones anteriores pero aceptan un parámetro llamado value que recoge el valor del botón que ha pulsado el usuario, por defecto los botones actúan como botones de radio (solo uno puede estar seleccionado).
 
 ```html
 <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
@@ -164,15 +161,11 @@ Estos botones no tienen los parámetros anteriores pero aceptan un parámetro ll
 </mat-button-toggle-group>
 ```
 
-<iframe width="100%" height="250px" src="https://stackblitz.com/angular/vqmarvxkrlk?ctl=1&embed=1&file=app/button-toggle-overview-example.ts&hideExplorer=1&hideNavigation=1&view=preview"></iframe>
+<a href="https://stackblitz.com/angular/eyxpgodgvbg?file=app%2Fbutton-toggle-exclusive-example.html"><button class="btn">Ejemplo de botones toggle</button></a> 
 
-### Badges o indicadores
+### Badges o indicadores - MatBadgeModule
 
-Pequeños indicadores redondos para mostrar el número de notificaciones que tiene un usuario, por ejemplo. Para usarlos: 
-
-```typescript
-import {MatBadgeModule} from '@angular/material/badge';
-```
+Pequeños indicadores redondos para mostrar el número de notificaciones que tiene un usuario, por ejemplo.
 
 Se puede definir la posición del badge usando el atributo **matBadgePosition**, por ejemplo: **matBadgePosition="above after"**
 
@@ -181,37 +174,28 @@ Para el tamaño se hace con **matBadgeSize**, los valores que acepta son **small
 ```html
 <span matBadge="4" matBadgeOverlap="false">Text with a badge</span>
 ```
+<a href="https://stackblitz.com/edit/angular-zpvcju?file=app%2Fbadge-overview-example.html"><button class="btn">Ejemplo de badge o indicador material</button></a> 
 
-<iframe width="100%" height="250px" src="https://stackblitz.com/edit/angular-zpvcju?ctl=1&embed=1&file=app/badge-overview-example.html&hideExplorer=1&hideNavigation=1&view=preview"></iframe>
+## Iconos Angular Material - MatIconModule
 
-## Iconos Angular Material design
-
-Angular material viene con un set de iconos material design, si has configurado el CDN cómo he indicado antes, tienes a tu disposición un conjunto bastante bueno de iconos svg material design. Para usar estos iconos importa:
-
-```typecript
-import {MatIconModule} from '@angular/material/icon';
-```
+Angular material viene con un set de iconos material design, si has configurado el CDN de los icons cómo he indicado antes, tienes a tu disposición un conjunto bastante bueno de iconos svg material design. Para usar estos iconos importa:
 
 Si quieres usarlos simplemente crea la etiqueta con el parámetro **svgIcon** del icono que quieres renderizar.
 
 ```html
 <mat-icon svgIcon="thumbs-up"></mat-icon>
 ```
-Si quieres saber una lista de iconos disponibles, mira esta página de [iconos angular material](https://klarsys.github.io/angular-material-icons/)
+Si quieres saber una lista de iconos disponibles, mira esta página de [iconos material](https://klarsys.github.io/angular-material-icons/)
 
-### Spinners
+### Spinners - MatProgressSpinnerModule
 
-El típico spinner que gira para mostrar que algo está cargando. Si lo quieres usar importa:
-
-```typescript
-import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
-```
+El típico spinner que gira para mostrar que algo está cargando. 
 
 ```html
 <mat-spinner></mat-spinner>
 ```
 
-<iframe width="100%" height="250px" src="https://stackblitz.com/angular/ndvrqmopnqm?ctl=1&embed=1&file=app/progress-spinner-overview-example.ts&hideExplorer=1&hideNavigation=1&view=preview"></iframe>
+<a href="https://stackblitz.com/angular/ndvrqmopnqm?file=app%2Fprogress-spinner-overview-example.html"><button class="btn">Ejemplo de spinners material design</button></a> 
 
 <br>
 
@@ -219,15 +203,9 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 ## Formularios
 
-### Date picker, selección de fechas y calendarios
+### Date picker, selección de fechas y calendarios - MatDatepickerModule
 
-Con este componente tan útil, puedes añadir un selector de fechas mediante calendario al usuario. Este es uno de los componetes más customizables, por lo que solamente voy a poner los parámetros que me han parecido más útiles. Los inputs no los he querido poner porque no añaden mucho nuevo, pero lo menciono por si los quieres investigar por tu cuenta:
-
-Si quierees usarlo importa:
-
-```typescript
-import {MatDatepickerModule} from '@angular/material/datepicker';
-```
+Con este componente tan útil, puedes añadir un selector de fechas mediante calendario al usuario. Este es uno de los componetes más customizables, por lo que solamente voy a poner los parámetros que me han parecido más útiles. En mi opinión, los calendarios son los mejores componentes de Angular Material, ya que crear de cero un calendario te puede llevar bastante tiempo.
 
 - startView: Sirve para poner que selección se va a mostrar al principio, **year** para selección de años, **month** para meses y **multi-year** para varios años, por defecto es **month**. 
 
@@ -254,35 +232,26 @@ Hay mas propiedades pero te voy a dejar la [documentación oficial sobre los cal
 </mat-form-field>
 ```
 
-<iframe width="100%" height="250px" src="https://stackblitz.com/angular/odrmqdenkrv?ctl=1&embed=1&file=app/datepicker-events-example.ts&hideExplorer=1&hideNavigation=1&view=preview"></iframe>
+<a href="https://stackblitz.com/angular/odrmqdenkrv?file=app%2Fdatepicker-events-example.html"><button class="btn">Ejemplo de calendario con Angular material</button></a> 
 
-## Checkbox y botones radio
 
-Son las típicas casillas que vienen con el HTML por defecto para que el usuario seleccione o no un elemento. La diferencia es que las checkbox están preparadas para múltiples selecciones y son cuadradas, si los quieres importar:
+## Checkbox y botones radio - MatCheckboxModule y MatRadioModule
 
-```typescript
-import {MatCheckboxModule} from '@angular/material/checkbox';
-import {MatRadioModule} from '@angular/material/radio';
-```
+Son las típicas casillas que vienen con el HTML por defecto para que el usuario seleccione o no un elemento solo que con estilos material design. La diferencia entre checkbox y radio button es que las primeros están preparadas para múltiples selecciones y son cuadradas.
 
 Puedes cambiar el color de ambos elementos con la etiqueta **color** y para recoger el valor que ha seleccionado el usuario se hace con `[(ngModel)]="labelPosition"`
 
-<iframe width="100%" height="250px" src="https://stackblitz.com/angular/qyljmgavjad?ctl=1&embed=1&file=app/checkbox-configurable-example.ts&hideExplorer=1&hideNavigation=1&view=preview"></iframe>
+<a href="https://stackblitz.com/angular/eyaqvjlqvmy?file=app%2Fradio-ng-model-example.html"><button class="btn">Ejemplo de checkboxes</button></a> 
 
+### Select box - MatSelectModule
 
-### Select box
-
-Sirve para mostrar un cuadro en el que los usuarios pueden seleccionar items de una lista de opciones. Para usarlo importa:
-
-```typescript
-import {MatSelectModule} from '@angular/material/select';
-```
+Sirve para mostrar un cuadro en el que los usuarios pueden seleccionar items de una lista de opciones.
 
 Para añadir las opciones lo tienes que hacer creando una etiqueta `<mat-option></mat-option>', el uso de ngFor también está permitido por lo que puedes hacer un ngFor de un array para que automáticamente cree todas las opciones.
 
 Si quieres hacer el binding de la opción que ha pulsado el usuario simplemente haz: `[(value)]="selected"`. La variable selected tendrá el valor de la selección del usuario.
 
-Los select boxes se pueden ampliar añadiendo validadores de los formularios, es decir, formControls, para, por ejemplo, hacer que tenga que seleccionar el usuario, un valor sí o si.
+Estas cajas de selección se pueden ampliar añadiendo validadores de los formularios, es decir, formControls, para, por ejemplo, hacer que tenga que seleccionar el usuario, un valor sí o si.
 
 Si añades el campo **multiple** en el **mat-form-field** Angular Material creará un select en el cual el usuario podrá seleccionar varios campos a la vez.
 
@@ -297,15 +266,11 @@ Si añades el campo **multiple** en el **mat-form-field** Angular Material crear
 </mat-form-field>
 ```
 
-<iframe width="100%" height="250px" src="https://stackblitz.com/angular/kdjlbelxgvk?ctl=1&embed=1&file=app/select-value-binding-example.ts&hideExplorer=1&hideNavigation=1&view=preview"></iframe>
+<a href="https://stackblitz.com/angular/kdjlbelxgvk?file=app%2Fselect-value-binding-example.html"><button class="btn">Ejemplo de selector con two way data binding</button></a> 
 
-### Toggler
+### Toggler - MatSlideToggleModule
 
-Estos, personalmente, me gustan más que los botones radio de Angular Material, son unos botones para encender/apagar cosas. Su funcionamiento es sencillo, simplemente los importas con:
-
-```typescript
-import {MatSlideToggleModule} from '@angular/material/slide-toggle';
-```
+Estos, personalmente, me gustan más que los botones radio de Angular Material, son unos botones para encender/apagar cosas. Tienen un diseño parecido a los togglers de ios.
 
 Los creas con su etiqueta y le añades un color si quieres. 
 
@@ -313,7 +278,7 @@ Los creas con su etiqueta y le añades un color si quieres.
 <mat-slide-toggle>Slide me!</mat-slide-toggle>
 ```
 
-<iframe width="100%" height="250px" src="https://stackblitz.com/angular/apxvyaereqk?ctl=1&embed=1&file=app/slide-toggle-configurable-example.ts&hideExplorer=1&hideNavigation=1&view=preview"></iframe>
+<a href="https://stackblitz.com/angular/apxvyaereqk?file=app%2Fslide-toggle-configurable-example.html"><button class="btn">Ejemplo de toggler estilo ios material design</button></a> 
 
 <br>
 
@@ -323,15 +288,11 @@ Los creas con su etiqueta y le añades un color si quieres.
 
 <img src="https://i.imgur.com/BKHFZHz.png" class="responsive-img" alt="Tabs, checkboxes y radio en Angular material"> 
 
-En esta sección me dejo elementos que he considerado poco interesantes porque añaden estilos y ofrecen poco. Por ejemplo el [toolbar](), el [menú], el [card] el [divider], etc
+En esta sección me dejo elementos que he considerado poco interesantes porque añaden estilos y ofrecen poco. Por ejemplo, el [menú para crear navbars responsive](https://material.angular.io/components/menu/overview),el [componente card para añadir tarjetas](https://material.angular.io/components/card/overview) el [divider mostrar items con divisiones](https://material.angular.io/components/divider/overview), etc
 
-### Sidebar
+### Sidebar - MatSidenavModule
 
-El sidebar es la región de la página web en uno de los laterales, normalmente se usa para poner un menú. El problema de esta región es que en dispositivos móviles se tiene que ocultar para que no ocupe espacio de pantalla. Por suerte Angular Material nos da el diseño responsive para estos paneles. Impórtalos así:
-
-```typescript
-import {MatSidenavModule} from '@angular/material/sidenav';
-```
+El sidebar es la región de la página web que se muestra en uno de los laterales, normalmente se usa para poner un menú. El problema de esta región es que en dispositivos móviles se tiene que ocultar para que no ocupe espacio de pantalla. Por suerte Angular Material nos da el diseño responsive para estos paneles. 
 
 Por ejemplo el funcionamiento básico sería:
 
@@ -343,17 +304,13 @@ Por ejemplo el funcionamiento básico sería:
 ```
 El texto de Main Content es donde tienes que poner el contenido principal y el de Drawer content lo tienes que sustituir por lo que quieras poner en el panel lateral.
 
-Para el diseño de un sidenav responsice te recomiendo que le eches un vistazo al siguiente ejemplo creado por los chicos de Angular:
+Para el diseño de un sidenav responsive te recomiendo que le eches un vistazo al siguiente ejemplo para que veas su funcionamiento:
 
-[Ejemplo de sidenav responsive](https://stackblitz.com/angular/onrlxdodyer?file=app%2Fsidenav-responsive-example.ts)
+[Ejemplo de sidenav angular material responsive](https://stackblitz.com/angular/onrlxdodyer?file=app%2Fsidenav-responsive-example.ts)
 
-### Expansion panel
+### Expansion panel - MatExpansionModule
 
 Un panel que al hacer clic se expande mostrando más elementos, muy útil para ofrecer opciones avanzadas al usuario sin comprometer expacio en pantalla. Para importarlo: 
-
-```typescript
-import {MatExpansionModule} from '@angular/material/expansion';
-```
 
 El elemento `<mat-expansion-panel-header>` sirve para mostrar el texto o lo que queremos mostrar al usuario antes de abrir el panel. Debajo de este elemento simplemente ponemos el contenido que se oculta al principio, pero aparece al hacer clic. Como ves en el ejemplo de a continuación, se rodea todo con el elemento `<mat-accordion`. Se puede deshabilitar un panel dinámicamente así: `[disabled]="isDisabled"`
 
@@ -392,15 +349,12 @@ El elemento `<mat-expansion-panel-header>` sirve para mostrar el texto o lo que 
 </mat-accordion>
 ```
 
-<iframe width="100%" height="250px" src="https://stackblitz.com/angular/xvgeddekxdq?ctl=1&embed=1&file=app/expansion-overview-example.ts&hideExplorer=1&hideNavigation=1&view=preview"></iframe>
+<a href="https://stackblitz.com/angular/xvgeddekxdq?file=app%2Fexpansion-overview-example.html"><button class="btn">Ejemplo de contenido expandible</button></a> 
 
-### Columnas. Sistema de grid
 
-Si estas buscando una alternativa a Bootstrap, en especial al sistema de columnas, este es tu componente, con este componente puedes renderizar listas, por ejemplo, especificando el tamaño de las columnas y de las filas. Si quieres usarlo importa:
+### Columnas. Sistema de grid - MatGridListModule
 
-```typescript
-import {MatGridListModule} from '@angular/material/grid-list';
-```
+Si estas buscando una alternativa a Bootstrap, en especial al sistema de columnas, este es tu componente, con este componente puedes renderizar listas, por ejemplo, especificando el tamaño de las columnas y de las filas.
 
 Un ejemplo sencillo:
 
@@ -446,15 +400,9 @@ export class GridListDynamicExample {
 
 Puedes ver aquí, [el ejemplo de columnas en Angular Material](https://stackblitz.com/angular/vjkmnvjjjya?file=app%2Fgrid-list-dynamic-example.ts)
 
-### Stepper
+### Stepper - MatStepperModule
 
 Sirve para mostrar al usuario lo que tiene que hacer en una lista de pasos. Se suele usar por ejemplo en procesos de registros para que,en lugar de mostrar todo de golpe, hacer que el usuario vaya introducciendo sus datos en distintos pasos para que resulte más cómodo. 
-
-Como siempre, para usarlos hay que importar:
-
-```typescript
-import {MatStepperModule} from '@angular/material/stepper';
-```
 
 Hay dos tipos: `<mat-horizontal-stepper>` y `<mat-vertical-stepper>` uno es para mostrar los pasos en horizontal y el otro para mostrarlos con una disposición vertical. Los steppers ofrecen un parámetro llamado `[linear]` que sirve para decidir si el usuario puede saltar pasos o tiene que ir de uno en uno en orden. Para crear un paso se hace con labels así: Para que el usuario pueda introducir los datos, tenemos que crear un form y le tenemos que meter un sistema de validación para que no pueda avanzar si el usuario no ha hecho lo que necesitamos. Por defecto los pasos son editables, eso quiere decir que el usuario siempre puede volver a un paso anterior a cambiar su respuesta, aunque este comportamiento se puede cambiar.
 
@@ -463,7 +411,6 @@ Hay dos tipos: `<mat-horizontal-stepper>` y `<mat-vertical-stepper>` uno es para
     Content 1
 </mat-step>
 ```
-Para verlo mejor te dejo este [ejemplo completo de los steppers ofrecido por Google](https://stackblitz.com/angular/amjgpjxbpak?file=app%2Fstepper-overview-example.ts)
 
 ```html
 <button mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear">
@@ -503,15 +450,13 @@ Para verlo mejor te dejo este [ejemplo completo de los steppers ofrecido por Goo
   </mat-step>
 </mat-horizontal-stepper>
 ```
-<iframe width="100%" height="250px" src="https://stackblitz.com/angular/amjgpjxbpak?ctl=1&embed=1&file=app/stepper-overview-example.ts&hideExplorer=1&hideNavigation=1&view=preview"></iframe>
 
-### Tabs
+Para verlo mejor te dejo este [ejemplo completo para crear formularios de registro con pasos mediante Angular material](https://stackblitz.com/angular/amjgpjxbpak?file=app%2Fstepper-overview-example.ts)
 
-Las tabs o pestañas sirven para mostrar más información en la pantalla sin perder espacio, para pasar de una pestaña a otra, el usuario tiene que hacer clic. Para crearlas importa:
 
-```typescript
-import {MatTabsModule} from '@angular/material/tabs';
-```
+### Tabs - MatTabsModule
+
+Las tabs o pestañas sirven para mostrar más información en la pantalla sin perder espacio, para pasar de una pestaña a otra, el usuario tiene que hacer clic. 
 
 Su funcionamiento es sencillo, simplemente creas la tab con su etiqueta y el label y dentro metes el contenido que quieras:
 
@@ -530,7 +475,7 @@ Su funcionamiento es sencillo, simplemente creas la tab con su etiqueta y el lab
 
 Puedes alinear las pestañas a la izquierda (start), al centro (center) y al final (end) con la propiedad `mat-align-tabs="center"`
 
-<iframe width="100%" height="250px" src="https://stackblitz.com/angular/ekgoaageqbr?ctl=1&embed=1&file=app/tab-group-basic-example.ts&hideExplorer=1&hideNavigation=1"></iframe>
+<a href="https://stackblitz.com/angular/ekgoaageqbr?file=app%2Ftab-group-basic-example.html"><button class="btn">Ejemplo de pestañas o tabs</button></a> 
 
 <br>
 
@@ -538,13 +483,9 @@ Puedes alinear las pestañas a la izquierda (start), al centro (center) y al fin
 
 ## Popups y notificaciones
 
-### Dialog
+### Dialog - MatDialogModule
 
 Sirve para mostrar una ventana emergente al usuario con información o para que introduzca más datos.
-
-```typescript
-import {MatDialogModule} from '@angular/material/dialog';
-```
 
 Para usarlo, lo recomendado es crearte otro componente con un html normal (o utilizando otros componentes material design de esta librería) y simplemente lo que tienes que hacer es llamarlo desde un botón por ejemplo:
 
@@ -575,15 +516,11 @@ let dialogRef = dialog.open(YourDialog, {
 });
 ```
 
-<iframe width="100%" height="250px" src="https://stackblitz.com/angular/koppvkvpmpdn?ctl=1&embed=1&file=app/dialog-overview-example.ts&hideExplorer=1&hideNavigation=1&view=preview"></iframe>
+<a href="https://stackblitz.com/angular/koppvkvpmpdn?file=app%2Fdialog-overview-example.html"><button class="btn">Ejemplo de dialog o popup material</button></a> 
 
-### Notificaciones
+### Notificaciones (snack bars) - MatSnackBarModule
 
 sive para mostrar un pequeño panel que aparece en la pantalla durante unos pequeños instantes mostrando un mensaje, normalmente de notificación tras una acción del usuario. Para importarlos:
-
-```typescript
-import {MatSnackBarModule} from '@angular/material/snack-bar';
-```
 
 Para usarlo simplemente llama al método para abrir la notificación con el mensaje, de esta manera:
 
@@ -591,21 +528,17 @@ Para usarlo simplemente llama al método para abrir la notificación con el mens
 let snackBarRef = snackBar.open('Mensaje');
 ```
 
-<iframe width="100%" height="250px" src="https://stackblitz.com/run?ctl=1&embed=1&file=app/snack-bar-component-example.ts&hideExplorer=1&hideNavigation=1&view=preview"></iframe>
+<a href="https://stackblitz.com/angular/amombxvyqvx?file=app%2Fsnack-bar-overview-example.html"><button class="btn">Ejemplo de notificaciones snack bar</button></a> 
 
 <br>
 
 ***
 
-## Tablas
+## Tablas - MatTableModule
 
 Las tablas son otro de esos componentes que me encantan de Angular Material, y todo porque añaden la posibilidad de hacer que las columnas sean ordenables. Si quieres usar las tablas importa:
 
-```typescript
-import {MatTableModule} from '@angular/material/table';
-```
-
-La manera más sencilla de usar una tabla es creando la etiqueta de tabla y pasando un array con los valores, de esta forma:
+La manera más sencilla de usar una tabla es creando la etiqueta **table de Angular material** pasando un array con los valores, de esta forma:
 
 ```html
 <table mat-table [dataSource]=”myDataArray”>
@@ -628,13 +561,14 @@ Para conseguir la funcionalidad de ordenación, tienes que importar el módulo *
 </ng-container>
 ```
 
-Lo que hace Angular por defecto es asumir que el nombre que le has puesto a la columna coincide con el nombre del campo que la tabla muestra. También se puede añadir un input al comienzo de la tabla para filtrar por nombre, así que te voy a dejar un par de ejemplos para que veas como funciona. 
+Lo que hace Angular por defecto es asumir que el nombre que le has puesto a la columna coincide con el nombre del campo que la tabla muestra. También se puede añadir un input al comienzo de la tabla para filtrar por nombre, así que te voy a dejar un par de ejemplos de tablas creadas con Angular material para que veas como funciona. 
 
-<iframe width="100%" height="250px" src="https://stackblitz.com/angular/rxayjbvbdbv?ctl=1&embed=1&file=app/table-basic-example.ts&hideExplorer=1&hideNavigation=1&view=preview"></iframe>
+<a href="https://stackblitz.com/angular/rxayjbvbdbv?file=app%2Ftable-basic-example.html"><button class="btn">Ejemplo de tabla básica</button></a> 
 
-<iframe width="100%" height="250px" src="https://stackblitz.com/angular/mdxrrgqdrkn?ctl=1&embed=1&file=app/table-filtering-example.ts&hideExplorer=1&hideNavigation=1&view=preview"></iframe>
+<a href="https://stackblitz.com/angular/ygdrrokyvkv?file=app%2Ftable-expandable-rows-example.html"><button class="btn">Ejemplo de tabla con filas expandibles</button></a> 
 
-<iframe width="100%" height="250px" src="https://stackblitz.com/angular/njrkrvllrlv?ctl=1&embed=1&file=app/table-sorting-example.ts&hideExplorer=1&hideNavigation=1&view=preview"></iframe>
+<a href="https://stackblitz.com/angular/bxvnjpleneo?file=app%2Ftable-http-example.html"><button class="btn">Ejemplo de tabla con datos de una API REST y ordenables</button></a> 
+
 
 ## Conclusiones
 
