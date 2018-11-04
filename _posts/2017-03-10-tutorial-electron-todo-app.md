@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Tutorial Electron js - Cómo crear una aplicación de escritorio con tecnologías web
+title: Tutorial Electron js - Cómo crear una app de escritorio con tecnologías web
 meta: Descubre con ejemplos cómo porgramar una aplicación de escritorio multiplataforma para crear notas usando electron js junto a AngularJS
 description: Descubre con ejemplos cómo porgramar una aplicación de escritorio multiplataforma para crear notas usando electron js junto a AngularJS
 excerpt: En este post echaremos un vistazo a Electron, un framework creado por el equipo de Atom para la creación de apps de escritorio multiplataforma. También veremos como podemos usar Electron para desarrollar una app para tomar notas y apintar recordatorios de una manera muy sencilla. 
@@ -8,7 +8,7 @@ title-page: Tutorial Electron - Cómo crear una aplicación de notas cross platf
 image: task
 lang: es
 tags: [Electron, NodeJS, ExpressJS, MongoDB, Moongose ]
-lastmod: 2018-10-27T00:00:00+00:00
+lastmod: 2018-11-04T00:00:00+00:00
 ---
 
 En el día de hoy vamos a ver en que consiste Electron js, una librería para crear aplicaciones de escritorio con tecnologías web, y para ello vamos a desarrollar una app muy sencilla para la gestión de notas y recordatorios usando ExpressJS, MongoDB y Angular JS (Stack MEAN).
