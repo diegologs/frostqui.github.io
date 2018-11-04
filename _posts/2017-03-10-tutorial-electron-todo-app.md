@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Tutorial Electron - Cómo crear una app con AngularJS de escritorio
-meta: Descubre cómo crear aplicaciones cross platform en usando tecnologías web. Cómo usarlo junto a AngularJS para crear una app de notas
-description: Descubre cómo crear aplicaciones cross platform en usando tecnologías web. Cómo usarlo junto a AngularJS para crear una app de notas
+title: Tutorial Electron js - Cómo crear una aplicación de escritorio con tecnologías web
+meta: Descubre con ejemplos cómo porgramar una aplicación de escritorio multiplataforma para crear notas usando electron js junto a AngularJS
+description: Descubre con ejemplos cómo porgramar una aplicación de escritorio multiplataforma para crear notas usando electron js junto a AngularJS
 excerpt: En este post echaremos un vistazo a Electron, un framework creado por el equipo de Atom para la creación de apps de escritorio multiplataforma. También veremos como podemos usar Electron para desarrollar una app para tomar notas y apintar recordatorios de una manera muy sencilla. 
 title-page: Tutorial Electron - Cómo crear una aplicación de notas cross platform
 image: task
@@ -13,9 +13,9 @@ lastmod: 2018-10-27T00:00:00+00:00
 
 En el día de hoy vamos a ver en que consiste Electron js, una librería para crear aplicaciones de escritorio con tecnologías web, y para ello vamos a desarrollar una app muy sencilla para la gestión de notas y recordatorios usando ExpressJS, MongoDB y Angular JS (Stack MEAN).
 
-<h2>Introducción</h2>
+<h2>¿Qué es electron js?</h2>
 
-Antes de empezar con el ejemplo que vamos a desarrollar vamos a ver que es Electron. Electron es un framework desarrollado con la intención de facilitar la vida enormemente al programador.
+Electron js es un framework desarrollado con la intención de facilitar la vida enormemente al programador.
 Entre su ventajas, destaca la de poder crear apps de escritorio multiplataforma, es decir, para distintos sistemas operativos, usando tecnologías web.
 Si manejas bien los lenguajes del desarrollo web como HTML, CSS y JavaScript, con este framework, podrás crear apps sin tener que aprender un lenguaje nuevo. 
 Al utilizar HTML y CSS para representar los datos, es más sencillo crear apps responsive.
@@ -23,7 +23,7 @@ Una vez entendidas las características de Electron vamos a crear un ejemplo sen
 
 <h2>Cómo empezar a usar Electron con ExpressJS</h2>
 
-Antes de instalar Electron, tenemos que instalar Node y NPM en nuestro equipo. Nos dirigimos a su página, lo descargamos y lo instalamos: [https://nodejs.org/en/](https://nodejs.org/en/). NPM lo pudes bajar e instalar desde aquí: [https://www.npmjs.com/](https://www.npmjs.com/)
+Antes de instalar Electron js, tenemos que instalar Node y NPM en nuestro equipo. Nos dirigimos a su página, lo descargamos y lo instalamos: [https://nodejs.org/en/](https://nodejs.org/en/). NPM lo pudes bajar e instalar desde aquí: [https://www.npmjs.com/](https://www.npmjs.com/)
 Para instalar Electron, tenemos que abrir la terminal para introduccir el siguiente comando:
 
 ```bash

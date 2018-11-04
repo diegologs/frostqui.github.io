@@ -464,6 +464,11 @@ footer a {
   background-position: center center;
 }
 
+.post_desc {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
 .post_header_content {
   color: white !important;
   padding-top: 85px;
