@@ -9,8 +9,8 @@ sitemap:
     {% unless post.published == false %}
     <url>
       <loc>{{ site.url }}{{ post.url }}</loc>
-      {% if post.sitemap.lastmod %}
-        <lastmod>{{ post.sitemap.lastmod | date: "%Y-%m-%d" }}</lastmod>
+      {% if post.lastmod %}
+        <lastmod>{{ post.lastmod | date: "%Y-%m-%d" }}</lastmod>
       {% elsif post.date %}
         <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
       {% else %}
@@ -33,8 +33,8 @@ sitemap:
     {% unless page.sitemap.exclude == "yes" %}
     <url>
       <loc>{{ site.url }}{{ page.url | remove: "index.html" }}</loc>
-      {% if page.sitemap.lastmod %}
-        <lastmod>{{ page.sitemap.lastmod | date: "%Y-%m-%d" }}</lastmod>
+      {% if page.lastmod %}
+        <lastmod>{{ page.lastmod | date: "%Y-%m-%d" }}</lastmod>
       {% elsif page.date %}
         <lastmod>{{ page.date | date_to_xmlschema }}</lastmod>
       {% else %}
