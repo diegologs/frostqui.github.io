@@ -8,10 +8,10 @@ title-page: Jenkins tutorial en español, integración continua
 image: jenkins
 lang: es
 tags: [Devops]
-lastmod: 2018-10-28T00:00:00+00:00
+lastmod: 2018-11-05T00:00:00+00:00
 ---
 
-## Introducción
+## Introducción - ¿Qué es continuous integration?
 
 Lo primero que te vas a preguntar es ¿qué es Jenkins?, pero antes de resolver a esta pregunta hay que preguntarse, ¿qué es la integración continua y para que sirve? 
 
@@ -24,11 +24,11 @@ Por ejemplo desde la rama de master podemos escribir una serie de pruebas al hac
 
 Esto no son más que un ejemplo pero básicamente con integración continua se pueden hacer todo tipo de cosas ya que realmente estamos programando tareas automáticas. Se conoce como integración continua porque la idea es ir subiendo el código regularmente para "integrarlo", propiamente dicho,en el repositorio para no tener conflictos, además haciendo despliegues cada poco tiempo aseguramos una versión estable del programa.
 
-Ahora que has entendido a grandes rasgos que es la integración continua y cuáles son sus ventajas, vamos a ver un tutorial sobre cómo instalar y usar Jenkins.
+Ahora que has entendido a grandes rasgos que es la integración continua y cuáles son sus ventajas, vamo
 
 ## Qué es Jenkins
 
-Jenkins (no confundir con jenkin) no es más que un sistema desplegado en un servidor que nos ayuda en la tarea de hacer integración continua y programar tareas automáticas cuando ocurra una determinada acción. A este tipo de servicios se los conoce como CI/CD (Coninuous integration / Continuous deploy) y no es el único existen un montón de sistemas parecidos, aunque en este post me voy a basar en Jenkins ya que es uno de los más conocidos, aunque te dejo enlaces a otros sistemas por si este no te convence y buscas otra opción:
+Jenkins CI no es más que un sistema desplegado en un servidor que nos ayuda en la tarea de hacer integración continua y programar tareas automáticas cuando ocurra una determinada acción. A este tipo de servicios se los conoce como CI/CD (Coninuous integration / Continuous deploy) y no es el único existen un montón de sistemas parecidos, aunque en este post me voy a basar en Jenkins ya que es uno de los más conocidos, aunque te dejo enlaces a otros sistemas por si este no te convence y buscas otra opción:
 
 - [Travis CI](https://travis-ci.org/)
 - [Codeship](https://codeship.com/)
@@ -85,7 +85,7 @@ Por último nos va a pedir un usuario para usar con Jenkins, aunque también pod
 
 ## Primeros pasos con Jenkins: Cómo crear tareas
 
-Lo que vas a leer a continuación no se trata de un manual exhaustivo ni de una gúia o tutorial de cómo usar Jenkins, simplemente es una aproximación y una guia básica de funcionamiento. A partir de aquí cada uno tiene que adaptar lo que le interese para su caso de uso.
+Lo que vas a leer a continuación no se trata de un manual exhaustivo ni de una gúia o tutorial de cómo usar Jenkins, simplemente es una aproximación y una guia básica de funcionamiento. Tanto si eres usuario con conocimientos básicos o una persona que se dedique en específico al devops, te recomiendo que leas este tutorial de jenkis por si te sirve algo para tu caso de uso particular.
 
 Tras instalarlo la pantalla principal que aparecerá es como esta:
 

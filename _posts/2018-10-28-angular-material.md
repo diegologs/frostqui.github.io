@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Angular Material - Tutorial de la mejor librería de componentes material design
-meta: Cómo usar angular material design para crear componentes. Cómo crear iconos con angular material. Guía de todo lo que puede ofrecer esta librería de componentes web
-description: Cómo usar angular material design para crear componentes. Cómo crear iconos con angular material. Guía de todo lo que puede ofrecer esta librería de componentes web
+title: Tutorial Angular Material - Qué es y cómo usar los componentes material design
+meta: Cómo crear componentes material design con Angular. Guía de todo lo que puede ofrecer esta librería de componentes web
+description: Cómo crear componentes material design con Angular. Guía de todo lo que puede ofrecer esta librería de componentes web
 excerpt: Echamos un vistazo a Angular Material, una librería de componentes web con un estilo material design de Google. Hacemos un repaso de algunos componentes interesantes listos para usar en tu proyecto Angular
 title-page: Angular Material- Tutorial de la mejor librería de componentes
 image: angular-material
 lang: es
 tags: [Angular] 
 serie: angular
-lastmod: 2018-11-04T00:00:00+00:00
+lastmod: 2018-11-05T00:00:00+00:00
 
 ---
 
@@ -314,6 +314,7 @@ Un panel que al hacer clic se expande mostrando más elementos, muy útil para o
 
 El elemento `<mat-expansion-panel-header>` sirve para mostrar el texto o lo que queremos mostrar al usuario antes de abrir el panel. Debajo de este elemento simplemente ponemos el contenido que se oculta al principio, pero aparece al hacer clic. Como ves en el ejemplo de a continuación, se rodea todo con el elemento `<mat-accordion`. Se puede deshabilitar un panel dinámicamente así: `[disabled]="isDisabled"`
 
+{% raw %}
 ```html
 <mat-accordion>
   <mat-expansion-panel>
@@ -348,6 +349,7 @@ El elemento `<mat-expansion-panel-header>` sirve para mostrar el texto o lo que 
   </mat-expansion-panel>
 </mat-accordion>
 ```
+{% endraw %}
 
 <a href="https://stackblitz.com/angular/xvgeddekxdq?file=app%2Fexpansion-overview-example.html"><button class="btn">Ejemplo de contenido expandible</button></a> 
 
@@ -358,6 +360,7 @@ Si estas buscando una alternativa a Bootstrap, en especial al sistema de columna
 
 Un ejemplo sencillo:
 
+{% raw %}
 ```html
 <mat-grid-list cols="4" rowHeight="100px">
   <mat-grid-tile
@@ -369,6 +372,7 @@ Un ejemplo sencillo:
   </mat-grid-tile>
 </mat-grid-list>
 ```
+{% endraw %}
 
 ```typescript
 mport {Component} from '@angular/core';
@@ -411,7 +415,7 @@ Hay dos tipos: `<mat-horizontal-stepper>` y `<mat-vertical-stepper>` uno es para
     Content 1
 </mat-step>
 ```
-
+{% raw %}
 ```html
 <button mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear">
   {{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}}
@@ -450,6 +454,7 @@ Hay dos tipos: `<mat-horizontal-stepper>` y `<mat-vertical-stepper>` uno es para
   </mat-step>
 </mat-horizontal-stepper>
 ```
+{% endraw %}
 
 Para verlo mejor te dejo este [ejemplo completo para crear formularios de registro con pasos mediante Angular material](https://stackblitz.com/angular/amjgpjxbpak?file=app%2Fstepper-overview-example.ts)
 
@@ -554,12 +559,14 @@ Si quieres añadir paginación, añade al final esta etiqueta con el número de 
 ```
 Para conseguir la funcionalidad de ordenación, tienes que importar el módulo **MatSortModule**. Hecho esto lo que tienes que hacer es añadir el parámetro de ordenación en la cabecera de las tablas, de esta forma:
 
+{% raw %}
 ```html
 <ng-container matColumnDef="position">
   <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
   <td mat-cell *matCellDef="let element"> {{element.position}} </td>
 </ng-container>
 ```
+{% endraw %}
 
 Lo que hace Angular por defecto es asumir que el nombre que le has puesto a la columna coincide con el nombre del campo que la tabla muestra. También se puede añadir un input al comienzo de la tabla para filtrar por nombre, así que te voy a dejar un par de ejemplos de tablas creadas con Angular material para que veas como funciona. 
 

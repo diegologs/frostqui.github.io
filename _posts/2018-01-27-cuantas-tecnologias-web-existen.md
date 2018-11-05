@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ¿Cuántas tecnologías para el desarollo web existen? ¿Qué tipos hay?
+title: ¿Cuántas tecnologías web existen? Echamos un vistazo a los mejores frameworks
 meta:  Las mejores y más populares tecnologías y frameworks para crear páginas web, tanto para frontend como para backend
 description: Las mejores y más populares tecnologías y frameworks para crear páginas web, tanto para frontend como para backend
 excerpt: Hoy en día existen muchísimas tecnologías para desarrollar web. En este artículo voy a motrar cuáles son los frameworks más interesantes y populares para del desarrollo web en el año 2018.
@@ -13,7 +13,7 @@ lastmod: 2018-10-22T00:00:00+00:00
 
 ## Introducción
 
-La realidad es que exixten cientos o incluso miles de tecnologías y frameworks distintos para el desarrollo web, contarlas todas sería imposible ya que cada poco tiempo 
+La realidad es que exixten cientos o incluso miles de tecnologías web, contarlas todas sería imposible ya que cada poco tiempo 
 aparecen nuevas tecnologías. En este post vamos a ver las tecnologías más famosas y importantes para que sepas qué opciones tienes a la hora de 
 desarrollar una web o aplicación web. Antes de empezar es importante diferenciar dos conceptos: frontend y backend
 
@@ -22,7 +22,7 @@ El backend en cambio es la parte del lado del servidor, es decir, bases de datos
 
 En este artículo voy a mostrar las tecnologías web más populares (a fecha 2018) de cada tipo.
 
-## Tecnologías para el frontend
+## Tecnologías web para el frontend
 
 Los navegadores web solo entienden código escrito en HTML, CSS o Javascript, es decir, los frameworks y herramientas expuestos a continuación pueden
 ser sustituidos por código en Javascript puro.
