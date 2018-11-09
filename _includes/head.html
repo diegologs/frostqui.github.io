@@ -9,14 +9,19 @@
   });
 </script>
 
+{% include loadCSS.html %}
 <link rel="shortcut icon" type="image/png" href="{{site.baseurl}}/images/favicon.png" />
 
 <link href="https://fonts.googleapis.com/css?family=Lato|Titillium+Web" rel="stylesheet">
 
-<link href="{{site.baseurl}}/css/prism.min.css" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/ficons@1.1.52/dist/ficons/font.css" rel="stylesheet">
-<link rel="stylesheet" href="{{site.baseurl}}/css/picnic.min.css">
+<link rel="preload" href="{{site.baseurl}}/css/picnic.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" href="{{site.baseurl}}/css/prism.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/ficons@1.1.52/dist/ficons/font.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+<noscript><link rel="stylesheet" href="{{site.baseurl}}/css/picnic.min.css"></noscript>
 <link rel="stylesheet" href="{{site.baseurl}}/css/index.min.css">
+<noscript><link href="{{site.baseurl}}/css/prism.min.css" rel="stylesheet"></noscript>
+<noscript><link href="https://cdn.jsdelivr.net/npm/ficons@1.1.52/dist/ficons/font.css" rel="stylesheet"></noscript>
 
 {% if page.title %}
   <title>{{page.title}}</title>
@@ -67,6 +72,7 @@
 {% if page.lastmod %}
   <meta property="article:modified_time" content="{{page.lastmod}}">
 {% endif %}
+
 
 <link rel="manifest" href="/manifest.json">
 
