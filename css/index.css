@@ -4,7 +4,7 @@ body {
   font-size: 15px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #eee;
+  background-color: #f5f3f0;
   font-family: 'Lato', sans-serif;
 }
 
@@ -600,8 +600,23 @@ footer a {
 /*  ------ PROJECTS ------*/
 
 .project{
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 10px;
+  margin-left: 0;
+}
+
+.project_thumb {
+  height: 140px;
+  overflow: hidden;
+}
+
+.project_info {
+  background-color: white;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 8px 14px 38px rgba(39,44,49,.06),1px 3px 8px rgba(39,44,49,.03);
+
 }
 
 .project_title{

@@ -11,23 +11,28 @@ description: Todos los proyectos más importantes en forma de lista que he reali
 <main class="container main_content ">
 
 <h2>Mis proyectos</h2>
-
-    {% for project in site.pages %}
+    <div class="flex two">
+    {% for project in site.pages reversed%}
     {% if project.type == 'project' %}
-    <article class="project">
-        <img class="responsive-img" src="{{site.baseurl}}/images/projects/{{project.image}}">
+    <article class="project full half-500">
+      <div class="project_thumb">
+      <img class="responsive-img" src="{{site.baseurl}}/images/projects/{{project.image}}">
+    </div>
+        <div class="project_info">
         <a class="post-title" href="{{project.url}}">
           <h3 class="post-title">{{project.title}}</h3>
         </a>
         <p>{{project.description}}</p>
+        <p><a href="{{project.url}}">Leer más</a></p>
         {% for tag in project.tenol %}
         <a class="tags" href="/tag#{{ tag | slugify }}">{{ tag }}</a>
         {% endfor %}
 
+      </div>
       </article>
-    <hr aria-hidden="true"> 
     {% endif %} 
     {% endfor %}
+  </div>
 </main>
 
 
