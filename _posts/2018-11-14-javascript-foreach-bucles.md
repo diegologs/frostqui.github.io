@@ -81,7 +81,9 @@ for (i = 0; i < 10; i++) {
 }
 ```
 
-Si ejecutas el código anterior y miras en la consola del navegador, podrás observar que no pinta el contador cuando vale 3. Estas dos instrucciones se pueden usar junto a una etiqueta para referenciar el bloque al que se aplica, por ejemplo:
+Si ejecutas el código anterior y miras en la consola del navegador, podrás observar que no pinta el contador cuando vale 3.
+
+Estas dos instrucciones se pueden usar junto a una etiqueta para referenciar el bloque al que se aplica, por ejemplo:
 
 ```javascript
 var fruits = ["Apple", "Banana", "Cherries"];
@@ -139,7 +141,7 @@ Como hemos visto antes, se puede usar también for in para recorrer un array, pe
 Ejemplo de bucle for in:
 
 ```javascript
-var myCar = {
+var oldCar = {
     make: 'Audi',
     model: 'A4',
     year: '2010'
