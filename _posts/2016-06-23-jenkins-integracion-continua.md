@@ -1,17 +1,17 @@
 ---
 layout: post
 title: Jenkins - Tutorial en español. Cómo hacer integración continua y cómo empezar a usarlo
-meta: Cómo instalar jenkins para crear tareas y pipelines. Además decubrimos cuál es el mejor plugin para jenkins.
-description: Cómo instalar jenkins para crear tareas y pipelines. Además decubrimos cuál es el mejor plugin para jenkins.
+meta: Aprende cómo empezar a usar Jenkins para disfrutar de la integración contínua. Además de ver cómo instalar Jenkins y cómo usarlo vemos Blue Ocean el mejor plugin para crear tareas
+description: Aprende cómo empezar a usar Jenkins para disfrutar de la integración contínua. Además de ver cómo instalar Jenkins y cómo usarlo vemos Blue Ocean el mejor plugin para crear tareas
 excerpt: La integración continua es una práctica de desarrollo de software y del desarrollo web, en la cual los desarrolladores de software suben su código a un repositorio central donde automáticamente pasan las pruebas métricas y de calidad. Y Jenkins es la herramienta perfecta para realizar integración continua, además es muy simple de utilizar.
 title-page: Jenkins tutorial en español, integración continua
 image: jenkins
 lang: es
 tags: [Devops]
-lastmod: 2018-11-05T00:00:00+00:00
+lastmod: 2018-11-16T00:00:00+00:00
 ---
 
-## Introducción - ¿Qué es continuous integration?
+## Introducción - ¿Qué es la integración continua?
 
 Lo primero que te vas a preguntar es ¿qué es Jenkins?, pero antes de resolver a esta pregunta hay que preguntarse, ¿qué es la integración continua y para que sirve? 
 
@@ -24,7 +24,7 @@ Por ejemplo desde la rama de master podemos escribir una serie de pruebas al hac
 
 Esto no son más que un ejemplo pero básicamente con integración continua se pueden hacer todo tipo de cosas ya que realmente estamos programando tareas automáticas. Se conoce como integración continua porque la idea es ir subiendo el código regularmente para "integrarlo", propiamente dicho,en el repositorio para no tener conflictos, además haciendo despliegues cada poco tiempo aseguramos una versión estable del programa.
 
-Ahora que has entendido a grandes rasgos que es la integración continua y cuáles son sus ventajas, vamo
+Muy bien, visto este concepto, vamos a ver cómo aplicar integración continua con jenkins.
 
 ## Qué es Jenkins
 
@@ -36,7 +36,7 @@ Jenkins CI no es más que un sistema desplegado en un servidor que nos ayuda en 
 
 Además te dejo una lista en la que hacen una comparación de todos los sistemas CI [https://github.com/ligurio/awesome-ci](https://github.com/ligurio/awesome-ci)
 
-Jenkins se integra a la perfección con Git para poder ejecutar tareas con determinadas acciones Git, por ejemplo cuando se lanza un pull request, cuando se pushea a una determinada rama, cuando se crea una rama, etc. Además de integrarse con Git, también tiene la posibilidad de instalar muchos plugins para extender su funcionalidad. En este tutorial de Jenkins vamos a ver cómo instalarlo y para disfrutar de las ventajas de la integración continua.
+Jenkins se integra a la perfección con Git para poder ejecutar tareas con determinadas acciones Git, por ejemplo cuando se lanza un pull request, cuando se pushea a una determinada rama, cuando se crea una rama, etc. Además de integrarse con Git, también tiene la posibilidad de instalar muchos plugins para extender su funcionalidad. 
 
 ## Cómo instalar Jenkins
 
@@ -55,7 +55,7 @@ De todas formas te dejo un enlace oficial en inglés de como instalarlo en los d
 
 En mi caso particular voy a instalarlo en docker para hacer pruebas en local y poder gestionarlo facilmente. Para ello simplemente he descargado la imagen de docker desde Kitematic (una GUI de docker que recomiendo) y la he ejecutado.
 
-## Configuración de Jenkis y cómo instalar plugins
+## Configuración de Jenkins y cómo instalar plugins
 
 Tras ejecuta Jenkins nos dirigimos a la ruta en local donde lo hayamos configurado, en mi caso, **http://localhost:32769/** y nos aparecerá una imagen tal que así:
 
@@ -83,9 +83,9 @@ Hacemos clic en install y esperamos a que instale Jenkins y los plugins que hemo
 
 Por último nos va a pedir un usuario para usar con Jenkins, aunque también podemos continuar como admin. Y listo ya tenemos Jenkins instalado y listo para empezar a usar.
 
-## Primeros pasos con Jenkins: Cómo crear tareas
+## Primeros pasos con Jenkins: Tutorial para empezar a usarlo
 
-Lo que vas a leer a continuación no se trata de un manual exhaustivo ni de una gúia o tutorial de cómo usar Jenkins, simplemente es una aproximación y una guia básica de funcionamiento. Tanto si eres usuario con conocimientos básicos o una persona que se dedique en específico al devops, te recomiendo que leas este tutorial de jenkis por si te sirve algo para tu caso de uso particular.
+Lo que vas a leer a continuación no se trata de un manual exhaustivo ni de un tutorial de Jenkins en profundidad, simplemente es una aproximación y una guia básica de funcionamiento. Tanto si eres usuario con conocimientos básicos o una persona que se dedique en específico al devops, te recomiendo que leas este tutorial de cómo funciona Jenkins por si te sirve algo para tu caso de uso particular.
 
 Tras instalarlo la pantalla principal que aparecerá es como esta:
 
@@ -140,6 +140,10 @@ Si quieres mas información o necesitas un tutorial más exhaustivo sobre el plu
 En este tutorial para Jenkins hemos visto por encima que crear todo el sistema de integración continua es un rollo, si tienes un proyecto muy pequeño no sé si merece la pena el esfuerzo de montar todo, pero a la larga viene muy bien para no perder tanto tiempo al haciendo los builds, despliegues, etc, de forma manual. Para los proyectos open source también viene bien para restringir cada merge. Si el merge no cumple ciertos requisitos de estilo o no pasa los tests, el merge no se puede hacer. La integración continua es perfecta para tener un control de lo que pasa en el proyecto, para saber cómo de estable es un proyecto y para avisar a la gente cuando un build a producción ha salido mal.
 
 Otra cosa que no he comentado es que se pueden hacer esquemas predefinidos para los proyectos, por ejemplo te puedes hacer un esquema para proyectos front con ciertos comandos, otro para proyectos backend etc, de esta forma una vez has creado uno crear los demás es cosa de dos clics. 
+
+Te dejo un vídeo tutorial de jenkins en español donde se ve con ejemplos cómo usar jenkins:
+
+<iframe width="100%" height="400" src="https://www.youtube.com/embed/ma6x5sn3Rzg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Te dejo enlaces a artículos en inglés con más información y más detallada si te interesa Jenkins y quieres aprender más:
 

@@ -158,6 +158,11 @@ code {
   list-style: none;
 }
 
+.all_posts li{
+  margin: 0.65rem;
+  font-size: 0.80rem;
+}
+
 /*  ------ HEADER & NAVBAR------*/
 
 #header_logo {

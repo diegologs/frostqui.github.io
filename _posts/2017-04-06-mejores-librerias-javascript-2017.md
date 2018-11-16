@@ -8,16 +8,16 @@ title-page: Mejores librerías JavaScript 2017
 image: library
 lang: es
 tags: [Javascript]
-lastmod: 2018-10-28T00:00:00+00:00
+lastmod: 2018-11-16T00:00:00+00:00
 ---
 
 
-Hoy os traigo una lista seleccionada personalmente por mí, con las que considero que son las mejores o más utilies librerías para Javascript.
+Hoy os traigo una lista seleccionada personalmente por mí, con las que considero que son las mejores o más utilies librerías Javascript.
 Decir que no he incluido JQuery por ejemplo al igual que tantas otras porque ya son conocidas por todos. También he omitido frameworks completos como Angular o React porque he querido enfocarlo hacia librerías que ofrezcan pequeñas funcionalidades pero útiles para usar en cualquier página web. De todas formas si quieres encontrar frameworks para el desarrollo web te recomiendo que eches un vistazo a este post: [¿Cuantás tecnologías web existen?]({{site.baseurl}}/cuantas-tecnologias-web-existen)
 
 ## Jquery FlexDataList
 
-Empezamos con Jquery FlexDataList, una librería de Javascript incluir autocompletado en un página web. Para usarla tienes que seguir estos pasos:
+Empezamos con Jquery FlexDataList, una librería js incluir autocompletado en un página web. Para usarla tienes que seguir estos pasos:
 
 Incluimos la ruta de la librería en la seccion HEAD de nuestro archivo HTML y sustituimos /path/to/ por la ruta donde descargemos flexdatalist:
 
@@ -209,7 +209,7 @@ window.onload = function() {
 
 ## Jquery Izimodal
 
-Si no quieres perder mucho el tiempo haciendo y diseñando modals, te recomiendo este plugin. Tiene muchos tipos prediseñados, como formularios de login y registro, notificaciones, alertas, etc. 
+Si no quieres perder mucho el tiempo haciendo y diseñando modals, te recomiendo este plugin. Por el nombre parece que va a ser una librería jquery pero no es así, se puede usar en cualquier proyecto. Tiene muchos tipos prediseñados, como formularios de login y registro, notificaciones, alertas, etc. 
 
 Si te gustaría usarlo, lo mejor es bajartelo usando el CDN [https://cdnjs.com/libraries/izimodal](https://cdnjs.com/libraries/izimodal)
 
@@ -232,7 +232,7 @@ Todos los ejemplos los puedes encontrar en su página web oficial
 
 ## Moment.js
 
-Esta librería es especialmente útil cuando queremos formatear fechas, es decir, si le pasamos al script una fecha, Moment.js podrá transformarla para mostrala 
+Esta librería javascript es especialmente útil cuando queremos formatear fechas, es decir, si le pasamos al script una fecha, Moment.js podrá transformarla para mostrala 
 de otro modo. También es capaz de coger una fecha, y devolver el tiempo que ha pasado desde entonces hasta ahora. Por si fuera poco también tiene soporte para muchos lenguajes, entre ellos el español.
 
 Para descargarla podemos hacerlo desde su [Página oficial](https://momentjs.com/)
@@ -430,6 +430,8 @@ Como ves, cargamos los datos y seteamos los colores que queremos para nuestra gr
 
 ## Clusterize.js
 
+Personalmente la de las librerías javascript de esta lista, me parece de las más interesantes.
+
 Si añadimos muchisimas filas a una tabla, en el HTML, al hacer scroll sobre la tabla, notaremos que la tabla se siente con mucho lag. Para arreglar esto puedes usar este script, se encarga de sustituir todas las filas en el HTML por una sola, reduciendo mucho la lentitud al hacer scroll.
 
 Te la puedes bajar de aquí [https://github.com/NeXTs/Clusterize.js](https://github.com/NeXTs/Clusterize.js)
@@ -502,7 +504,7 @@ notie.alert({
 
 ## Layzr.js
 
-Layzr es una librería de Javascript que ofrece una forma de incluir imágenes en una página web con carga perezosa, es decir, éstas imágenes no se renderizaran en pantalla hasta que no aparezcan. Por ejemplo, si tenemos una web con muchas imágenes, y que además, muchas de ellas no se ven hasta que el usuario hace scroll, este sistema hace que la 
+Layzr es una librería js que ofrece una forma de incluir imágenes en una página web con carga perezosa, es decir, éstas imágenes no se renderizaran en pantalla hasta que no aparezcan. Por ejemplo, si tenemos una web con muchas imágenes, y que además, muchas de ellas no se ven hasta que el usuario hace scroll, este sistema hace que la 
 página cargue mucho mas rápido, ofreciendo una mejor experiencia al usuario.
 
 Puedes descargartela de aqui [https://github.com/callmecavs/layzr.js/releases](https://github.com/callmecavs/layzr.js/releases) 

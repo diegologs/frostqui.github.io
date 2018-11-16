@@ -9,7 +9,7 @@ image: angular-components
 lang: es
 tags: [Angular] 
 serie: angular
-lastmod: 2018-10-27T00:00:00+00:00
+lastmod: 2018-11-16T00:00:00+00:00
 
 ---
 
@@ -24,7 +24,6 @@ La vista (html) y los estilos (css), definen qué y cómo queremos representar l
 Por ejemplo una estructura de componentes con componentes padres e hijos puede ser la siguiente:
 
 <img src="https://i.imgur.com/RG9ppXe.jpg" class="responsive-img" alt="Un componente que tiene dos componentes hijos y a su vez, su hijo tiene otros dos hijos"> 
-
 
 
 ## Creando componentes en Angular
@@ -77,7 +76,7 @@ Importamos 'Component' de @angular/core, llamamos a @Component y le pasamos tres
 
 Por último hacemos export class y el nombre de la clase.
 
-## Routing en Angular
+## Cómo crear rutas en Angular. Sistema de routing
 
 Con esto sabemos crear componentes sueltos (todavía sin funcionalidad) pero qué pasa si hemos creado un componente para una página entera, es decir, ¿cómo se crean páginas en Angular, y cómo asignarles una ruta en la página?
 

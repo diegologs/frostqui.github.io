@@ -8,7 +8,7 @@ title-page: Git, comandos básicos y avanzados
 image: git
 lang: es
 tags: [Git]
-lastmod: 2018-10-28T00:00:00+00:00
+lastmod: 2018-11-16T00:00:00+00:00
 ---
 
 En el post de hoy veremos algunos de los comandos git más utilizados, pero tranquilo, si ya eres un usuario más avanzado de git, también veremos algunos comandos menos conocidos y avanzados pero igualmente útiles.
@@ -36,6 +36,8 @@ git config --global user.name "Tu nombre aquí"
 git config --global user.email ejemplo@example.com
 ```
 
+Los comandos de git que voy a explicar a continuación se ejecutan tambien en consola.
+
 ## Comandos básicos
 
 Bien, pongámonos en la situación de que tenemos un proyecto que estamos dearrollando y queremos cambiar algo drástico. Lo mejor es usar git para llevar el control de estos cambios por si queremos revertirlos.
@@ -60,7 +62,7 @@ git status
 <img src="http://i.imgur.com/fBoD8Uk.png" class="responsive-img" alt="Git status"> 
 
 
-Este comando imprimirá los archivos que van a ser guardados, el siguiente paso es ejecutar:
+Este comando git imprimirá los archivos que van a ser guardados, el siguiente paso es ejecutar:
 
 ```bash
 git add .
@@ -80,7 +82,7 @@ Con estos comandos hemos añadido o hemos quitado archivos pero aún no han sido
 ```bash
 git commit -m "Nombre descriptivo del cambio que hemos realizado"
 ```
-Acabamos de hacer nuestro primer commit, un commit es un guardado con mensaje de los cambios que hemos realizado en un momento determinado en nuestro proyecto
+Acabamos de hacer nuestro primer commit, un commit es un guardado con mensaje de los cambios que hemos realizado en un momento determinado en nuestro proyecto. Normalemente el flujo de trabajo con git para el día a día consiste en hacer git status para ver la lista de cambios, git add de todos los archivos o de los que queramos, y por último hacer commit.
 
 Para imprimir todos los commits que hemos realizado tenemos el comando de git:
 
@@ -95,6 +97,12 @@ git reset --hard IDENTIFICADOR
 Sustituimos IDENTIFICADOR por el identificador que comentaba anteriormente, eliminando así, todos los commits posteriores a ese commit.
 
 Con *git revert* se crea un nuevo commit que revierte los cambios realizados en el último commit, pero no elimina dicho commit.
+
+Si quires ver los cambios que has realizado desde el último commit lo puedes hacer con:
+
+```bash
+git diff
+```
 
 ## Administrando proyectos git 
 
@@ -141,11 +149,6 @@ Las ramas sirven para llevar un control de cambios independiente en el mismo rep
 git push origin master
 ```
 
-Si quires ver los cambios que has realizado desde el último commit lo puedes hacer con:
-
-```bash
-git diff
-```
 En verde, saldrán las líneas que has añadido, y en rojo las que has eliminado desde la última vez.
 
 Para posicionarnos en una rama escribe:
@@ -158,13 +161,28 @@ Y para crear una rama:
 ```bash
 git checkout -b rama_nueva
 ```
+
+Para combinar ramas, es decir, git va a tratar de hacer una fusión de los cambios de ambas ramas, si llega a una línea que se ha cambiado en los dos sitios a la vez al no saber que cambio es el que el usuario quiere saltará un conflicto de git. Para arreglarlo tienes que decidir que cambio quieres conservar y volver a pushear para hacer el merge:
+
+```bash
+git merge hotfix
+```
+
+Este comando mergea los cambios de la rama llamada **hotfix** a la rama en la que nos encontremos. Puedes ver en qué rama te encuentras  si ejecutas:
+
+```bash
+git brach
+```
+
+Normalmente las ramas en git se utilizan para asilar funcionalidades, es decir, creamos una rama con el nombre de una funcionalidad, hacemos todos los commits que queramos y al finalizar la funcionalidad hacemos un merge de ramas. Esto permite tener equipos trabajando independientemente a la vez en el mismo proyecto sin pisar funcionalidad, esta estrategia se conoce como **git flow**. Puedes consultar más información de esto en este enlace: [http://aprendegit.com/que-es-git-flow/](http://aprendegit.com/que-es-git-flow/)
+
 ## Comandos avanzados
 
-Con este tutorial de comandos de git hemos visto los esenciales para cualquier proyecto, pero existen muchos más comandos, ahora voy a poner algunos que personalmente utilizo cada día y son algo más avanzados.
+Vistos estos comandos básicos de git toca ver algo más complejo. No son comandos muy complicados pero no son recomendables si no controlas del todo git. Para ciertas situaciones estos comandos de git son muy útiles.
 
 #### Cómo crear alias en git
 
-Para no tener que estar escribiendo todo el rato "commit" o "checkout" podemos crear alias, los alias de git sirven para decirle a git que comando tiene que ejecutar para el alias que le hemos indicado, estos son los alias más comunes, aunque puedes crear y configurar más.
+Para no tener que estar escribiendo todo el rato "commit" o "checkout" podemos crear alias, los alias de git sirven para decirle a git que comando tiene que ejecutar para el alias que le hemos indicado, estos son los alias más comunes, aunque puedes crear y configurar más. Personalmente considero los alias imprescindibles.
 
 ```bash
 git config --global alias.co checkout
@@ -188,6 +206,7 @@ Posteriormente si los quieres recuperar:
 ```bash
 git stash pop
 ```
+Este comando git es de los más útiles para no tener que estar guardando cosas momentáneamente en otros sitios si te quieras cambiar rápido de rama
 
 #### Pull de un solo commit
 
@@ -229,3 +248,7 @@ Estos comandos filtarán los commits por autor, por fecha y por los archivos que
 ## Conclusiones
 
 Git es una herramienta muy potente que ofrece muchísmos comandos para la gestios de versiónes de nuestros proyectos. Los commmits que he explicado son unos cuantos, me dejo muchos de ellos, pero te animo a que eches un vistazo a la documentación oficial de git para que descubras muchos mas comandos y configuraciones.
+
+Te dejo un vídeo para que veas en detalle y con ejemplos los comandos que acabas de aprender:
+
+<iframe width="100%" height="400" src="https://www.youtube.com/embed/HiXLkL42tMU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

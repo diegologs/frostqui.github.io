@@ -26,7 +26,7 @@ Dentro de los guards hay 4 tipos principales:
 
 - **CanLoad**: Sirve para evitar que la aplicación cargue los módulos perezosamente si el usuario no está autorizado a hacerlo.
 
-## Cómo se crea un guard
+## Cómo se crea un guard en Angular
 
 Los guards se implementan para ser inyectandos por lo tanto tenemos que usar la etiqueta @Inyectable, como si fuera un servicio. Si necesitas saber como crear servicios te recomiendo un [artículo anterior que escribí sobre este tema]({{site.baseurl}}/angular-servicios-llamadas-http)
 
@@ -99,7 +99,7 @@ Los guards también pueden recibir como parámetro el propio componente sobre el
 
 ## Conclusiones
 
-Lo bueno de los guards es que puedes crear varios para usarlos en varias rutas. Además si quieres usar varios guards en la misma ruta, también peudes hacerlo, simplemente separando los guards con una coma:
+Lo bueno de los guards de Angular es que puedes crear varios para usarlos en varias rutas. Además si quieres usar varios guards en la misma ruta, también peudes hacerlo, simplemente separando los guards con una coma:
 
 ```typescript
  canActivate: [OnlyLoggedInUsersGuard, AlwaysAuthGuard],

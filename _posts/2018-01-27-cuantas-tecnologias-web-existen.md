@@ -8,7 +8,7 @@ title-page: ¿Cuántas tecnologías web existen?
 image: tecnologias-web
 lang: es
 tags: [Web]
-lastmod: 2018-10-22T00:00:00+00:00
+lastmod: 2018-11-16T00:00:00+00:00
 ---
 
 ## Introducción
@@ -80,7 +80,7 @@ Sirven de gran ayuda para programar ciertas tareas, como por ejemplo, ejecutar a
 
 #### Transpiladores Javascript
 
-Podemos escribir código con otra sintaxis, y gracias a los transpiladores, será transformado a código Javascript
+Dentro de las tecnologías web existen, en concreto en el lado del front existen herraminetas que permiten escribir código con otra sintaxis, y gracias a los transpiladores, será transformado a código Javascript (el único lenguaje aparte de HTML y CSS que entiende el navegador)
 
 - **Typescript**: Una sintaxis muy parecida a Java. Tiene tipado estático y azúcar sintáctico. No tiene gestor de paquetes.
 - **CoffeScript**: Cada vez se usa menos. Añade abstracciones sintácticas y rendimiento a Javascript aunque no añade tipado fuerte estático. 
@@ -103,7 +103,7 @@ De igual manera, también exixten transpiladores para transformar código en CSS
 ## Tecnologías para el backend
 
 A diferencia de en el frontend, en el backend, existe más variedad de lenguajes con los que podemos crear un servidor conectado a una base de datos.
-Muchas de estas tecnologías se pueden usar junto con los frameworks para el frontend.
+Muchas de estas tecnologías web para el backend se pueden usar junto con los frameworks para el frontend, es decir, podemos poner como motor de plantillas Angular por ejemplo, aunque lo más típico es que se conecte frontend y backend mediante una API para que sean independientes.
 
 #### Java
 
