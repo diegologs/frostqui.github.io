@@ -106,7 +106,7 @@ for (i = 0; i < array.length; i++) {
 }
 ```
 
-La misma funcionalidad pero con un bucle for each:
+El bucle que voy a poner a continuación funciona como un bucle foreach de otros lenguajes pero técnicamente no lo es porque con las versiones mas recientes de Javascript (ES6) ya incluyen un bucle forEach propiamente dicho. Este bucle se llama bucle for in:
 
 ```javascript
 for (var x in array) {
@@ -120,21 +120,21 @@ Pongamos este ejemplo:
 
 ```javascript
 var a = [];
-a[5] = 5;
+a[5] = 3;
 for (var x in a) {
     console.log(x);
 }
 ```
 
-Lo que todo el mundo esperaría es que el array va a pintar 5 veces undefined y una vez el número 5, como si que pasaría si hacemos esto mismo pero con un bucle for normal, pero esto no es así, lo que va a mostrar en la consola es una vez el número 5 y nada más. Si esta funcionalidad la esperábamos si que nos puede servir, pero si no sabemos si el array va a tener casillas undefined puede ser que no sea lo que estamos buscando.
+Lo que todo el mundo esperaría es que el array va a pintar 5 veces undefined y una vez el número 3, que corresponde con el valor que hay en el array en la 5º posición, como si que pasaría si hacemos esto mismo pero con un bucle for normal, pero esto no es así, lo que va a mostrar en la consola es una vez el número 3 y nada más. Esto es debido a que lo que hace es pintar únicamente los valores del array que tengan un valor. Si esta funcionalidad la esperábamos si que nos puede servir, pero si no sabemos si el array va a tener casillas undefined puede ser que no sea lo que estamos buscando.
 
 Otro de los problemas de usar for each es que no está garantizado el orden numérico a la hora de recorrer el array, sobre todo en versiones más antiguas de los navegadores.
 
-Por último pero no menos importante, otro de los problemas de estos bucles es que primero se recorre todas las propiedades del array para sacar sus propiedades, simplemente para sacar el nombre, si queremos sacar su valor vamos a necesitar otra lectura, haciendo que este bucle sea más lento que un bucle for normal.There is a difference between for and forEach. `for` will local reassign variable for every run, while `forEach` will create new variable. Example:
+Otro de los problemas de estos bucles es que primero se recorre todas las propiedades del array para sacar sus propiedades, simplemente para sacar el nombre, si queremos sacar su valor vamos a necesitar otra lectura, haciendo que este bucle sea más lento que un bucle for normal.
 
-## for in vs for of
+## for in vs for of en javascript
 
-Hay otro tipo de bucle que funciona muy parecido al bucle for in visto anteriormente, el bucle for of. La sintaxis es exactamente la misma, se diferencia del anterior en que el bucle for of itera sobre los objetos que son iterables, un array por ejemplo. En cambio el bucle for in está pensado para iterar sobre las propiedades de los objectos, es decir para hacer un for each en javascript de un object.
+Hay otro tipo de bucle que funciona muy parecido al bucle for in visto anteriormente, el bucle for of. La sintaxis es exactamente la misma, se diferencia del anterior en que el bucle for of itera sobre los objetos que son iterables, un array por ejemplo. En cambio el bucle for in está pensado para iterar sobre las propiedades de los objectos. Si lo aplicamos sobre un objecto devolvera las claves (el nombre de sus propiedades pero no su valor)
 
 Como hemos visto antes, se puede usar también for in para recorrer un array, pero no es recomendable. Veamoslo con un par de ejemplos:
 
@@ -147,11 +147,16 @@ var oldCar = {
     year: '2010'
 };
 
-var (let key in oldCar) {
+for (let key in oldCar) {
     console.log(key + ' - ' + myCar[key]);
 }
 ```
-
+Si hacemos este mismo bucle pero con un **for of** se mostrará por pantalla:
+```
+make
+model
+year
+```
 Ejemplo de bucle for of:
 
 ```javascript
