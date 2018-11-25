@@ -116,7 +116,7 @@ Si todo ha salido bien estarás viendo una página con el logo de Angular indica
 <img src="https://i.imgur.com/eFs6dpB.png" class="responsive-img" alt="Verás el logo de Angular y un menú de navegación con 3 links"> 
 
 
-# Estructura de un proyecto y hola mundo con Angular 2
+## Estructura de un proyecto y hola mundo con Angular 2
 
 Si has instalado Angular y has creado un proyecto con el comando **ng new**, angular habrá creado una serie de carpetas y archivos base para cualquier aplicación angular.
 
@@ -150,7 +150,7 @@ title = 'app';
 
 Si cambias el valor de esta variable, por ejemplo a **hola mundo en Angular 2** y tienes la página servida mediante el comando **ng serve** al abrir la web otra vez en el navegador el mensaje que aparece en la web abrá cambiado. Lo bueno de Angular es que puedes tener la página servida con el comando ng serve, que si cambias algún archivo, el comando se refresca sin que tengas que hacer nada para que veas directamente los cambios en la web abierta sin tener que reabrir la página.
 
-# Ejemplos de páginas hechas con Angular 2
+## Ejemplos de páginas hechas con Angular 2
 
 En Internet hay muchas empresas usando Angular para sus páginas webs, te voy a dejar algunos ejemplos por si te quieres inspirar o para que veas cómo funcionan:
 
