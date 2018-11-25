@@ -5,6 +5,51 @@ layout: default
 {% include navbar_transparent.html %}
 
 
+{% if serie.links %}
+  <div class="post_header" style="background-image: linear-gradient( rgba(23, 45, 65, 0.5), rgba(54, 75, 94, 0.9) ), url({{site.baseurl}}/images/posts/{{page.image}}.jpg)">
+    <div class="container post_header_content">
+      <h1 class="post_title">{{page.title}} </h1>
+      <p>{{page.excerpt}}</p>
+    </div>
+  </div>
+
+  <div class="posts container">
+
+    <div class="series-content">{{content}}</div>
+    <hr aria-hidden="true"> 
+    {% assign counter = 0 %}
+
+    {% for post in site.posts reversed %} {% if post.serie == page.serie %} {% assign counter=counter | plus:1 %}
+    <article class="flex two single_post">
+      <div class="full fifth-1000">
+        <span>
+            <a href="{{site.baseurl}}{{post.url}}"><img class="responsive-img series_image center" src="{{site.baseurl}}/images/posts/{{post.image}}.jpg"></img></a>
+        </span>
+      </div>
+      <div class="full four-fifth-1000 posts_info_series">
+        <h3 class="posts_title">
+          <a href="{{site.baseurl}}{{post.url}}">{{counter}}. {{post.title}}</a>
+        </h3>
+        <p class="posts_summary">{{post.description}}</p>         
+        <a class="posts_read_more" href="{{site.baseurl}}{{post.url}}">Leer más
+          <span class="visuallyhidden">Leer más acerca de {{post.title}}</span>
+        </a>
+      
+      </div>
+    </article>
+    <br>
+    {% endif %} {% endfor %}
+
+    <h4 class="center">Suscríbete a mi blog por correo y no te pierdas futuros artículos sobre esta serie de artículos.</h4>
+    <br>
+
+  </div>
+
+  {% if counter == 0 %}
+  <h3 class="center">Actualmente no tenemos posts sobre esta serie, estamos trabajando en ello</h3>
+  {% endif %}
+
+{% else %}
 <div class="post_header" style="background-image: linear-gradient( rgba(23, 45, 65, 0.5), rgba(54, 75, 94, 0.9) ), url({{site.baseurl}}/images/posts/{{page.image}}.jpg)">
   <div class="container post_header_content">
     <h1 class="post_title">{{page.title}} </h1>
@@ -17,23 +62,20 @@ layout: default
   <div class="series-content">{{content}}</div>
   <hr aria-hidden="true"> 
   {% assign counter = 0 %}
-
+  <h2>¿Qué conceptos aprenderemos en este curso?</h2>
+  <br>
   {% for post in site.posts reversed %} {% if post.serie == page.serie %} {% assign counter=counter | plus:1 %}
   <article class="flex two single_post">
     <div class="full fifth-1000">
       <span>
-          <a href="{{site.baseurl}}{{post.url}}"><img class="responsive-img series_image center" src="{{site.baseurl}}/images/posts/{{post.image}}.jpg"></img></a>
+          <img class="responsive-img series_image center" src="{{site.baseurl}}/images/posts/{{post.image}}.jpg"></img>
       </span>
     </div>
     <div class="full four-fifth-1000 posts_info_series">
       <h3 class="posts_title">
-        <a href="{{site.baseurl}}{{post.url}}">{{counter}}. {{post.title}}</a>
+        {{post.title}}
       </h3>
       <p class="posts_summary">{{post.description}}</p>         
-      <a class="posts_read_more" href="{{site.baseurl}}{{post.url}}">Leer más
-        <span class="visuallyhidden">Leer más acerca de {{post.title}}</span>
-      </a>
-     
     </div>
   </article>
   <br>
@@ -46,4 +88,6 @@ layout: default
 
 {% if counter == 0 %}
 <h3 class="center">Actualmente no tenemos posts sobre esta serie, estamos trabajando en ello</h3>
+{% endif %}
+
 {% endif %}

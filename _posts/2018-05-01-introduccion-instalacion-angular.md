@@ -140,5 +140,3 @@ Con {{ nombre_variable }} puedes pintar variables creadas en el controlador (arc
 ## Conclusiones
 
 Recapitulando, hemos visto qué es Angular, como instalarlo, cómo crear el esqueleto de una app, y una idea aproximada de para qué sirven los archivos y carpetas que crea por defecto. Te animo a que pruebes y cambies cosas del código para que vayas viendo como funciona Angular y Typescript. Si quieres encontrar más info de Angular lo puedes hacer en su página oficial: [https://angular.io/](https://angular.io/).
-
-Este artículo es el primero de una serie que estoy preparando sobre Angular. Si quieres descubrir cómo funciona Angular. Estate atento al blog para que no te pierdas ningún artículo de la serie.

@@ -4,7 +4,7 @@ body {
   font-size: 15px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #f5f3f0;
+  background-color: #f1f0f5;
   font-family: 'Lato', sans-serif;
 }
 
@@ -635,6 +635,37 @@ footer a {
 .project_title{
   padding-top: 20px;
   padding-bottom: 20px;
+}
+#mc_embed_signup {
+  background: transparent !important;
+}
+.angular_form {
+  margin: 0px auto;
+}
+
+.button_form_angular {
+  background-color: #5331a0 !important;
+  height: 45px !important;
+}
+
+.form_title {
+  font-size: 1.5rem !important;
+}
+
+.form_email {
+  height: 40px !important;
+}
+
+.title_form {
+  color: #5331a0 !important;
+  font-size: 2.5em;
+}
+
+.angular_course_form {
+  background-color: white;
+  border-radius: 5px;
+  padding: 40px;
+  box-shadow: 8px 14px 38px rgba(39,44,49,.06),1px 3px 8px rgba(39,44,49,.03);
 }
 
 
