@@ -307,9 +307,17 @@ footer a {
   padding-left: 10px;
 }
 
+.icon_footer_social {
+  padding-right: 1rem;
+}
+
 #footer_menu {
   margin: 0px;
   margin-top: 20px;
+}
+
+.footer_social {
+  list-style: none;
 }
 
 #footer_menu li {
