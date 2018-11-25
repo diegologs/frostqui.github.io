@@ -4,11 +4,11 @@ title: Tutorial Angular 2 - Cómo empezar a usarlo y conceptos básicos
 meta: Aprende Angular 2 gratis y en español. En este artículo echamos un vistazo a su instalación y primeros pasos con este framework para el frontend
 description: Aprende Angular 2 gratis y en español. En este artículo echamos un vistazo a su instalación y primeros pasos con este framework para el frontend
 excerpt: Angular2 nos ofrece la posibilidad de de crear páginas webs SPA, es decir páginas compuestas de una sola página, esto tiene la ventaja de ser rápida, para ofrecer la mejor experiencia a los usuarios de nuestra página web. En este artículo iniciaremos un acercamiento a Angular2 para ver que cosas nos puede ofrecer. 
-title-page: Tutorial Angular 2 - Cómo empezar a usarlo y conceptos básicos 
+title-page: Tutorial Angular 2 - Cómo empezar a usarlo y conceptos básicos
 image: angular
 lang: es
 tags: [Angular]
-lastmod: 2018-10-22T00:00:00+00:00
+lastmod: 2018-11-25T00:00:00+00:00
 ---
 
 ## Curso gratis de Angular 2
