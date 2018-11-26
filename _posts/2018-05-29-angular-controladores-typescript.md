@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Angular - Introducción a Typescript y inyección de dependencias
+title: Angular - Introducción a Typescript e inyección de dependencias
 meta: Cómo es la sintaxis de Typescript y cómo hacer inyección de dependencias en Angular, además vemos la diferencia entre ngOnInit y el constructor
 description: Cómo es la sintaxis de Typescript y cómo hacer inyección de dependencias en Angular, además vemos la diferencia entre ngOnInit y el constructor
 excerpt: Angular se usa con typescript y para empezar con Angular hay que aprender antes su sintaxis. En este artículo explico la introducción y las principales características de Typescript. Además explico como se hace inyección de dependencias
