@@ -53,6 +53,7 @@ layout: default
   <div class="post_content">{{ content }}</div>
 
   {% if page.serie != "angular" %}
+  {% if page.serie %}
 
   <br />
 
@@ -81,7 +82,8 @@ layout: default
       {% endif %} {% endfor %}
     </ul>
   </div>
-
+  
+  {% endif %}
   {% endif %} 
   {% else %}
   <br>
