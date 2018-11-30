@@ -1,10 +1,10 @@
 ---
 layout: post
 title: Angular - Comunicación entre componentes
-meta: ¿Cómo crear formularios con Angular? Aprende como usar FormControl, FormGroup y FormBuilder en Angular
-description: ¿Cómo crear formularios con Angular? Aprende como usar FormControl, FormGroup y FormBuilder en Angular
-excerpt: En este artículo veremos qué son los componentes y cómo crearlos, además vamos a configurar rutas en la página para visualizar estos componentes que hemos creado.
-title-page: Qué es Angular y cómo se instala
+meta: Aprende a conectar componentes entre sí. Echamos un vistazo a las maneras que hay de compartir información entre componentes
+description: Aprende a conectar componentes entre sí. Echamos un vistazo a las maneras que hay de compartir información entre componentes
+excerpt: ¿Sabes que se pueden conectar los componentes entre sí para compartir datos y información? En este artículo veremos cómo comunicar componentes de varias maneras distintas, dependiendo de lo que necesitemos.
+title-page: Angular - Comunicación entre componentes
 image: angular-share-data
 lang: es
 tags: [Angular] 
