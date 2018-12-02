@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Angular - ¿Qué es Angular? ¿Cómo se instala?
-meta: En este tutorial miraremos pará que sirve Angular, sus ventajas, y cómo empezar a crear páginas webs SPA. Además explicamos la estructura de carpetas
-description: En este tutorial miraremos pará que sirve Angular, sus ventajas, y cómo empezar a crear páginas webs SPA. Además explicamos la estructura de carpetas
+title: Qué es Angular y para qué sirve. Guía de instalación y primeros pasos
+meta: Tutorial para empezar a usar Angular. Vemos sus ventajas, estructura de carpetas, qué IDE usar, comparación con JQuery y más
+description: Tutorial para empezar a usar Angular. Vemos sus ventajas, estructura de carpetas, qué IDE usar, comparación con JQuery y más
 excerpt: Primer artículo de una serie de artículos sobre Angular que voy a empezar a publicar. En este post voy a explicar qué es Angular y cómo instalarlo para empezar a desarrollar aplicaciones web.
 title-page: Qué es Angular y cómo se instala
 image: angular-intro
 lang: es
 tags: [Angular] 
 serie: angular
-lastmod: 2018-10-27T00:00:00+00:00
+lastmod: 2018-12-02T00:00:00+00:00
 
 ---
 
@@ -34,7 +34,13 @@ cuando un usuario entra en una web SPA, se carga todo a la vez en una misma pág
 - Se integra bien con herramientas de testing.
 - Se integra bien con Ionic, para adaptar aplicaciones web a dispositivos móviles.
 
-## Cómo se instala
+## Qué es mejor Angular o Jquery
+
+Si ya conoces Jquery seguramente quieres ver para qué sirve Angular, por si te interesa cambiarte. La realidad es que aunque Jquery se sigue utilizando mucho, está en desuso. En los tiempos en los que vivimos, los desarrolladores frontend se están pasando a otros frameworks como Angular o React. El por qué de esto radica en que estos frameworks ofrecen un conjunto de herramientas completas para hacer una web. Es decir, mientras que Jquery te da ciertas facilidades y ahorras código Javascript, con Angular, por ejemplo, tienes a tu disposición muchas más cosas, como por ejemplo, formas de definir rutas para la web, reactividad en las vistas, protección de rutas, etc. 
+
+Como conclusión diría que JQuery viene bien para proyectos muy sencillos si quieres trabajar con Javascript sin más, pero a la hora de hacer una web completa te recomiendo un framework completo como Angular o ReactJS
+
+## Cómo instalar Angular
 
 Para instalarlo tenemos que disponer de Node y NPM instalados en el equipo. Si no lo tienes instalado, puedes decargar las dos herramientas desde aquí: [https://www.npmjs.com/get-npm](https://www.npmjs.com/get-npm).
 
@@ -137,6 +143,12 @@ Con {{ nombre_variable }} puedes pintar variables creadas en el controlador (arc
 
 {% endraw %}
 
+## El mejor IDE para programar en Angular
+
+Sin duda te recomiendo que instales el [vscode](https://code.visualstudio.com/). Si no lo conocías, es un editor de textos muy avanzado open source mantenido por Microsoft. Es muy recomendable porque en los últimos tiempos ha mejorado mucho, es ligero y muy adaptable a los requisitos de todo el munco mediente extensiones. Además cuenta con una comunidad en auge, por lo que es una buena opción a futuro. Te recomiendo si lo instalas que eches un vistazo a [esta extensión](https://marketplace.visualstudio.com/items?itemName=johnpapa.angular-essentials) pensanda para Angular, ofrece más soporte, snippets, iconos, etc.
+
 ## Conclusiones
 
-Recapitulando, hemos visto qué es Angular, como instalarlo, cómo crear el esqueleto de una app, y una idea aproximada de para qué sirven los archivos y carpetas que crea por defecto. Te animo a que pruebes y cambies cosas del código para que vayas viendo como funciona Angular y Typescript. Si quieres encontrar más info de Angular lo puedes hacer en su página oficial: [https://angular.io/](https://angular.io/).
+Recapitulando, hemos visto qué es Angular, como instalarlo, cómo crear el esqueleto de una app, y una idea aproximada de para qué sirven los archivos y carpetas que crea por defecto. Como he dicho si que te recomiendo a que aprendas Angular porque es una apuesta segura de futuro. Con Angular vas a aprender además, Typescript, un lenguaje de programación que aporta muchas ventajas respecto a Javascript plano.
+
+Te animo a que pruebes y cambies cosas del código para que vayas viendo como funciona Angular y Typescript. Si quieres encontrar más info de Angular lo puedes hacer en su página oficial: [https://angular.io/](https://angular.io/).

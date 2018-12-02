@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Jenkins - Tutorial en español. Cómo hacer integración continua y cómo empezar a usarlo
+title: Tutorial Jenkins. Qué es y como empezar a usarlo para hacer integración continua
 meta: Aprende cómo empezar a usar Jenkins para disfrutar de la integración contínua. Además de ver cómo instalar Jenkins y cómo usarlo vemos Blue Ocean el mejor plugin para crear tareas
 description: Aprende cómo empezar a usar Jenkins para disfrutar de la integración contínua. Además de ver cómo instalar Jenkins y cómo usarlo vemos Blue Ocean el mejor plugin para crear tareas
 excerpt: La integración continua es una práctica de desarrollo de software y del desarrollo web, en la cual los desarrolladores de software suben su código a un repositorio central donde automáticamente pasan las pruebas métricas y de calidad. Y Jenkins es la herramienta perfecta para realizar integración continua, además es muy simple de utilizar.
@@ -8,7 +8,7 @@ title-page: Jenkins tutorial en español, integración continua
 image: jenkins
 lang: es
 tags: [Devops]
-lastmod: 2018-11-16T00:00:00+00:00
+lastmod: 2018-12-02T00:00:00+00:00
 ---
 
 ## Introducción - ¿Qué es la integración continua?
