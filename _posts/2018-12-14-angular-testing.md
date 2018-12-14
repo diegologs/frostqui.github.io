@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Angular - Cómo hacer testing unitario e2e con Jasmine
+title: Angular - Cómo hacer testing unitario con Jasmine
 meta: Aprende a hacer testeo unitario de componentes y servicios en Angular con Jasmine. Además aprendemos a testear llamadas asíncronas
 description: Aprende a hacer testeo unitario de componentes y servicios en Angular con Jasmine. Además aprendemos a testear llamadas asíncronas
 excerpt: ¿Siempre has querido hacer testing y no sabes por dónde empezar? Empieza con este artículo en el que descubriremos cómo hacer tests unitarios en Angular usando Jasmine. Aprenderemos a testear clases y a mockear servicios.  
