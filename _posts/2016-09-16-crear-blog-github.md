@@ -8,6 +8,8 @@ title-page: Jekyll para programar un blog en GitHub en español
 image: blog
 lang: es
 tags: [Jekyll, GitHub]
+redirect_to:
+  - http://www.codingpotions.com/crear-blog-github
 ---
 
 

@@ -9,6 +9,8 @@ image: jenkins
 lang: es
 tags: [Devops]
 lastmod: 2018-12-02T00:00:00+00:00
+redirect_to:
+  - http://www.codingpotions.com/jenkins-integracion-continua
 ---
 
 ## Introducción - ¿Qué es la integración continua?

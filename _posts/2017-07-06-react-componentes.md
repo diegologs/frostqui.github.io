@@ -9,6 +9,8 @@ image: react
 lang: es
 tags: [React]
 lastmod: 2018-10-27T00:00:00+00:00
+redirect_to:
+  - http://www.codingpotions.com/react-componentes
 ---
 
 ## ¿Qué es React?

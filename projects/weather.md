@@ -7,6 +7,8 @@ image: weather.png
 title-page: Stratus, aplicación sobre el tiempo
 description: Aplicación de escritorio multiplataforma para mostrar el tiempo actualmente y a lo largo de varios días en una ciudad o localidad determinada.
 tenol: [Electron, HTML, CSS, Jquery]
+redirect_to:
+  - http://www.codingpotions.com/
 ---
 
 

@@ -7,6 +7,8 @@ image: tabstart.png
 title-page: Tabstart, reemplazo de página de nueva pestaña
 description: Extension para navegadores que sustityue la página de nueva pestaña
 tenol: [HTML, CSS, Jquery]
+redirect_to:
+  - http://www.codingpotions.com/
 ---
 
 Tabstart es una extensión que he creado para que sustituir la paǵina que se abre por defecto al crear nuevas pestañas en los navegadores.

@@ -9,6 +9,8 @@ image: git
 lang: es
 tags: [Git]
 lastmod: 2018-11-16T00:00:00+00:00
+redirect_to:
+  - http://www.codingpotions.com/git-comandos-basicos-avanzados
 ---
 
 En el post de hoy veremos algunos de los comandos git más utilizados, pero tranquilo, si ya eres un usuario más avanzado de git, también veremos algunos comandos menos conocidos y avanzados pero igualmente útiles.

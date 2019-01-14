@@ -10,7 +10,8 @@ lang: es
 tags: [Angular] 
 serie: angular
 lastmod: 2018-12-02T00:00:00+00:00
-
+redirect_to:
+  - http://www.codingpotions.com/introduccion-instalacion-angular
 ---
 
 ## Qué es Angular

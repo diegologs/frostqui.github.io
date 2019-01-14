@@ -8,6 +8,8 @@ title-page: Tutorial AJAX - Citas aleatorias
 image: quotes
 lang: es
 tags: [AJAX, Javascript, HTML, CSS]
+redirect_to:
+  - http://www.codingpotions.com/tutorial-ajax-basico
 ---
 
 

@@ -9,6 +9,8 @@ image: tecnologias-web
 lang: es
 tags: [Web]
 lastmod: 2018-11-16T00:00:00+00:00
+redirect_to:
+  - http://www.codingpotions.com/cuantas-tecnologias-web-existen
 ---
 
 ## Introducción

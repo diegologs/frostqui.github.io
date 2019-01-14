@@ -8,6 +8,8 @@ title-page: Creavelas tutorial de UX y UI
 image: creavelas
 lang: es
 tags: [UX]
+redirect_to:
+  - http://www.codingpotions.com/proyecto-creavelas-ep0-uxui
 ---
 
 

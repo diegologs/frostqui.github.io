@@ -9,6 +9,8 @@ image: library
 lang: es
 tags: [Javascript]
 lastmod: 2018-11-16T00:00:00+00:00
+redirect_to:
+  - http://www.codingpotions.com/mejores-librerias-javascript-2017
 ---
 
 

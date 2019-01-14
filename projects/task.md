@@ -7,6 +7,8 @@ image: task.png
 title-page: TaskBox aplicación de tareas y notas multiplataforma.
 description: Aplicación de escritorio multiplataforma. Configurando una base de datos MongoDB, puedes usarla para crear tareas. La aplicación muestra las tareas sin completar y las completadas con el tiempo que ha pasado desde que creaste la tarea. 
 tenol: [Electron, HTML, CSS, ExpressJS]
+redirect_to:
+  - http://www.codingpotions.com/
 ---
 
 

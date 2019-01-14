@@ -9,6 +9,8 @@ image: angular
 lang: es
 tags: [Angular]
 lastmod: 2018-11-25T00:00:00+00:00
+redirect_to:
+  - http://www.codingpotions.com/tutorial-angular2
 ---
 
 ## Curso gratis de Angular 2

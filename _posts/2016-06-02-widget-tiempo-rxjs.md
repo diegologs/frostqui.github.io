@@ -8,6 +8,8 @@ title-page: RxJS para programar un widget del tiempo
 image: weather
 lang: es
 tags: [RxJS, Javascript, HTML, CSS]
+redirect_to:
+  - http://www.codingpotions.com/widget-tiempo-rxjs
 ---
 
 

@@ -8,6 +8,8 @@ title-page: Cómo desplegar Angular en un servidor Ubuntu en Clouding.io
 image: angular-deploy
 lang: es
 tags: [Devops] 
+redirect_to:
+  - http://www.codingpotions.com/clouding-io-despliegue-angular
 ---
 
 ## Introducción

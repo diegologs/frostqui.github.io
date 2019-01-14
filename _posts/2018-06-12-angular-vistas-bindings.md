@@ -9,7 +9,8 @@ image: angular-views
 lang: es
 tags: [Angular] 
 serie: angular
-
+redirect_to:
+  - http://www.codingpotions.com/angular-vistas-bindings
 ---
 
 ## Introducción

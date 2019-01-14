@@ -8,6 +8,8 @@ title-page: Javascript - foreach y todo sobre los bucles en js
 image: javascript-foreach
 lang: es
 tags: [Javascript]
+redirect_to:
+  - http://www.codingpotions.com/javascript-foreach-bucles
 ---
 
 

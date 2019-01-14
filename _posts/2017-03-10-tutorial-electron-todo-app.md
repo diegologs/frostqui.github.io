@@ -9,6 +9,8 @@ image: task
 lang: es
 tags: [Electron, NodeJS, ExpressJS, MongoDB, Moongose ]
 lastmod: 2018-11-04T00:00:00+00:00
+redirect_to:
+  - http://www.codingpotions.com/tutorial-electron-todo-app
 ---
 
 En el día de hoy vamos a ver en que consiste Electron js, una librería para crear aplicaciones de escritorio con tecnologías web, y para ello vamos a desarrollar una app muy sencilla para la gestión de notas y recordatorios usando ExpressJS, MongoDB y Angular JS (Stack MEAN).

@@ -7,6 +7,8 @@ image: christmas.png
 description: Este juego surgió en el invierno del año 2016. Tiene como temática la festividad navideña. El objetivo es simple, disparar regalos a los conejos. El juego tiene algunos fallos pero siemplemente lo creé para probar el lenguaje Dart.
 title-page: Christmas game con Dart
 tenol: [Dart, WebGL]
+redirect_to:
+  - http://www.codingpotions.com/
 ---
 
 

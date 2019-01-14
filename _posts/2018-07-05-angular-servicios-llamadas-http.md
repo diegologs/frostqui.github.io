@@ -10,6 +10,8 @@ lang: es
 tags: [Angular] 
 serie: angular
 lastmod: 2018-10-28T00:00:00+00:00
+redirect_to:
+  - http://www.codingpotions.com/angular-servicios-llamadas-http
 ---
 
 ## ¿Qué es un servicio de Angular y cómo crear servicios?

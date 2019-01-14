@@ -7,6 +7,8 @@ image: blog.jpg
 description: La página en la que actualmente te encuentras. Esta página nació con el objetivo de tener un espacio personal donde poder anotar y escribir entradas de blog con el fin de recordar todos los conocimientos que voy adquiriendo para recordarlos en un futuro, o para ayudar a otra gente.
 title-page: Jekyll y Github Pages 
 tenol: [HTML, CSS, JavaScript, Jekyll]
+redirect_to:
+  - http://www.codingpotions.com/
 ---
 
 

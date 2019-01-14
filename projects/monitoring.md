@@ -7,6 +7,8 @@ image: monitoring.png
 description: Se trata de una página en la que el usuario introduce los enlaces a vídeos de cámaras web o de cualquier otro tipo en Youtube, para poder visualizarlos todos a la vez 
 title-page: Jekyll y Github Pages 
 tenol: [HTML, CSS, Vue, Javascript]
+redirect_to:
+  - http://www.codingpotions.com/
 ---
 
 <a href="https://frostqui.github.io/monitoring" class="waves-effect waves-light btn">DEMO</a>

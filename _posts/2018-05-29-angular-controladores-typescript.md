@@ -9,7 +9,8 @@ image: angular-controllers
 lang: es
 tags: [Angular] 
 serie: angular
-
+redirect_to:
+  - http://www.codingpotions.com/angular-controladores-typescript
 ---
 
 ## Introducción

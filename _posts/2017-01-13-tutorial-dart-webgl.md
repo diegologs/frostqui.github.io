@@ -8,6 +8,8 @@ title-page: WebGl y Dart, cómo empezar
 image: dart
 lang: es
 tags: [Dart, WebGL]
+redirect_to:
+  - http://www.codingpotions.com/tutorial-dart-webgl
 ---
 
 

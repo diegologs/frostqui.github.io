@@ -9,6 +9,8 @@ tags: [Bootstrap]
 lang: es
 image: bootstrap
 lastmod: 2018-10-22T00:00:00+00:00
+redirect_to:
+  - http://www.codingpotions.com/desarrollo-web-bootstrap
 ---
 
 

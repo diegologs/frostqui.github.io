@@ -8,6 +8,8 @@ title-page: Calabash para realizar testing automatico
 image: calabash
 lang: es
 tags: [Android, Testing, Calabash]
+redirect_to:
+  - http://www.codingpotions.com/testing-calabash
 ---
 
 

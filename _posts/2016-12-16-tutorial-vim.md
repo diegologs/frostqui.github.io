@@ -8,6 +8,8 @@ title-page: Guia VIM para principiantes
 image: vim
 lang: es
 tags: [VIM]
+redirect_to:
+  - http://www.codingpotions.com/tutorial-vim
 ---
 
 

@@ -8,6 +8,8 @@ title-page: Bot de Telegram con PHP
 image: telegram
 lang: es
 tags: [PHP, Telegram, Heroku]
+redirect_to:
+  - http://www.codingpotions.com/bot-telegram-php
 ---
 
 

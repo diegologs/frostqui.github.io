@@ -8,6 +8,8 @@ title-page: WebGL y Dart, renderizando figuras simples
 image: dart2
 lang: es
 tags: [Dart, WebGL]
+redirect_to:
+  - http://www.codingpotions.com/dart-webgl-figuras-simples
 ---
 
 

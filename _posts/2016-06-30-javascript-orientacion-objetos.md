@@ -8,6 +8,8 @@ title-page: Programacion orientada a objetos en javascript con ejemplos
 image: poo
 lang: es
 tags: [Javascript]
+redirect_to:
+  - http://www.codingpotions.com/javascript-orientacion-objetos
 ---
 
 

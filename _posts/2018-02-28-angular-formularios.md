@@ -8,7 +8,8 @@ title-page: Angular - FormGroup y FormBuilder
 image: angular-forms
 lang: es
 tags: [Angular] 
-
+redirect_to:
+  - http://www.codingpotions.com/angular-formularios
 ---
 
 ## Introducción

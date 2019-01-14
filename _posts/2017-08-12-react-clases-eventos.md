@@ -7,7 +7,9 @@ excerpt: Los componentes de clase en React tienen estado y ciclos de vida. En es
 title-page: React - Clases estados y ciclos de vida
 image: react2
 lang: es
-tags: [React] 
+tags: [React]
+redirect_to:
+  - http://www.codingpotions.com/react-clases-eventos
 ---
 
 ## Componentes de clase
