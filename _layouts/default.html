@@ -1,46 +1,13 @@
 <!DOCTYPE html>
-
-<html lang="es">
-
+<html>
 <head>
-
-{% include head.html %}
-
+<link rel="canonical" href="https://codingpotions.com/{{ page.url }}"/>
+<meta http-equiv="content-type" content="https://codingpotions.com/{{ page.url }}" />
+<meta http-equiv="refresh" content="0;url=https://codingpotions.com/{{ page.url }}" />
 </head>
-
-
 <body>
-
-  
-  {{content}}
-
-
-
-  {% include footer.html %}
-
-
-
-
-  <script src="{{site.baseurl}}/js/prism.js"></script>
-  <script src="{{site.baseurl}}/js/index.js"></script>
-  <script type="text/javascript">
-    if ("serviceWorker" in navigator) {
-      navigator.serviceWorker.register("/sw.js").then(function(registration) {
-        console.log("Service Worker registration successful with scope: ", registration.scope);
-      }).catch(function(err) {
-        console.log("Service Worker registration failed: ", err);
-      });
-    }
-  </script>
-
-
-
+    <h1>Redirecting...</h1>
+      <a href="https://codingpotions.com/{{ page.url }}">Click here if you are not redirected.<a>
+      <script>location='https://codingpotions.com/{{ page.url }}'</script>
 </body>
-
-
-
-
-
-
-
 </html>
